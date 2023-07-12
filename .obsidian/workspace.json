@@ -29,6 +29,19 @@
             }
           },
           {
+            "id": "8abfe842f5857587",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Architecture/ABP.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "cc400a8c16ee3f67",
             "type": "leaf",
             "state": {
@@ -42,7 +55,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -108,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/工具集合.md",
+                "file": "Architecture/ABP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/工具集合.md",
+                "file": "Architecture/ABP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/工具集合.md"
+                "file": "Architecture/ABP.md"
               }
             }
           },
@@ -196,10 +209,12 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "d2371f3a1f630b7a",
+  "active": "95641d9f2e99738f",
   "lastOpenFiles": [
-    "Markdown.md",
+    "Architecture",
     "CTF/工具集合.md",
+    "Architecture/ABP.md",
+    "Markdown.md",
     "CTF/MISC/压缩包.md",
     "CTF/MISC/图像隐写.md",
     "CTF/MISC/文件头.md",
@@ -242,8 +257,6 @@
     "战略设计/[通用]审批子域.md",
     "战略设计/统计子域.md",
     "战略设计/数据交换子域.md",
-    "战略设计/基础数据子域.md",
-    "战略设计/[通用]通知子域.md",
     "未命dd名.canvas"
   ]
 }
