@@ -34,7 +34,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/工具集合.md",
+                "file": "CTF/ToolManual/Wireshark.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/工具集合.md",
+                "file": "CTF/ToolManual/Wireshark.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/工具集合.md",
+                "file": "CTF/ToolManual/Wireshark.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/工具集合.md"
+                "file": "CTF/ToolManual/Wireshark.md"
               }
             }
           },
@@ -211,9 +211,11 @@
   },
   "active": "8abfe842f5857587",
   "lastOpenFiles": [
+    "CTF/工具集合.md",
+    "CTF/ToolManual/Wireshark.md",
+    "CTF/ToolManual",
     "CTF/MISC/文件头.md",
     "Architecture",
-    "CTF/工具集合.md",
     "Architecture/ABP.md",
     "Markdown.md",
     "CTF/MISC/压缩包.md",
@@ -235,7 +237,6 @@
     "attachments/正文.md.baiduyun.uploading.cfg",
     "attachments/文件名.md.baiduyun.uploading.cfg",
     "attachments/python脚本.md.baiduyun.uploading.cfg",
-    "attachments/templates/正文.md.baiduyun.uploading.cfg",
     "attachments/templates/正文.md",
     "attachments/Pasted image 20230705203418.png",
     "attachments/Pasted image 20230705202930.png",
