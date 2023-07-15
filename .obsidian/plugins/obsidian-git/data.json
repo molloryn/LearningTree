@@ -29,9 +29,9 @@
   "lineAuthor": {
     "show": true,
     "followMovement": "inactive",
-    "authorDisplay": "initials",
+    "authorDisplay": "hide",
     "showCommitHash": false,
-    "dateTimeFormatOptions": "natural language",
+    "dateTimeFormatOptions": "hide",
     "dateTimeFormatCustomString": "YY.MM.DD",
     "dateTimeTimezone": "viewer-local",
     "coloringMaxAge": "1m",
@@ -47,7 +47,7 @@
     },
     "textColorCss": "var(--text-muted)",
     "ignoreWhitespace": false,
-    "gutterSpacingFallbackLength": 19,
+    "gutterSpacingFallbackLength": 0,
     "lastShownAuthorDisplay": "initials",
     "lastShownDateTimeFormatOptions": "natural language"
   },
