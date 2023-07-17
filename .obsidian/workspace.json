@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/图像隐写/PNG.md",
+                "file": "Architecture/ABP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/图像隐写/PNG.md",
+                "file": "Architecture/ABP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/图像隐写/PNG.md",
+                "file": "Architecture/ABP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/图像隐写/PNG.md"
+                "file": "Architecture/ABP.md"
               }
             }
           },
@@ -171,14 +171,13 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "markdown-table-editor:Open Markdown Table Editor": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obisidian-note-linker:Note Linker": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "6e0c339d6d8aa96e",
   "lastOpenFiles": [
-    "CTF/MISC/文件头.md",
     "CTF/MISC/图像隐写/PNG.md",
+    "CTF/MISC/文件头.md",
     "CTF/MISC/压缩包.md",
     "CTF/ToolManual/CyberChef.md",
     "Markdown.md",
