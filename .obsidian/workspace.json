@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolManual/CyberChef.md",
+                "file": "CTF/CRYPTO/密码种类与特征.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolManual/CyberChef.md",
+                "file": "CTF/CRYPTO/密码种类与特征.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolManual/CyberChef.md",
+                "file": "CTF/CRYPTO/密码种类与特征.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolManual/CyberChef.md"
+                "file": "CTF/CRYPTO/密码种类与特征.md"
               }
             }
           },
@@ -176,14 +176,16 @@
   },
   "active": "6e0c339d6d8aa96e",
   "lastOpenFiles": [
+    "CTF/MISC/文件头.md",
+    "CTF/CRYPTO/密码种类与特征.md",
+    "CTF/CRYPTO",
+    "CTF/MISC/压缩包.md",
+    "CTF/ToolManual/CyberChef.md",
     "attachments/Pasted image 20230718192015.png",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/ToolsList.md",
     "CTF/README.md",
-    "CTF/MISC/压缩包.md",
-    "CTF/ToolManual/CyberChef.md",
-    "CTF/MISC/文件头.md",
     "Architecture/ABP.md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "attachments/Pasted image 20230717214042.png",
@@ -198,7 +200,6 @@
     "attachments/templates/正文.md.baiduyun.uploading.cfg",
     "attachments/templates/文件名.md.baiduyun.uploading.cfg",
     "attachments/templates/工具表.md.baiduyun.uploading.cfg",
-    "attachments/templates/python脚本.md.baiduyun.uploading.cfg",
     "attachments/templates/工具表.md",
     "attachments/Pasted image 20230709005551.png",
     "attachments/templates/文件名.md",
@@ -214,7 +215,6 @@
     "attachments/Pasted image 20230705202142.png",
     "attachments/Pasted image 20230704181147.png",
     "attachments/Pasted image 20230703215646.png",
-    "attachments/Pasted image 20230703201943.png",
     "最佳实践/数据库.md",
     "最佳实践/微服务接口.md",
     "最佳实践/微服务配置.md",
