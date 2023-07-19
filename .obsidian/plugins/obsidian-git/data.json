@@ -31,7 +31,7 @@
     "followMovement": "inactive",
     "authorDisplay": "hide",
     "showCommitHash": false,
-    "dateTimeFormatOptions": "hide",
+    "dateTimeFormatOptions": "natural language",
     "dateTimeFormatCustomString": "YY.MM.DD",
     "dateTimeTimezone": "viewer-local",
     "coloringMaxAge": "1m",
@@ -47,7 +47,7 @@
     },
     "textColorCss": "var(--text-muted)",
     "ignoreWhitespace": false,
-    "gutterSpacingFallbackLength": 0,
+    "gutterSpacingFallbackLength": 12,
     "lastShownAuthorDisplay": "initials",
     "lastShownDateTimeFormatOptions": "natural language"
   },
