@@ -105,6 +105,25 @@
 
 
 
+# 中间件管理
+
+| 软件名                        | 场景                  | 备注                                                                                                       |
+|:----------------------------- |:--------------------- |:---------------------------------------------------------------------------------------------------------- |
+| RedisInsight                  | Redis官方出品管理工具 | [RedisInsight/RedisInsight: Redis GUI by Redis (github.com)](https://github.com/RedisInsight/RedisInsight) |
+| Another Redis Desktop Manager | Redis管理工具         | [qishibo/AnotherRedisDesktopManager](https://github.com/qishibo/AnotherRedisDesktopManager)                |
+|                               |                       |                                                                                                            |
+
+
+# Linux效率
+
+| 软件名        | 场景              | 备注                                                                                        |
+|:------------- |:----------------- |:------------------------------------------------------------------------------------------- |
+| thefuck       | 辅助linux修复命令 | [nvbn/thefuck](https://github.com/nvbn/thefuck)                                             |
+| powerlevel10k | zsh主题           | [romkatv/powerlevel10k: A Zsh theme (github.com)](https://github.com/romkatv/powerlevel10k) |
+| ohmyzsh       | 管理 linux shell zsh       | [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)                                                                                            |
+
+
+
 
 # 其他
 
@@ -116,4 +135,15 @@
 | ContextMenuManager.NET.4.0 | Windows右键管理工具                  |                    |
 | Optimizer                  | Windows优化工具                      | [hellzerg/optimizer: The finest Windows Optimizer (github.com)](https://github.com/hellzerg/optimizer)                   |
 
+
+# 效率
+
+| 软件名       | 场景                                             | 备注                                                                                               |
+|:------------ |:------------------------------------------------ |:-------------------------------------------------------------------------------------------------- |
+| Snipaste     | 截图贴图工具                                     |                                                                                                    |
+| GoldenDict   | 支持MDict的字典工具                              |                                                                                                    |
+| FluentSearch | 快捷搜索栏，大量功能                             |                                                                                                    |
+| Quicker      | 鼠标中键插件扩展、类Workflow编程、含有快捷搜索栏 | 收费版可翻页                                                                                       |
+| DevToys      | 如格式化JSON，JSON转YAML，比较文本，测试RegExp   | [veler/DevToys](https://github.com/veler/DevToys) |
+| PowerToys    | 微软开源功能增强工具，包括批量重命名、图像压缩等 | [microsoft/PowerToys](https://github.com/microsoft/PowerToys)                                                                                                   |
 
