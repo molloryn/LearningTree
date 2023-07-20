@@ -116,11 +116,12 @@
 
 # Linux效率
 
-| 软件名        | 场景              | 备注                                                                                        |
-|:------------- |:----------------- |:------------------------------------------------------------------------------------------- |
-| thefuck       | 辅助linux修复命令 | [nvbn/thefuck](https://github.com/nvbn/thefuck)                                             |
-| powerlevel10k | zsh主题           | [romkatv/powerlevel10k: A Zsh theme (github.com)](https://github.com/romkatv/powerlevel10k) |
-| ohmyzsh       | 管理 linux shell zsh       | [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)                                                                                            |
+| 软件名        | 场景                       | 备注                                                                                        |
+|:------------- |:-------------------------- |:------------------------------------------------------------------------------------------- |
+| thefuck       | 辅助linux修复命令          | [nvbn/thefuck](https://github.com/nvbn/thefuck)                                             |
+| powerlevel10k | zsh主题                    | [romkatv/powerlevel10k: A Zsh theme (github.com)](https://github.com/romkatv/powerlevel10k) |
+| ohmyzsh       | 管理 linux shell zsh       | [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)                                       |
+| Dust          | Du+rust,增强disk usage命令 | [bootandy/dust](https://github.com/bootandy/dust)                                                                                            |
 
 
 
