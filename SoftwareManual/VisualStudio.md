@@ -2,6 +2,12 @@
 
 <https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2022>
 
+### CLI
+
+Windows下设置dotnet cli工具语言为英文：`set DOTNET_CLI_UI_LANGUAGE=en`
+
+Linux下设置系统语言为英文即可同步变为英文：`export LANG=en_US.UTF-8`
+
 ### 插件推荐
 
 Debug Single Thread 多线程时单线程调试
