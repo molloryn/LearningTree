@@ -1,82 +1,3 @@
-
-
-
-
-**●建立数据库【结构】**
-
-Mysql
-
-要考虑id自增（AUTO_INCREMENT）、PRIMARY KEY、COMMENT（注释）
-
-![](../attachments/bba22799c1c0040134dfe9025ebec076.png)
-
-常见的mysql表引擎有INNODB和MyISAM，主要的区别是INNODB适合频繁写数据库操作，MyISAM适合读取数据库的情况多一点
-
-使用以下mysql sql语句，可以给表设定数据库引擎：
-
-ALTER TABLE \`wp_posts\` ENGINE = MyISAM;
-
-●外键
-
-Company_table中假设有
-
-foreign key(repo_id) references repo_table(repo_id))
-
-repo_id在repo表中是主键，在company表中是外键
-
-约束作用：
-
-1.  如果在company中插入repo_id而repo表中没有，则数据库不允许插入
-2.  如果修改/删除repo表中的id而company还在引用，则修改/删除失败
-
-**●索引**
-
-索引的好处在于可以讲指定列进行排序，提高检索的速度。
-
-一个简单的例子：
-
-某个列的数据是
-
-id name
-
-12 小李
-
-10 小龙
-
-5 小青
-
-99 小红
-
-id列创建索引后就会生成一个索引表
-
-id index
-
-5 3
-
-10 2
-
-12 1
-
-99 4
-
-当查询 where id =10的 时候，使用到索引表。由于10下面是15，不可能有大于10的数。所以不再进行扫描表操作。返回第二条数据，对应回主表的第二行。
-
-这样就提高了查询的速度，如果没添加索引；则扫描整张主表。
-
-注意事项：
-
-1、需要加索引的字段，要在where条件中
-
-2、数据量少的字段不需要加索引；因为建索引有一定开销，如果数据量小则没必要建索引（速度反而慢）
-
-3、如果where条件中是OR关系，加索引不起作用
-
-4、联合索引比对每个列分别建索引更有优势，因为索引建立得越多就越占磁盘空间，在更新数据的时候速度会更慢。另外建立多列索引时，顺序也是需要注意的
-
-联合索引：
-
-<https://www.cnblogs.com/musings/p/10890563.html>
-
 # 基础知识
 
 ## 并发锁
@@ -260,6 +181,81 @@ select * from stuInfo where stuName = @name
 
 
 ## SQL语句
+
+### 建表
+
+以MySQL为例
+
+要考虑id自增（AUTO_INCREMENT）、PRIMARY KEY、COMMENT（注释）
+
+![](../attachments/bba22799c1c0040134dfe9025ebec076.png)
+
+常见的mysql表引擎有INNODB和MyISAM，主要的区别是INNODB适合频繁写数据库操作，MyISAM适合读取数据库的情况多一点
+
+使用以下mysql sql语句，可以给表设定数据库引擎：
+
+
+```sql
+ALTER TABLE `wp_posts` ENGINE = MyISAM;
+```
+
+### 外键
+
+Company_table中假设有
+
+```sql
+foreign key(repo_id) references repo_table(repo_id))
+```
+
+`repo_id`在repo表中是主键，在company表中是外键
+
+约束作用：
+
+1.  如果在company中插入repo_id而repo表中没有，则数据库不允许插入
+2.  如果修改/删除repo表中的id而company还在引用，则修改/删除失败
+
+### 索引
+
+索引的好处在于可以讲指定列进行排序，提高检索的速度。
+
+一个简单的例子：
+
+某个列的数据是
+
+```
+id name
+12 小李
+10 小龙
+5 小青
+99 小红
+```
+
+id列创建索引后就会生成一个索引表
+
+```
+id index
+5 3
+10 2
+12 1
+99 4
+```
+
+当查询 where id =10的 时候，使用到索引表。由于10下面是15，不可能有大于10的数。所以不再进行扫描表操作。返回第二条数据，对应回主表的第二行。
+
+这样就提高了查询的速度，如果没添加索引；则扫描整张主表。
+
+注意事项：
+
+1. 需要加索引的字段，要在where条件中
+
+2. 数据量少的字段不需要加索引；因为建索引有一定开销，如果数据量小则没必要建索引（速度反而慢）
+
+3. 如果where条件中是OR关系，加索引不起作用
+
+4. 联合索引比对每个列分别建索引更有优势，因为索引建立得越多就越占磁盘空间，在更新数据的时候速度会更慢。另外建立多列索引时，顺序也是需要注意的
+
+联合索引：
+[mysql索引 多个单列索引和联合索引的区别详解 - musings - 博客园 (cnblogs.com)](https://www.cnblogs.com/musings/p/10890563.html)
 
 ### 查询（Select）
 
