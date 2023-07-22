@@ -8,5 +8,7 @@
   "customizable-menu",
   "codeblock-customizer",
   "obsidian-command-alias-plugin",
-  "colored-text"
+  "colored-text",
+  "floating-toc",
+  "obsidian-quiet-outline"
 ]

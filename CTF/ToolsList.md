@@ -49,6 +49,10 @@
 
 # WEB
 
+## 目录扫描
+
+目录扫描：[kali linux web目录扫描工具汇总 - 哔哩哔哩 (bilibili.com)](https://www.bilibili.com/read/cv18085514/)
+
 ## 漏洞扫描
 
 | 软件名 | 场景 | 备注 |

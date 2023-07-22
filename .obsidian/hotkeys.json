@@ -81,7 +81,6 @@
       "key": "R"
     }
   ],
-  "outline:open": [],
   "find-and-replace-in-selection:find-and-replace-in-selection": [
     {
       "modifiers": [
@@ -141,5 +140,13 @@
     }
   ],
   "colored-text:change-color-forward": [],
-  "colored-text:change-color-backwards": []
+  "colored-text:change-color-backwards": [],
+  "obsidian-quiet-outline:quiet-outline": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Q"
+    }
+  ]
 }

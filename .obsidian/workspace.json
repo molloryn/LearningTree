@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md",
+                "file": "Music/MusicTheory.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md",
+                "file": "Music/MusicTheory.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md",
+                "file": "Music/MusicTheory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md"
+                "file": "Music/MusicTheory.md"
               }
             }
           },
@@ -153,13 +153,22 @@
               "type": "git-view",
               "state": {}
             }
+          },
+          {
+            "id": "6716985ecea915f5",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
-    "width": 340.5
+    "width": 340.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -175,52 +184,52 @@
   },
   "active": "a699c46d79554932",
   "lastOpenFiles": [
+    "Music/FLStudio.md",
     "CTF/ToolsList.md",
-    "CloudNative/Deployments/K8S部署笔记.md",
-    "ComputerScience/人工智能.md",
-    "SoftwareManual/VSCode.md",
-    "SoftwareManual/VisualStudio.md",
-    "SoftwareManual/AHK.md",
     "CTF/README.md",
-    "CTF/ToolManual/Xdbg.md",
+    "CTF/CTF.md",
+    "CTF/Reverse.md",
     "CTF/ToolManual/Wireshark.md",
+    "CTF/ToolManual/Xdbg.md",
+    "CTF/ToolManual/WireShark2.md",
     "CTF/ToolManual/CyberChef.md",
+    "Music/MusicTheory.md",
+    "attachments/ffbf0839a1b1013377f002c9325dc7be.png",
+    "attachments/fcf4104187daf017d196f9f78ae3026d.png",
+    "attachments/faa2999d50b3b1ad6eed55bdce1f885a.png",
+    "attachments/f929b0b0711e50201e9052eaaa57efee.jpeg",
+    "attachments/f1d536758829215117a158ef7cf922bb.png",
+    "attachments/ecab3e5c9f7424f21b6ee96c1b48970b.png",
+    "attachments/ec41e0fb319b852f88fb9e1d58133e0e.png",
+    "attachments/e853f449ad2dc9e60a72101d81454ab8.png",
+    "attachments/e354ddfa068d3c01865b622d3edbf92a.png",
+    "attachments/e11c5afabe2c155e82e65e9228d35871.png",
+    "SoftwareManual/AHK.md",
+    "SoftwareManual/CMD.md",
+    "SoftwareManual/VisualStudio.md",
+    "SoftwareManual/MicosoftOffice.md",
+    "SoftwareManual/VSCode.md",
+    "ComputerScience/人工智能.md",
+    "Music",
+    "CloudNative/Deployments/K8S部署笔记.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/MISC/文件头.md",
     "CTF/MISC/压缩包.md",
-    "SoftwareManual/CMD.md",
-    "SoftwareManual/MicosoftOffice.md",
     "README.md",
-    "attachments/006623272f7415e1c9c9d30e9f1800d4.png",
     "ComputerScience",
     "新建文件夹",
-    "attachments/e5b6915ff51790ee1c3e9259bc73d4fe.png",
-    "attachments/c72604bc7b344b366da069bddf45216c.png",
-    "attachments/83459e82e04017d0879e71fd66af76c3.png",
-    "attachments/1525d7698e05a28a8469b0ffe660eea7.png",
-    "attachments/537f1baaa84f2789a6882f56dd6cda8a.png",
-    "attachments/74e21a384f864e2e846265455b6a244e.png",
-    "attachments/61c35245aaef85def9b6acf21febe75a.png",
-    "attachments/8a7e674cd34fb186d10dd651dc1994dd.png",
-    "attachments/1c68a4db15913dc4a0355b6a7c692f41.png",
     "SoftwareManual/Untitled.md",
     "media/1bffabf753c0392c3520a8248c0ce74a.gif.md",
     "SoftwareManual",
     "IDE/VSCode.md",
     "SoftwareMannual/VSCode.md",
-    "SoftwareMannual/VisualStudio.md",
-    "SoftwareMannual/MicosoftOffice.md",
     "SoftwareMannual",
-    "IDE/MicosoftOffice.md",
-    "IDE/VisualStudio.md",
-    "attachments/templates/Csharp代码.md",
     "media",
     "IDE",
     "CTF/CRYPTO",
     "CTF/ToolManual/CyberChef.md.baiduyun.uploading.cfg",
     "CTF/MISC/图像隐写/PNG.md.baiduyun.uploading.cfg",
-    "CTF/MISC/文件头.md.baiduyun.uploading.cfg",
     "未命dd名.canvas"
   ]
 }

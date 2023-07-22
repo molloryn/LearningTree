@@ -8,15 +8,15 @@ $data = Get-WMIObject -Query "SELECT * FROM Win32_PerfFormattedData_Counters_The
 @($data)[0].HighPrecisionTemperature
 ```
 
-#### 获取电池寿命报告
-
-`powercfg batteryreport output "D:\\battery_report.html"`
-
 #### 临时无限制模式
 
 `pwsh -ExecutePolicy Unrestricted`
 
 在当前会话有效
+
+#### 获取电池寿命报告
+
+`powercfg batteryreport output "D:\\battery_report.html"`
 
 #### 计算文件sha256
 
@@ -114,7 +114,19 @@ $data = Get-WMIObject -Query "SELECT * FROM Win32_PerfFormattedData_Counters_The
 6669, // Alternate IRC
 ```
 
-# 一般
+# Windows
+
+#### 游戏强制全屏的窗口化
+
+`Alt+Enter`
+
+#### 应用自启动最小化
+
+`start /min D:\Euynac\Dictionary\GoldenDict\GoldenDict.exe`
+
+保存为`.bat`
+
+cmd运行`shell:startup`打开自定义自启动列表放入该bat文件
 
 #### win11启动组策略gpedit.msc
 
