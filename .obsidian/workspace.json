@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Music/MusicTheory.md",
+                "file": "ComputerScience/BigData.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Music/MusicTheory.md",
+                "file": "ComputerScience/BigData.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Music/MusicTheory.md",
+                "file": "ComputerScience/BigData.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Music/MusicTheory.md"
+                "file": "ComputerScience/BigData.md"
               }
             }
           },
@@ -184,6 +184,8 @@
   },
   "active": "a699c46d79554932",
   "lastOpenFiles": [
+    "SoftwareManual/Git.md",
+    "Music/MusicTheory.md",
     "Music/FLStudio.md",
     "CTF/ToolsList.md",
     "CTF/README.md",
@@ -193,7 +195,6 @@
     "CTF/ToolManual/Xdbg.md",
     "CTF/ToolManual/WireShark2.md",
     "CTF/ToolManual/CyberChef.md",
-    "Music/MusicTheory.md",
     "attachments/ffbf0839a1b1013377f002c9325dc7be.png",
     "attachments/fcf4104187daf017d196f9f78ae3026d.png",
     "attachments/faa2999d50b3b1ad6eed55bdce1f885a.png",
@@ -223,7 +224,6 @@
     "media/1bffabf753c0392c3520a8248c0ce74a.gif.md",
     "SoftwareManual",
     "IDE/VSCode.md",
-    "SoftwareMannual/VSCode.md",
     "SoftwareMannual",
     "media",
     "IDE",
