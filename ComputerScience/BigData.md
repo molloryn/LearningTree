@@ -15,45 +15,6 @@
 | 图计算         | 针对大规模图结构数据的处理（图结构数据） | Pregel、GraphX、Giraph、PowerGraph、Hama、GoldenOrb等                       |
 | 查询分析计算   | 大规模数据的存储管理和查询分析           | Dremel、Hive、Cassandra、Impala等                                           |
 
-## 数据库事务ACID
-
-事务具有4个特征，分别是原子性、一致性、隔离性和持久性，简称事务的ACID特性；
-
-#### 原子性（atomicity)
-
-一个事务要么全部提交成功，要么全部失败回滚，不能只执行其中的一部分操作，这就是事务的原子性
-
-#### 一致性（consistency)
-
-事务的执行不能破坏数据库数据的完整性和一致性，一个事务在执行之前和执行之后，数据库都必须处于一致性状态。
-
-如果数据库系统在运行过程中发生故障，有些事务尚未完成就被迫中断，这些未完成的事务对数据库所作的修改有一部分已写入物理数据库，这是数据库就处于一种不正确的状态，也就是不一致的状态
-
-#### 隔离性（isolation）
-
-事务的隔离性是指在并发环境中，并发的事务时相互隔离的，一个事务的执行不能不被其他事务干扰。不同的事务并发操作相同的数据时，每个事务都有各自完成的数据空间，即一个事务内部的操作及使用的数据对其他并发事务时隔离的，并发执行的各个事务之间不能相互干扰。
-
-在标准SQL规范中，定义了4个事务隔离级别，不同的隔离级别对事务的处理不同，分别是：未授权读取，授权读取，可重复读取和串行化
-
-1. 读未提交（Read Uncommited）
-
-该隔离级别允许脏读取，其隔离级别最低；比如事务A和事务B同时进行，事务A在整个执行阶段，会将某数据的值从1开始一直加到10，然后进行事务提交，此时，事务B能够看到这个数据项在事务A操作过程中的所有中间值（如1变成2，2变成3等），而对这一系列的中间值的读取就是未授权读取
-
-2. 授权读取（也称为已提交读）（Read Commited）
-
-授权读取只允许获取已经提交的数据。比如事务A和事务B同时进行，事务A进行+1操作，此时，事务B无法看到这个数据项在事务A操作过程中的所有中间值，只能看到最终的10。另外，如果说有一个事务C，和事务A进行非常类似的操作，只是事务C是将数据项从10加到20，此时事务B也同样可以读取到20，即授权读取允许不可重复读取。
-
-3. 可重复读（Repeatable Read)
-
-就是保证在事务处理过程中，多次读取同一个数据时，其值都和事务开始时刻是一致的，因此该事务级别禁止不可重复读取和脏读取，但是有可能出现幻影数据。所谓幻影数据，就是指同样的事务操作，在前后两个时间段内执行对同一个数据项的读取，可能出现不一致的结果。在上面的例子中，可重复读取隔离级别能够保证事务B在第一次事务操作过程中，始终对数据项读取到1，但是在下一次事务操作中，即使事务B（注意，事务名字虽然相同，但是指的是另一个事务操作）采用同样的查询方式，就可能读取到10或20；
-
-4. 串行化
-
-是最严格的事务隔离级别，它要求所有事务被串行执行，即事务只能一个接一个的进行处理，不能并发执行。
-
-#### 持久性（durability）
-
-一旦事务提交，那么它对数据库中的对应数据的状态的变更就会永久保存到数据库中。--即使发生系统崩溃或机器宕机等故障，只要数据库能够重新启动，那么一定能够将其恢复到事务成功结束的状态
 
 # Hadoop框架
 
@@ -69,7 +30,7 @@ Hadoop实际上是实现分布式文件系统的框架，命名为HDFS（Hadoop 
 
 | 命令                                        | 全称（辅助记忆）                        | 作用                                                     | 选项                                                                                                                                                                                                                                                                                 |
 |---------------------------------------------|-----------------------------------------|----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| hdfs dfs(Hadoop fs) 命令                    |                                         |                                                          |                                                                                                                                                                                                                                                                                      |
+| **hdfs dfs(Hadoop fs) 命令**                    |                                         |                                                          |                                                                                                                                                                                                                                                                                      |
 | -cp                                         | copy                                    | 在HDFS文件系统中，将文件或目录复制到目标路径下           | -cp [-f] [-p \| -p [topax] ] URI [ URI …] \< dest\>                                                                                                                                                                                                                                  |
 | -touchz                                     |                                         | 创建一个零长度的文件。                                   | -touchz URI [URI ...]                                                                                                                                                                                                                                                                |
 | -put(-copyFromLocal)                        |                                         | 将本地文件或目录上传到HDFS中的路径                       | -put \< localsrc\> … \< dst\>                                                                                                                                                                                                                                                        |
@@ -79,51 +40,52 @@ Hadoop实际上是实现分布式文件系统的框架，命名为HDFS（Hadoop 
 | -cat                                        |                                         | 显示文件内容到标准输出上。                               | -cat URI [URI …]                                                                                                                                                                                                                                                                     |
 | -tail                                       |                                         | 显示文件的最后1kb内容到标准输出                          | -tail [-f] URI -f选项将在文件增长时输出附加数据，如在Unix中一样。                                                                                                                                                                                                                    |
 | -mkdir                                      |                                         | 在dfs上创建文件夹                                        | 注意要写/…不然不会创建到主目录 比如/xxx而不是xxx                                                                                                                                                                                                                                     |
-| 启动HDFS                                    |                                         | 先要是hadoop账号（这才能免密ssh其他节点）                |                                                                                                                                                                                                                                                                                      |
+| **启动HDFS**                                    |                                         | 先要是hadoop账号（这才能免密ssh其他节点）                |                                                                                                                                                                                                                                                                                      |
 | start-dfs.sh                                |                                         |                                                          |                                                                                                                                                                                                                                                                                      |
 | start-yarn.sh                               |                                         |                                                          |                                                                                                                                                                                                                                                                                      |
 | mr-jobhistory-daemon.sh start historyserver |                                         |                                                          |                                                                                                                                                                                                                                                                                      |
 | start-all.sh                                |                                         | 实际就是start-dfs.sh 和 start-yarn.sh                    |                                                                                                                                                                                                                                                                                      |
-| 关闭HDFS                                    |                                         |                                                          |                                                                                                                                                                                                                                                                                      |
+| **关闭HDFS**                                    |                                         |                                                          |                                                                                                                                                                                                                                                                                      |
 | stop-yarn.sh                                |                                         |                                                          |                                                                                                                                                                                                                                                                                      |
 | stop-dfs.sh                                 |                                         |                                                          |                                                                                                                                                                                                                                                                                      |
 | mr-jobhistory-daemon.sh stop historyserver  |                                         |                                                          |                                                                                                                                                                                                                                                                                      |
 | stop-all.sh                                 |                                         |                                                          |                                                                                                                                                                                                                                                                                      |
-| 其他命令                                    |                                         |                                                          |                                                                                                                                                                                                                                                                                      |
+| **其他命令**                                    |                                         |                                                          |                                                                                                                                                                                                                                                                                      |
 | jps                                         | JavaVirtual Machine Process Status Tool | 查看当前java进程的小工具                                 |                                                                                                                                                                                                                                                                                      |
 | hadoop jar                                  |                                         | 运行jar包                                                | hadoop jar jar包路径                                                                                                                                                                                                                                                                 |
 
-通过命令 jps 可以查看各个节点所启动的进程。正确的话，在 Master 节点上可以看到 NameNode、ResourceManager、SecondrryNameNode、JobHistoryServer 、jps进程
+通过命令 `jps` 可以查看各个节点所启动的进程。
+正确的话，在 Master 节点上可以看到 `NameNode`、`ResourceManager`、`SecondrryNameNode`、`JobHistoryServer` 、`jps`进程
 
-在 Slave 节点可以看到 DataNode 和 NodeManager、jps 进程
+在 Slave 节点可以看到 `DataNode` 和 `NodeManager`、`jps` 进程
 
 Master如果**没有NameNode和SecondaryNameNode进程**：
 
-netstat -alnp \| grep 50070 看看端口是否被占用
-
+```bash
+netstat -alnp | grep 50070 # 看看端口是否被占用
 sudo lsof -i:端口 -P
-
 sudo kill -9 PID
+```
 
-或者使用hadoop namenode -format （namenode格式化命令）但是格式化namenode后会有datanode的clusterID 和 namenode的clusterID 不匹配的问题，这样**slave节点的datanode节点可能启动不成功**
+或者使用`hadoop namenode -format` （namenode格式化命令）但是格式化namenode后会有datanode的clusterID 和 namenode的clusterID 不匹配的问题，这样**slave节点的datanode节点可能启动不成功**
 
 当我们执行文件系统格式化时，会在namenode数据文件夹（即配置文件中dfs.name.dir在本地系统的路径）中保存一个current/VERSION文件，记录namespaceID，标志了所有格式化的namenode版本。如果我们频繁的格式化namenode，那么datanode中保存（即dfs.data.dir在本地系统的路径）的current/VERSION文件只是你地第一次格式化时保存的namenode的ID，因此就会造成namenode和datanode之间的ID不一致。
 
 解决方案：
 
-根据日志中的路径，cd /home/hadoop/tmp/dfs（一般设置的dfs.name.dir在本地系统的路径），能看到 data和name两个文件夹。
+根据日志中的路径，`cd /home/hadoop/tmp/dfs`（一般设置的`dfs.name.dir`在本地系统的路径），能看到 data和name两个文件夹。
 
 解决方法一：（推荐）
 
-删除DataNode的所有资料及将集群中每个datanode节点的/dfs/data/current中的VERSION删除，然后重新执行hadoop namenode -format进行格式化，重启集群，错误消失。
+删除DataNode的所有资料及将集群中每个datanode节点的`/dfs/data/current`中的VERSION删除，然后重新执行`hadoop namenode -format`进行格式化，重启集群，错误消失。
 
 解决方法二：
 
-将name/current下的VERSION中的clusterID复制到data/current下的VERSION中，覆盖掉原来的clusterID
+将`name/current`下的VERSION中的clusterID复制到`data/current`下的VERSION中，覆盖掉原来的clusterID
 
 让两个保持一致
 
-然后重启，启动后执行jps，查看进程
+然后重启，启动后执行`jps`，查看进程
 
 ## MapReduce
 
@@ -131,7 +93,7 @@ MapReduce是一种分布式并行编程框架，属于批处理的大数据计�
 
 MapReduce 采用分而治之，把非常庞大的数据集切成非常多的独立的小分片，然后为每一个分片单独地启动一个map任务，最终通过多个map任务，并行地在多个机器上去处理
 
-**理念**
+### 理念
 
 ![](../attachments/8f32067fd814bfa88192c710f4a30e6f.png) ![](../attachments/09ef84012e8d4bdf33928d9b8083d013.png)
 
@@ -139,33 +101,33 @@ MapReduce 采用分而治之，把非常庞大的数据集切成非常多的独�
 
 ![](../attachments/7004b5022fcd0e86dba22e9334a50460.png)
 
-就是输入一个键值对\<K1,V1\>经过map函数输出一批的键值对\<K2,V2\>
+就是输入一个键值对`<K1,V1>`经过map函数输出一批的键值对`<K2,V2>`
 
-Reduce函数作用
+#### Reduce函数作用
 
 ![](../attachments/904c8e26ca556c6da2811c15f74827fb.png)
 
-●体系结构
+#### 体系结构
 
 ![](../attachments/56400b450cba2d2b3ca81a35f424adf1.png)
 
-**Client（客户端）**
+#### Client（客户端）
 
 ![](../attachments/e9d9ab2494095230d2074f65edcbb7f1.png)
 
-**JobTracker（作业跟踪器）**
+#### JobTracker（作业跟踪器）
 
 ![](../attachments/8774a7fd25962605e30939f9109e33fb.png)
 
-**TaskTracker（任务调度器）**
+#### TaskTracker（任务调度器）
 
 ![](../attachments/bff81f1b67cba8fad0784a92097d9533.png)
 
-如何衡量资源使用情况？
+#### 如何衡量资源使用情况？
 
 slot（槽）资源调度单位，包含内存和cpu资源（将所有内存和cpu资源进行打包），分成map类型slot和reduce类型slot，可以一台机同时运行map任务和reduce任务
 
-**●工作流程**
+**工作流程**
 
 Map任务 -\> Reduce任务 结果是key-value键值对
 
@@ -235,9 +197,9 @@ Map任务的结果是输入到Map任务机器所在的本地磁盘上面
 
 对JobTracker进行功能拆分
 
-将资源管理抽出作为**ResourceManager 还会处理客户端请求 全局的资源管理器 以容器的形式分配（动态资源分配单位，每个容器中都封装了一定数量的CPU、内存、磁盘等资源，从而限定每个应用程序可以使用的资源量）给申请的应用程序，容器选择通常会考虑应用程序所要处理的数据的位置，就近选择。**
+将资源管理抽出作为**ResourceManager** 还会处理客户端请求 全局的资源管理器 以容器的形式分配（动态资源分配单位，每个容器中都封装了一定数量的CPU、内存、磁盘等资源，从而限定每个应用程序可以使用的资源量）给申请的应用程序，容器选择通常会考虑应用程序所要处理的数据的位置，就近选择。
 
-将任务调度和任务监控 作为**ApplicationMaster 还会容错，为应用程序申请资源，并分配给内部任务**
+将任务调度和任务监控 作为**ApplicationMaster** 还会容错，为应用程序申请资源，并分配给内部任务
 
 原来的Slave节点的TaskTracker交给**NodeManager**去管理
 
@@ -265,7 +227,7 @@ RegionServer，理解为数据节点，存储数据的。
 
 Master RegionServer要实时的向Master报告信息。Master知道全局的RegionServer运行情况，可以控制RegionServer的故障转移和Region的切分。
 
-<https://www.jianshu.com/p/b23800d9b227>
+[入门HBase，看这一篇就够了 - 简书 (jianshu.com)](https://www.jianshu.com/p/b23800d9b227)
 
 ### 存储
 
@@ -338,7 +300,7 @@ KeyType是什么？我们上面只说了「修改」的情况，你们有没有�
 | shutdown              | 关闭hbase集群（与exit不同）                                            |                                                                                                                                                                                                                     |
 | tools                 | 列出hbase所支持的工具                                                  |                                                                                                                                                                                                                     |
 
-### 问题
+## 问题
 
 #### 无法退格
 
@@ -369,5 +331,3 @@ Datahub 元数据治理平台（可以搜索到数据中心表、字段）
 ![Diagram Description automatically generated](../attachments/a7dec8118b5f0123e757f8f3f8256fba.png)
 
 TiDB、oceanBase，都是MySQL协议的。
-
-<https://www.yuque.com/xiaojian-bouxy/wesub4/wr2mgrdiop4uss6y>

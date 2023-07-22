@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/BigData.md",
+                "file": "ComputerScience/SoftwareTest.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/BigData.md",
+                "file": "ComputerScience/SoftwareTest.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/BigData.md",
+                "file": "ComputerScience/SoftwareTest.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/BigData.md"
+                "file": "ComputerScience/SoftwareTest.md"
               }
             }
           },
@@ -163,12 +163,11 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 340.5,
-    "collapsed": true
+    "width": 340.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,8 +181,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a699c46d79554932",
+  "active": "bcaaad220d822f98",
   "lastOpenFiles": [
+    "ComputerScience/IoT.md",
+    "ComputerScience/Database.md",
+    "ComputerScience/BigData.md",
+    "ComputerScience/SoftwareTest.md",
     "SoftwareManual/Git.md",
     "Music/MusicTheory.md",
     "Music/FLStudio.md",
@@ -217,13 +220,9 @@
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/MISC/文件头.md",
     "CTF/MISC/压缩包.md",
-    "README.md",
     "ComputerScience",
     "新建文件夹",
-    "SoftwareManual/Untitled.md",
-    "media/1bffabf753c0392c3520a8248c0ce74a.gif.md",
     "SoftwareManual",
-    "IDE/VSCode.md",
     "SoftwareMannual",
     "media",
     "IDE",

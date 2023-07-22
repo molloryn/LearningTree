@@ -13,7 +13,7 @@
   "markdown": true,
   "expand_level": "1",
   "hide_unsearched": true,
-  "auto_expand": true,
+  "auto_expand": false,
   "regex_search": false,
   "ellipsis": false,
   "label_direction": "left",

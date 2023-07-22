@@ -1,108 +1,6 @@
-目录
 
-[基础知识](#基础知识)
 
-[并发锁](#并发锁)
 
-[事务（Transaction）](#事务transaction)
-
-[数据库基础](#数据库基础)
-
-[查询顺序](#查询顺序)
-
-[引擎](#引擎)
-
-[锁](#锁)
-
-[SQL Server](#sql-server)
-
-[**语句**](#_Toc123134396)
-
-[**嵌套子查询**](#_Toc123134397)
-
-[**坑**](#_Toc123134398)
-
-[**函数**](#_Toc123134399)
-
-[数据库文件迁移](#数据库文件迁移)
-
-[MySQL常用操作](#mysql常用操作)
-
-[Trouble Shotting](#trouble-shotting)
-
-[连接及配置](#连接及配置)
-
-[管理全局变量](#管理全局变量)
-
-[表操作](#表操作)
-
-[临时表](#临时表)
-
-[查询（Select）](#查询select)
-
-[联表查询](#联表查询)
-
-[统计数据出现次数](#统计数据出现次数)
-
-[插入（INSERT）](#插入insert)
-
-[更新（UPDATE）](#更新update)
-
-[删除（DELETE）](#删除delete)
-
-[判断（Where Clause）](#判断where-clause)
-
-[函数](#函数)
-
-[其他](#其他)
-
-[字符编码](#字符编码)
-
-[数据库中的编码](#数据库中的编码)
-
-[问题](#问题)
-
-[DBF](#dbf)
-
-●in foreign key constraint ‘xxx_ibfk_1' are incompatible. 这种外键不兼容问题，可能是外键引用的类型不对
-
-●自动生成字段
-
-INSERT INTO \`user_account\` VALUES (ROUND(RAND()\*10000),rand_string(5),rand_string(6),ROUND(RAND()\*100), now(), ROUND(RAND()\*100000),0);
-
-●注释
-
-![](../attachments/7dc98a6eefb9e0f2514d0b470962f4b3.png)
-
-●"@"是:局部变量声明，如果没有"@"的字段代表是列名；
-
-eg：
-
-声明变量： declare @name varchar(8)
-
-赋值： set @name= '张三'
-
-查询： select \* from stuInfo where stuName = @name
-
-由set 和 select 进行赋值；
-
-select一般用于查询数据，然后再赋值变量。
-
-还有@@error 等是全局变量，系统自定义的，我们只读，不能改！！
-
-●order by …可以通过其+二分法来得到字段长度（就表格上面那行属性有多少种）
-
-order by 1就是用表中第一个字段来进行默认的升序排序（asc是升序的意思 默认可以不写 desc是降序 ）
-
-order by〖以某个字段排序]
-
-order by a,b ——a和b都是升序
-
-order by a,b desc ——a升序，b降序
-
-order by a desc，b ——a降序，b升序
-
-order by a desc，b desc ——a，b都是降序
 
 **●建立数据库【结构】**
 
@@ -207,73 +105,104 @@ id index
 
 ## 事务（Transaction）
 
-#### 原子性（atomicity）
+事务具有4个特征，分别是原子性、一致性、隔离性和持久性，简称事务的ACID特性；
 
-指事务是不可分割的工作单位，事务要么一起执行且成功，要么就不执行（中途失败需要回滚）
+#### 原子性（atomicity)
+
+一个事务要么全部提交成功，要么全部失败回滚，不能只执行其中的一部分操作，这就是事务的原子性
 
 回滚事务的原理就是，每个sql语句有对应的逆sql，MySQL中的innoDB引擎拥有undolog，有insert，就记录对应的delete语句
 
 事务提交有对应的redolog，用于数据恢复，保证持久性。
 
-#### 一致性（consistency）
+#### 一致性（consistency)
 
-事务执行后符合逻辑，即事务按照预期生效，数据的状态是预期的状态。
+事务的执行不能破坏数据库数据的完整性和一致性，一个事务在执行之前和执行之后，数据库都必须处于一致性状态。
+
+如果数据库系统在运行过程中发生故障，有些事务尚未完成就被迫中断，这些未完成的事务对数据库所作的修改有一部分已写入物理数据库，这是数据库就处于一种不正确的状态，也就是不一致的状态
 
 #### 隔离性（isolation）
 
-又称独立性，即并发运行的事务之间不可以相互影响，即需要规避并发错误。
+事务的隔离性是指在并发环境中，并发的事务时相互隔离的，一个事务的执行不能不被其他事务干扰。不同的事务并发操作相同的数据时，每个事务都有各自完成的数据空间，即一个事务内部的操作及使用的数据对其他并发事务是隔离的，并发执行的各个事务之间不能相互干扰。
+
+在标准SQL规范中，定义了4个事务隔离级别，不同的隔离级别对事务的处理不同，分别是：读未提交，读已提交，可重复读和串行化
+
+##### 事务隔离级别
+###### 1. 读未提交（Read Uncommited）
+
+该隔离级别相当于没有加锁，允许脏读，其隔离级别最低。比如事务A和事务B同时进行，事务A在整个执行阶段，会将某数据的值从1开始一直加到10，然后进行事务提交，此时，事务B能够读取到这个数据项在事务A操作过程中的所有中间值（如1变成2，2变成3等）。
+
+**脏读(Dirty Read)**：在A事务中，可以读到实际上可能不存在的数据（因为在B事务执行的中间值并不是最终的数据）
+
+###### 2. 读已提交（Read Commited）
+
+只能读取到已经提交了的事务的值，避免了脏读。但仍有幻读和不可重复读的问题存在。
+
+**幻读(Phantom reads)**：在A事务中，第一次读取的消息条数可能和第二次读取的消息条数不一样。涉及到消息条目的操作（insert, delete）需要注意该问题。
+
+**不可重复读(Non-repeatable reads)**：在A事务中，第一次读取一条记录某个字段上的值，可能和第二次读取该条记录上的值不一致。涉及到单条数据的需要注意该问题。
+
+###### 3. 可重复读（Repeatable Read)
+
+对正在修改的记录加了读锁，避免了不可重复读的问题。但仍有幻读的问题。
+
+###### 4. 串行化（Serializable）
+
+是最严格的事务隔离级别，它要求所有事务被串行执行，即事务只能一个接一个的进行处理，不能并发执行。
+避免了三种Read phenomena
 
 #### 持久性（durability）
 
-事务完成后，数据库做出的改变应该是永久的，即使数据库故障关闭，再启动数据库仍然是事务执行后的样子。
+一旦事务提交，那么它对数据库中的对应数据的状态的变更就会永久保存到数据库中。即使发生系统崩溃或机器宕机等故障，只要数据库能够重新启动，那么一定能够将其恢复到事务成功结束的状态
+
 
 # 数据库基础
 
 ## 查询顺序
 
-The following steps show the logical processing order, or binding order, for a SELECT statement. This order determines when the objects defined in one step are made available to the clauses in subsequent steps. For example, if the query processor can bind to (access) the tables or views defined in the FROM clause, these objects and their columns are made available to all subsequent steps. Conversely, because the SELECT clause is step 8, any column aliases or derived columns defined in that clause cannot be referenced by preceding clauses.(所以select的别名只能在select执行顺序后续的语句中使用) However, they can be referenced by subsequent clauses such as the ORDER BY clause. The actual physical execution of the statement is determined by the query processor and the order may vary from this list.
+The following steps show the logical processing order, or binding order, for a SELECT statement. This order determines when the objects defined in one step are made available to the clauses in subsequent steps. For example, if the query processor can bind to (access) the tables or views defined in the FROM clause, these objects and their columns are made available to all subsequent steps. **Conversely, because the SELECT clause is step 8, any column aliases or derived columns defined in that clause cannot be referenced by preceding clauses.(所以select的别名只能在select执行顺序后续的语句中使用)** However, they can be referenced by subsequent clauses such as the ORDER BY clause. The actual physical execution of the statement is determined by the query processor and the order may vary from this list.
 
-FROM
+### FROM
 
 对FROM子句中的前两个表执行笛卡尔积（Cartesian product)(交叉联接），生成虚拟表VT1
 
-ON
+### ON
 
 对VT1应用ON筛选器。只有那些使条件为真的行才被插入VT2。
 
-OUTER(JOIN)
+### OUTER(JOIN)
 
 如果指定了OUTER JOIN（相对于CROSS JOIN 或(INNER JOIN),保留表（preserved table：左外部联接把左表标记为保留表，右外部联接把右表标记为保留表，完全外部联接把两个表都标记为保留表）中未找到匹配的行将作为外部行添加到 VT2,生成VT3.如果FROM子句包含两个以上的表，则对上一个联接生成的结果表和下一个表重复执行步骤1到步骤3，直到处理完所有的表为止。
 
-WHERE
+### WHERE
 
 对VT3应用WHERE筛选器。只有条件为true的行才被插入VT4.
 
-GROUP BY
+### GROUP BY
 
 按GROUP BY子句中的列列表对VT4中的行分组，生成VT5.
 
-WITH CUBE or WITH ROLLUP
+### WITH CUBE or WITH ROLLUP
 
 把超组(Suppergroups)插入VT5,生成VT6.
 
-HAVING
+### HAVING
 
 对VT6应用HAVING筛选器。只有条件为true的组才会被插入VT7.
 
-SELECT
+### SELECT
 
 处理SELECT列表，产生VT8.
 
-DISTINCT
+### DISTINCT
 
 将重复的行从VT8中移除，产生VT9.
 
-ORDER BY
+### ORDER BY
 
 将VT9中的行按ORDER BY 子句中的列列表排序，生成游标（VC10).
 
-TOP/LIMIT
+### TOP/LIMIT
 
 从第几位开始取，限制行数
 
@@ -287,8 +216,10 @@ TOP/LIMIT
 
 对数据对象加上share共享锁（S锁），其他事务可以读取但无法修改它。如果加上exclusive排他锁（X锁），则其他事务无法访问到它。
 
-# SQL Server
 
+## 存储过程
+
+```sql
 IF NOT EXISTS(SELECT 1 WHERE @LocalAddr IN ('')) BEGIN
 
 IF … BEGIN
@@ -302,134 +233,349 @@ ELSE BEGIN
 …
 
 END
+```
 
-**语句**
+### 变量
 
-RESTORE DATABASE FIPS with recovery 使正在还原的数据库变为已还原可访问
+`@`是局部变量声明，如果没有`@`的字段代表是列名；
 
-**嵌套子查询**
+eg：
 
-select sum(c), d from
+```sql
+-- 声明变量：
+declare @name varchar(8)
 
+-- 赋值： 
+set @name= '张三'
+
+-- 查询：
+select * from stuInfo where stuName = @name
+```
+
+由 `set` 和 `select` 进行赋值；
+
+`select`一般用于查询数据，然后再赋值变量。
+
+还有`@@error` 等是全局变量，系统自定义的，我们只读，不能改！！
+
+
+## SQL语句
+
+### 查询（Select）
+
+##### := 符号
+
+```sql
+SET @rownum = 0;
+UPDATE table_name SET id = @rownum := @rownum +1;
+```
+
+将`@rownum+1`结果先赋值给`@rownum`，然后取`@rownum`的值
+
+##### DISTINCT
+
+```sql
+select title, count(*)
+from `music_data`
+group by 1
+having count(*) > 1;
+```
+
+可以取得distinct相反的结果
+
+##### NOT IN 和 IN
+
+```sql
+select *
+from class
+where id in (
+    select id from users
+)
+```
+
+但如果in的结果中包含null，那么整个结果都会变成null，所以in的select里面要`where id is not null`
+
+可以获得相反的结果
+
+##### Union
+
+```sql
+SELECT expression1, expression2, ... expression_n
+
+FROM tables
+
+[WHERE conditions]
+
+UNION [ALL | DISTINCT]
+
+SELECT expression1, expression2, ... expression_n
+
+FROM tables
+
+[WHERE conditions];
+```
+
+UNION 操作符用于连接两个以上的 SELECT 语句的结果组合到一个结果集合中。多个 SELECT 语句会删除重复的数据。
+
+**DISTINCT**: 可选，删除结果集中重复的数据。默认情况下 UNION 操作符已经删除了重复数据，所以 DISTINCT 修饰符对结果没啥影响。
+
+**ALL**: 可选，返回所有结果集，包含重复数据。
+
+##### 二次查询
+
+```sql
+select cardid from (select cardid,count(cardid) as total from p_person_info group by cardid) temp where temp.total>1
+```
+
+需要将临时表命名，这里命名为了temp
+
+#### 联表查询
+
+![](../attachments/a7fe2576af63b7d3b499b9fee1193621.jpeg)
+
+##### Left Join
+
+以左表为基准，on某个字段上为判断条件，所有符合的都会填充到左表上去，而且有多个符合会复制多次。
+
+##### 注意一对多的关联造成的错误
+
+业务上出现了
+
+```sql
+select * from flightPlan as f join @plan s on f.ReferSourceID = s.ReferSourceID WHERE S.ModifyFlag = 1
+```
+
+却筛选出ModifyFlag=-1的情况。这是因为ReferSourceID是一对多的关系，需要使用FlightPlanID进行一对一关联
+
+#### 统计数据出现次数
+
+[MySQL: Count occurrences of distinct values for each row - Stack Overflow](https://stackoverflow.com/questions/53103519/mysql-count-occurrences-of-distinct-values-for-each-row)
+
+**MYSQL 8.0.2+**
+
+```sql
+SELECT
+  name,
+  COUNT(*) OVER (PARTITION BY name) AS total_count
+FROM your_table
+```
+
+**Below 8.0.2**
+
+```sql
+SELECT
+  t1.name,
+  dt.total_count
+FROM your_table AS t1
+JOIN
 (
+ SELECT name,
+        COUNT(*) AS total_count
+ FROM your_table
+ GROUP BY name
+) AS dt ON dt.name = t1.name
+ORDER BY t1.id
+```
 
-select count(\*) c, DATEPART(HH, SOBT) as d from FlightPlan where … group by SOBT
 
+### 插入（INSERT）
+
+
+```sql
+INSERT INTO table_name ( field1, field2,...fieldN )
+VALUES
+( value1, value2,...valueN );
+-- 查询结果插入表
+insert into aliases(title, alias) select title, alias from aliasList;
+```
+
+
+### 更新（UPDATE）
+
+
+```sql
+UPDATE table_name SET field1=new-value1, field2=new-value2
+
+[WHERE Clause]
+
+-- 以下实例将更新 runoob_id 为 3 的runoob_title 字段值的 "C++" 替换为 "Python"：
+
+UPDATE runoob_tbl SET runoob_title = REPLACE(runoob_title, 'C++', 'Python') where
+
+runoob_id = 3;
+```
+
+
+##### 使用循环、游标、变量进行更新
+
+```sql
+DROP procedure IF EXISTS conbine_delete_remark;
+CREATE PROCEDURE conbine_delete_remark ()
+        BEGIN
+                     DECLARE _id int;
+                       DECLARE done INT DEFAULT 0;
+            DECLARE remark varchar(255) DEFAULT NULL;
+            --  创建游标  定义一个游标来记录sql查询的结果
+            declare cur cursor for
+                select sheet4.remark, sheet4.id from `sheet4` where sheet4.remark is not null && sheet4.type is null; -- 需要读取的数据列表
+            --  游标中的内容执行完后将done设置为1 为下面while循环建立一个退出标志，当游标遍历完后将flag的值设置为1
+             DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+             -- 打开游标
+            OPEN cur;
+            --  执行循环 
+            read_loop: LOOP
+            -- 提取游标里的数据 要一一对应
+            FETCH cur INTO remark, _id;
+            -- 判断是否结束循环 
+            IF done =1 THEN   
+                LEAVE read_loop; 
+            END IF;
+                       update `sheet4` set sheet4.remark = CONCAT(sheet4.remark, CHAR(10), remark) where sheet4.id = _id - 1;
+                      DELETE FROM `sheet4` where id = _id;
+            End LOOP;
+            -- 关闭游标 
+            close cur; 
+   END;
+call conbine_delete_remark (); -- 执行存储过程
+
+```
+
+##### 将查询仅一行结果赋值到变量
+
+```sql
+select max(status), avg(status) into @max, @avg from test_tbl;
+```
+
+##### 联表更新
+
+```sql
+update `plugin_maimai_song` a left join (SELECT c.song_title_kana, b.* FROM `plugin_maimai_song` c
+right join `jp` as b on c.song_title_kana = b.title_kana
+where c.song_title_kana is null) as j
+on a.song_title like CONCAT(SUBSTR(j.title, 1, 1),'%')
+where j.title is not null and a.song_title_kana is null
+set a.song_title = j.title, a.song_title_kana = j.title_kana
+```
+
+
+### 删除（DELETE）
+
+`DELETE FROM table_name [WHERE Clause]`
+
+### 判断（Where Clause）
+
+##### 判断null
+
+判断字段是否为null不可以用`=null`，需要使用`is null`或`is not null`
+
+```sql
+SELECT * FROM `sheet1` where sheet4.title is NULL;
+```
+
+##### In
+
+`not in`相当于all，如果 `not in` 后面跟的是子查询，子查询中只要包含一个 `null` 的返回值，则会造成 整个 `not in` 字句返回空值，查询不会返回任何结果。
+
+但`in` 相当于 any ,可以处理子查询中返回`null`的情况,返回正确的结果。
+
+### 排序 （Order By）
+
+可以通过其+二分法来得到字段长度（就表格上面那行属性有多少种）
+order by 1就是用表中第一个字段来进行默认的升序排序（asc是升序的意思 默认可以不写 desc是降序 ）
+order by 以某个字段排序
+order by a,b ——a和b都是升序
+order by a,b desc ——a升序，b降序
+order by a desc，b ——a降序，b升序
+order by a desc，b desc ——a，b都是降序
+
+# SQL Server
+
+
+## 语句
+
+`RESTORE DATABASE FIPS with recovery` 使正在还原的数据库变为已还原可访问
+
+### 嵌套子查询
+
+```sql
+select sum(c), d from
+(
+select count(*) c, DATEPART(HH, SOBT) as d from FlightPlan where … group by SOBT
 ) as tempTable group by d order by d.
+```
 
 嵌套语句都需要取列名、且临时表也要取名
 
-**坑**
+## 坑
 
 #### 自增ID列无法插入
 
-SET IDENTITY_INSERT FlightPlan ON
+`SET IDENTITY_INSERT FlightPlan ON`
 
 #### TOP而不是LIMIT
 
-而且写法是 SELECT TOP 100 \* FROM Table
+而且写法是 `SELECT TOP 100 * FROM Table`
 
 #### 字符串是用单引号而不是双引号
 
--   **在查询结果里面继续查询需要重命名结果**
+#### 在查询结果里面继续查询需要重命名结果
 
+```sql
 SELECT
-
-newStr,
-
-oldStr,
-
-LogID
-
+    newStr,
+    oldStr,
+    LogID
 FROM
+    (
+        SELECT
+           SUBSTRING (
+               MsgText,
+               newStart,
+               newEnd - newStart
+           ) AS newStr,
+           SUBSTRING (
+               MsgText,
+               oldStart,
+               oldEnd - oldStart
+           ) AS oldStr,
+           LogID
+        FROM
+           (
+               SELECT
+                   CHARINDEX('"OLDFLT_NUM":', MsgText) AS flag1,
+                   CHARINDEX('"OLDFLT_NUM":', MsgText) + len('"OLDFLT_NUM":') AS oldStart,
+                   CHARINDEX(',"OLDSTART_CITY"', MsgText) AS oldEnd,
+                   CHARINDEX('"NEWFLT_NUM":', MsgText) AS flag2,
+                   CHARINDEX('"NEWFLT_NUM":', MsgText) + len('"NEWFLT_NUM":') AS newStart,
+                   CHARINDEX(',"NEWSTART_CITY"', MsgText) AS newEnd,
+                   MsgText,
+                   LogID
+               FROM
+                   NAIPChangeLog
+               WHERE
+                   MsgVersion = '2021-13.V1'
+           ) AS tmp
+        WHERE
+           flag1 > 0
+        AND flag2 > 0
+        AND SUBSTRING (
+           MsgText,
+           oldStart,
+           oldEnd - oldStart
+        ) != SUBSTRING (
+           MsgText,
+           newStart,
+           newEnd - newStart
+        )
+    ) tmp2;
 
-(
+```
 
-SELECT
+> 注意里面的tmp和tmp2
 
-SUBSTRING (
+#### 在Select中命名的在Where中不能马上使用，这是因为Where比Select先执行，所以得使用嵌套查询才可用别名
 
-MsgText,
-
-newStart,
-
-newEnd - newStart
-
-) AS newStr,
-
-SUBSTRING (
-
-MsgText,
-
-oldStart,
-
-oldEnd - oldStart
-
-) AS oldStr,
-
-LogID
-
-FROM
-
-(
-
-SELECT
-
-CHARINDEX('"OLDFLT_NUM":', MsgText) AS flag1,
-
-CHARINDEX('"OLDFLT_NUM":', MsgText) + len('"OLDFLT_NUM":') AS oldStart,
-
-CHARINDEX(',"OLDSTART_CITY"', MsgText) AS oldEnd,
-
-CHARINDEX('"NEWFLT_NUM":', MsgText) AS flag2,
-
-CHARINDEX('"NEWFLT_NUM":', MsgText) + len('"NEWFLT_NUM":') AS newStart,
-
-CHARINDEX(',"NEWSTART_CITY"', MsgText) AS newEnd,
-
-MsgText,
-
-LogID
-
-FROM
-
-NAIPChangeLog
-
-WHERE
-
-MsgVersion = '2021-13.V1'
-
-) AS tmp
-
-WHERE
-
-flag1 \> 0
-
-AND flag2 \> 0
-
-AND SUBSTRING (
-
-MsgText,
-
-oldStart,
-
-oldEnd - oldStart
-
-) != SUBSTRING (
-
-MsgText,
-
-newStart,
-
-newEnd - newStart
-
-)
-
-) tmp2;
-
--   **在Select中命名的在Where中不能马上使用，这是因为Where比Select先执行，所以得使用嵌套查询才可用别名**
-
-**函数**
+## 函数
 
 | 函数名                                       | 作用                                                                                                   | 备注                                                                                                                                                                                 |
 |----------------------------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -443,23 +589,25 @@ newEnd - newStart
 
 ## 数据库文件迁移
 
+```sql
 select name,physical_name from sys.master_files; -- 查看数据库定义的文件目录
 
 USE master
 
 GO
 
-ALTER DATABASE ZGACFIPS MODIFY FILE (NAME= ZGACFIPS_data , FILENAME= 'D:\\MSSQL\\DATA\\ZGACFIPS_data.mdf') -- 设定数据库定义位置
+ALTER DATABASE ZGACFIPS MODIFY FILE (NAME= ZGACFIPS_data , FILENAME= 'D:\MSSQL\DATA\ZGACFIPS_data.mdf') -- 设定数据库定义位置
+```
 
 使用select后复制出来可以使用该正则快速生成
 
-\^((.+?)_.+?)\\s+.+\\\\(.+)
+`^((.+?)_.+?)\s+.+\\(.+)`
 
-ALTER DATABASE \$2 MODIFY FILE (NAME= \$1, FILENAME= 'D:\\\\MSSQL\\\\DATA\\\\\$3')
+`ALTER DATABASE $2 MODIFY FILE (NAME= $1, FILENAME= 'D:\\MSSQL\\DATA\\$3')`
 
 然后关闭数据库，解除文件占用，移动ldf、log文件到指定目录，再启动数据库，把处于Recovery Pending的数据库删除，再Attach上指定目录上的数据库。
 
-# MySQL常用操作
+# MySQL
 
 要注意MySQL里面函数的index是从1开始的。
 
@@ -475,11 +623,13 @@ EFCore默认是生成小写表名，不显式配置表名迁移到linux中会导
 
 #### 允许远程连接
 
-GRANT ALL PRIVILEGES ON \*.\* TO 'USERNAME'@'IP' IDENTIFIED BY 'PASSWORD' with grant option; -- ip设置为%是允许所有来源IP
+
+```sql
+GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'IP' IDENTIFIED BY 'PASSWORD' with grant option; -- ip设置为%是允许所有来源IP
 
 FLUSH PRIVILEGES;
 
-\--mysql8.0后不能直接GRANT to现有的用户 需要先创建新的再赋予权限
+--mysql8.0后不能直接GRANT to现有的用户 需要先创建新的再赋予权限
 
 Starting with MySQL 8 you no longer can (implicitly) create a user using the GRANT command. Use CREATE USER instead, followed by the GRANT statement:
 
@@ -487,19 +637,25 @@ USE mysql;
 
 CREATE USER 'user'@'localhost' IDENTIFIED BY 'P@ssW0rd';
 
-GRANT ALL ON \*.\* TO 'user'@'localhost';
+GRANT ALL ON *.* TO 'user'@'localhost';
 
 FLUSH PRIVILEGES;
 
-\--检查设定用户连接允许的host来源
+--检查设定用户连接允许的host来源
 
 SELECT host,user FROM mysql.user;
+```
+
 
 ## 管理全局变量
 
+
+```sql
 SHOW GLOBAL VARIABLES LIKE 'local_infile';
 
 SET GLOBAL local_infile = true;
+```
+
 
 ## 表操作
 
@@ -507,279 +663,56 @@ SET GLOBAL local_infile = true;
 
 ALTER TABLE 表名 CHANGE 旧字段名 新字段名 必须还得跟着新字段类型等;
 
-alter table \`songs\` change \`aaa\` \`bbb\` VARCHAR(255);
+
+```sql
+alter table `songs` change `aaa` `bbb` VARCHAR(255);
+```
+
 
 #### 修改字段
 
+
+```sql
 ALTER TABLE t_user
 
 ADD COLUMN user_age int(**11**) DEFAULT NULL COMMENT '年龄' AFTER user_email;
 
-\-- 删除列，COLUMN也可以不用写
+-- 删除列，COLUMN也可以不用写
 
 DROP COLUMN column;
 
-\-- 添加自增ID
+-- 添加自增ID
 
 alter table calendar add id int not null auto_increment PRIMARY KEY;
+```
+
 
 ## 临时表
 
-CREATE TEMPORARY TABLE IF NOT EXISTS table2 AS (SELECT \* FROM table1)
+```sql
+CREATE TEMPORARY TABLE IF NOT EXISTS table2 AS (SELECT * FROM table1)
 
-直接用结果集创建为临时表，不需要写临时表结构。
+-- 直接用结果集创建为临时表，不需要写临时表结构。
 
 DROP TABLE if EXISTS aliasTmpTable;
 
 CREATE TEMPORARY TABLE if not EXISTS aliasTmpTable (
 
-titleTmp VARCHAR ( 255 ), aliasTmp VARCHAR ( 255 ));
+        titleTmp VARCHAR ( 255 ), aliasTmp VARCHAR ( 255 ));
 
-临时表不可以写进存储过程BEGAIN里面，必须在外面声明，不然会报错。
+-- 临时表不可以写进存储过程BEGAIN里面，必须在外面声明，不然会报错。
+```
 
-## 查询（Select）
+### 注释
 
-#### := 符号
+![](../attachments/7dc98a6eefb9e0f2514d0b470962f4b3.png)
 
-SET @rownum = 0;
-
-UPDATE table_name SET id = @rownum := @rownum +1;
-
-将@rownum+1结果先赋值给@rownum，然后取@rownum的值
-
-#### DISTINCT
-
-select title, count(\*)
-
-from \`music_data\`
-
-group by 1
-
-having count(\*) \> 1;
-
-可以取得distinct相反的结果
-
-#### NOT IN 和 IN
-
-select \*
-
-from class
-
-where id in （
-
-select id from users
-
-）
-
-但如果in的结果中包含null，那么整个结果都会变成null，所以in的select里面要where id is not null
-
-可以获得相反的结果
-
-#### Union
-
-SELECT expression1, expression2, ... expression_n
-
-FROM tables
-
-[WHERE conditions]
-
-UNION [ALL \| DISTINCT]
-
-SELECT expression1, expression2, ... expression_n
-
-FROM tables
-
-[WHERE conditions];
-
-UNION 操作符用于连接两个以上的 SELECT 语句的结果组合到一个结果集合中。多个 SELECT 语句会删除重复的数据。
-
-DISTINCT: 可选，删除结果集中重复的数据。默认情况下 UNION 操作符已经删除了重复数据，所以 DISTINCT 修饰符对结果没啥影响。
-
-ALL: 可选，返回所有结果集，包含重复数据。
-
-#### 二次查询
-
-select cardid from (select cardid,count(cardid) as total from p_person_info group by cardid) temp where temp.total\>**1**
-
-需要将临时表命名，这里命名为了temp
-
-### 联表查询
-
-![](../attachments/a7fe2576af63b7d3b499b9fee1193621.jpeg)
-
-#### Left Join
-
-以左表为基准，on某个字段上为判断条件，所有符合的都会填充到左表上去，而且有多个符合会复制多次。
-
-#### 注意一对多的关联造成的错误
-
-业务上出现了
-
-select \* from flightPlan as f join @plan s on f.ReferSourceID = s.ReferSourceID WHERE S.ModifyFlag = 1，却筛选出ModifyFlag=-1的情况。这是因为ReferSourceID是一对多的关系，需要使用FlightPlanID进行一对一关联
-
-### 统计数据出现次数
-
-<https://stackoverflow.com/questions/53103519/mysql-count-occurrences-of-distinct-values-for-each-row>
-
-**MYSQL 8.0.2+**
-
-SELECT
-
-name,
-
-COUNT(\*) OVER (PARTITION BY name) AS total_count
-
-FROM your_table
-
-**Below**
-
-SELECT
-
-t1.name,
-
-dt.total_count
-
-FROM your_table AS t1
-
-JOIN
-
-(
-
-SELECT name,
-
-COUNT(\*) AS total_count
-
-FROM your_table
-
-GROUP BY name
-
-) AS dt ON dt.name = t1.name
-
-ORDER BY t1.id
-
-## 插入（INSERT）
-
-INSERT INTO table_name ( field1, field2,...fieldN )
-
-VALUES
-
-( value1, value2,...valueN );
-
-查询结果插入表
-
-insert into aliases(title, alias) select title, alias from aliasList;
-
-## 更新（UPDATE）
-
-UPDATE table_name SET field1=new-value1, field2=new-value2
-
-[WHERE Clause]
-
-以下实例将更新 runoob_id 为 3 的runoob_title 字段值的 "C++" 替换为 "Python"：
-
-UPDATE runoob_tbl SET runoob_title = REPLACE(runoob_title, 'C++', 'Python') where
-
-runoob_id = 3;
-
-#### 使用循环、游标、变量进行更新
-
-DROP procedure IF EXISTS conbine_delete_remark;
-
-CREATE PROCEDURE conbine_delete_remark ()
-
-BEGIN
-
-DECLARE \_id int;
-
-DECLARE done INT DEFAULT 0;
-
-DECLARE remark varchar(255) DEFAULT NULL;
-
-\-- 创建游标 定义一个游标来记录sql查询的结果
-
-declare cur cursor for
-
-select sheet4.remark, sheet4.id from \`sheet4\` where sheet4.remark is not null && sheet4.type is null; -- 需要读取的数据列表
-
-\-- 游标中的内容执行完后将done设置为1 为下面while循环建立一个退出标志，当游标遍历完后将flag的值设置为1
-
-DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
-
-\-- 打开游标
-
-OPEN cur;
-
-\-- 执行循环
-
-read_loop: LOOP
-
-\-- 提取游标里的数据 要一一对应
-
-FETCH cur INTO remark, \_id;
-
-\-- 判断是否结束循环
-
-IF done =1 THEN
-
-LEAVE read_loop;
-
-END IF;
-
-update \`sheet4\` set sheet4.remark = CONCAT(sheet4.remark, CHAR(10), remark) where sheet4.id = \_id - 1;
-
-DELETE FROM \`sheet4\` where id = \_id;
-
-End LOOP;
-
-\-- 关闭游标
-
-close cur;
-
-END;
-
-call conbine_delete_remark (); -- 执行存储过程
-
-#### 将查询仅一行结果赋值到变量
-
-select max(status), avg(status) into @max, @avg from test_tbl;
-
-#### 联表更新
-
-update \`plugin_maimai_song\` a left join (SELECT c.song_title_kana, b.\* FROM \`plugin_maimai_song\` c
-
-right join \`jp\` as b on c.song_title_kana = b.title_kana
-
-where c.song_title_kana is null) as j
-
-on a.song_title like CONCAT(SUBSTR(j.title, 1, 1),'%')
-
-where j.title is not null and a.song_title_kana is null
-
-set a.song_title = j.title, a.song_title_kana = j.title_kana
-
-## 删除（DELETE）
-
-DELETE FROM table_name [WHERE Clause]
-
-## 判断（Where Clause）
-
-#### 判断null
-
-判断字段是否为null不可以用=null，需要使用is null或is not null
-
-SELECT \* FROM \`sheet1\` where sheet4.title is NULL;
-
-#### In
-
-not in相当于all，如果 not in 后面跟的是子查询，子查询中只要包含一个 null 的返回值，则会造成 整个 not in 字句返回空值，查询不会返回任何结果。
-
-但in 相当于 any ,可以处理子查询中返回null的情况,返回正确的结果。
 
 ## 函数
 
 | 函数                                     | 作用           | 备注                                                                                                                                                                                                                                                                                                                               |
-|------------------------------------------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 字符串操作                               |                |                                                                                                                                                                                                                                                                                                                                    |
+| ---------------------------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **字符串操作**                               |                |                                                                                                                                                                                                                                                                                                                                    |
 |                                          | Start With     | MySQL似乎没有StartWith这种功能，但是可以通过下面这个实现： a.song_title like CONCAT(SUBSTR(j.title, 1, 1),'%')                                                                                                                                                                                                                     |
 | CONCAT()                                 | 字符串拼接     | 最常用的字符串拼接方法，但遇到拼接中的字符串出现null的情况会返回null 插入换行符得用CHAR(10)                                                                                                                                                                                                                                        |
 | CONCAT_WS()（concat with separator）     | 字符串拼接     | 比CONCAT多了个分隔符功能，且如果某个字符串为null，会忽略null，并返回其他字符串的值 语法：CONCAT_WS(separator,str1,str2,…) 第一个参数是其它参数的分隔符。分隔符的位置放在要连接的两个字符串之间。分隔符可以是一个字符串，也可以是其它参数                                                                                           |
@@ -787,47 +720,14 @@ not in相当于all，如果 not in 后面跟的是子查询，子查询中只要
 | CONVERT("23333.3333", decimal(3,1))      | 字符串类型转换 | 不支持’’的，会报错Incorrect DECIMAL value: ‘0’ for column ‘’ at row -1 decimal(3,1)，总3位，保留1位 如果只用decimal，则是四舍五入变成整数                                                                                                                                                                                          |
 | substring_index                          |                | Return the substring before the first occurrence of the delimiter "-": SELECT SUBSTRING_INDEX('foo-bar-bar', '-', 1) as result; Outputs result = "foo" You can replace 1 with the numbers of occurrences you want before getting the substring SELECT SUBSTRING_INDEX('foo-bar-bar', '-', 2) as result; Outputs result = "foo-bar" |
 | FROM_UNIXTIME(date,'%Y-%m-%d %H:%i:%S')  | 时间戳转换     |                                                                                                                                                                                                                                                                                                                                    |
-| SUBSTRING(myfield, 1, LENGTH(myfield)-4) |                | 利用length函数，动态的检测需要保留的位数，因此曲线救国的实现了remove。 注意**CHARACTER_LENGTH()**与**LENGTH()**的区别！                                                                                                                                                                                                            |
+| SUBSTRING(myfield, 1, LENGTH(myfield)-4) |                | 利用length函数，动态的检测需要保留的位数，因此曲线救国的实现了remove。 注意CHARACTER_LENGTH()与LENGTH()的区别！                                                                                                                                                                                                                    |
 |                                          |                |                                                                                                                                                                                                                                                                                                                                    |
 |                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-| 判断操作                                 |                |                                                                                                                                                                                                                                                                                                                                    |
+| **判断操作**                                 |                |                                                                                                                                                                                                                                                                                                                                    |
 | IF(expr1,expr2,expr3)                    | IF             | 如果expr1=true，则返回expr2，否则expr3。                                                                                                                                                                                                                                                                                           |
 | IFNULL(expr1,expr2)                      |                | 假如expr1 不为 NULL，则 IFNULL() 的返回值为 expr1; 否则其返回值为 expr2                                                                                                                                                                                                                                                            |
 |                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-|                                          |                |                                                                                                                                                                                                                                                                                                                                    |
-| 日期处理                                 |                |                                                                                                                                                                                                                                                                                                                                    |
+| **日期处理**                                 |                |                                                                                                                                                                                                                                                                                                                                    |
 | YEAR(date)                               | 获取年         |                                                                                                                                                                                                                                                                                                                                    |
 | MONTH(date)                              | 获取月         |                                                                                                                                                                                                                                                                                                                                    |
 | DAY(date)                                | 获取日         |                                                                                                                                                                                                                                                                                                                                    |
@@ -838,43 +738,37 @@ not in相当于all，如果 not in 后面跟的是子查询，子查询中只要
 
 #### 自增ID重置
 
-从第一条开始重置（注意不可以用于有外键关系的）
+
+```sql
+-- 从第一条开始重置（注意不可以用于有外键关系的）
 
 SET @rownum = 0;
-
 UPDATE table_name SET id = @rownum := @rownum +1;
 
-从最后一条开始重置
+-- 从最后一条开始重置
 
 ALTER TABLE table_name AUTO_INCREMENT = 1;
 
-注意自增id重置后仍然会往现有表中id最大一个往后加
+-- 注意自增id重置后仍然会往现有表中id最大一个往后加
+```
 
 #### 一行变多行
 
+```sql
 Drop table if EXISTS numbers;
-
 CREATE TEMPORARY TABLE numbers (
-
-n INT PRIMARY KEY);
-
-\-- 这意思是是拆分结果最多可能的数量
-
+  n INT PRIMARY KEY);
+-- 这意思是是拆分结果最多可能的数量
 INSERT INTO numbers VALUES (1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12),(13);
-
 select
-
-aliases.title,
-
-SUBSTRING_INDEX(SUBSTRING_INDEX(aliases.alias, '\|', n), '\|', -1) as a
-
+  aliases.title,
+  SUBSTRING_INDEX(SUBSTRING_INDEX(aliases.alias, '|', n), '|', -1) as a
 from
+  numbers inner join aliases
+  on CHAR_LENGTH(aliases.alias)
+     -CHAR_LENGTH(REPLACE(aliases.alias, '|', ''))>=n-1
 
-numbers inner join aliases
-
-on CHAR_LENGTH(aliases.alias)
-
-\-CHAR_LENGTH(REPLACE(aliases.alias, '\|', ''))\>=n-1
+```
 
 ## 字符编码
 
@@ -924,19 +818,15 @@ U+10000 \~ U+10FFFF: 11110XXX 10XXXXXX 10XXXXXX 10XXXXXX
 
 根据上表中的编码规则，之前的「知」字的码位 U+77E5 属于第三行的范围：
 
-7 7 E 5
-
-0111 0111 1110 0101 二进制的 77E5
-
-\--------------------------
-
-0111 011111 100101 二进制的 77E5
-
+```
+       7    7    E    5   
+    0111 0111 1110 0101    二进制的 77E5
+--------------------------
+    0111   011111   100101 二进制的 77E5
 1110XXXX 10XXXXXX 10XXXXXX 模版（上表第三行）
-
 11100111 10011111 10100101 代入模版
-
-E 7 9 F A 5
+   E   7    9   F    A   5
+```
 
 这就是将 U+77E5 按照 UTF-8 编码为字节序列 E79FA5 的过程。反之亦然。
 
@@ -972,11 +862,18 @@ ci是case insensitive的缩写，cs是case sensitive的缩写。即，指定大�
 
 **在ci的collation下，如何在比对时区分大小写？**
 
-select \* from pet where name = binary 'whistler';(推荐，这不会使索引失效)
+
+```sql
+select * from pet where name = binary 'whistler'; -- 推荐，这不会使索引失效
+```
+
 
 或
 
-select \* from pet where binary name = 'whistler';
+
+```sql
+select * from pet where binary name = 'whistler';
+```
 
 **mysql中的对utf8支持有缺点**（因为早期规定只支持最大utf8的字符长度为 3 字节 或称为utf8mb3）
 
@@ -994,55 +891,46 @@ ai表示accent insensitivity，也就是“不区分音调”
 
 修改数据库的
 
+
+```sql
 ALTER DATABASE db_name CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+```
+
 
 生成修改表的语句
 
+
+```sql
 SELECT
-
-CONCAT("ALTER TABLE \`", TABLE_NAME,"\` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;")
-
+CONCAT("ALTER TABLE `", TABLE_NAME,"` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;")
 AS target_tables
-
 FROM INFORMATION_SCHEMA.TABLES
-
 WHERE TABLE_SCHEMA="db_name"
-
 AND TABLE_TYPE="BASE TABLE"
+```
 
-注意，这里使用 CONVERT TO 而非 DEFAULT，是因为后者不会修改表中字段的编码和字符集。
+注意，这里使用 `CONVERT TO` 而非 `DEFAULT`，是因为后者不会修改表中字段的编码和字符集。
 
 #### 使用Mysql数据库函数解码Unicode字段内容到UTF-8
 
+
+```sql
 CREATE FUNCTION STRINGDECODE(str TEXT CHARSET utf8)
-
 RETURNS text CHARSET utf8 DETERMINISTIC
-
 BEGIN
-
 declare pos int;
-
 declare escape char(6) charset utf8;
-
 declare unescape char(3) charset utf8;
-
-set pos = locate('\\\\u', str);
-
-while pos \> 0 do
-
-set escape = substring(str, pos, 6);
-
-set unescape = char(conv(substring(escape,3),16,10) using ucs2);
-
-set str = replace(str, escape, unescape);
-
-set pos = locate('\\\\u', str, pos+1);
-
+set pos = locate('\\u', str);
+while pos > 0 do
+    set escape = substring(str, pos, 6);
+    set unescape = char(conv(substring(escape,3),16,10) using ucs2);
+    set str = replace(str, escape, unescape);
+    set pos = locate('\\u', str, pos+1);
 end while;
-
 return str;
-
-END//
+END
+```
 
 ##### Collation与Character Set分开的好处
 
@@ -1070,11 +958,14 @@ END//
 
 #### MySQL Error 1153 - Got a packet bigger than 'max_allowed_packet' bytes
 
+```sql
 set global net_buffer_length=1000000;
 
 set global max_allowed_packet=1000000000;
 
-(Use a very large value for the packet size.)
+-- Use a very large value for the packet size.
+```
+
 
 # DBF
 

@@ -6,7 +6,7 @@
 
 最终目的是质量保障QA（QUALITY ASSURANCE）。
 
-<https://blog.csdn.net/weixin_47197994/article/details/106334704>
+[2020软件测试工程师面试题汇总（内含答案）-看完BATJ面试官对你竖起大拇指！_软件测试狂阿沐的博客-CSDN博客](https://blog.csdn.net/weixin_47197994/article/details/106334704)
 
 对我而言的测试：
 
