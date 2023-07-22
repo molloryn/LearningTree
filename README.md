@@ -29,7 +29,13 @@
 | 表格Tab           | 同行切换，最后一列后开始添加下一列 |
 | Ctrl+D            | 删除当前段落（Delete）             |
 | Ctrl+E            | 切换为编辑模式进行预览             |
-| Ctrl+Shift+I      | 打开DevTools查看Obsidian报错       | 
+| Ctrl+Shift+I      | 打开DevTools查看Obsidian报错       |
+| Alt+1             | 添加代码行                         |
+| Alt+3             | 添加代码块                         |
+| Alt+4             | 来源浮窗插件颜色                   |
+| Alt+5             | 来源字体颜色插件颜色               |
+| Alt+6             | 设置字体颜色                       |
+| Alt+Q             | Quiet Outline插件的目录            | 
 
 > 模板在attachments/templates文件夹下，可以自行增加模板
 

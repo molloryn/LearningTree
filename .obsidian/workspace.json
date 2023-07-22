@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/ArtificialIntelligence.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/ArtificialIntelligence.md",
+                "file": "README.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/ArtificialIntelligence.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/ArtificialIntelligence.md"
+                "file": "README.md"
               }
             }
           },
@@ -183,9 +183,10 @@
   },
   "active": "a699c46d79554932",
   "lastOpenFiles": [
+    "ComputerScience/Unity.md",
+    "ComputerScience/ArtificialIntelligence.md",
     "ComputerScience/Database.md",
     "ComputerScience/BigData.md",
-    "ComputerScience/ArtificialIntelligence.md",
     "README.md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "ComputerScience/IoT.md",
@@ -219,7 +220,6 @@
     "SoftwareManual/VSCode.md",
     "Music",
     "CTF/MISC/图像隐写/图像隐写.md",
-    "CTF/MISC/图像隐写/PNG.md",
     "ComputerScience",
     "新建文件夹",
     "SoftwareManual",
