@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/VSCode.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/VSCode.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/VSCode.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolsList.md"
+                "file": "SoftwareManual/VSCode.md"
               }
             }
           },
@@ -181,8 +181,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a699c46d79554932",
+  "active": "95641d9f2e99738f",
   "lastOpenFiles": [
+    "CTF/ToolsList.md",
     "README.md",
     "ComputerScience/Unity.md",
     "ComputerScience/ArtificialIntelligence.md",
@@ -196,7 +197,6 @@
     "CTF/ToolManual/Wireshark.md",
     "ComputerScience/SoftwareTest.md",
     "SoftwareManual/Git.md",
-    "CTF/ToolsList.md",
     "CTF/README.md",
     "CTF/CTF.md",
     "CTF/Reverse.md",
