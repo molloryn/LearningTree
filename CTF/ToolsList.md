@@ -78,8 +78,8 @@
 
 | 软件名    | 场景    | 备注 |
 |:--------- |:------- |:---- |
-| tabby     |         | [A terminal for a more modern age (github.com)](https://github.com/Eugeny/tabby)     |
-| WindTerm  |         |      |
+| tabby     | 终端       | [A terminal for a more modern age](https://github.com/Eugeny/tabby)     |
+| WindTerm  |         | [kingToolbox/WindTerm](https://github.com/kingToolbox/WindTerm)     |
 | MobaXterm |         |      |
 | WinSCP    | FTP工具 |      |
 |           |         |      |
