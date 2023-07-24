@@ -1,8 +1,8 @@
 # 术语
 
-速度：BPM beats per minutes; 每分钟有多少拍
+速度：BPM beats per minutes; 每分钟有多少拍。
 
-小节：一定数量的节拍组成一个小节
+小节：一定数量的节拍组成一个小节。
 
 ## 节拍
 
