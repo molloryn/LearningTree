@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VSCode.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VSCode.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VSCode.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VSCode.md"
+                "file": "SoftwareManual/VisualStudio.md"
               }
             }
           },
@@ -181,8 +181,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "95641d9f2e99738f",
+  "active": "a699c46d79554932",
   "lastOpenFiles": [
+    "SoftwareManual/VSCode.md",
     "CTF/ToolsList.md",
     "README.md",
     "ComputerScience/Unity.md",
@@ -217,7 +218,6 @@
     "SoftwareManual/CMD.md",
     "SoftwareManual/VisualStudio.md",
     "SoftwareManual/MicosoftOffice.md",
-    "SoftwareManual/VSCode.md",
     "Music",
     "CTF/MISC/图像隐写/图像隐写.md",
     "ComputerScience",

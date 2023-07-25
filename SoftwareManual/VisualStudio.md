@@ -1,16 +1,19 @@
 ### 离线下载
-
+##### 教程
 [Create an offline installation - Visual Studio (Windows) | Microsoft Learn](https://learn.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2022)
 
+##### 下载bootstrapper vs_enterprise.exe
+[Create a network-based installation - Visual Studio (Windows) | Microsoft Learn](https://learn.microsoft.com/en-us/visualstudio/install/create-a-network-installation-of-visual-studio?view=vs-2022#download-the-visual-studio-bootstrapper-to-create-the-layout)
 ```shell
-# 下载vs_enterprise.exe
-https://learn.microsoft.com/en-us/visualstudio/install/create-a-network-installation-of-visual-studio?view=vs-2022#download-the-visual-studio-bootstrapper-to-create-the-layout
-
-# create local layout
+# 使用哦 bootstrapper进行运行命令 create local layout
 vs_enterprise.exe --layout D:\VS2022\vslayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Microsoft.VisualStudio.Component.Git --includeRecommended --lang en-US zh-CN
 
-# 到内网机器下，一定要使用同一条命令安装
-D:\VS2022\vslayout\vs_enterprise.exe --noweb --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Microsoft.VisualStudio.Component.Git --includeRecommended --lang en-US zh-CN 
+# --lang在安装时无效
+# --fix可以检验vslayout是否有包是损坏的
+
+
+# 到内网机器下，一定要使用同一条命令安装，而且启动bootstrapper换成了vslayout里面的
+D:\VS2022\vslayout\vs_enterprise.exe --noweb --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Microsoft.VisualStudio.Component.Git --includeRecommended
 # 指定路径安装：--installPath d:\VS2021
 ```
 
