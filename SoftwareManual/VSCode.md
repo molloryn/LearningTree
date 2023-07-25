@@ -1,5 +1,7 @@
 ### 导出当前所有安装的插件的vsix文件以供离线安装
 
+[How can I install Visual Studio Code extensions offline? - Stack Overflow](https://stackoverflow.com/questions/37071388/how-can-i-install-visual-studio-code-extensions-offline)
+
 保存为`.ps1`文件运行即可。
 
 ```powershell
