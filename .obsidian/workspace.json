@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolsList.md"
+                "file": "SoftwareManual/VisualStudio.md"
               }
             }
           },
@@ -183,6 +183,7 @@
   },
   "active": "a699c46d79554932",
   "lastOpenFiles": [
+    "CTF/ToolsList.md",
     "attachments/templates/Csharp代码.md.baiduyun.uploading.cfg",
     "attachments/ffbf0839a1b1013377f002c9325dc7be.png.baiduyun.uploading.cfg",
     "attachments/fcf4104187daf017d196f9f78ae3026d.png.baiduyun.uploading.cfg",
@@ -193,10 +194,8 @@
     "attachments/f6900c3da018b866d40387f299d60a83.png.baiduyun.uploading.cfg",
     "attachments/f58053aebc4a367dba3f4568e6046917.png.baiduyun.uploading.cfg",
     "attachments/f1d536758829215117a158ef7cf922bb.png.baiduyun.uploading.cfg",
-    "attachments/ecab3e5c9f7424f21b6ee96c1b48970b.png.baiduyun.uploading.cfg",
     "SoftwareManual/VisualStudio.md",
     "SoftwareManual/VSCode.md",
-    "CTF/ToolsList.md",
     "README.md",
     "ComputerScience/Unity.md",
     "ComputerScience/ArtificialIntelligence.md",
