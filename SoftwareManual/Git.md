@@ -23,6 +23,10 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/Euynac/IntelligentTowerUI.git
 git push -u origin main
+# 这里-u是--set-upstream的简写，其主要用途是在推送代码的同时，将本地分支与远程分支建立起关联关系。
+# 这里就是将本地的main分支与远程的origin/main分支建立关联
+# 下次再在本地mian分支进行push时，可以直接简化写为git push
+
 ```
 
 ### 提交
@@ -33,7 +37,9 @@ git diff # 然后查看冲突的原因
 git status # 查看当前修改以及新增的未track的
 git add . # 提交到缓冲区，未track的也track
 git commit -m 描述 # m是message，提交到本地仓库
-git push origin 本地分支名:远程分支名 # 提交到远程仓库。本地分支名写HEAD是指当前本地工作的分支指针
+git push 远程仓库名 本地分支名:远程分支名 # 提交到远程仓库。本地分支名写HEAD是指当前本地工作的分支指针
+# 其中远程仓库名在git remote add origin时设置，所以一般就是origin
+# 如果不指明远程分支名，那么默认推送到远程仓库的与本地分支名一样的分支
 ```
 
 
@@ -41,7 +47,7 @@ git push origin 本地分支名:远程分支名 # 提交到远程仓库。本地
 
 ```bash
 git config --global http.proxy # 查看当前设置的代理
-git config --global http.proxy socks5://127.0.0.1:1080 # 设置代理为sock5（可换为http等），设置后同样作用于vs的gi
+git config --global http.proxy socks5://127.0.0.1:1080 # 设置代理为sock5（可换为http等），设置后同样作用于vs的git
 git config --global --unset http.proxy # 移除代理
 ```
 

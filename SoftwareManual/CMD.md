@@ -115,6 +115,12 @@ $data = Get-WMIObject -Query "SELECT * FROM Win32_PerfFormattedData_Counters_The
 ```
 
 # Windows
+#### 入域
+
+计算机名联系部门相关人员，应是一人一计算机名。
+确认入域时，会提醒输入域账号密码验证，这时候如果这个计算机名没有关联到域账号，那会显示找不到路径之类的错误提示，这时候要联系域管理员关联上，才能使用域账号密码登陆。
+
+![](../attachments/Pasted%20image%2020230726170452.png)
 
 #### 游戏强制全屏的窗口化
 

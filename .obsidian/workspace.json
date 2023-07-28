@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "SoftwareManual/CMD.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "SoftwareManual/CMD.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "SoftwareManual/CMD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "SoftwareManual/CMD.md"
               }
             }
           },
@@ -183,6 +183,8 @@
   },
   "active": "a699c46d79554932",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230726170452.png",
+    "SoftwareManual/VisualStudio.md",
     "CTF/ToolsList.md",
     "attachments/templates/Csharp代码.md.baiduyun.uploading.cfg",
     "attachments/ffbf0839a1b1013377f002c9325dc7be.png.baiduyun.uploading.cfg",
@@ -194,7 +196,6 @@
     "attachments/f6900c3da018b866d40387f299d60a83.png.baiduyun.uploading.cfg",
     "attachments/f58053aebc4a367dba3f4568e6046917.png.baiduyun.uploading.cfg",
     "attachments/f1d536758829215117a158ef7cf922bb.png.baiduyun.uploading.cfg",
-    "SoftwareManual/VisualStudio.md",
     "SoftwareManual/VSCode.md",
     "README.md",
     "ComputerScience/Unity.md",

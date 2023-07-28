@@ -67,6 +67,16 @@ Shift+F5就能回到上一次编辑位置
 
 ![Graphical user interface Description automatically generated with medium confidence](../attachments/f58053aebc4a367dba3f4568e6046917.png)
 
+# PPT
+
+#### 隐藏指定Component
+
+使用“选择”窗格管理对象，快捷键`ALT+F10`
+
+
+
+
+
 # Excel
 
 ## 删除多行
