@@ -20,7 +20,11 @@ git branch -vv #查看本地分支和远程分支的关联关系
 git init
 git add .
 git commit -m "first commit"
-git branch -M main
+git branch -M main 
+# 更改当前分支名为main。-M是--move 和 --force的结合
+# -M是即使已存在相应的分支名也可以重命名分支。而-m则更宽松
+
+
 git remote add origin https://github.com/Euynac/IntelligentTowerUI.git
 git push -u origin main
 # 这里-u是--set-upstream的简写，其主要用途是在推送代码的同时，将本地分支与远程分支建立起关联关系。
