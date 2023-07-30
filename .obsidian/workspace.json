@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolManual/VMware.md",
+                "file": "CTF/ToolManual/010Editor.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolManual/VMware.md",
+                "file": "CTF/ToolManual/010Editor.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolManual/VMware.md",
+                "file": "CTF/ToolManual/010Editor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolManual/VMware.md"
+                "file": "CTF/ToolManual/010Editor.md"
               }
             }
           },
@@ -183,13 +183,16 @@
   },
   "active": "a699c46d79554932",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230730194022.png",
+    "CTF/README.md",
+    "CTF/ToolManual/010Editor.md",
+    "CTF/MISC/文件头.md",
+    "CTF/MISC/图像隐写/PNG.md",
+    "CTF/MISC/图像隐写/图像隐写.md",
+    "CTF/ToolManual/VMware.md",
     "attachments/Pasted image 20230730175440.png",
     "attachments/Pasted image 20230730175319.png",
     "CTF/MISC/压缩包.md",
-    "CTF/ToolManual/VMware.md",
-    "CTF/MISC/图像隐写/PNG.md",
-    "CTF/MISC/文件头.md",
-    "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/ToolManual/CyberChef.md",
     "CTF/ToolsList.md",
     "attachments/Pasted image 20230726170452.png.baiduyun.uploading.cfg",
@@ -218,9 +221,7 @@
     "CTF/ToolManual/Wireshark.md",
     "ComputerScience/SoftwareTest.md",
     "SoftwareManual/Git.md",
-    "CTF/README.md",
     "CTF/CTF.md",
-    "CTF/Reverse.md",
     "attachments/ffbf0839a1b1013377f002c9325dc7be.png",
     "attachments/fcf4104187daf017d196f9f78ae3026d.png",
     "attachments/faa2999d50b3b1ad6eed55bdce1f885a.png",
@@ -228,7 +229,6 @@
     "attachments/f1d536758829215117a158ef7cf922bb.png",
     "attachments/ecab3e5c9f7424f21b6ee96c1b48970b.png",
     "attachments/ec41e0fb319b852f88fb9e1d58133e0e.png",
-    "attachments/e853f449ad2dc9e60a72101d81454ab8.png",
     "未命dd名.canvas"
   ]
 }
