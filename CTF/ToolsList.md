@@ -161,7 +161,7 @@
 | GoldenDict   | 支持MDict的字典工具                              |                                                               |
 | FluentSearch | 快捷搜索栏，大量功能                             |                                                               |
 | Quicker      | 鼠标中键插件扩展、类Workflow编程、含有快捷搜索栏 | 收费版可翻页                                                  |
-| utools       | 类似Quicker，但支持markdown笔记搜索              |                                                               |
+| utools       | 类似Quicker，但支持markdown笔记搜索              | [插件离线安装](https://blog.csdn.net/m0_32156988/article/details/126415067)                                                              |
 | DevToys      | 如格式化JSON，JSON转YAML，比较文本，测试RegExp   | [veler/DevToys](https://github.com/veler/DevToys)             |
 | PowerToys    | 微软开源功能增强工具，包括批量重命名、图像压缩等 | [microsoft/PowerToys](https://github.com/microsoft/PowerToys) |
 
