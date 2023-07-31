@@ -1,4 +1,10 @@
-# Git使用
+# Git
+
+## 概念
+
+##### ref
+
+A remote ref is a reference (pointer) to a branch, tag, or other object in a remote repository. For example, if you clone a repository from git.ourcompany.com, you will have a remote ref named origin/master that points to the master branch on the remote server. You can use remote refs to fetch, push, or pull data from the remote repository. You can also use them to track the state of the remote repository and compare it with your local repository.
 
 ## 开始新项目
 
