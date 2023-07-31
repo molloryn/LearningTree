@@ -119,13 +119,29 @@ Proper Name <proper@email.xx> Commit Name <commit@email.xx>
 
 但似乎对Gitlab不管用。
 
-不过可以通过[github.com/newren/git-filter-repo/](https://github.com/newren/git-filter-repo/)该工具，通过编写的`mailmap`文件，自动应用`filter-branch`命令
+###### git-filter-repo工具
+
+不过可以通过[github.com/newren/git-filter-repo/](https://github.com/newren/git-filter-repo/)该工具，通过编写的`mailmap`文件，自动应用`filter-branch`命令。
+
+这个命令还需要在`fresh clone`的仓库下运行，意思是需要重新从远程克隆仓库到本地并保持`fresh`，以保证执行的简单性。
 
 ```shell
 git filter-repo --mailmap git-mailmap
 ```
 
 [git - How do I change the author and committer name/email for multiple commits? - Stack Overflow](https://stackoverflow.com/questions/750172/how-do-i-change-the-author-and-committer-name-email-for-multiple-commits/9491696#9491696)
+
+###### 提交filter-branch的更改
+
+```shell
+git push origin --force-with-lease
+```
+
+> `force` overwrites a remote branch with your local branch.
+>
+> `--force-with-lease` It allows you to overwrite a remote branch only if your local copy is up to date with the remote branch, or in other words, if you have the “lease” on the remote branch. This way, you can avoid losing someone else’s work that you have not fetched yet. If the remote branch has changed since you last fetched it, the push will be rejected and you will have to fetch and merge or rebase before pushing again.
+
+但实测发现还是需要用`--force`，不知道为什么用上面的命令会失败。
 
 
 
