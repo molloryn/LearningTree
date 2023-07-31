@@ -101,6 +101,8 @@ fi
 
 ###### 不修改历史来将错误的用户/邮箱关联上
 
+使用`git-mailmap`特性
+
 [git - How do I change the author and committer name/email for multiple commits? - Stack Overflow](https://stackoverflow.com/questions/750172/how-do-i-change-the-author-and-committer-name-email-for-multiple-commits/9491696#9491696)
 
 
