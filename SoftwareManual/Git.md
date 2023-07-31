@@ -152,6 +152,9 @@ git push origin --force-with-lease
 > `--force-with-lease` It allows you to overwrite a remote branch only if your local copy is up to date with the remote branch, or in other words, if you have the “lease” on the remote branch. This way, you can avoid losing someone else’s work that you have not fetched yet. If the remote branch has changed since you last fetched it, the push will be rejected and you will have to fetch and merge or rebase before pushing again.
 
 但实测发现还是需要用`--force`，不知道为什么用上面的命令会失败。
+而且还遇到了没有origin的定义的问题，手动添加`git add remote origin <url>`
+另外推送的时候还需要指定`set-upstream`的问题，导致只能一分支一分支的进行push
+
 
 ### .gitingore不生效
 
