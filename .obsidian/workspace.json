@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md"
+                "file": "CloudNative/Kubernetes(K8S).md"
               }
             }
           },
@@ -196,14 +196,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "95641d9f2e99738f",
+  "active": "8bba2cd5f7b97135",
   "lastOpenFiles": [
-    "CloudNative/Kubernetes(K8S).md",
     "CloudNative/Docker.md",
+    "CloudNative/Deployments/K8S部署笔记.md",
+    "CloudNative/Kubernetes(K8S).md",
     "SoftwareManual/Git.md",
     "README.md",
     "CloudNative/CloudNative.md",
-    "CloudNative/Deployments/K8S部署笔记.md",
     "ComputerScience/Linux.md",
     "ComputerScience/SoftwareTest.md",
     "attachments/ff9f8ba6a923aa8fa8705a432b2b7b81.jpeg",
