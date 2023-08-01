@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Linux.md",
+                "file": "CloudNative/Docker.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -110,8 +110,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.49999618530273,
-    "collapsed": true
+    "width": 299.49999618530273
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -127,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Linux.md",
+                "file": "CloudNative/Docker.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Linux.md",
+                "file": "CloudNative/Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Linux.md"
+                "file": "CloudNative/Docker.md"
               }
             }
           },
@@ -224,6 +223,9 @@
   },
   "active": "2d4975ac87a15258",
   "lastOpenFiles": [
+    "CloudNative/CloudNative.md",
+    "CloudNative/Docker.md",
+    "ComputerScience/SoftwareTest.md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "ComputerScience/Linux.md",
     "attachments/ff9f8ba6a923aa8fa8705a432b2b7b81.jpeg",
@@ -267,9 +269,6 @@
     "ComputerScience/IoT.md",
     "Music/MusicTheory.md",
     "Music/FLStudio.md",
-    "CTF/ToolManual/Wireshark.md",
-    "ComputerScience/SoftwareTest.md",
-    "CTF/CTF.md",
     "未命dd名.canvas"
   ]
 }
