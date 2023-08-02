@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md",
+                "file": "Programming/C#.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md",
+                "file": "Programming/C#.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md",
+                "file": "Programming/C#.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md"
+                "file": "Programming/C#.md"
               }
             }
           },
@@ -198,6 +198,13 @@
   },
   "active": "8bba2cd5f7b97135",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230802171236.png",
+    "attachments/Pasted image 20230802171059.png",
+    "attachments/Pasted image 20230802171032.png",
+    "CloudNative/Deployments/K8S部署笔记.md",
+    "Programming/C#.md",
+    "Programming",
+    "新建文件夹",
     "CTF/MISC/图像隐写/PNG.md",
     "attachments/Pasted image 20230801220336.png",
     "attachments/Pasted image 20230801220313.png",
@@ -205,7 +212,6 @@
     "attachments/Pasted image 20230801220300.png",
     "CloudNative/Kubernetes(K8S).md",
     "CloudNative/Docker.md",
-    "CloudNative/Deployments/K8S部署笔记.md",
     "SoftwareManual/Git.md",
     "README.md",
     "CloudNative/CloudNative.md",
@@ -215,8 +221,6 @@
     "attachments/fedf7e3d0bbff1ea70bb09384d43c370.png",
     "attachments/fe23f359a26b0d080e10bc837a69b927.png",
     "attachments/fc35966aaa4228489b7f58a18df9583d.png",
-    "attachments/fb4a25918d43ded045a8ffce8865a06b.png",
-    "attachments/fa553fa65e35ca0ee554684aaffc6077.png",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/文件头.md",
     "CTF/ToolManual/010Editor.md",
@@ -235,14 +239,11 @@
     "attachments/templates/Csharp代码.md.baiduyun.uploading.cfg",
     "attachments/ffbf0839a1b1013377f002c9325dc7be.png.baiduyun.uploading.cfg",
     "attachments/fcf4104187daf017d196f9f78ae3026d.png.baiduyun.uploading.cfg",
-    "attachments/fc4c8e56e190ad09b005012c03b28fd0.png.baiduyun.uploading.cfg",
-    "attachments/fac481c6ec3efacce0ec3f3c7d127db0.jpeg.baiduyun.uploading.cfg",
     "SoftwareManual/VSCode.md",
     "ComputerScience/Unity.md",
     "ComputerScience/ArtificialIntelligence.md",
     "ComputerScience/Database.md",
     "ComputerScience/BigData.md",
-    "ComputerScience/IoT.md",
     "未命dd名.canvas"
   ]
 }
