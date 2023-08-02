@@ -11,8 +11,13 @@
             "id": "d5047fd25ee9aa9a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Programming/C#.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Programming/C#.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Programming/C#.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Programming/C#.md"
+              }
             }
           },
           {
@@ -175,6 +184,7 @@
   },
   "active": "d5047fd25ee9aa9a",
   "lastOpenFiles": [
+    "CloudNative/CloudNative.md",
     "SoftwareManual/VisualStudio.md",
     "CloudNative/Docker.md",
     "attachments/Pasted image 20230802175133.png",
@@ -195,7 +205,6 @@
     "CloudNative/Kubernetes(K8S).md",
     "SoftwareManual/Git.md",
     "README.md",
-    "CloudNative/CloudNative.md",
     "ComputerScience/Linux.md",
     "ComputerScience/SoftwareTest.md",
     "CTF/MISC/图像隐写/图像隐写.md",
