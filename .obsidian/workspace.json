@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/图像隐写/PNG.md",
+                "file": "CloudNative/Deployments/K8S部署笔记.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/图像隐写/PNG.md",
+                "file": "CloudNative/Deployments/K8S部署笔记.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/图像隐写/PNG.md",
+                "file": "CloudNative/Deployments/K8S部署笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/图像隐写/PNG.md"
+                "file": "CloudNative/Deployments/K8S部署笔记.md"
               }
             }
           },
@@ -198,6 +198,7 @@
   },
   "active": "8bba2cd5f7b97135",
   "lastOpenFiles": [
+    "CTF/MISC/图像隐写/PNG.md",
     "attachments/Pasted image 20230801220336.png",
     "attachments/Pasted image 20230801220313.png",
     "attachments/Pasted image 20230801220312.png",
@@ -216,9 +217,7 @@
     "attachments/fc35966aaa4228489b7f58a18df9583d.png",
     "attachments/fb4a25918d43ded045a8ffce8865a06b.png",
     "attachments/fa553fa65e35ca0ee554684aaffc6077.png",
-    "attachments/f8465574550795aeae5a9aa36f80364a.png",
     "CTF/MISC/图像隐写/图像隐写.md",
-    "CTF/MISC/图像隐写/PNG.md",
     "CTF/MISC/文件头.md",
     "CTF/ToolManual/010Editor.md",
     "CTF/ToolsList.md",

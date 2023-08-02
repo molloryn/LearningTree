@@ -760,6 +760,8 @@ alias proxy="source /xxx/proxy.sh" # 可以为这个脚本设置别名 proxy，�
 
 <https://blog.csdn.net/tabactivity/article/details/125875242> 桌面版
 
+`locale` 可以查看当前配置的语言环境
+
 dpkg-reconfigure locales
 
 下载语言包，默认Debian的语言包不是UTF-8格式的，所以中文会显示乱码。
