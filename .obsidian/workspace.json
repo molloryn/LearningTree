@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/VSCode.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/VSCode.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/VSCode.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolsList.md"
+                "file": "SoftwareManual/VSCode.md"
               }
             }
           },
@@ -184,6 +184,8 @@
   },
   "active": "47c1b2d63db417cb",
   "lastOpenFiles": [
+    "Programming/C#.md",
+    "CTF/ToolsList.md",
     "CTF/ToolManual/Xdbg.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/图像隐写/JPG.md",
@@ -194,7 +196,6 @@
     "SoftwareManual/CMD.md",
     "attachments/Pasted image 20230803190424.png",
     "attachments/Pasted image 20230803191354.png",
-    "Programming/C#.md",
     "CloudNative/CloudNative.md",
     "SoftwareManual/VisualStudio.md",
     "CloudNative/Docker.md",
@@ -214,7 +215,6 @@
     "ComputerScience/SoftwareTest.md",
     "CTF/MISC/文件头.md",
     "CTF/ToolManual/010Editor.md",
-    "CTF/ToolsList.md",
     "CTF/ToolManual/CyberChef.md",
     "CTF/README.md",
     "CTF/ToolManual/VMware.md",
