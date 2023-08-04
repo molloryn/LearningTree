@@ -54,7 +54,17 @@ ARP请求是广播的，因此可以靠速度取胜。
 
 # 其他功能
 
-## 流量图
+## 统计
+
+### 协议分组分析
+
+
+
+### I/O图表
+
+可以直观查看当前HTTP流量，可以判断是否存在暴力破解的流量。
+
+### 流量图
 
 ![A picture containing table Description automatically generated](../../attachments/85ae0277215f41040d79bc506dd971ec.png)
 
