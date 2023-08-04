@@ -29,8 +29,12 @@
 |stegpy |01双通道隐写|  |
 |cloacked-pixel |带密码的LSB隐写|  |
 |stegsolve|图片隐写综合分析工具|  |
-|steghide|能够隐藏各种图像和音频文件中的数据。颜色方面的样本频率不会更改，因此使嵌入抗一阶统计检验。|`apt-get install stegdetect` |
+|steghide|能够隐藏各种图像和音频文件中的数据。颜色方面的样本频率不会更改，因此使嵌入抗一阶统计检验。支持的隐写工具有：`jsteg`, `outguess`, `jphide`, `invisible secrets` |`apt-get install stegdetect` |
 |jphs(jphide) |使用stegdetect出现的提示的工具，用于有密码的jpg隐写文件，目前网上能下载到的带界面的为`jphswin`|  |
+
+
+steghide -s 100 设置容错，但其实检测不一定准确。。因此如果输出检测失败也不能放弃对那些工具的嫌疑。 
+
 
 ## 文件
 
