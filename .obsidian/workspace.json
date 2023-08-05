@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/ToolsList.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/ToolsList.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/ToolsList.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md"
+                "file": "CTF/ToolsList.md"
               }
             }
           },
@@ -182,8 +182,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "95641d9f2e99738f",
+  "active": "47c1b2d63db417cb",
   "lastOpenFiles": [
+    "CTF/Reverse.md",
+    "CTF/ToolManual/Wireshark.md",
     "CTF/MISC/压缩包.md",
     "attachments/Pasted image 20230804210215.png",
     "CTF/MISC/文件头.md",
@@ -228,7 +230,6 @@
     "attachments/templates/Csharp代码.md.baiduyun.uploading.cfg",
     "attachments/ffbf0839a1b1013377f002c9325dc7be.png.baiduyun.uploading.cfg",
     "ComputerScience/Unity.md",
-    "ComputerScience/ArtificialIntelligence.md",
     "未命dd名.canvas"
   ]
 }

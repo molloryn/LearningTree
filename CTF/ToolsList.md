@@ -54,6 +54,14 @@ steghide -s 100 设置容错，但其实检测不一定准确。。因此如果�
 | Cyberchef | 烹饪化加解密/编码工具         |                                                                |
 | Ares      | 自动加解密，是Ciphey下一代 | [bee-san/Ares (github.com)](https://github.com/bee-san/Ares)                                                               |
 
+## 内存取证
+
+| 软件名 | 场景 | 备注 |
+|:------ |:---- |:---- |
+|MemProcFs|像访问文件一样进行内存取证|      |
+|Volatility|经典内存取证命令行工具|      |
+|VolProGUI|自动化的内存取证工具|      |
+
 
 
 # WEB
