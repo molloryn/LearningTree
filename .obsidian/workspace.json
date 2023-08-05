@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CTF/ToolsList.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CTF/ToolsList.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CTF/ToolsList.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md"
+                "file": "CTF/ToolsList.md"
               }
             }
           },
@@ -182,11 +182,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "47c1b2d63db417cb",
+  "active": "95641d9f2e99738f",
   "lastOpenFiles": [
+    "ComputerScience/Linux.md",
+    "CTF/Untitled.md",
+    "CTF/CRYPTO/密码种类与特征.md",
+    "CTF/CRYPTO/Practice_Cryptograph.md",
+    "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/MISC/文件头.md",
-    "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/ToolsList.md",
     "CTF/Reverse.md",
     "CTF/ToolManual/Wireshark.md",
@@ -217,11 +221,8 @@
     "CloudNative/Kubernetes(K8S).md",
     "SoftwareManual/Git.md",
     "README.md",
-    "ComputerScience/Linux.md",
     "ComputerScience/SoftwareTest.md",
     "CTF/ToolManual/CyberChef.md",
-    "CTF/README.md",
-    "CTF/ToolManual/VMware.md",
     "attachments/Pasted image 20230726170452.png.baiduyun.uploading.cfg",
     "SoftwareManual/MicosoftOffice.md.baiduyun.uploading.cfg",
     "SoftwareManual/Git.md.baiduyun.uploading.cfg",
@@ -229,7 +230,6 @@
     "CTF/ToolsList.md.baiduyun.uploading.cfg",
     "attachments/templates/Csharp代码.md.baiduyun.uploading.cfg",
     "attachments/ffbf0839a1b1013377f002c9325dc7be.png.baiduyun.uploading.cfg",
-    "ComputerScience/Unity.md",
     "未命dd名.canvas"
   ]
 }

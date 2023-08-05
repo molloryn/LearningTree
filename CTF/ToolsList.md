@@ -182,3 +182,9 @@ steghide -s 100 设置容错，但其实检测不一定准确。。因此如果�
 | DevToys      | 如格式化JSON，JSON转YAML，比较文本，测试RegExp   | [veler/DevToys](https://github.com/veler/DevToys)             |
 | PowerToys    | 微软开源功能增强工具，包括批量重命名、图像压缩等 | [microsoft/PowerToys](https://github.com/microsoft/PowerToys) |
 
+# Python环境
+
+必装包：
+numpy
+matplotlib
+
