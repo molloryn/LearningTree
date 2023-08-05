@@ -10,7 +10,7 @@ PNG图像格式文件由一个8字节的PNG文件标识（file signature or f
 | 50 4E 47 | PNG每个字母对应的ASCII，让用户可以使用文本编辑器查看时，识别出是PNG文件。                                      |
 | 0D 0A    | DOS风格的换行符（CRLF）。用于DOS-Unix数据的换行符转换。                                                        |
 | 1A       | 在DOS命令行下，用于阻止文件显示的文件结束符。                                                                  |
-| 0A       | Unix风格的换行符（LF）。用于Unix-DOS换行符的转换。                                                             |
+| 0A       |Unix风格的换行符（LF）。用于Unix-DOS换行符的转换。|
 
 
 
