@@ -166,7 +166,7 @@ steghide -s 100 设置容错，但其实检测不一定准确。。因此如果�
 | Proxifier                  | 设置各种规则，使得本地软件走特定代理 |                                                                                                        |
 | ContextMenuManager.NET.4.0 | Windows右键管理工具                  |                                                                                                        |
 | Optimizer                  | Windows优化工具                      | [hellzerg/optimizer: The finest Windows Optimizer (github.com)](https://github.com/hellzerg/optimizer) |
-| sysinternals               | Windows调试工具等，火绒剑替代        |                                                                                                        |
+|sysinternals| Windows调试工具等，火绒剑替代        |                                                                                                        |
 |BFG-repo-cleaner| Git Secret blob 移除工具                  |[rtyley/bfg-repo-cleaner](https://github.com/rtyley/bfg-repo-cleaner) |
 |Czkawka|文件清理，可以搜索相似、重复文件、文件夹等|[qarmin/czkawka](https://github.com/qarmin/czkawka)|
 
@@ -177,11 +177,32 @@ steghide -s 100 设置容错，但其实检测不一定准确。。因此如果�
 |:------------ |:------------------------------------------------ |:------------------------------------------------------------- |
 | Snipaste     | 截图贴图工具                                     |                                                               |
 | GoldenDict   | 支持MDict的字典工具                              |                                                               |
-| FluentSearch | 快捷搜索栏，大量功能                             |                                                               |
+| FluentSearch | 快捷搜索栏，大量功能                             |  |
 | Quicker      | 鼠标中键插件扩展、类Workflow编程、含有快捷搜索栏 | 收费版可翻页                                                  |
 | utools       | 类似Quicker，但支持markdown笔记搜索              | [插件离线安装](https://blog.csdn.net/m0_32156988/article/details/126415067)                                                              |
 | DevToys      | 如格式化JSON，JSON转YAML，比较文本，测试RegExp   | [veler/DevToys](https://github.com/veler/DevToys)             |
 | PowerToys    | 微软开源功能增强工具，包括批量重命名、图像压缩等 | [microsoft/PowerToys](https://github.com/microsoft/PowerToys) |
+
+
+# AI
+
+| 软件名       | 场景                | 备注                                                            |
+|:------------ |:------------------- |:--------------------------------------------------------------- |
+| Umi-OCR      | 离线、批量OCR       | [hiroi-sora/Umi-OCR](https://github.com/hiroi-sora/Umi-OCR)     |
+| Lama-cleaner | 图像修复/自定义擦除 | [Sanster/lama-cleaner](https://github.com/Sanster/lama-cleaner) |
+| DeepFaceLive | AI换脸，支持直播    | [iperov/DeepFaceLive](https://github.com/iperov/DeepFaceLive)                                                                |
+
+
+# Game
+
+| 软件名   | 场景          | 备注 |
+|:-------- |:------------- |:---- |
+| Habitica | RPG般习惯养成 | [HabitRPG/habitica](https://github.com/HabitRPG/habitica)     |
+|          |               |      |
+|          |               |      |
+
+
+
 
 # Python环境
 
@@ -197,3 +218,4 @@ python-tk
 Pillow
 crypto
 pycryptodome # 可以替代难以安装的pycrypto
+
