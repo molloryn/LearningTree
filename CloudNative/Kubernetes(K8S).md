@@ -109,6 +109,14 @@ Node中有多个Pod，多个Service，可以用一个Ingress用于外部路由Se
 
 对于Pod的外部配置，可以使用ConfigMap或Secrets。
 
+# Harbor镜像仓库
+
+## 使用方式
+
+### 推送到镜像仓库
+
+ `docker tag <仓库名>/`
+
 # K8S集群管理
 
 ## KubeSphere
