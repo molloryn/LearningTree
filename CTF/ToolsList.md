@@ -184,7 +184,15 @@ steghide -s 100 设置容错，但其实检测不一定准确。。因此如果�
 
 # Python环境
 
-必装包：
+
+linux apt包：
+python-tk
+python3-tk
+
+python包：
 numpy
 matplotlib
-
+python-tk
+Pillow
+crypto
+pycryptodome # 可以替代难以安装的pycrypto

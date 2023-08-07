@@ -73,6 +73,27 @@ IHDR会出现宽高隐写。
 一般是高隐写，在windows中直接往大的值修改高即可。在linux中如CRC不匹配则报错无法显示。
 直接修改宽会导致图片显示异常，需要修改使得CRC匹配。
 
+只需要有CRC，就能爆破出宽高，CRC爆破脚本：
+
+```python
+import struct
+import binascii
+import os
+import sys
+png = sys.argv[1]
+print(png)
+m = open(png,"rb").read()
+# print(m[20:29])
+for i in range(5000):
+    for j in range(5000):
+        c = m[12:16] + struct.pack('>i', i) + struct.pack('>i', j)+m[24:29]
+        crc = binascii.crc32(c) & 0xffffffff
+        if crc == 0xF30971FC:
+            #print(c)
+            print(hex(i),hex(j))
+            break
+```
+
 
 ### 调色板数据块PLTE（palette chunk）
 
