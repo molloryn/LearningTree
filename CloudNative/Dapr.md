@@ -147,6 +147,14 @@ daprd sidecar 有 app-port，是指宿主微服务的API监听地址，由sideca
 
 sidecar的默认的HTTP监听是3500，gRPC的是50001。一般不需要修改（修改后暂时不知道怎么调通，因为dapr-placement默认是映射到默认端口？）。
 
+### 问题
+
+#### ERR_DIRECT_INVOKE fail to invoke
+有可能是命名空间的问题，边车与边车之间不在同一个命名空间，则默认无法互相通信。比如在K8S中挂载的边车，默认是采用了K8S自己项目的命名空间。
+
+可以通过改写调用api进行，如：`https://localhost:3500/v1.0/invoke/myappid.<namespace>/method/ping`
+[How to: Service invocation across namespaces | Dapr Docs](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-namespaces/)
+
 ### Dashboard
 
 Standalone模式暂时不支持docker compose。（仅支持k8s，截至2022/9/29）
