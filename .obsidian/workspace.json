@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "Fontend/FrontendConcept.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "Fontend/FrontendConcept.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "Fontend/FrontendConcept.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md"
+                "file": "Fontend/FrontendConcept.md"
               }
             }
           },
@@ -184,6 +184,10 @@
   },
   "active": "47c1b2d63db417cb",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230808185806.png",
+    "CloudNative/Kubernetes(K8S).md",
+    "Fontend/FrontendConcept.md",
+    "Fontend",
     "CloudNative/Docker.md",
     "CloudNative/Dapr.md",
     "CloudNative/Components/Apache APISIX.md",
@@ -200,7 +204,6 @@
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/思路打开.md",
     "CTF/ToolsList.md",
-    "CloudNative/Kubernetes(K8S).md",
     "attachments/Pasted image 20230805144424.png",
     "CTF/MISC/文件头.md",
     "CTF/ToolManual/CyberChef.md",
@@ -217,8 +220,6 @@
     "CTF/Reverse.md",
     "CTF/ToolManual/Wireshark.md",
     "attachments/Pasted image 20230804210215.png",
-    "SoftwareManual/VSCode.md",
-    "Programming/C#.md",
     "attachments/Pasted image 20230803213143.png",
     "CTF/MISC/图像隐写/Untitled.md.nssyncsc",
     "attachments/Pasted image 20230803205855.png",
@@ -229,7 +230,6 @@
     "SoftwareManual/Git.md.baiduyun.uploading.cfg",
     "SoftwareManual/CMD.md.baiduyun.uploading.cfg",
     "CTF/ToolsList.md.baiduyun.uploading.cfg",
-    "attachments/templates/Csharp代码.md.baiduyun.uploading.cfg",
     "未命dd名.canvas"
   ]
 }
