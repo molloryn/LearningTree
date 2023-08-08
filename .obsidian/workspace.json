@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/压缩包.md",
+                "file": "CloudNative/Components/Apache APISIX.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/压缩包.md",
+                "file": "CloudNative/Components/Apache APISIX.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/压缩包.md",
+                "file": "CloudNative/Components/Apache APISIX.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/压缩包.md"
+                "file": "CloudNative/Components/Apache APISIX.md"
               }
             }
           },
@@ -184,10 +184,12 @@
   },
   "active": "47c1b2d63db417cb",
   "lastOpenFiles": [
+    "CTF/MISC/压缩包.md",
+    "CloudNative/Components/Apache APISIX.md",
+    "CloudNative/Components",
     "attachments/Pasted image 20230808001803.png",
     "CTF/ToolManual/010Editor.md",
     "attachments/Pasted image 20230808001258.png",
-    "CTF/MISC/压缩包.md",
     "attachments/Pasted image 20230808001056.png",
     "CTF/MISC/图像隐写/PNG.md",
     "attachments/Pasted image 20230807234958.png",
@@ -220,7 +222,6 @@
     "CTF/MISC/图像隐写/Untitled.md.nssyncsc",
     "attachments/Pasted image 20230803205855.png",
     "SoftwareManual/CMD.md",
-    "attachments/Pasted image 20230803190424.png",
     "Programming",
     "新建文件夹",
     "attachments/Pasted image 20230726170452.png.baiduyun.uploading.cfg",
@@ -229,7 +230,6 @@
     "SoftwareManual/CMD.md.baiduyun.uploading.cfg",
     "CTF/ToolsList.md.baiduyun.uploading.cfg",
     "attachments/templates/Csharp代码.md.baiduyun.uploading.cfg",
-    "attachments/ffbf0839a1b1013377f002c9325dc7be.png.baiduyun.uploading.cfg",
     "未命dd名.canvas"
   ]
 }
