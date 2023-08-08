@@ -61,6 +61,16 @@ CORS是在服务端配置的，来指明该服务端**是否支持跨站请求**
 
 ##### 流程
 1. 浏览器发起预检请求`preflight`，请求方法是`OPTIONS`，请求头带上来源`origin`，不包含请求体；
-2. 服务器返回检查结果，配置CORS头；
-3. 浏览器发起真正请求；
-4. 浏览器返回数据；
+2. 服务器返回检查结果，配置CORS头。未配置CORS的，浏览器视为拒绝跨域，则停止请求。
+3. 对比服务器返回的CORS头，通过则浏览器发起真正请求。
+	 - Access-Control-Allow-Origin（必含）：见简单请求
+	 - Access-Control-Allow-Methods（必含） ：这是对预请求当中Access-Control-Request-Method的回复，这一回复将是一个以逗号分隔的列表。尽管客户端或许只请求某一方法，但服务端仍然可以返回所有允许的方法，以便客户端将其缓存。 
+	 - Access-Control-Allow-Headers（当预请求中包含Access-Control-Request-Headers时必须包含） ： 这是对预请求当中Access-Control-Request-Headers的回复，和上面一样是以逗号分隔的列表，可以返回所有支持的头部。
+	 - Access-Control-Allow-Credentials（可选） ：和简单请求当中作用相同 
+	 - Access-Control-Max-Age（可选）：以秒为单位的缓存时间。预请求的的发送并非免费午餐，允许时应当尽可能缓存。
+4. 服务端返回数据。
+5. 后续浏览器关于该请求就和简单请求一样进行。
+## 参考
+
+[Complete Guide to CORS (reflectoring.io)](https://reflectoring.io/complete-guide-to-cors/)
+[跨域资源共享 CORS 详解 - 阮一峰的网络日志 (ruanyifeng.com)](https://www.ruanyifeng.com/blog/2016/04/cors.html)
