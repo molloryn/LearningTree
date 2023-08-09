@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CloudNative/Components/Apache APISIX.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CloudNative/Components/Apache APISIX.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CloudNative/Components/Apache APISIX.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md"
+                "file": "CloudNative/Components/Apache APISIX.md"
               }
             }
           },
@@ -183,6 +183,7 @@
   },
   "active": "47c1b2d63db417cb",
   "lastOpenFiles": [
+    "CTF/MISC/图像隐写/图像隐写.md",
     "attachments/Pasted image 20230808222519.png",
     "attachments/Pasted image 20230808222119.png",
     "attachments/Pasted image 20230808221927.png",
@@ -205,8 +206,6 @@
     "CloudNative/Components",
     "attachments/Pasted image 20230808001803.png",
     "CTF/ToolManual/010Editor.md",
-    "attachments/Pasted image 20230808001258.png",
-    "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/思路打开.md",
     "CTF/ToolsList.md",
     "CTF/MISC/文件头.md",
