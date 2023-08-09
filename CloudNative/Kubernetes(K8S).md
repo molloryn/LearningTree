@@ -81,7 +81,10 @@ Kubernetes每个实例是以Cluster为单位的。每个Work Node（VM或物理�
 
 ## Pod
 
-Pod是对容器化的Application的抽象，不仅仅是指代docker，可以替换为任何一种容器技术。
+Pod是对容器化的Application的抽象，不仅仅是指代docker，可以替换为任何一种容器技术。只需要遵循`Container Runtime Interface (CRI)`实现和`OCI`规范。
+
+OCI stands for the [Open Container Initiative](https://opencontainers.org/about/overview/), which standardized many of the interfaces between container tools and technologies. They maintain a standard specification for packaging container images (OCI image-spec) and running containers (OCI runtime-spec). They also maintain an actual implementation of the runtime-spec in the form of [runc](https://github.com/opencontainers/runc), which is the underlying default runtime for both [containerd](https://containerd.io/) and [CRI-O](https://cri-o.io/). The `CRI` builds on these low-level specifications to provide an end-to-end standard for managing containers.
+CRI is an interface between container runtimes and container orchestration platforms that allows for seamless integration between the two. Docker is a popular containerization platform that has been impacted by these standards.
 
 ![图形用户界面 低可信度描述已自动生成](../attachments/ec859af1d041089310cf91dfdb84b9dc.png)
 
@@ -133,13 +136,13 @@ docker push <仓库名>/<项目名>/<镜像名>:[版本号] # push只能通过ta
 
 ### 概念
 
-| 名称     | 作用                                                                                     | 备注   |
+| 名称     |作用| 备注   |
 |:-------- |:---------------------------------------------------------------------------------------- |:------ |
 | KubeKey  | 用于便捷安装K8S和KubeSphere的工具                                                        | 简称kk |
 | VIP      | virtual IP，它是一群节点共用的一个虚拟IP                                                 |        |
 | Ceph     | 分布式存储方案，实现K8S的存储卷方面的能力                                                |        |
 | Ceph-CSI | Ceph Container Storage Interface. Ceph 容器存储接口是一个用于 RBD 和 CephFS 的驱动程序。 |        |
-| HAproxy  |负载均衡器，用于创建高可用K8S集群。provides high availability, load balancing, and proxying for TCP and HTTP-based applications. (LVS)|  |
+| HAproxy  |负载均衡器，用于创建高可用K8S集群。provides high availability, load balancing, and proxying for TCP and HTTP-based applications. |  |
 |Keepalived |provides high availability for Linux systems by allowing multiple servers to share a virtual IP address.  |  |
 ### HAproxy
 
