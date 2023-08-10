@@ -1,3 +1,14 @@
+# 工具
+
+#### stegdetect
+用于检测JPG中常见的工具隐写。**但检测不一定准确**，因此如果输出检测失败也不能放弃对那些工具的嫌疑。 
+支持的隐写工具有：`jsteg`, `outguess`, `jphide`, `invisible secrets`
+```sh
+stegdetect -s 100 # 设置容错，尝试调整可以获得不一样的结果
+```
+
+####  jphs(jphide)
+使用stegdetect出现的提示的工具，用于有密码（也可能没密码）的jpg隐写文件，目前网上能下载到的带界面的为`jphswin`
 
 # 结构
 

@@ -21,19 +21,18 @@
 
 ### 加解密隐写
 
-|软件名 | 场景                                                                     | 备注                                                |
-|:--------- |:------------------------------------------------------------------------ |:--------------------------------------------------- |
-| oursecret |有些提示“我们的秘密”这种可能涉及该工具隐写加密，需要密码，可进行图片+文件加密隐写|  |
-| zsteg     |zsteg可以检测PNG和BMP图片里的隐写数据，LSB部分支持 | [zed-0xff/zsteg](https://github.com/zed-0xff/zsteg) |
-|LSB-Steganography|00000开头特征的LSB隐写 |  |
-|stegpy |01双通道隐写|  |
-|cloacked-pixel |带密码的LSB隐写|  |
-|stegsolve|图片隐写综合分析工具|  |
-|steghide|能够隐藏各种图像和音频文件中的数据。颜色方面的样本频率不会更改，因此使嵌入抗一阶统计检验。支持的隐写工具有：`jsteg`, `outguess`, `jphide`, `invisible secrets` |`apt-get install stegdetect` |
-|jphs(jphide) |使用stegdetect出现的提示的工具，用于有密码的jpg隐写文件，目前网上能下载到的带界面的为`jphswin`|  |
+| 软件名            | 场景                                                                                           | 备注                                                |
+|:----------------- |:---------------------------------------------------------------------------------------------- |:--------------------------------------------------- |
+| oursecret         | 有些提示“我们的秘密”这种可能涉及该工具隐写加密，需要密码，可进行图片+文件加密隐写              |                                                     |
+| zsteg             | zsteg可以检测PNG和BMP图片里的隐写数据，LSB部分支持                                             | [zed-0xff/zsteg](https://github.com/zed-0xff/zsteg) |
+| LSB-Steganography | 00000开头特征的LSB隐写                                                                         |                                                     |
+| stegpy            | 01双通道隐写                                                                                   |                                                     |
+| cloacked-pixel    | 带密码的LSB隐写                                                                                |                                                     |
+| stegsolve         | 图片隐写综合分析工具                                                                           |                                                     |
+| jphs(jphide)      | 使用stegdetect出现的提示的工具，用于有密码的jpg隐写文件，目前网上能下载到的带界面的为`jphswin` |                                                     |
 
 
-steghide -s 100 设置容错，但其实检测不一定准确。。因此如果输出检测失败也不能放弃对那些工具的嫌疑。 
+
 
 
 ## 文件
@@ -225,6 +224,7 @@ numpy
 matplotlib
 python-tk
 Pillow
+progressbar2
 crypto
 pycryptodome # 可以替代难以安装的pycrypto
 
