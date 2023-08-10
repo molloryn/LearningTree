@@ -12,7 +12,8 @@
 | `[]()` | Markdown规范链接                                                               |
 | `> `   | 引用                                                                               |
 
-
+[Basic Syntax | Markdown Guide](https://www.markdownguide.org/basic-syntax/)
+[Extended Syntax | Markdown Guide](https://www.markdownguide.org/extended-syntax/)
 
 ## Obsidian快捷键
 
@@ -50,3 +51,5 @@
 | dc   | delete column | 删除当前列   | 
 | sd   | swap down     | 与下一行互换 |
 | su   | swap up       | 与上一行互换 |
+
+

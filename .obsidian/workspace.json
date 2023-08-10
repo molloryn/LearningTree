@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md",
+                "file": "CloudNative/Docker.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.49999618530273
+    "width": 299.49999618530273,
+    "collapsed": true
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md",
+                "file": "CloudNative/Docker.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md",
+                "file": "CloudNative/Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Deployments/K8S部署笔记.md"
+                "file": "CloudNative/Docker.md"
               }
             }
           },
@@ -183,18 +184,26 @@
   },
   "active": "3772a3b4cf7197f3",
   "lastOpenFiles": [
+    "README.md",
+    "CloudNative/Docker.md",
+    "CTF/CRYPTO/公钥密码密钥格式.md",
     "CloudNative/Kubernetes(K8S).md",
-    "CloudNative/K8S集群管理.md",
-    "CloudNative/Deployments/K8S部署笔记.md",
     "ComputerScience/Linux.md",
+    "CTF/CRYPTO/CTF.md",
+    "CTF/MISC/压缩包.md",
+    "CTF/ToolManual/010Editor.md",
+    "CTF/ToolManual/VMware.md",
+    "CTF/ToolManual/Xdbg.md",
+    "CloudNative/K8S集群管理.md",
+    "CloudNative/CloudNative.md",
+    "CloudNative/Dapr.md",
+    "CloudNative/Deployments/K8S部署笔记.md",
     "ComputerScience/WEB.md",
     "Architecture/ABP.md",
     "attachments/Pasted image 20230809141442.png",
-    "CloudNative/Docker.md",
     "CloudNative/Components/Apache APISIX.md",
     "CTF/ToolsList.md",
     "attachments/Pasted image 20230809100733.png",
-    "CloudNative/CloudNative.md",
     "Koubot/Linux命令.md",
     "attachments/templates/LinuxShellPlugin.md",
     "attachments/templates/python脚本.md",
@@ -212,16 +221,8 @@
     "attachments/Pasted image 20230808191824.png",
     "attachments/Pasted image 20230808191816.png",
     "Fontend",
-    "CloudNative/Dapr.md",
-    "CTF/MISC/压缩包.md",
     "CloudNative/Components",
-    "CTF/ToolManual/010Editor.md",
     "CTF/MISC/思路打开.md",
-    "CTF/MISC/文件头.md",
-    "CTF/ToolManual/CyberChef.md",
-    "CTF/CRYPTO/Encoding.md",
-    "CTF/CRYPTO/CTF.md",
-    "CTF/CRYPTO/Practice_Cryptograph.md",
     "CTF/MISC/图像隐写/Untitled.md.nssyncsc",
     "Programming",
     "新建文件夹",
