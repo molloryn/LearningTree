@@ -135,16 +135,9 @@
 
 
 
-# 中间件管理
-
-| 软件名                        | 场景                  | 备注                                                                                                       |
-|:----------------------------- |:--------------------- |:---------------------------------------------------------------------------------------------------------- |
-| RedisInsight                  | Redis官方出品管理工具 | [RedisInsight/RedisInsight: Redis GUI by Redis (github.com)](https://github.com/RedisInsight/RedisInsight) |
-| Another Redis Desktop Manager | Redis管理工具         | [qishibo/AnotherRedisDesktopManager](https://github.com/qishibo/AnotherRedisDesktopManager)                |
-|                               |                       |                                                                                                            |
 
 
-# Linux效率
+# Linux
 
 | 软件名        | 场景                       | 备注                                                                                        |
 |:------------- |:-------------------------- |:------------------------------------------------------------------------------------------- |
@@ -153,10 +146,29 @@
 | ohmyzsh       | 管理 linux shell zsh       | [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)                                       |
 | Dust          | Du+rust,增强disk usage命令 | [bootandy/dust](https://github.com/bootandy/dust)                                                                                            |
 
+# 笔记
+
+| 软件名   | 场景                            | 备注 |
+|:-------- |:------------------------------- |:---- |
+| Obsidian | Markdown编辑器，支持插件        |      |
+| MarkText | 开源Markdown编辑器，支持UML图等 |      |
+| Typora   | Markdown编辑器                  |      |
 
 
 
-# 其他
+
+# Windows
+
+## 硬件
+
+| 软件名 | 场景                   | 备注 |
+|:------ |:---------------------- |:---- |
+| aida64 | 全能硬件检测、指标工具 |      |
+|        |                        |      |
+|        |                        |      |
+
+
+## 其他
 
 |软件名| 场景                                 | 备注                                                                                                   |
 |:-------------------------- |:------------------------------------ |:------------------------------------------------------------------------------------------------------ |
@@ -170,18 +182,36 @@
 |Czkawka|文件清理，可以搜索相似、重复文件、文件夹等|[qarmin/czkawka](https://github.com/qarmin/czkawka)|
 
 
-# 效率
+## 效率
 
-| 软件名       | 场景                                             | 备注                                                          |
-|:------------ |:------------------------------------------------ |:------------------------------------------------------------- |
-| Snipaste     | 截图贴图工具                                     |                                                               |
-| GoldenDict   | 支持MDict的字典工具                              |                                                               |
-| FluentSearch | 快捷搜索栏，大量功能                             |  |
-| Quicker      | 鼠标中键插件扩展、类Workflow编程、含有快捷搜索栏 | 收费版可翻页                                                  |
-| utools       | 类似Quicker，但支持markdown笔记搜索              | [插件离线安装](https://blog.csdn.net/m0_32156988/article/details/126415067)                                                              |
-| DevToys      | 如格式化JSON，JSON转YAML，比较文本，测试RegExp   | [veler/DevToys](https://github.com/veler/DevToys)             |
-| PowerToys    | 微软开源功能增强工具，包括批量重命名、图像压缩等 | [microsoft/PowerToys](https://github.com/microsoft/PowerToys) |
+| 软件名       | 场景                                             | 备注                                                                        |
+|:------------ |:------------------------------------------------ |:--------------------------------------------------------------------------- |
+| Snipaste     | 截图贴图工具                                     |                                                                             |
+| GoldenDict   | 支持MDict的字典工具                              |                                                                             |
+| FluentSearch | 快捷搜索栏，大量功能                             |                                                                             |
+| Quicker      | 鼠标中键插件扩展、类Workflow编程、含有快捷搜索栏 | 收费版可翻页                                                                |
+| utools       | 类似Quicker，但支持markdown笔记搜索              | [插件离线安装](https://blog.csdn.net/m0_32156988/article/details/126415067) |
+| DevToys      | 如格式化JSON，JSON转YAML，比较文本，测试RegExp   | [veler/DevToys](https://github.com/veler/DevToys)                           |
+| PowerToys    | 微软开源功能增强工具，包括批量重命名、图像压缩等 | [microsoft/PowerToys](https://github.com/microsoft/PowerToys)               |
+| Captura      | 开源录屏工具                                     |                                                                             |
+| TreeSizePro  | 用饼图方式直观的查看硬盘占用情况                 |                                                                             |
+|              |                                                  |                                                                             |
 
+
+## Video
+| 软件名                        | 场景                          | 备注 |
+|:----------------------------- |:----------------------------- |:---- |
+| BoilsoftVideoSplitterPortable | 无渲染无损视频剪辑            |      |
+| MKVToolNix                    | MKV格式编辑，提取字幕、音频等 |      |
+| Lossless Cut                  | 无渲染无损、音频剪辑          |      |
+
+## 中间件管理
+
+| 软件名                        | 场景                  | 备注                                                                                                       |
+|:----------------------------- |:--------------------- |:---------------------------------------------------------------------------------------------------------- |
+| RedisInsight                  | Redis官方出品管理工具 | [RedisInsight/RedisInsight: Redis GUI by Redis (github.com)](https://github.com/RedisInsight/RedisInsight) |
+| Another Redis Desktop Manager | Redis管理工具         | [qishibo/AnotherRedisDesktopManager](https://github.com/qishibo/AnotherRedisDesktopManager)                |
+|                               |                       |                                                                                                            |
 
 # AI
 
@@ -199,6 +229,7 @@
 | Habitica | RPG般习惯养成 | [HabitRPG/habitica](https://github.com/HabitRPG/habitica)     |
 |          |               |      |
 |          |               |      |
+
 
 
 # Browser Add-on
