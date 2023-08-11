@@ -1,5 +1,9 @@
 # 概念
 
+## WWW
+
+`www`开头和不加`www`开头是不同的域名，因此并不能等同。
+
 ## 正向代理 (Forward Proxy)和 反向代理 （Reverse Proxy）
 
 正向代理的典型例子有VPN，反向代理的则是Nginx。
