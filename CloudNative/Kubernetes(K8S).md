@@ -113,7 +113,10 @@ Node中有多个Pod，多个Service，可以用一个Ingress用于外部路由Se
 对于Pod的外部配置，可以使用ConfigMap或Secrets。
 #### 挂载单个文件
 默认挂载 `configMap` 时，`kubernetes` 会覆盖掉挂载的整个目录，哪怕使用 `items` 也会导致整个目录被覆盖，那么如何实现挂在单个文件而不覆盖整个目录呢。下面说一下 `kubernetes` 中如何挂载单个文件而不是整个目录。
-
+实际上 `kubernets` 本身提供了 `volumeMounts.subPath` 属性用于挂在单个文件而不是整个目录。
+问题
+- 如果使用 ConfigMap 的 subPath 挂载为 Container 的 Volume，`Kubernetes不会做自动热更新`
+- ConfigMap 哪怕不使用 `subPath` 的挂载方式 `C#` 文件修改监听功能也没有触发，`Golang` 的正常，怀疑可能和自己的实现有关，因为还有其他事情没有继续跟进，下周准备继续跟进一下。
 # Harbor镜像仓库
 
 ## 使用方式
