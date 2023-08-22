@@ -485,7 +485,19 @@ order by a desc，b ——a降序，b升序
 order by a desc，b desc ——a，b都是降序
 
 # SQL Server
+## 配置管理器
 
+管理SQLServer服务
+不能直接找到，需要运行相应版本的`SQLServerManagerXX.msc`
+
+| Version                | Path                                       |
+| ---------------------- | ------------------------------------------ |
+| SQL Server 2022        | C:\Windows\SysWOW64\SQLServerManager16.msc |
+| SQL Server 2019        | C:\Windows\SysWOW64\SQLServerManager15.msc |
+| SQL Server 2017        | C:\Windows\SysWOW64\SQLServerManager14.msc |
+| SQL Server 2016        | C:\Windows\SysWOW64\SQLServerManager13.msc |
+| SQL Server 2014 (12.x) | C:\Windows\SysWOW64\SQLServerManager12.msc |
+| SQL Server 2012 (11.x) | C:\Windows\SysWOW64\SQLServerManager11.msc |
 
 ## 语句
 
