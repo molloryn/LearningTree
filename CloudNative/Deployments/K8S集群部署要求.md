@@ -20,6 +20,9 @@ The commands `dnf clean all` and `dnf makecache` are related to the DNF package 
 
 9. 执行 `yum install -y conntrack socat tar`
 
+`Conntrack` is a Linux kernel module that enables tracking of network connections. It allows the kernel to keep track of all currently active network connections and provides a way to manipulate them through a user-space interface.
+`Socat` is a command-line utility that establishes two bidirectional byte streams and transfers data between them. It can be used for a variety of purposes, such as debugging, testing, and network exploration. It is often used as a replacement for the `netcat` utility in Linux systems.
+
 10. 重启群集每个节点的服务器。
 
 
@@ -133,8 +136,6 @@ gpgkey=file:///opt/openeuler_repo/RPM-GPG-KEY-openEuler
 ```
 
 
-![](file:///C:/Users/87083/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg)
-
 3、执行“yum -y install nginx”安装 nginx，将/etc/nginx/nginx.conf 文件重命名备份，然后将“nginx.conf”拷贝到/etc/nginx 路径下。
 `nginx.conf`文件内容修改如下：
 
@@ -182,8 +183,4 @@ http {
 
 4、依次执行“systemctl enable nginx”，“systemctl start nginx”， “systemctl status nginx”，看到下图则nginx 启动成功。
 
-![](file:///C:/Users/87083/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg)
-
 5、打开浏览器访问本机 IP 地址，出现下图则部署成功。
-
-![](file:///C:/Users/87083/AppData/Local/Temp/msohtmlclip1/01/clip_image006.jpg)

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "CloudNative/Deployments/K8S集群部署要求.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "CloudNative/Deployments/K8S集群部署要求.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "CloudNative/Deployments/K8S集群部署要求.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolsList.md"
+                "file": "CloudNative/Deployments/K8S集群部署要求.md"
               }
             }
           },
@@ -184,19 +184,20 @@
   },
   "active": "fdbdedb149a82885",
   "lastOpenFiles": [
+    "CloudNative/Deployments/K8S部署笔记.md",
+    "CloudNative/Deployments/K8S集群部署要求.md",
+    "CloudNative/K8S集群管理.md",
+    "CTF/ToolsList.md",
     "README.md",
     "attachments/Pasted image 20230823084310.png",
     "SoftwareManual/MicosoftOffice.md",
-    "CloudNative/Deployments/K8S集群部署要求.md",
     "SoftwareManual/VSCode.md",
     "SoftwareManual/VisualStudio.md",
-    "CTF/ToolsList.md",
     "SoftwareManual/CMD.md",
     "CTF/ToolManual/Wireshark.md",
     "CTF/ToolManual/010Editor.md",
     "CTF/Hacker/软件破解.md",
     "ComputerScience/Database.md",
-    "CloudNative/Deployments/K8S部署笔记.md",
     "CTF/ToolManual/Xdbg.md",
     "attachments/Pasted image 20230817230201.png",
     "CTF/CRYPTO/CTF.md",
