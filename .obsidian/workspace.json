@@ -4,24 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "098a6127f086942b",
+        "id": "374d26330f1bce67",
         "type": "tabs",
         "children": [
           {
-            "id": "3772a3b4cf7197f3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9b66dae170f86e0e",
+            "id": "fdbdedb149a82885",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/ToolsList.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/ToolsList.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md"
+                "file": "CTF/ToolsList.md"
               }
             }
           },
@@ -195,16 +182,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3772a3b4cf7197f3",
+  "active": "fdbdedb149a82885",
   "lastOpenFiles": [
-    "CTF/ToolManual/010Editor.md",
+    "README.md",
+    "attachments/Pasted image 20230823084310.png",
+    "SoftwareManual/MicosoftOffice.md",
+    "CloudNative/Deployments/K8S集群部署要求.md",
+    "SoftwareManual/VSCode.md",
+    "SoftwareManual/VisualStudio.md",
+    "CTF/ToolsList.md",
+    "SoftwareManual/CMD.md",
     "CTF/ToolManual/Wireshark.md",
+    "CTF/ToolManual/010Editor.md",
     "CTF/Hacker/软件破解.md",
     "ComputerScience/Database.md",
-    "CloudNative/Deployments/K8S集群部署要求.md",
     "CloudNative/Deployments/K8S部署笔记.md",
-    "SoftwareManual/CMD.md",
-    "CTF/ToolsList.md",
     "CTF/ToolManual/Xdbg.md",
     "attachments/Pasted image 20230817230201.png",
     "CTF/CRYPTO/CTF.md",
@@ -219,11 +211,6 @@
     "CTF/CRYPTO/Encoding.md",
     "CTF/CRYPTO/密码种类与特征.md",
     "CTF/CRYPTO/公钥密码密钥格式.md",
-    "CTF/MISC/图像隐写/图像隐写.md",
-    "CTF/MISC/图像隐写/JPG.md",
-    "CTF/MISC/图像隐写/PNG.md",
-    "CTF/MISC/思路打开.md",
-    "CTF/MISC/文件头.md",
     "attachments/Pasted image 20230814163237.png",
     "CTF/Hacker",
     "attachments/Pasted image 20230814155551.png",
@@ -235,7 +222,6 @@
     "attachments/Pasted image 20230809100733.png",
     "Koubot",
     "attachments/Pasted image 20230808222519.png",
-    "attachments/Pasted image 20230808222119.png",
     "Fontend",
     "CloudNative/Components",
     "CTF/MISC/图像隐写/Untitled.md.nssyncsc",
