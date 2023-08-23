@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Deployments/K8S集群部署要求.md",
+                "file": "CloudNative/K8S集群管理.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Deployments/K8S集群部署要求.md",
+                "file": "CloudNative/K8S集群管理.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Deployments/K8S集群部署要求.md",
+                "file": "CloudNative/K8S集群管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Deployments/K8S集群部署要求.md"
+                "file": "CloudNative/K8S集群管理.md"
               }
             }
           },
@@ -184,8 +184,9 @@
   },
   "active": "fdbdedb149a82885",
   "lastOpenFiles": [
-    "CloudNative/Deployments/K8S部署笔记.md",
+    "CloudNative/Kubernetes(K8S).md",
     "CloudNative/Deployments/K8S集群部署要求.md",
+    "CloudNative/Deployments/K8S部署笔记.md",
     "CloudNative/K8S集群管理.md",
     "CTF/ToolsList.md",
     "README.md",
@@ -204,7 +205,6 @@
     "CTF/README.md",
     "Music/MusicTheory.md",
     "Music/FLStudio.md",
-    "CloudNative/Kubernetes(K8S).md",
     "Architecture/ABP.md",
     "CloudNative/Dapr.md",
     "CTF/CRYPTO/Practice_Cryptograph.md",
