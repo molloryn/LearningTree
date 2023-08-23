@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/K8S集群管理.md",
+                "file": "CTF/ToolsList.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/K8S集群管理.md",
+                "file": "CTF/ToolsList.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/K8S集群管理.md",
+                "file": "CTF/ToolsList.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/K8S集群管理.md"
+                "file": "CTF/ToolsList.md"
               }
             }
           },
@@ -167,8 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 340.5,
-    "collapsed": true
+    "width": 340.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,12 +181,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fdbdedb149a82885",
+  "active": "95641d9f2e99738f",
   "lastOpenFiles": [
+    "CloudNative/K8S集群管理.md",
     "CloudNative/Kubernetes(K8S).md",
     "CloudNative/Deployments/K8S集群部署要求.md",
     "CloudNative/Deployments/K8S部署笔记.md",
-    "CloudNative/K8S集群管理.md",
     "CTF/ToolsList.md",
     "README.md",
     "attachments/Pasted image 20230823084310.png",
