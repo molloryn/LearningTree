@@ -24,6 +24,11 @@ $data = Get-WMIObject -Query "SELECT * FROM Win32_PerfFormattedData_Counters_The
 
 `CertUtil -hashfile {PATH AND FILE NAME} {SHA256|MD5}`
 
+#### 同时使用WIFI与有线网络
+
+首先使用`route print`
+
+
 #### 端口转发
 
 `netsh interface portproxy add v4tov4 listenaddress=10.0.10.21 listenport=8081 connectaddress=192.168.33.111 connectport=8081`
