@@ -26,7 +26,15 @@ $data = Get-WMIObject -Query "SELECT * FROM Win32_PerfFormattedData_Counters_The
 
 #### 同时使用WIFI与有线网络
 
-首先使用`route print`
+首先使用`route print`查看路由表。
+路由表有顺序优先级，越上面的优先级越高。
+`0.0.0.0`指代所有目标？
+![](../attachments/Pasted%20image%2020230824155703.png)
+其中`192`部分为`WIFI`网关，`188`为有线网关（外网）。此时所有流量先走有线网，导致上不了外网。
+而这种原因可能是配置了DHCP导致的，因此如果进行手动配置，填写好掩码、网关，则可以将优先级下降。
+另外还有一种方式可以增加：
+`route add 188.2.76.0 mask 255.255.255.0 188.2.77.1 -p`
+其中`-p`是永久生效，默认是拔网线重启后就失效。
 
 
 #### 端口转发
