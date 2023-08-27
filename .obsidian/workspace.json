@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "374d26330f1bce67",
+        "id": "48aa5d8191c2f87b",
         "type": "tabs",
         "children": [
           {
-            "id": "fdbdedb149a82885",
+            "id": "f54d71e3ce6ef86d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/K8S集群管理.md",
+                "file": "CTF/MISC/文件头.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.49999618530273,
-    "collapsed": true
+    "width": 299.49999618530273
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/K8S集群管理.md",
+                "file": "CTF/MISC/文件头.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/K8S集群管理.md",
+                "file": "CTF/MISC/文件头.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/K8S集群管理.md"
+                "file": "CTF/MISC/文件头.md"
               }
             }
           },
@@ -168,8 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 340.5,
-    "collapsed": true
+    "width": 340.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,13 +181,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fdbdedb149a82885",
+  "active": "f54d71e3ce6ef86d",
   "lastOpenFiles": [
+    "CTF/MISC/压缩包.md",
+    "CTF/README.md",
+    "CTF/ToolManual/Wireshark.md",
+    "CloudNative/K8S集群管理.md",
     "CloudNative/Docker.md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "CloudNative/Deployments/K8S集群部署要求.md",
     "CloudNative/Kubernetes(K8S).md",
-    "CloudNative/K8S集群管理.md",
     "SoftwareManual/CMD.md",
     "attachments/Pasted image 20230824155703.png",
     "CTF/ToolsList.md",
@@ -198,14 +199,12 @@
     "SoftwareManual/MicosoftOffice.md",
     "SoftwareManual/VSCode.md",
     "SoftwareManual/VisualStudio.md",
-    "CTF/ToolManual/Wireshark.md",
     "CTF/ToolManual/010Editor.md",
     "CTF/Hacker/软件破解.md",
     "ComputerScience/Database.md",
     "CTF/ToolManual/Xdbg.md",
     "attachments/Pasted image 20230817230201.png",
     "CTF/CRYPTO/CTF.md",
-    "CTF/README.md",
     "Music/MusicTheory.md",
     "Music/FLStudio.md",
     "Architecture/ABP.md",
@@ -213,7 +212,6 @@
     "CTF/CRYPTO/Practice_Cryptograph.md",
     "CTF/CRYPTO/PBE.md",
     "CTF/CRYPTO/Encoding.md",
-    "CTF/CRYPTO/密码种类与特征.md",
     "attachments/Pasted image 20230814163237.png",
     "CTF/Hacker",
     "attachments/Pasted image 20230814155551.png",
