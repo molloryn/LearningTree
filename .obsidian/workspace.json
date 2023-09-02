@@ -4,37 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "48aa5d8191c2f87b",
+        "id": "6eb8b289ea557845",
         "type": "tabs",
         "children": [
           {
-            "id": "f54d71e3ce6ef86d",
+            "id": "6eeb6d8d40f5925e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a8c5223bbc373a70",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CTF/ToolManual/010Editor.md",
+                "file": "CTF/MISC/文件头.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolManual/010Editor.md",
+                "file": "CTF/MISC/文件头.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolManual/010Editor.md",
+                "file": "CTF/MISC/文件头.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolManual/010Editor.md"
+                "file": "CTF/MISC/文件头.md"
               }
             }
           },
@@ -195,20 +181,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a8c5223bbc373a70",
+  "active": "6eeb6d8d40f5925e",
   "lastOpenFiles": [
-    "CTF/ToolManual/CyberChef.md",
-    "CTF/MISC/图像隐写/图像隐写.md",
-    "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/图像隐写/PNG.md",
-    "CTF/ToolsList.md",
     "CTF/MISC/文件头.md",
+    "CTF/MISC/图像隐写/图像隐写.md",
+    "CTF/README.md",
+    "CTF/ToolManual/010Editor.md",
+    "CTF/ToolManual/CyberChef.md",
+    "CTF/MISC/图像隐写/JPG.md",
+    "CTF/ToolsList.md",
     "CTF/MISC/压缩包.md",
     "CTF/MISC/思路打开.md",
     "CTF/Hacker/软件破解.md",
     "SoftwareManual/VisualStudio.md",
     "attachments/Pasted image 20230829170428.png",
-    "CTF/README.md",
     "CTF/ToolManual/Wireshark.md",
     "CloudNative/K8S集群管理.md",
     "CloudNative/Docker.md",
@@ -221,7 +208,6 @@
     "attachments/Pasted image 20230823084310.png",
     "SoftwareManual/MicosoftOffice.md",
     "SoftwareManual/VSCode.md",
-    "CTF/ToolManual/010Editor.md",
     "ComputerScience/Database.md",
     "CTF/ToolManual/Xdbg.md",
     "attachments/Pasted image 20230817230201.png",
