@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolManual/CyberChef.md",
+                "file": "CTF/MISC/图像隐写/图像隐写.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "cloack",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,11 +66,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 299.49999618530273
+    "width": 299.49999618530273,
+    "collapsed": true
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -86,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolManual/CyberChef.md",
+                "file": "CTF/MISC/图像隐写/图像隐写.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolManual/CyberChef.md",
+                "file": "CTF/MISC/图像隐写/图像隐写.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolManual/CyberChef.md"
+                "file": "CTF/MISC/图像隐写/图像隐写.md"
               }
             }
           },
@@ -183,10 +185,13 @@
   },
   "active": "c69c0511e417c5e0",
   "lastOpenFiles": [
+    "CTF/README.md",
+    "CTF/ToolManual/Xdbg.md",
+    "CTF/ToolManual/010Editor.md",
+    "CTF/ToolManual/CyberChef.md",
     "attachments/Pasted image 20230902211937.png",
     "CTF/CRYPTO/CTF.md",
     "CTF/MISC/思路打开.md",
-    "CTF/ToolManual/CyberChef.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/CRYPTO/公钥密码密钥格式.md",
@@ -199,13 +204,10 @@
     "CTF/MISC/压缩包.md",
     "ComputerScience/Linux.md",
     "CTF/MISC/音频隐写.md",
-    "CTF/ToolManual/Xdbg.md",
     "CTF/ToolManual/VMware.md",
-    "CTF/README.md",
     "attachments/Pasted image 20230902133734.png",
     "attachments/Pasted image 20230902132207.png",
     "attachments/Pasted image 20230902132123.png",
-    "CTF/ToolManual/010Editor.md",
     "attachments/Pasted image 20230902121620.png",
     "CTF/Reverse.md",
     "CTF/ToolsList.md",
@@ -219,7 +221,6 @@
     "attachments/Pasted image 20230817230201.png",
     "attachments/Pasted image 20230814163237.png",
     "CTF/Hacker",
-    "attachments/Pasted image 20230814155551.png",
     "AI",
     "Koubot",
     "Fontend",
