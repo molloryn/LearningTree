@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/文件头.md",
+                "file": "CTF/MISC/Untitled.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/文件头.md",
+                "file": "CTF/MISC/Untitled.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/文件头.md",
+                "file": "CTF/MISC/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/文件头.md"
+                "file": "CTF/MISC/Untitled.md"
               }
             }
           },
@@ -183,6 +183,10 @@
   },
   "active": "6eeb6d8d40f5925e",
   "lastOpenFiles": [
+    "CTF/MISC/思路打开.md",
+    "CTF/MISC/Untitled.md",
+    "attachments/Pasted image 20230902133734.png",
+    "CTF/MISC/文件头.md",
     "attachments/Pasted image 20230902132207.png",
     "attachments/Pasted image 20230902132123.png",
     "CTF/MISC/图像隐写/PNG.md",
@@ -194,10 +198,8 @@
     "CTF/ToolsList.md",
     "CTF/ToolManual/CyberChef.md",
     "CTF/ToolManual/VMware.md",
-    "CTF/MISC/文件头.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/图像隐写/JPG.md",
-    "CTF/MISC/思路打开.md",
     "CTF/Hacker/软件破解.md",
     "SoftwareManual/VisualStudio.md",
     "attachments/Pasted image 20230829170428.png",
@@ -218,8 +220,6 @@
     "attachments/Pasted image 20230814163237.png",
     "CTF/Hacker",
     "attachments/Pasted image 20230814155551.png",
-    "attachments/Pasted image 20230814155526.png",
-    "attachments/Pasted image 20230814155516.png",
     "AI",
     "Koubot",
     "Fontend",
