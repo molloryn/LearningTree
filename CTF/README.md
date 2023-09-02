@@ -13,30 +13,7 @@
 冷门：[blog.csdn.net/weixin_45883223/article/details/111059544](https://blog.csdn.net/weixin_45883223/article/details/111059544)
 
 
-## 虚拟机
 
-#### VMDK转VHDX
-VHDX是Hyper-V的，VMDK是VMware的
-https://theitbros.com/how-to-convert-vmdk-to-vhdx/
-
-下载[Microsoft Virtual Machine Converter](http://download.microsoft.com/download/9/1/E/91E9F42C-3F1F-4AD9-92B7-8DD65DA3B0C2/mvmc_setup.msi)
-
-管理员权限执行：
-```powershell
-Import-Module 'C:\Program Files\Microsoft Virtual Machine Converter\MvmcCmdlet.psd1'
-
-ConvertTo-MvmcVirtualHardDisk -SourceLiteralPath "C:\SharedVMDK\shareddisk01.vmdk" -VhdType DynamicHardDisk -VhdFormat vhdx -destination C:\VHD
-```
-要在一个会话中用
-
-
-## 文件恢复
-
-WinHex有此功能可以恢复硬盘文件
-
-Binwalk也能提取
-
-![A screenshot of a computer Description automatically generated](../attachments/ec41e0fb319b852f88fb9e1d58133e0e.png)
 
 ## 密码
 
@@ -108,23 +85,7 @@ CTF有些题给的压缩包要用winrar，7zip等压缩包能看到文件，而�
 
 [https://www.qingsword.com/qing/812.html\#windows-NTFS-ADS-2](https://www.qingsword.com/qing/812.html#windows-NTFS-ADS-2)
 
-## 音频隐写
 
-套路：
-
-<http://www.hackdig.com/02/hack-898013.htm>
-
-<https://blog.csdn.net/qq_51652400/article/details/123504708>
-
-### 工具
-
-MMSTV
-
-<http://radiogalena.es/yoniq/>
-
-### private bit隐写
-
-关键字：私密
 
 ## 图片隐写
 
