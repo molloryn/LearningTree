@@ -11,3 +11,9 @@ convert text to its ASCII charcode: To Charcode radix 10
 其中有`Decode text`和`Encode text`功能，含有各种字符集。
 比如：
 `IBM EBCDIC International (EBCDIC)`, `US-ASCII (ASCII)`
+
+
+# 暴力破解
+
+凯撒密码暴力破解
+![](../../attachments/Pasted%20image%2020230902211937.png)
