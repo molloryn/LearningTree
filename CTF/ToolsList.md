@@ -139,13 +139,14 @@ https://github.com/gubeihc/blasting 前端密码爆破
 
 # Linux
 
-| 软件名        | 场景                       | 备注                                                                                        |
-|:------------- |:-------------------------- |:------------------------------------------------------------------------------------------- |
-| thefuck       | 辅助linux修复命令          | [nvbn/thefuck](https://github.com/nvbn/thefuck)                                             |
-| powerlevel10k | zsh主题                    | [romkatv/powerlevel10k: A Zsh theme (github.com)](https://github.com/romkatv/powerlevel10k) |
-| ohmyzsh       | 管理 linux shell zsh       | [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)                                       |
-| Dust          | Du+rust,增强disk usage命令 | [bootandy/dust](https://github.com/bootandy/dust)                                           |
-| Bat           | Cat美化工具，语法高亮      | [42.6k star,推荐个强大的命令，让输出焕然一新的语法高亮工具--bat](https://mp.weixin.qq.com/s/D7WCiwXo1aGsa2RQeR82nA)                                                                                            |
+| 软件名        | 场景                       | 备注                                                                                                                |
+|:------------- |:-------------------------- |:------------------------------------------------------------------------------------------------------------------- |
+| thefuck       | 辅助linux修复命令          | [nvbn/thefuck](https://github.com/nvbn/thefuck)                                                                     |
+| powerlevel10k | zsh主题                    | [romkatv/powerlevel10k: A Zsh theme (github.com)](https://github.com/romkatv/powerlevel10k)                         |
+| ohmyzsh       | 管理 linux shell zsh       | [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)                                                               |
+| Dust          | Du+rust,增强disk usage命令 | [bootandy/dust](https://github.com/bootandy/dust)                                                                   |
+| Bat           | Cat美化工具，语法高亮      | [42.6k star,推荐个强大的命令，让输出焕然一新的语法高亮工具--bat](https://mp.weixin.qq.com/s/D7WCiwXo1aGsa2RQeR82nA) |
+| rustup        | rust安装工具               | 先`sudo apt remove rustc`如果已经安装的话                                                                                                                    |
 
 # 笔记
 
