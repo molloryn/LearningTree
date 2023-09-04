@@ -40,6 +40,19 @@ ADB 全称 Android Debug Bridge，译作Android 调试桥。 ADB是一种功能�
 adb connect host:port # 连接安卓模拟器
 adb devices # 列出已连接的设备
 adb -s 设备号 shell # 连上shell
+
+# 连上设备，查看设备cpu架构
+> adb shell
+* daemon started successfully
+> root@aosp: getprop ro.product.cpu.abi
+x86
+
+# 根据cpu版本及frida版本去下载相应frida-server
+https://github.com/frida/frida/releases
+
+# 通过adb push frida server文件推到手机的/data/local/tmp目录下，并给予777权限，然后运行server
+
+
 ```
 
 
