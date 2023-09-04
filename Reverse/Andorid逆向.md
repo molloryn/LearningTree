@@ -40,20 +40,8 @@ ADB 全称 Android Debug Bridge，译作Android 调试桥。 ADB是一种功能�
 adb connect host:port # 连接安卓模拟器
 adb devices # 列出已连接的设备
 adb -s 设备号 shell # 连上shell
-
-# 连上设备，查看设备cpu架构
-> adb shell
-* daemon started successfully
-> root@aosp: getprop ro.product.cpu.abi
-x86
-
-# 根据cpu版本及frida版本去下载相应frida-server
-https://github.com/frida/frida/releases
-
-# 通过adb push frida server文件推到手机的/data/local/tmp目录下，并给予777权限，然后运行server
-
-
 ```
+
 
 
 # 软件
@@ -78,6 +66,36 @@ https://github.com/frida/frida/releases
 ### Frida
 Frida是个轻量级别的hook框架，是Python API，但JavaScript调试逻辑
 
+
+```sh
+# 使用编写好的HOOK脚本
+frida -UF -l exp.js
+```
+
+
+```sh
+# 连上设备，查看设备cpu架构
+> adb shell
+* daemon started successfully
+> root@aosp: getprop ro.product.cpu.abi
+x86
+
+# 根据cpu版本及frida版本去下载相应frida-server
+https://github.com/frida/frida/releases
+
+# 通过adb push frida server文件推到手机的/data/local/tmp目录下，并给予777权限，然后运行server
+> adb push frida-serverx86 /data/local/tmp
+> frida-serverx86: 1 file pushed. 6.7 MB/s (28209380 bytes in 3.992s) E:\frida
+> adb shell
+> root@aosp:/ # cd /
+> root@aosp:/ # cd data/local/tmp/
+> root@aosp:/data/local/tmp # chmod 777 frida-serverx86
+> root@aosp:/data/local/tmp # ./frida-serverx86
+WARNING: linker: ./frida-serverx86: unused DT entry: type 0x6ffffef5 arg 0x1c60
+
+# 再检查是否配置成功
+frida-ps -U
+```
 
 ## 反编译
 ### Jadx
