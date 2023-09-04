@@ -118,6 +118,14 @@ Then restart wsl with
 ```sh
 wsl --shutdown
 ```
+#### 添加需要的windows程序到环境变量
+
+注意大小写
+```zshrc
+path+=( 
+/mnt/c/Users/lesmo/AppData/Local/Microsoft/WindowsApps /mnt/c/Users/lesmo/AppData/Local/Programs/Microsoft VS Code/bin /mnt/c/Program Files/Docker/Docker/resources/bin /mnt/c/ProgramData/DockerDesktop/version-bin /mnt/c/WINDOWS 
+)
+```
 
 
 # Kali
@@ -279,4 +287,16 @@ ln -s /root/xxx/bkcrack/install/bkcrack /usr/local/bin
 echo $PATH
 
 
+```
+
+## Linux命令手册
+[jaywcjlove/linux-command: Linux命令大全搜索工具，内容包含Linux命令手册、详解、学习、搜集。https://git.io/linux (github.com)](https://github.com/jaywcjlove/linux-command)
+轻松通过 `docker` 部署 `linux-command` 网站。
+
+```shell
+docker pull wcjiang/linux-command
+```
+
+```shell
+docker run --name linux-command --rm -d -p 9665:3000 wcjiang/linux-command:latest
 ```
