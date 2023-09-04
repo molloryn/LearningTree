@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/CRYPTO/密码攻击方式.md",
+                "file": "SoftwareManual/WSL.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/CRYPTO/密码攻击方式.md",
+                "file": "SoftwareManual/WSL.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/CRYPTO/密码攻击方式.md",
+                "file": "SoftwareManual/WSL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/CRYPTO/密码攻击方式.md"
+                "file": "SoftwareManual/WSL.md"
               }
             }
           },
@@ -167,7 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 235.5
+    "width": 237.5
   },
   "left-ribbon": {
     "hiddenItems": {

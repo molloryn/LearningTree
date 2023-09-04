@@ -104,7 +104,7 @@ alias proxy="source /xxx/proxy.sh" # 可以为这个脚本设置别名 proxy，�
 输入第一块命令的时候，WSL2的zsh语法高亮特别慢，通过排查 `~/.zshrc`可以发现是`zsh-syntax-highlighting.zsh`的问题，遂上Github发现问题：
 [syntax highlighting is super slow in WSL2 · Issue #790 · zsh-users/zsh-syntax-highlighting (github.com)](https://github.com/zsh-users/zsh-syntax-highlighting/issues/790)
 
-其中有一个临时解决方案，禁用掉某个wsl2的功能（似乎是可以将windows的环境变量运用到wsl中）。
+其中有一个临时解决方案，禁用掉某个wsl2的功能（似乎是可以将windows的环境变量运用到wsl中，这也导致docker之类的用不了了）。
 
 I solved this by excluding windows directories from `$PATH` by adding following in `/etc/wsl.conf`. Create the file if it doesn't exist
 
@@ -260,3 +260,23 @@ wget //从Web下载文件
 net-tools
 
 sudo
+
+## 安装自编译软件
+
+
+```sh
+# Git拉取，并编译需要的软件，比如bkcrack (源码其实可以拉去/usr/local/src大概)
+cmake -S . -B build -DCMAKE_INSTALL_PREFIX=install
+cmake --build build --config Release
+cmake --build build --config Release --target install
+
+# 在工作目录下install文件夹内有二进制可执行文件
+# 一般来说自编译的软件放在/usr/local/bin 目录下
+# 一定要使用绝对路径进行软链接，不然无法识别
+ln -s /root/xxx/bkcrack/install/bkcrack /usr/local/bin
+
+# 此时已经生效了，如果没生效检查一下环境变量作用范围是不是有那个/usr/local/bin
+echo $PATH
+
+
+```
