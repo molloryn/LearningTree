@@ -97,6 +97,29 @@ alias proxy="source /xxx/proxy.sh" # 可以为这个脚本设置别名 proxy，�
 
 解决方案是直接重启电脑。猜测是hype-v的端口随机占用有概率导致无法连接问题
 
+## 问题
+
+### zsh语法高亮非常慢
+
+输入第一块命令的时候，WSL2的zsh语法高亮特别慢，通过排查 `~/.zshrc`可以发现是`zsh-syntax-highlighting.zsh`的问题，遂上Github发现问题：
+[syntax highlighting is super slow in WSL2 · Issue #790 · zsh-users/zsh-syntax-highlighting (github.com)](https://github.com/zsh-users/zsh-syntax-highlighting/issues/790)
+
+其中有一个临时解决方案，禁用掉某个wsl2的功能（似乎是可以将windows的环境变量运用到wsl中）。
+
+I solved this by excluding windows directories from `$PATH` by adding following in `/etc/wsl.conf`. Create the file if it doesn't exist
+
+```
+[interop]
+appendWindowsPath = false
+```
+
+Then restart wsl with
+
+```sh
+wsl --shutdown
+```
+
+
 # Kali
 
 ## 安装

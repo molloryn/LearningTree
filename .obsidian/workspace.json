@@ -4,37 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "d53434c99eee6fe0",
+        "id": "cd0b1f5d039843d0",
         "type": "tabs",
         "children": [
           {
-            "id": "c69c0511e417c5e0",
+            "id": "b9be702cd5f712b9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Linux.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "79d0616adb181207",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SoftwareManual/WSL.md",
+                "file": "CTF/CRYPTO/密码攻击方式.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/WSL.md",
+                "file": "CTF/CRYPTO/密码攻击方式.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/WSL.md",
+                "file": "CTF/CRYPTO/密码攻击方式.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/WSL.md"
+                "file": "CTF/CRYPTO/密码攻击方式.md"
               }
             }
           },
@@ -195,16 +181,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "79d0616adb181207",
+  "active": "b9be702cd5f712b9",
   "lastOpenFiles": [
-    "ComputerScience/Linux.md",
+    "CTF/CRYPTO/密码攻击方式.md",
+    "CTF/MISC/压缩包.md",
+    "CTF/CRYPTO/公钥密码密钥格式.md",
+    "CTF/CRYPTO/密码种类与特征.md",
+    "CTF/MISC/图像隐写/图像隐写.md",
+    "CTF/ToolsList.md",
     "SoftwareManual/WSL.md",
+    "ComputerScience/Linux.md",
     "Music/MusicTheory.md",
     "Koubot/Linux命令.md",
     "SoftwareManual/CMD.md",
     "Reverse/Andorid逆向.md",
     "attachments/Pasted image 20230904172641.png",
-    "CTF/ToolsList.md",
     "Reverse/Reverse.md",
     "Architecture/ABP.md",
     "attachments/Pasted image 20230904114624.png",
@@ -212,15 +203,11 @@
     "attachments/Pasted image 20230904101145.png",
     "attachments/Pasted image 20230904095851.png",
     "Reverse",
-    "CTF/CRYPTO/密码种类与特征.md",
     "CTF/CRYPTO/CTF.md",
     "CTF/CRYPTO/Encoding.md",
-    "CTF/CRYPTO/公钥密码密钥格式.md",
-    "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/Hacker/软件破解.md",
-    "CTF/MISC/压缩包.md",
     "attachments/Pasted image 20230903004512.png",
     "CTF/MISC/思路打开.md",
     "attachments/Pasted image 20230903003515.png",
@@ -233,7 +220,6 @@
     "CTF/ToolManual/Xdbg.md",
     "CTF/ToolManual/CyberChef.md",
     "attachments/Pasted image 20230902211937.png",
-    "CTF/CRYPTO/PBE.md",
     "CTF/Hacker",
     "AI",
     "Koubot",

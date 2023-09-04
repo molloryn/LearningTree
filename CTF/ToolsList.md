@@ -11,11 +11,8 @@
 | ziperello           |                                                                      | [主流格式压缩包密码破解方法+字典枚举 整理+工具](https://www.52pojie.cn/forum.php?mod=viewthread&tid=1478639&highlight=%D1%B9%CB%F5%B0%FC) |
 | 字典破解2.0         |                                                                      |                                                                                                                                           |
 | PasswareKitForensic | 除明文攻击外，基本支持暴力破解相关所有功能                           | 已保存在百度网盘                                                                                                                          |
-| bkcrack             | 可用于明文攻击                                                       |[Release Release v1.5.0 · kimci86/bkcrack (github.com)](https://github.com/kimci86/bkcrack/releases/tag/v1.5.0) [bkcrack：一款基于已知明文攻击的传统zip加密破解工具](https://cloud.tencent.com/developer/article/2215202)                                                                                                                                          |
+| bkcrack             | 可用于明文攻击                                                       | [kimci86/bkcrack](https://github.com/kimci86/bkcrack/releases/tag/v1.5.0)                                                                 | 
 
-注意：明文文件路径内zip文件头需要和加密压缩包文件头一样（同一压缩工具压缩），相关工具内列出了常用压缩工具文件头和文件头识别工具。
-明文攻击是先把里面存在的文件用同样的压缩工具进行压缩。
-明文攻击文件和加密zip内的文件CRC校验要一样。
 
 ## 图片
 
