@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fontend/FrontendConcept.md",
+                "file": "CTF/MISC/压缩包.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fontend/FrontendConcept.md",
+                "file": "CTF/MISC/压缩包.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fontend/FrontendConcept.md",
+                "file": "CTF/MISC/压缩包.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fontend/FrontendConcept.md"
+                "file": "CTF/MISC/压缩包.md"
               }
             }
           },
@@ -183,6 +183,7 @@
   },
   "active": "1868b21d6d323f46",
   "lastOpenFiles": [
+    "Fontend/FrontendConcept.md",
     "Koubot/Linux命令.md",
     "Music/MusicTheory.md",
     "Reverse/Andorid逆向.md",
@@ -218,7 +219,6 @@
     "CTF/MISC/镜像分析.md",
     "CTF/README.md",
     "CTF/ToolManual/Xdbg.md",
-    "CTF/ToolManual/CyberChef.md",
     "attachments/Pasted image 20230902211937.png",
     "CTF/Hacker",
     "AI",
