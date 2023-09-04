@@ -32,7 +32,16 @@ Dex是Dalvik虚拟机的可执行文件，Dex文件与标准的Class文件在结
 
 
 ### ADB
-用于创建adb shell，连上安卓系统，就相当于ssh连上linux一样。
+连上安卓系统，就相当于ssh连上linux一样。
+ADB 全称 Android Debug Bridge，译作Android 调试桥。 ADB是一种功能多样的命令行工具，可让您与设备进行通信。ADB 命令可用于执行各种设备操作（例如安装和调试应用），并提供对 Unix shell（可用来在设备上运行各种命令）的访问权限。它是一种客户端-服务器程序，对我们以后进行安卓开发与设备系统安装方面有极大的用处。
+
+
+```sh
+adb connect host:port # 连接安卓模拟器
+adb device # 列出已连接的设备
+adb -s 设备号 shell # 连上shell
+```
+
 
 # 软件
 ## 脱壳
@@ -47,6 +56,14 @@ Dex是Dalvik虚拟机的可执行文件，Dex文件与标准的Class文件在结
 ### MT管理器
 
 安卓中的app，可以对apk进行重打包、签名。
+
+## Hook
+对某个方法或参数进行hook，支持使用frida或xposed进行。
+比如可以将某个方法实现变为自己传入的代码片段。
+[凡墙总是门 (kevinspider.github.io)](https://kevinspider.github.io/)
+
+### Frida
+Frida是个轻量级别的hook框架，是Python API，但JavaScript调试逻辑
 
 
 ## 反编译
@@ -67,10 +84,7 @@ Dex是Dalvik虚拟机的可执行文件，Dex文件与标准的Class文件在结
 IDA 还原JNI函数方法名，用于显示调用的具体函数名称
 [IDA 还原JNI函数方法名 的三种方法_ida jni_暗夜枭熊的博客-CSDN博客](https://blog.csdn.net/yb493071294/article/details/80378730)
 
-#### Hook
-对某个方法或参数进行hook，支持使用frida或xposed进行。
-比如可以将某个方法实现变为自己传入的代码片段。
-[凡墙总是门 (kevinspider.github.io)](https://kevinspider.github.io/)
+
 
 
 ### Andorid Killer

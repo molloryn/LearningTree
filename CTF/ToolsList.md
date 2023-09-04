@@ -332,4 +332,6 @@ Pillow
 progressbar2
 crypto
 pycryptodome # 可以替代难以安装的pycrypto
+frida
+frida-tools
 
