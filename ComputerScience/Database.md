@@ -636,10 +636,10 @@ EFCore默认是生成小写表名，不显式配置表名迁移到linux中会导
 GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'IP' IDENTIFIED BY 'PASSWORD' with grant option; -- ip设置为%是允许所有来源IP
 
 FLUSH PRIVILEGES;
-
+-- 以上是mysql8以前
 --mysql8.0后不能直接GRANT to现有的用户 需要先创建新的再赋予权限
 
-Starting with MySQL 8 you no longer can (implicitly) create a user using the GRANT command. Use CREATE USER instead, followed by the GRANT statement:
+-- Starting with MySQL 8 you no longer can (implicitly) create a user using the GRANT command. Use CREATE USER instead, followed by the GRANT statement:
 
 USE mysql;
 
@@ -652,6 +652,9 @@ FLUSH PRIVILEGES;
 --检查设定用户连接允许的host来源
 
 SELECT host,user FROM mysql.user;
+
+-- 修改密码
+ALTER USER '用户名'@'localhost' IDENTIFIED WITH mysql_native_password BY '新密码';
 ```
 
 
