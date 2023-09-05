@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "74c573b9697e4c41",
+        "id": "d672965b4c6e936b",
         "type": "tabs",
         "children": [
           {
-            "id": "1868b21d6d323f46",
+            "id": "00dd08fa9b7e859d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CTF/MISC/图像隐写/BMP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "BMP",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CTF/MISC/图像隐写/BMP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CTF/MISC/图像隐写/BMP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md"
+                "file": "CTF/MISC/图像隐写/BMP.md"
               }
             }
           },
@@ -182,16 +181,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "06bae426a52ef2d9",
+  "active": "00dd08fa9b7e859d",
   "lastOpenFiles": [
-    "CloudNative/Docker.md",
-    "CTF/MISC/图像隐写/图像隐写.md",
-    "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/图像隐写/PNG.md",
+    "CTF/MISC/图像隐写/BMP.md",
     "CTF/ToolManual/010Editor.md",
-    "attachments/Pasted image 20230904233917.png",
     "CTF/MISC/文件头.md",
+    "CTF/MISC/图像隐写/图像隐写.md",
+    "CTF/MISC/音频隐写.md",
     "CTF/MISC/压缩包.md",
+    "attachments/Pasted image 20230905102150.png",
+    "CTF/MISC/镜像分析.md",
+    "CTF/MISC/思路打开.md",
+    "CTF/MISC/图像隐写/JPG.md",
+    "CloudNative/Docker.md",
+    "attachments/Pasted image 20230904233917.png",
     "Fontend/FrontendConcept.md",
     "Koubot/Linux命令.md",
     "Music/MusicTheory.md",
@@ -213,14 +217,9 @@
     "Reverse",
     "CTF/CRYPTO/CTF.md",
     "CTF/CRYPTO/Encoding.md",
-    "CTF/Hacker/软件破解.md",
     "attachments/Pasted image 20230903004512.png",
-    "CTF/MISC/思路打开.md",
     "attachments/Pasted image 20230903003515.png",
     "attachments/Pasted image 20230903003510.png",
-    "attachments/Pasted image 20230902234150.png",
-    "CTF/MISC/镜像分析.md",
-    "CTF/README.md",
     "CTF/Hacker",
     "AI",
     "Koubot",
