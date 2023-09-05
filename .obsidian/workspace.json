@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/WEB/绕过方式.md",
+                "file": "CTF/PWN/注意事项.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/WEB/绕过方式.md",
+                "file": "CTF/PWN/注意事项.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/WEB/绕过方式.md",
+                "file": "CTF/PWN/注意事项.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/WEB/绕过方式.md"
+                "file": "CTF/PWN/注意事项.md"
               }
             }
           },
@@ -184,8 +184,9 @@
   },
   "active": "45ebae64a1720615",
   "lastOpenFiles": [
-    "SoftwareManual/CMD.md",
     "CTF/WEB/绕过方式.md",
+    "CTF/PWN/注意事项.md",
+    "SoftwareManual/CMD.md",
     "CTF/WEB",
     "CTF/PWN",
     "ComputerScience/Database.md",
@@ -211,7 +212,6 @@
     "CTF/MISC/压缩包.md",
     "CTF/ToolManual/Wireshark.md",
     "CTF/MISC/图像隐写/PNG.md",
-    "CTF/MISC/图像隐写/BMP.md",
     "attachments/Pasted image 20230905110623.png",
     "attachments/Pasted image 20230905105246.png",
     "attachments/Pasted image 20230905102150.png",
