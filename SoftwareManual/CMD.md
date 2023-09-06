@@ -20,8 +20,14 @@ Get-NetFirewallRule -Name *ssh*
 
 #卸载
 Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+
+# 添加防火墙
+New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH SSH Server' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22 -Program "C:\Windows\System32\OpenSSH\sshd.exe"
+
 ```
 
+仍然无效的可以使用如下方法安装
+[Manually install OpenSSH in Windows Server (saotn.org)](https://www.saotn.org/manually-install-openssh-in-windows-server/)
 
 #### 获取CPU温度
 
