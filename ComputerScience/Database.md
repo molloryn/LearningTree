@@ -781,87 +781,9 @@ from
 
 ```
 
-## 字符编码
 
-#### 字符集（character set）
 
-为每一个「字符」分配一个唯一的 ID（学名为码位 / 码点 / Code Point）
-
-**代码点（码位 / 码点）**
-
-字符集中的每个字符都被分配到一个“代码点”。每个代码点都有一个特定的唯一数值，称为标值。该标量值通常用十六进制表示。（就是ID的总值吧）
-
-**Unicode与UCS（Universal Character Set 通用字符集）**
-
-其实两者都是为了统一的单一标准字符集，区别在于是历史上两种组织（ISO 国际化标准组织和软件制造商组成的Unicode统一码联盟），前者是ISO/IEC 10646项目，后者是Unicode项目，最终两个组织发现目的相同，开始合并双方成果，后面标准码基本趋于相同（即某个代码点代表的字符相同且有相同的名字）所以UCS字符集目前已经和Unicode兼容。
-
-Unicode 、ASCII(American Standard Code for Information Interchange)是「**字符集**」，字符集只规定了符号的二进制代码，却没有规定这个二进制代码应该如何存储。出于节省空间的目的，对字符集编码的实现方式有所不同。Unicode这个标准不仅同时定义了字符集，还定义了一系列的编码规则
-
-UTF-8(8-bit Unicode Transformation Format Unicode转换格式 之 8位) 是「**编码规则**」
-
-#### 编码规则
-
-将「码位」转换为字节序列的规则（编码/解码 可以理解为 加密/解密 的过程）
-
-广义的 Unicode 是一个标准，定义了一个字符集以及一系列的编码规则，即 Unicode 字符集和 UTF-8、UTF-16、UTF-32 等等编码……。
-
-**代码单元**
-
-在每种编码形式中，代码点被映射到一个或多个代码单元。“代码单元”是各个编码方式中的单个单元。代码单元的大小等效于特定编码方式的位数，也就是最小编码单位（就是一个字符用多少位来表示，比如8位的代码单元就是，一个字符最少要用8位二进制来表示）utf-8就是最少使用8位表示一个字符，又因为是变长，如果表示不了就用多个8位。utf-16就是最少使用16位，utf-32类似。
-
-UCS字符集（已经与Unicode兼容），其所对应的编码方式为UCS-2，UCS-4。其中UCS-2是16位来表示一个字符，但这个与utf-16不同的是定长的，固定16位，所以不支持某些扩展字符（超过16位的），UCS-4也是定长，用32位来表示一个字符。所以UCS是落伍的编码方式。
-
-##### Unicode与UTF8的关系
-
-UTF-8 顾名思义，是一套以 8 位为一个编码单位的可变长编码。会将一个码位编码为 1 到 4 个字节
-
-例如「知」的Unicode码位是 30693，记作 U+77E5（30693 的十六进制为 0x77E5）
-
-Unicode UTF-8
-
-U+ 0000 \~ U+ 007F: 0XXXXXXX
-
-U+ 0080 \~ U+ 07FF: 110XXXXX 10XXXXXX
-
-U+ 0800 \~ U+ FFFF: 1110XXXX 10XXXXXX 10XXXXXX
-
-U+10000 \~ U+10FFFF: 11110XXX 10XXXXXX 10XXXXXX 10XXXXXX
-
-根据上表中的编码规则，之前的「知」字的码位 U+77E5 属于第三行的范围：
-
-```
-       7    7    E    5   
-    0111 0111 1110 0101    二进制的 77E5
---------------------------
-    0111   011111   100101 二进制的 77E5
-1110XXXX 10XXXXXX 10XXXXXX 模版（上表第三行）
-11100111 10011111 10100101 代入模版
-   E   7    9   F    A   5
-```
-
-这就是将 U+77E5 按照 UTF-8 编码为字节序列 E79FA5 的过程。反之亦然。
-
-##### UTF-8 BOM（Byte Order Mark 字节序标记）
-
-在UCS的规范中有一个叫做*zero-width non-breaking*的字符，它的码位是U+FEFF。
-
-UCS规范建议我们在传输字节流前，先传输 字符”ZERO WIDTH NO-BREAK SPACE“。
-
-BOM它能表明信息的一些编码方式：
-
-The byte order, or endianness, of the text stream in the cases of 16-bit and 32-bit encodings;
-
-The fact that the text stream's encoding is Unicode, to a high level of confidence;
-
-Which Unicode character encoding is used.
-
-UTF-8因为它的编码特性，是字节序无关的，所以BOM其实是可选的（Unicode没有建议使用BOM）
-
-BOM在设计中意思是“不可见字符”，在编辑器中不可见，但在UNIX设计规范中，就是文档中存在的数据必须可见。所以linux中对于bom的存在争议颇大，引起很多不兼容的问题。
-
-windows坚持用bom，比如自带的文本编辑器保存的utf8就是with bom的。
-
-### 数据库中的编码
+## 数据库中的字符编码
 
 utf8mb4_general_ci是针对utf8mb4编码的collation(n.校对，核对；整理; (对书卷号码、编页等的) 核实，配页; 牧师职务的授予;)
 
