@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/AWD/AWD.md",
+                "file": "CTF/WEB/WEB.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/AWD/AWD.md",
+                "file": "CTF/WEB/WEB.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/AWD/AWD.md",
+                "file": "CTF/WEB/WEB.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/AWD/AWD.md"
+                "file": "CTF/WEB/WEB.md"
               }
             }
           },
@@ -198,8 +198,8 @@
   },
   "active": "089244ec01f2a52b",
   "lastOpenFiles": [
-    "SoftwareManual/CMD.md",
     "CTF/AWD/AWD.md",
+    "SoftwareManual/CMD.md",
     "ComputerScience/Linux.md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "CTF/ToolManual/VMware.md",

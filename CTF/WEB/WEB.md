@@ -16,6 +16,9 @@ To expand all elements, use the `<html>` element's arrow icon in the shortcut.
 比如过滤给定字符串内关键字：`CTF`，只过滤一次，但想要最终结果还保留有该关键字，就可以采用双写绕过：
 `CCTFTF`
 
+## 双重编码绕过
+
+
 ## 响应绕过
 
 ### ROT13
