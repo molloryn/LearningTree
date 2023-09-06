@@ -25,9 +25,8 @@ Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH SSH Server' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22 -Program "C:\Windows\System32\OpenSSH\sshd.exe"
 
 
-# ssh服务端生成ssh公钥，以使用无密码连接
-ssh-keygen -t rsa -b 4096
-
+# ssh客户端生成ssh公钥与私钥，以使用无密码连接，将生成的公钥放到ssh服务端
+ssh-keygen -q -b 2048 -P "" -f <hostname>_rsa -t rsa
 # 
 ```
 
