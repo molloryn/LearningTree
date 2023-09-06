@@ -27,6 +27,17 @@ scp -P 12345 /home/1.zip root@127.0.0.1:/home
 
 ## 源码备份
 
+```sh
+# zip
+zip -r xxx.zip ./*
+unzip xxx.zip -d
+
+# tar
+tar -cvf xxx.tar ./*
+tar -xvf xxx.tar -C /home/ctf/xxx
+
+```
+
 备份到本地、以及源站上`/home/xxx`目录一份，不建议备份到`/tmp`，因为攻击者通过`/var/www/`攻击的访问权限是在`/tmp`以及`/tmp/www/html`目录下
 
 ## 主机发现
