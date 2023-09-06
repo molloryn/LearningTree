@@ -223,6 +223,7 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | WinMerge         | 开源的文件比较/合并工具                                    |                                                                             |
 | Everything       | 最强全局文件搜索                                           |                                                                             |
 | ScreenToGif      | Gif录屏工具                                                |                                                                             |
+| Textify          | 无限制复制工具，替代OCR                                    | [m417z/Textify](https://github.com/m417z/Textify)                                                                            |
 
 ## Audio
 | 软件名  | 场景                   | 备注 |
