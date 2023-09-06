@@ -27,7 +27,7 @@ New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH SSH Server' -Enabled True -
 
 # ssh客户端生成ssh公钥与私钥，以使用无密码连接，将生成的公钥放到ssh服务端
 ssh-keygen -q -b 2048 -P "" -f <hostname>_rsa -t rsa
-# 
+# 具体操作： https://stackoverflow.com/a/69970152
 ```
 
 仍然无效的可以使用如下方法安装
