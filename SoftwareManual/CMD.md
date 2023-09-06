@@ -18,6 +18,8 @@ Set-Service -Name sshd -StartupType 'Automatic'
 # This is a PowerShell command that retrieves all firewall rules that have "ssh" in their name.
 Get-NetFirewallRule -Name *ssh*
 
+#卸载
+Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 ```
 
 

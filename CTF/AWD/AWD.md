@@ -1,4 +1,17 @@
 
+# 环境
+
+## 靶机环境
+
+如果没有安装python，可以尝试安装到有权限写入的目录：
+```sh
+./configure --prefix=/home/ctf/python32  
+make  
+make install
+```
+
+
+
 # 命令
 通常用于自动化脚本编写。
 #### scp
