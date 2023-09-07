@@ -44,7 +44,7 @@ tar -xvf xxx.tar -C /home/ctf/xxx
 
 ```sh
 id # 获取用户所在组。根据权限的不同，进行网站恢复、不死马的查杀。
-ls -l /var/www/html # 获取所属者 所属组 权限
+ls -l /var/www/html # 获取权限 所属组 所属者 
 
 ```
 
@@ -97,3 +97,42 @@ kill -9 -1  # 终止你拥有的全部进程
 rm -rf *
 # 恢复
 ```
+
+
+## 隐匿后门
+
+### 上传
+
+利用内置后门
+`file_put_contents('xx', base64_decode(base64_encode('TrojansContent')))`
+### 被利用
+
+#### 加密码
+
+- 写死密码
+- 动态密码
+- MD5
+- RSA密码
+
+### 被检测被删除
+#### 混淆
+- 文件名混淆、或假名
+#### 困难删除
+- 命名：使用`     .php`或`-- -.php`等不太好手动删除的文件（但可以直接通过FTP工具删除）
+- 
+
+#### 时间变化
+ 有三种时间：
+- atime (access time)
+- ctime (change time)
+- mtime (modified time)
+
+```sh
+stat <file> # 可以查看文件状态信息，包括三种时间。
+touch -r <oldFile> <newFile> # 可以将`oldFile`和`newFile`时间戳同步，但changeTime似乎会修改失败。
+```
+
+#### 不死马
+免杀
+##### 内存马
+自身执行一次后，把自己删除，自身已经驻留在内存之中，可以不断执行一些复活等操作，来进行权限维持。
