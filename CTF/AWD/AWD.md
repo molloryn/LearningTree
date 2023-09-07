@@ -39,8 +39,17 @@ tar -xvf xxx.tar -C /home/ctf/xxx
 ```
 
 备份到本地、以及源站上`/home/xxx`目录一份，不建议备份到`/tmp`，因为攻击者通过`/var/www/`攻击的访问权限是在`/tmp`以及`/tmp/www/html`目录下
+## 信息收集
 
-## 主机发现
+
+```sh
+id # 获取用户所在组。根据权限的不同，进行网站恢复、不死马的查杀。
+ls -l /var/www/html # 获取所属者 所属组 权限
+
+```
+
+
+### 主机发现
 
 AWD主机发现
     线下
@@ -50,6 +59,10 @@ AWD主机发现
         根据端口划分(web\ssh),可能有其他比赛
         scan.py
 
+区分选手和裁判：
+        check
+        down
+        waf
 ```python
 import requests
 
@@ -68,10 +81,6 @@ for i in range(51200,51230):
 
 ```
 
-    区分选手和裁判：
-        check
-            down
-            waf
 ### 目录发现
 
 ```sh
@@ -85,6 +94,6 @@ find / -name 'xxx.php' 2 > /dev/null
 ```sh
 # 以www-data用户执行 （比如使用蚁剑，或自建相关木马脚本然后通过网站执行）
 kill -9 -1  # 终止你拥有的全部进程
-
+rm -rf *
 # 恢复
 ```

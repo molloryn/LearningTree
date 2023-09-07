@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "CTF/AWD/AWD.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "CTF/AWD/AWD.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "CTF/AWD/AWD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolsList.md"
+                "file": "CTF/AWD/AWD.md"
               }
             }
           },
@@ -198,6 +198,7 @@
   },
   "active": "a5931f46c768f0d8",
   "lastOpenFiles": [
+    "CTF/ToolsList.md",
     "SoftwareManual/CMD.md",
     "CTF/ToolManual/CyberChef.md",
     "CTF/ToolManual/VMware.md",
@@ -217,7 +218,6 @@
     "CTF/CRYPTO/学习资料.md",
     "CTF/CRYPTO/Practice_Cryptograph.md",
     "attachments/Pasted image 20230905233647.png",
-    "CTF/ToolsList.md",
     "CTF/WEB",
     "CTF/PWN",
     "SoftwareManual/AHK.md",
