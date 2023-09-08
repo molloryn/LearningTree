@@ -167,8 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 237.5,
-    "collapsed": true
+    "width": 237.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,8 +183,10 @@
   },
   "active": "341423f849019691",
   "lastOpenFiles": [
-    "CTF/AWD/漏洞.md",
+    "Programming/C#.md",
+    "SoftwareManual/WSL.md",
     "CTF/AWD/工具.md",
+    "CTF/AWD/漏洞.md",
     "CTF/AWD/AWD.md",
     "CTF/思路打开.md",
     "CTF/ToolsList.md",
@@ -211,11 +212,9 @@
     "CTF/AWD",
     "ComputerScience/Database.md",
     "CTF/CRYPTO/学习资料.md",
-    "CTF/CRYPTO/Practice_Cryptograph.md",
     "attachments/Pasted image 20230905233647.png",
     "CTF/WEB",
     "CTF/PWN",
-    "SoftwareManual/AHK.md",
     "attachments/Pasted image 20230905110623.png",
     "attachments/Pasted image 20230905105246.png",
     "attachments/Pasted image 20230905102150.png",
