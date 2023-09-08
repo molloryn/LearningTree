@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/数值类.md",
+                "file": "CTF/MISC/电子取证.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/数值类.md",
+                "file": "CTF/MISC/电子取证.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/数值类.md",
+                "file": "CTF/MISC/电子取证.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/数值类.md"
+                "file": "CTF/MISC/电子取证.md"
               }
             }
           },
@@ -183,12 +183,12 @@
   },
   "active": "d8d06db9c05d4775",
   "lastOpenFiles": [
-    "CTF/MISC/内存取证.md",
+    "CTF/MISC/数值类.md",
+    "CTF/MISC/电子取证.md",
     "CTF/AWD/Linux易忽略点.md",
     "CloudNative/Docker.md",
     "CTF/ToolsList.md",
     "CTF/AWD/工具.md",
-    "CTF/MISC/数值类.md",
     "CTF/MISC/音频隐写.md",
     "CTF/MISC/压缩包.md",
     "CTF/PWN/基础.md",
