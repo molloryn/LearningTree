@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/电子取证.md",
+                "file": "CTF/CRYPTO/密码种类与特征.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "维",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/电子取证.md",
+                "file": "CTF/CRYPTO/密码种类与特征.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/电子取证.md",
+                "file": "CTF/CRYPTO/密码种类与特征.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/电子取证.md"
+                "file": "CTF/CRYPTO/密码种类与特征.md"
               }
             }
           },
@@ -183,8 +184,8 @@
   },
   "active": "d8d06db9c05d4775",
   "lastOpenFiles": [
-    "CTF/MISC/数值类.md",
     "CTF/MISC/电子取证.md",
+    "CTF/MISC/数值类.md",
     "CTF/AWD/Linux易忽略点.md",
     "CloudNative/Docker.md",
     "CTF/ToolsList.md",
