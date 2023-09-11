@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/AWD/AWD.md",
+                "file": "CTF/WEB/PHP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/AWD/AWD.md",
+                "file": "CTF/WEB/PHP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/AWD/AWD.md",
+                "file": "CTF/WEB/PHP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/AWD/AWD.md"
+                "file": "CTF/WEB/PHP.md"
               }
             }
           },
@@ -183,6 +183,10 @@
   },
   "active": "d8d06db9c05d4775",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230911233713.png",
+    "CTF/WEB/WEB.md",
+    "CTF/WEB/PHP.md",
+    "CTF/AWD/AWD.md",
     "SoftwareManual/WSL.md",
     "CTF/AWD/工具.md",
     "CTF/PWN/基础.md",
@@ -206,10 +210,6 @@
     "CTF/CRYPTO/Practice_Cryptograph.md",
     "CTF/CRYPTO/Encoding.md",
     "CTF/CRYPTO/PBE.md",
-    "CTF/CRYPTO/公钥密码密钥格式.md",
-    "CTF/CRYPTO/密码攻击方式.md",
-    "CTF/AWD/AWD.md",
-    "CTF/AWD/漏洞.md",
     "attachments/Pasted image 20230907170754.png",
     "attachments/Pasted image 20230907154606.png",
     "CTF/AWD",
