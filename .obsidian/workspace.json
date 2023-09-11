@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fontend/Blazor.md",
+                "file": "SoftwareManual/Git.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nuget",
+                "query": "path: git",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fontend/Blazor.md",
+                "file": "SoftwareManual/Git.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fontend/Blazor.md",
+                "file": "SoftwareManual/Git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fontend/Blazor.md"
+                "file": "SoftwareManual/Git.md"
               }
             }
           },
@@ -184,6 +184,7 @@
   },
   "active": "d8d06db9c05d4775",
   "lastOpenFiles": [
+    "Fontend/Blazor.md",
     "SoftwareManual/VisualStudio.md",
     "SoftwareManual/CMD.md",
     "CTF/MISC/文件头.md",
@@ -192,7 +193,6 @@
     "CTF/MISC/电子取证.md",
     "CTF/CRYPTO/CTF.md",
     "CTF/CRYPTO/密码种类与特征.md",
-    "Fontend/Blazor.md",
     "Fontend/FrontendConcept.md",
     "Programming/C#.md",
     "Programming/ASP.NET Core接口.md",
