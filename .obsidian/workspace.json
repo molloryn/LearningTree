@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "Fontend/Blazor.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "Fontend/Blazor.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "Fontend/Blazor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/CMD.md"
+                "file": "Fontend/Blazor.md"
               }
             }
           },
@@ -161,6 +161,16 @@
               "type": "quiet-outline",
               "state": {}
             }
+          },
+          {
+            "id": "c455a32f745a50cd",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
           }
         ],
         "currentTab": 4
@@ -183,13 +193,14 @@
   },
   "active": "d8d06db9c05d4775",
   "lastOpenFiles": [
-    "SoftwareManual/WSL.md",
+    "CTF/AWD/AWD.md",
+    "CTF/AWD/漏洞.md",
+    "CTF/AWD/工具.md",
     "SoftwareManual/CMD.md",
+    "SoftwareManual/WSL.md",
     "CTF/WEB/PHP.md",
     "attachments/Pasted image 20230911233713.png",
     "CTF/WEB/WEB.md",
-    "CTF/AWD/AWD.md",
-    "CTF/AWD/工具.md",
     "CTF/PWN/基础.md",
     "CloudNative/Docker.md",
     "CTF/ToolsList.md",

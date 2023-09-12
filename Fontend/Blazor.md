@@ -303,6 +303,10 @@ Data="@PredictedLogs"
 
 就类似于 `Winform` UI线程刷新问题，需要使用UI线程去刷新，而不能是其他工作线程。最常出现的原因是因为在使用 `StateHasChanged` 方法时，替换为 `await InvokeAsync(StateHasChanged)`即可。
 
+#### InvalidOperationException: 'WebViewNavigationManager' has not been initialized.
+[BlazorWebView NavigationManager in WPF · Issue #8583 · dotnet/maui (github.com)](https://github.com/dotnet/maui/issues/8583)
+不能把 `blazor`相关的服务注册为 `singleton`，因为它本身是 `scope`的
+
 ## 结合使用Js
 
 <https://docs.devexpress.com/Blazor/403578/common-concepts/add-devextreme-widgets-to-application>
