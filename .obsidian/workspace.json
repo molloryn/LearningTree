@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/文件头.md",
+                "file": "CTF/AWD/AWD.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/文件头.md",
+                "file": "CTF/AWD/AWD.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/文件头.md",
+                "file": "CTF/AWD/AWD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/文件头.md"
+                "file": "CTF/AWD/AWD.md"
               }
             }
           },
@@ -207,6 +207,10 @@
   },
   "active": "b3603e03c46ed70e",
   "lastOpenFiles": [
+    "CTF/AWD/工具.md",
+    "ComputerScience/WEB.md",
+    "CloudNative/Docker.md",
+    "CTF/MISC/文件头.md",
     "CTF/CRYPTO/Practice_Cryptograph.md",
     "CTF/CRYPTO/PBE.md",
     "CTF/CRYPTO/Encoding.md",
@@ -227,13 +231,9 @@
     "CTF/MISC/电子取证.md",
     "CTF/AWD/AWD.md",
     "CTF/AWD/漏洞.md",
-    "CTF/AWD/工具.md",
     "Fontend/Blazor.md",
     "SoftwareManual/CMD.md",
-    "SoftwareManual/WSL.md",
-    "CTF/WEB/PHP.md",
     "attachments/Pasted image 20230911233713.png",
-    "CTF/PWN/基础.md",
     "attachments/Pasted image 20230909205742.png",
     "attachments/Pasted image 20230907170754.png",
     "attachments/Pasted image 20230907154606.png",
