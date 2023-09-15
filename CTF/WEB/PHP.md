@@ -17,3 +17,13 @@ var_dump("0e123124"=="0e44912"); //true 科学计数法时(0e开头) 视为相�
 # 哈希绕过
 
 `md5(array())`将等于 `null`，因为函数接收了非有效参数输入。
+
+
+
+# 安全配置
+
+#### allow_url_include
+The term "allow_url_include" refers to a PHP setting that controls whether or not remote file inclusion is allowed. When set to "On", it allows PHP scripts to include files from remote locations using a URL. This can be useful for accessing resources or libraries hosted on other servers, but it can also pose a security risk if not used carefully.
+
+#### magic_quotes_gpc
+"magic_quotes_gpc" is a security feature in PHP that automatically adds escape characters to certain characters in user input data, such as quotes and backslashes, to prevent SQL injection attacks. However, this feature is now deprecated and should not be relied upon as the sole means of preventing such attacks. Therefore, it is recommended to turn it off and use other security measures, such as prepared statements and input validation.

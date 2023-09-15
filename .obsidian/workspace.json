@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/AWD/AWD.md",
+                "file": "CTF/WEB/解析漏洞.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/AWD/AWD.md",
+                "file": "CTF/WEB/解析漏洞.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/AWD/AWD.md",
+                "file": "CTF/WEB/解析漏洞.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/AWD/AWD.md"
+                "file": "CTF/WEB/解析漏洞.md"
               }
             }
           },
@@ -187,7 +187,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -207,6 +207,12 @@
   },
   "active": "b3603e03c46ed70e",
   "lastOpenFiles": [
+    "CTF/WEB/代码与命令执行.md",
+    "CTF/WEB/解析漏洞.md",
+    "CTF/WEB/PHP.md",
+    "CTF/WEB/WEB.md",
+    "CTF/WEB/文件包含.md",
+    "CTF/AWD/AWD.md",
     "CTF/AWD/工具.md",
     "ComputerScience/WEB.md",
     "CloudNative/Docker.md",
@@ -221,18 +227,12 @@
     "CTF/CRYPTO/密码攻击方式.md",
     "CTF/CRYPTO/公钥密码密钥格式.md",
     "Reverse/Andorid逆向.md",
-    "CTF/WEB/WEB.md",
     "CTF/思路打开.md",
     "CTF/README.md",
     "CTF/ToolsList.md",
     "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/MISC/图像隐写/图像隐写.md",
-    "CTF/MISC/电子取证.md",
-    "CTF/AWD/AWD.md",
-    "CTF/AWD/漏洞.md",
-    "Fontend/Blazor.md",
-    "SoftwareManual/CMD.md",
     "attachments/Pasted image 20230911233713.png",
     "attachments/Pasted image 20230909205742.png",
     "attachments/Pasted image 20230907170754.png",
