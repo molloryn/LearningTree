@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/AWD/Linux易忽略点.md",
+                "file": "CTF/AWD/AWD.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/AWD/Linux易忽略点.md",
+                "file": "CTF/AWD/AWD.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/AWD/Linux易忽略点.md",
+                "file": "CTF/AWD/AWD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/AWD/Linux易忽略点.md"
+                "file": "CTF/AWD/AWD.md"
               }
             }
           },
@@ -207,9 +207,9 @@
   },
   "active": "b3603e03c46ed70e",
   "lastOpenFiles": [
+    "CTF/AWD/Linux易忽略点.md",
     "SoftwareManual/WSL.md",
     "ComputerScience/Linux.md",
-    "CTF/AWD/Linux易忽略点.md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "CloudNative/Docker.md",
     "Koubot/Linux命令.md",

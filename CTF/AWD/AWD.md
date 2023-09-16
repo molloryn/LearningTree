@@ -33,8 +33,8 @@ zip -r xxx.zip ./*
 unzip xxx.zip -d
 
 # tar
-tar -cvf xxx.tar ./* -p # -p 保持文件权限一致
-tar -xvf xxx.tar -C /home/ctf/xxx
+tar -cvpf xxx.tar ./* # -p 保持文件权限一致
+tar -xvpf xxx.tar -C /home/ctf/xxx
 
 ```
 
