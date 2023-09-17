@@ -33,8 +33,10 @@ zip -r xxx.zip ./*
 unzip xxx.zip -d
 
 # tar
-tar -cvpf /home/ctf/backup.tar -C /var/www/html ./* # -p 保持文件权限一致; -C 设置目标路径，不设置如果用绝对路径则包含父目录路径加入压缩包
-tar -xvpf xxx.tar -C /home/ctf/xxx
+tar -cvpf /home/ctf/backup.tar -C /var/www/html . # -p 保持文件权限一致; -C 设置目标路径，不设置如果用绝对路径则包含父目录路径加入压缩包（注意，后面不能跟./*，而只能直接是.，否则会产生莫名其妙的错误）
+tar --same-owner -xvpf xxx.tar -C /home/ctf/xxx
+
+# same-owner 是super user默认的配置，普通用户似乎时常不管用
 
 ```
 
