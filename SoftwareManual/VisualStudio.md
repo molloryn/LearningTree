@@ -383,6 +383,12 @@ Shortcut Scheme中可以开启Shortcut Browser，按三下Ctrl快速弹出当前
 
 ### 快捷
 
+#### Alt+\` Navigate To
+
+##### To-do explorer
+需要在写了 `TODO` `BUG`等描述的地方进入
+[Navigate To: To-do Explorer | ReSharper Documentation (jetbrains.com)](https://www.jetbrains.com/help/resharper/Navigation_and_Search__Navigate_from_Here__Todo_Explorer.html)
+
 #### Alt+Insert Generate Code
 [Generate type members | ReSharper Documentation (jetbrains.com)](https://www.jetbrains.com/help/resharper/2023.2/Generating_Type_Members.html)
 
