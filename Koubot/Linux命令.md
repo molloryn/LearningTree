@@ -9,3 +9,8 @@ cat /etc/os-release
 
 
 ## 备注
+
+
+# 查看历史命令
+
+The command "fc -l" is a command used in the command line interface of a computer. "fc" stands for "fix command" and is used to edit and re-execute previously entered commands. The "-l" option is used to list the last executed commands. Therefore, "fc -l" will display a list of the most recent commands that have been executed in the command line interface.
