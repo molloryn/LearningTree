@@ -378,6 +378,9 @@ Shortcut Scheme中可以开启Shortcut Browser，按三下Ctrl快速弹出当前
 
 ### 快捷
 
+#### Alt+Insert Generate Code
+[Generate type members | ReSharper Documentation (jetbrains.com)](https://www.jetbrains.com/help/resharper/2023.2/Generating_Type_Members.html)
+
 #### Ctrl+Shift+Alt+方向键 快速移动参数/行顺序
 
 MoveUp和MoveDown可能要重新设置一下

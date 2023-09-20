@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/C#.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/C#.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/C#.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming/C#.md"
+                "file": "SoftwareManual/VisualStudio.md"
               }
             }
           },
@@ -193,6 +193,7 @@
   },
   "active": "b3603e03c46ed70e",
   "lastOpenFiles": [
+    "Programming/C#.md",
     "SoftwareManual/VisualStudio.md",
     "CTF/ToolsList.md",
     "CTF/Reverse/PE逆向.md",
@@ -218,7 +219,6 @@
     "ComputerScience/Linux.md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "CloudNative/Docker.md",
-    "Koubot/Linux命令.md",
     "attachments/Pasted image 20230911233713.png",
     "attachments/Pasted image 20230909205742.png",
     "attachments/Pasted image 20230907170754.png",
