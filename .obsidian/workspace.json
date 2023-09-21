@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolManual/Burpsuite.md",
+                "file": "CTF/WEB/代码与命令执行.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolManual/Burpsuite.md",
+                "file": "CTF/WEB/代码与命令执行.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolManual/Burpsuite.md",
+                "file": "CTF/WEB/代码与命令执行.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolManual/Burpsuite.md"
+                "file": "CTF/WEB/代码与命令执行.md"
               }
             }
           },
@@ -193,16 +193,18 @@
   },
   "active": "b3603e03c46ed70e",
   "lastOpenFiles": [
+    "CTF/WEB/绕过(Bypass).md",
+    "CTF/WEB/文件包含.md",
+    "CTF/WEB/解析漏洞.md",
+    "CTF/WEB/代码与命令执行.md",
+    "CTF/ToolManual/Burpsuite.md",
     "attachments/Pasted image 20230921000057.png",
     "CTF/ToolsList.md",
     "CTF/WEB/PHP.md",
     "CTF/WEB/WEB.md",
-    "CTF/WEB/解析漏洞.md",
-    "CTF/WEB/文件包含.md",
     "CTF/WEB/信息收集.md",
     "Fontend/FrontendConcept.md",
     "CTF/思路打开.md",
-    "CTF/ToolManual/Burpsuite.md",
     "SoftwareManual/WSL.md",
     "Koubot/Linux命令.md",
     "CloudNative/Kubernetes(K8S).md",
@@ -218,7 +220,6 @@
     "README.md",
     "CTF/README.md",
     "CTF/AWD/AWD.md",
-    "CTF/WEB/绕过(Bypass).md",
     "attachments/Pasted image 20230911233713.png",
     "attachments/Pasted image 20230909205742.png",
     "attachments/Pasted image 20230907170754.png",
@@ -231,7 +232,6 @@
     "attachments/Pasted image 20230905105246.png",
     "attachments/Pasted image 20230905102150.png",
     "attachments/Pasted image 20230904233917.png",
-    "attachments/Pasted image 20230904172641.png",
     "CTF/Reverse",
     "CTF/Hacker",
     "AI",
