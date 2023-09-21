@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/WEB/代码与命令执行.md",
+                "file": "CTF/WEB/SSRF.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/WEB/代码与命令执行.md",
+                "file": "CTF/WEB/SSRF.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/WEB/代码与命令执行.md",
+                "file": "CTF/WEB/SSRF.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/WEB/代码与命令执行.md"
+                "file": "CTF/WEB/SSRF.md"
               }
             }
           },
@@ -193,10 +193,14 @@
   },
   "active": "b3603e03c46ed70e",
   "lastOpenFiles": [
-    "CTF/WEB/绕过(Bypass).md",
-    "CTF/WEB/文件包含.md",
-    "CTF/WEB/解析漏洞.md",
     "CTF/WEB/代码与命令执行.md",
+    "CTF/WEB/解析漏洞.md",
+    "CTF/WEB/SSRF.md",
+    "CTF/WEB/绕过(Bypass).md",
+    "CloudNative/Docker.md",
+    "AI/ArtificialIntelligence.md",
+    "AI/Drawing.md",
+    "CTF/WEB/文件包含.md",
     "CTF/ToolManual/Burpsuite.md",
     "attachments/Pasted image 20230921000057.png",
     "CTF/ToolsList.md",
@@ -209,7 +213,6 @@
     "Koubot/Linux命令.md",
     "CloudNative/Kubernetes(K8S).md",
     "CloudNative/K8S集群管理.md",
-    "CloudNative/Docker.md",
     "CloudNative/CloudNative.md",
     "CloudNative/Deployments/K8S集群部署要求.md",
     "CloudNative/Deployments/K8S部署笔记.md",
@@ -217,9 +220,6 @@
     "Programming/C#.md",
     "CTF/Reverse/PE逆向.md",
     "CTF/AWD/工具.md",
-    "README.md",
-    "CTF/README.md",
-    "CTF/AWD/AWD.md",
     "attachments/Pasted image 20230911233713.png",
     "attachments/Pasted image 20230909205742.png",
     "attachments/Pasted image 20230907170754.png",
