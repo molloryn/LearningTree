@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Reverse/Andorid逆向.md",
+                "file": "CTF/ToolManual/Wireshark.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/Reverse/Andorid逆向.md",
+                "file": "CTF/ToolManual/Wireshark.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/Reverse/Andorid逆向.md",
+                "file": "CTF/ToolManual/Wireshark.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/Reverse/Andorid逆向.md"
+                "file": "CTF/ToolManual/Wireshark.md"
               }
             }
           },
@@ -193,6 +193,8 @@
   },
   "active": "b3603e03c46ed70e",
   "lastOpenFiles": [
+    "CTF/ToolManual/Xdbg.md",
+    "CTF/Reverse/Andorid逆向.md",
     "CTF/ToolsList.md",
     "CTF/WEB/SSRF.md",
     "CTF/WEB/代码与命令执行.md",
@@ -218,8 +220,6 @@
     "CloudNative/Deployments/K8S部署笔记.md",
     "SoftwareManual/VisualStudio.md",
     "Programming/C#.md",
-    "CTF/Reverse/PE逆向.md",
-    "CTF/AWD/工具.md",
     "attachments/Pasted image 20230911233713.png",
     "attachments/Pasted image 20230909205742.png",
     "attachments/Pasted image 20230907170754.png",

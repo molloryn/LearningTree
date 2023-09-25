@@ -48,6 +48,7 @@ tshark -r challenge.pcapng -Y "http" -T fields -e "http.request.uri.quer
 
 ### 自定义列
 ![](../../attachments/Pasted%20image%2020230905105246.png)
+还可以添加 Source port和Destination port
 
 ## ARP (Address Resolution Protocol)
 
