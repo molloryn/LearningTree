@@ -27,3 +27,20 @@ The term "allow_url_include" refers to a PHP setting that controls whether or no
 
 #### magic_quotes_gpc
 "magic_quotes_gpc" is a security feature in PHP that automatically adds escape characters to certain characters in user input data, such as quotes and backslashes, to prevent SQL injection attacks. However, this feature is now deprecated and should not be relied upon as the sole means of preventing such attacks. Therefore, it is recommended to turn it off and use other security measures, such as prepared statements and input validation.
+
+
+# 伪协议
+
+[文件包含&PHP伪协议利用_file_get_contents()支持的协议_红云谈安全的博客-CSDN博客](https://blog.csdn.net/qq_51524329/article/details/121439731)
+
+[phpfilter的妙用_拓海AE的博客-CSDN博客](https://blog.csdn.net/weixin_44576725/article/details/124177555)
+
+
+#### php://filter
+
+可用于 `include`等
+```
+page=php://filter/convert.base64-encode/resource=index.php
+源码泄露？
+
+```
