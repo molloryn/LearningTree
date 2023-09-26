@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/流量分析.md",
+                "file": "CloudNative/Deployments/K8S集群部署要求.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/流量分析.md",
+                "file": "CloudNative/Deployments/K8S集群部署要求.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/流量分析.md",
+                "file": "CloudNative/Deployments/K8S集群部署要求.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/流量分析.md"
+                "file": "CloudNative/Deployments/K8S集群部署要求.md"
               }
             }
           },
@@ -193,8 +193,10 @@
   },
   "active": "b3603e03c46ed70e",
   "lastOpenFiles": [
-    "CTF/WEB/PHP.md",
+    "CloudNative/Deployments/K8S部署笔记.md",
+    "CloudNative/Components/Apache APISIX.md",
     "CTF/MISC/流量分析.md",
+    "CTF/WEB/PHP.md",
     "CTF/MISC/电子取证.md",
     "CTF/ToolManual/Wireshark.md",
     "CTF/ToolManual/Xdbg.md",
@@ -218,8 +220,6 @@
     "Koubot/Linux命令.md",
     "CloudNative/Kubernetes(K8S).md",
     "CloudNative/K8S集群管理.md",
-    "CloudNative/CloudNative.md",
-    "CloudNative/Deployments/K8S集群部署要求.md",
     "attachments/Pasted image 20230911233713.png",
     "attachments/Pasted image 20230909205742.png",
     "attachments/Pasted image 20230907170754.png",
