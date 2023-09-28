@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "Fontend/FrontendConcept.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "Fontend/FrontendConcept.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "Fontend/FrontendConcept.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "Fontend/FrontendConcept.md"
               }
             }
           },
@@ -191,8 +191,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b3603e03c46ed70e",
+  "active": "95641d9f2e99738f",
   "lastOpenFiles": [
+    "Fontend/FrontendConcept.docx",
+    "Fontend/Blazor.md",
+    "CTF/WEB/信息收集.md",
+    "CTF/WEB/PHP.md",
+    "CTF/WEB/解析漏洞.md",
+    "CTF/MISC/流量分析.md",
+    "CTF/MISC/数值类.md",
+    "SoftwareManual/VisualStudio.md",
     "CloudNative/Dapr.md",
     "CloudNative/CloudNative.md",
     "CloudNative/K8S集群管理.md",
@@ -201,8 +209,6 @@
     "CloudNative/Docker.md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "Architecture/ABP.md",
-    "CTF/MISC/流量分析.md",
-    "CTF/WEB/PHP.md",
     "CTF/MISC/电子取证.md",
     "CTF/ToolManual/Wireshark.md",
     "CTF/ToolManual/Xdbg.md",
@@ -210,16 +216,10 @@
     "CTF/ToolsList.md",
     "CTF/WEB/SSRF.md",
     "CTF/WEB/代码与命令执行.md",
-    "CTF/WEB/解析漏洞.md",
     "CTF/WEB/绕过(Bypass).md",
     "AI/ArtificialIntelligence.md",
     "AI/Drawing.md",
-    "CTF/WEB/文件包含.md",
-    "CTF/ToolManual/Burpsuite.md",
     "attachments/Pasted image 20230921000057.png",
-    "CTF/WEB/WEB.md",
-    "CTF/WEB/信息收集.md",
-    "Fontend/FrontendConcept.md",
     "attachments/Pasted image 20230911233713.png",
     "attachments/Pasted image 20230909205742.png",
     "attachments/Pasted image 20230907170754.png",
