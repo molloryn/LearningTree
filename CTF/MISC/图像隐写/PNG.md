@@ -129,13 +129,13 @@ IDAT存放着图像真正的数据信息，因此，如果能够了解IDAT的结
 ![](../../../attachments/Pasted%20image%2020230801220336.png)
 可以用脚本读取来解题：
 ```python
-import zlib
-import binascii
-fp = open('pngpng.png','rb')
-fp.seek(96775,0) # 这其实就是数据块的起始
-fp1 = zlib.decompress(binascii.unhexlify(fp.read(98).hex()))
-fp2 = open('1.rar','wb')
-fp2.write(fp1)
+	import zlib
+	import binascii
+	fp = open('pngpng.png','rb')
+	fp.seek(96775,0) # 这其实就是数据块的起始
+	fp1 = zlib.decompress(binascii.unhexlify(fp.read(98).hex())) # 读取的字节数
+	fp2 = open('1.rar','wb')
+	fp2.write(fp1)
 ```
 
 因为PNG是采用了无损的zlib算法压缩图像数据，所以提取数据还得用zlib算法解压。
