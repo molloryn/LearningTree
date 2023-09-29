@@ -314,6 +314,10 @@ alias phpman="docker run --rm --name php8-manual -dp 3001:80 koubot/php8-manual-
 alias cyberchef="docker run --name cyberchef -it --rm -dp 3004:8000 mpepping/cyberchef;echo http://localhost:3004"
 alias phpdocker="docker run --rm -d -p 8080:80 -p 2222:22 --name my-apache-php-app -v "$PWD":/var/www/html php72-ctf"
 eval $(thefuck --alias)
+
+function volatility() {
+  docker run --rm --user=$(id -u):$(id -g) -v "$(pwd)":/dumps:ro,Z -ti phocean/volatility $@
+}
 ```
 
 

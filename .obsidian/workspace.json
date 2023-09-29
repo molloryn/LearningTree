@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/流量分析.md",
+                "file": "CTF/MISC/电子取证.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/流量分析.md",
+                "file": "CTF/MISC/电子取证.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/流量分析.md",
+                "file": "CTF/MISC/电子取证.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/流量分析.md"
+                "file": "CTF/MISC/电子取证.md"
               }
             }
           },
@@ -193,10 +193,11 @@
   },
   "active": "e9474b2aba1ae203",
   "lastOpenFiles": [
+    "SoftwareManual/WSL.md",
+    "CTF/MISC/流量分析.md",
     "attachments/Pasted image 20230929104919.png",
     "attachments/Pasted image 20230929100844.png",
     "CTF/MISC/压缩包.md",
-    "CTF/MISC/流量分析.md",
     "CTF/ToolsList.md",
     "CTF/CRYPTO/密码攻击方式.md",
     "CTF/MISC/图像隐写/PNG.md",
@@ -232,7 +233,6 @@
     "CTF/PWN",
     "attachments/Pasted image 20230905110623.png",
     "attachments/Pasted image 20230905105246.png",
-    "attachments/Pasted image 20230905102150.png",
     "CTF/Reverse",
     "CTF/Hacker",
     "AI",
