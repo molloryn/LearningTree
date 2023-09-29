@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/电子取证.md",
+                "file": "CTF/MISC/图像隐写/图像隐写.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/电子取证.md",
+                "file": "CTF/MISC/图像隐写/图像隐写.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/电子取证.md",
+                "file": "CTF/MISC/图像隐写/图像隐写.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/电子取证.md"
+                "file": "CTF/MISC/图像隐写/图像隐写.md"
               }
             }
           },
@@ -193,6 +193,8 @@
   },
   "active": "e9474b2aba1ae203",
   "lastOpenFiles": [
+    "CTF/MISC/图像隐写/JPG.md",
+    "CTF/MISC/电子取证.md",
     "SoftwareManual/WSL.md",
     "CTF/MISC/流量分析.md",
     "attachments/Pasted image 20230929104919.png",
@@ -203,8 +205,6 @@
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/MISC/数值类.md",
     "CTF/MISC/文件头.md",
-    "CTF/MISC/电子取证.md",
-    "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/图像隐写/BMP.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "Architecture/ABP.md",
