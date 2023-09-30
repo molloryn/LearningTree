@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/CRYPTO/CTF.md",
+                "file": "CTF/MISC/文件头.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/CRYPTO/CTF.md",
+                "file": "CTF/MISC/文件头.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/CRYPTO/CTF.md",
+                "file": "CTF/MISC/文件头.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/CRYPTO/CTF.md"
+                "file": "CTF/MISC/文件头.md"
               }
             }
           },
@@ -193,10 +193,11 @@
   },
   "active": "fc0c2a0a8ed9331f",
   "lastOpenFiles": [
+    "CTF/README.md",
+    "CTF/CRYPTO/CTF.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/图像隐写/BMP.md",
     "CTF/MISC/图像隐写/JPG.md",
-    "CTF/CRYPTO/CTF.md",
     "ComputerScience/Algorithm/代码优化.md",
     "ComputerScience/Algorithm",
     "Programming/ASP.NET Core接口.md",
@@ -226,7 +227,6 @@
     "CTF/MISC/文件头.md",
     "ComputerScience/Architecture/ABP.md",
     "Fontend/FrontendConcept.docx",
-    "CTF/WEB/信息收集.md",
     "attachments/Pasted image 20230921000057.png",
     "attachments/Pasted image 20230911233713.png",
     "attachments/Pasted image 20230909205742.png",

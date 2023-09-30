@@ -75,7 +75,7 @@ jsfuck等<http://www.jsfuck.com>
 
 snow隐写，在文本末尾追加由制表位以及空格隔开的组合进行的隐写。
 
-工具在kali linux名为snowsteg
+工具在kali linux名为`stegsnow`
 
 #### 文件隐写
 
