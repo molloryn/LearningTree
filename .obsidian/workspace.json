@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/二维码.md",
+                "file": "Math/形式幂级数.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.49999618530273
+    "width": 447.49999618530273
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/二维码.md",
+                "file": "Math/形式幂级数.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/二维码.md",
+                "file": "Math/形式幂级数.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/二维码.md"
+                "file": "Math/形式幂级数.md"
               }
             }
           },
@@ -193,10 +193,13 @@
   },
   "active": "e9474b2aba1ae203",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230930112206.png",
+    "CTF/MISC/二维码.md",
+    "Math/形式幂级数.md",
+    "Math",
     "attachments/Pasted image 20230930103322.png",
     "attachments/Pasted image 20230930103305.png",
     "CTF/MISC/图像隐写/图像隐写.md",
-    "CTF/MISC/二维码.md",
     "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/电子取证.md",
     "SoftwareManual/WSL.md",
@@ -222,7 +225,6 @@
     "CloudNative/K8S集群管理.md",
     "CloudNative/Components/Apache APISIX.md",
     "CloudNative/Deployments/K8S集群部署要求.md",
-    "CloudNative/Docker.md",
     "attachments/Pasted image 20230921000057.png",
     "attachments/Pasted image 20230911233713.png",
     "attachments/Pasted image 20230909205742.png",
@@ -232,13 +234,11 @@
     "attachments/Pasted image 20230905233647.png",
     "CTF/WEB",
     "CTF/PWN",
-    "attachments/Pasted image 20230905110623.png",
     "CTF/Reverse",
     "CTF/Hacker",
     "AI",
     "Koubot",
     "Fontend",
-    "CloudNative/Components",
     "未命dd名.canvas"
   ]
 }
