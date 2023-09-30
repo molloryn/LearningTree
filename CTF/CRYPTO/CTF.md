@@ -72,7 +72,7 @@ FAXDF ADDDG DGFFF AFAXX AFAFX
 
 仿射密码,它是一个字母对一个字母的。 y = ax + b
 
-**特征**:  无, 看提示,flag还原
+**特征**:  替换密码，位置不变。 看提示,flag还原
 
 **测试数据**: 
 
@@ -98,12 +98,13 @@ ascii累计求和
 
 埃特巴什码,最后一个字母代表第一个字母，倒数第二个字母代表第二个字母
 
-**特征**:   无, 看提示
+**特征**:   替换密码，位置不变
 
 **测试数据**:
 
 ```
 SVOOL
+WZHXGU{v6086w7w137455u0041720yu0595xw46}
 ```
 
 ## [autoKey](https://zh.wikipedia.org/wiki/%E8%87%AA%E5%8A%A8%E5%AF%86%E9%92%A5%E5%AF%86%E7%A0%81)
@@ -240,7 +241,7 @@ ximil-hymuk-derak-habak-comyk-dorok-homok-sanek-zuruf-gosyf-koxix
 
 凯撒位移密码
 
-**特征**: 无,见提示
+**特征**: 替换密码，位置不变。见提示
 
 **测试数据**:
 
