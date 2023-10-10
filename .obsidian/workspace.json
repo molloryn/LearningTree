@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "CTF/Hacker/软件破解.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "CTF/Hacker/软件破解.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "CTF/Hacker/软件破解.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md"
+                "file": "CTF/Hacker/软件破解.md"
               }
             }
           },
@@ -193,6 +193,7 @@
   },
   "active": "fc0c2a0a8ed9331f",
   "lastOpenFiles": [
+    "ComputerScience/Architecture/ABP.md",
     "CTF/MISC/数值类.md",
     "CTF/README.md",
     "CTF/MISC/电子取证.md",
@@ -225,7 +226,6 @@
     "CTF/MISC/压缩包.md",
     "CTF/ToolsList.md",
     "CTF/CRYPTO/密码攻击方式.md",
-    "CTF/MISC/图像隐写/PNG.md",
     "Fontend/FrontendConcept.docx",
     "attachments/Pasted image 20230921000057.png",
     "attachments/Pasted image 20230911233713.png",
