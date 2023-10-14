@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/C#.md",
+                "file": "ComputerScience/AI/Audio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -66,11 +66,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 223.49999618530273,
+    "collapsed": true
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -86,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/C#.md",
+                "file": "ComputerScience/AI/Audio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/C#.md",
+                "file": "ComputerScience/AI/Audio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming/C#.md"
+                "file": "ComputerScience/AI/Audio.md"
               }
             }
           },
@@ -193,6 +195,16 @@
   },
   "active": "fc0c2a0a8ed9331f",
   "lastOpenFiles": [
+    "attachments/Pasted image 20231014230052.png",
+    "attachments/Pasted image 20231014230047.png",
+    "attachments/Pasted image 20231014230021.png",
+    "attachments/Pasted image 20231014230007.png",
+    "attachments/Pasted image 20231014225939.png",
+    "CTF/ToolsList.md",
+    "ComputerScience/AI/Audio.md",
+    "ComputerScience/AI/ArtificialIntelligence.md",
+    "ComputerScience/AI/Drawing.md",
+    "Programming/C#.md",
     "CTF/Hacker/软件破解.md",
     "ComputerScience/Architecture/ABP.md",
     "CTF/MISC/数值类.md",
@@ -207,10 +219,7 @@
     "ComputerScience/Algorithm/代码优化.md",
     "ComputerScience/Algorithm",
     "Programming/ASP.NET Core接口.md",
-    "Programming/C#.md",
     "Fontend/Blazor.md",
-    "ComputerScience/AI/Drawing.md",
-    "ComputerScience/AI/ArtificialIntelligence.md",
     "ComputerScience/IoT.md",
     "CloudNative/Dapr.md",
     "CloudNative/CloudNative.md",
@@ -221,17 +230,10 @@
     "attachments/Pasted image 20230930103322.png",
     "attachments/Pasted image 20230930103305.png",
     "SoftwareManual/WSL.md",
-    "CTF/MISC/流量分析.md",
     "attachments/Pasted image 20230929104919.png",
     "attachments/Pasted image 20230929100844.png",
-    "CTF/MISC/压缩包.md",
-    "CTF/ToolsList.md",
     "Fontend/FrontendConcept.docx",
     "attachments/Pasted image 20230921000057.png",
-    "attachments/Pasted image 20230911233713.png",
-    "attachments/Pasted image 20230909205742.png",
-    "attachments/Pasted image 20230907170754.png",
-    "attachments/Pasted image 20230907154606.png",
     "CTF/AWD",
     "CTF/WEB",
     "CTF/PWN",

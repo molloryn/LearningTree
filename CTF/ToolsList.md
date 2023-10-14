@@ -286,7 +286,7 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | Lama-cleaner | 图像修复/自定义擦除                                          | [Sanster/lama-cleaner](https://github.com/Sanster/lama-cleaner) |
 | DeepFaceLive | AI换脸，支持直播                                             | [iperov/DeepFaceLive](https://github.com/iperov/DeepFaceLive) |
 | SpleeterGUI  | 去伴奏、人声、乐器分离等                                     |                                                              |
-| UVR5         | 最强分离伴奏人声                                             | [Anjok07/ultimatevocalremovergui](https://github.com/Anjok07/ultimatevocalremovergui)<br />`MDX-Net Kim_Vocal_1` 分离人声及伴奏<br />`VR Architecture 5_HP-Karaoke-UVR` 分离和声<br/>`VR Architecture UVR-DeEcho-DeReverb` 去除混响和回声 |
+| UVR5         | 最强分离伴奏人声                                             | [Anjok07/ultimatevocalremovergui](https://github.com/Anjok07/ultimatevocalremovergui)|
 | buzz         | 语音转文字                                                   | [chidiwilliams/buzz](https://github.com/chidiwilliams/buzz)  |
 
 
