@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Music/和弦.md",
+                "file": "Programming/C#.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Music/和弦.md",
+                "file": "Programming/C#.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Music/和弦.md",
+                "file": "Programming/C#.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Music/和弦.md"
+                "file": "Programming/C#.md"
               }
             }
           },
@@ -193,9 +193,11 @@
   },
   "active": "a5ab6bf5f1b09bab",
   "lastOpenFiles": [
+    "CTF/MISC/图像隐写/JPG.md",
+    "CTF/MISC/压缩包.md",
+    "Music/和弦.md",
     "Music/MusicTheory.md",
     "Music/FLStudio.md",
-    "Music/和弦.md",
     "SoftwareManual/VisualStudio.md",
     "attachments/Pasted image 20231014230052.png",
     "attachments/Pasted image 20231014230047.png",
@@ -217,14 +219,12 @@
     "CTF/MISC/文件头.md",
     "CTF/CRYPTO/CTF.md",
     "CTF/MISC/图像隐写/BMP.md",
-    "CTF/MISC/图像隐写/JPG.md",
     "ComputerScience/Algorithm/代码优化.md",
     "ComputerScience/Algorithm",
     "Programming/ASP.NET Core接口.md",
     "Fontend/Blazor.md",
     "ComputerScience/IoT.md",
     "CloudNative/Dapr.md",
-    "CloudNative/CloudNative.md",
     "attachments/Pasted image 20230930112206.png",
     "Math",
     "attachments/Pasted image 20230930103322.png",

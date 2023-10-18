@@ -6,6 +6,11 @@
 
 另外还有CRCF的问题，如果是sh脚本，在linux下就运行不正常。
 
+# 发布
+
+#### 发布单体程序
+
+`dotnet publish -r win10-x64 -p:PublishSingleFile=true`
 
 # 历史
 
