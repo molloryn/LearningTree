@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Music/和弦.md",
+                "file": "Music/MusicTheory.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Music/和弦.md",
+                "file": "Music/MusicTheory.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Music/和弦.md",
+                "file": "Music/MusicTheory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Music/和弦.md"
+                "file": "Music/MusicTheory.md"
               }
             }
           },
@@ -206,10 +206,12 @@
   },
   "active": "a5ab6bf5f1b09bab",
   "lastOpenFiles": [
+    "attachments/Pasted image 20231022002020.png",
+    "attachments/Pasted image 20231022001334.png",
+    "Music/和弦.md",
     "attachments/Pasted image 20231021230844.png",
     "Music/MusicTheory.md",
     "Music/FLStudio.md",
-    "Music/和弦.md",
     "attachments/Pasted image 20231021223140.png",
     "SoftwareManual/CMD.md",
     "CTF/MISC/压缩包.md",
@@ -242,8 +244,6 @@
     "attachments/Pasted image 20230930112206.png",
     "Math",
     "attachments/Pasted image 20230930103322.png",
-    "attachments/Pasted image 20230930103305.png",
-    "attachments/Pasted image 20230929104919.png",
     "Fontend/FrontendConcept.docx",
     "CTF/AWD",
     "CTF/WEB",
