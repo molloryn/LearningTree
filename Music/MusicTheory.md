@@ -134,9 +134,9 @@ BDF对应的就是si re fa
 
 调（scale）分大（major）小（minor）两类，分自然（natural）、旋律（melodic）、和声（harmonic）三种。
 
-自然大调：CDEFGAB，它们之间是全全半全全全半的间隔。
+**自然大调**：CDEFGAB，它们之间是全全半全全全半的间隔。
 
-自然小调：abcdefg，它们之间是全半全全半全全的间隔
+**自然小调**：abcdefg，它们之间是全半全全半全全的间隔
 
 ##### 快速认出五线谱调号
 
