@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Music/MusicTheory.md",
+                "file": "Music/和弦.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Music/MusicTheory.md",
+                "file": "Music/和弦.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Music/MusicTheory.md",
+                "file": "Music/和弦.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Music/MusicTheory.md"
+                "file": "Music/和弦.md"
               }
             }
           },
@@ -193,6 +193,9 @@
   },
   "active": "44dddb4ffc621111",
   "lastOpenFiles": [
+    "attachments/Pasted image 20231023211045.png",
+    "Music/FLStudio.md",
+    "Music/MusicTheory.md",
     "attachments/Pasted image 20231023204716.png",
     "attachments/Pasted image 20231023204349.png",
     "attachments/Pasted image 20231023204010.png",
@@ -204,9 +207,6 @@
     "attachments/Pasted image 20231023001009.png",
     "attachments/Pasted image 20231022235309.png",
     "attachments/Pasted image 20231022234044.png",
-    "attachments/Pasted image 20231022231429.png",
-    "Music/FLStudio.md",
-    "Music/MusicTheory.md",
     "Programming/C#.md",
     "ComputerScience/Database.md",
     "SoftwareManual/VisualStudio.md",
