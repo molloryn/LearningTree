@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 297.49999618530273
+    "width": 273.49999618530273
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -193,11 +193,11 @@
   },
   "active": "7f302cd6406add63",
   "lastOpenFiles": [
-    "ComputerScience/Architecture/ABP.md",
-    "Programming/C#.md",
     "CloudNative/Dapr.md",
-    "ComputerScience/计算机网络.md",
+    "Programming/C#.md",
     "SoftwareManual/VisualStudio.md",
+    "ComputerScience/Architecture/ABP.md",
+    "ComputerScience/计算机网络.md",
     "ComputerScience/Database.md",
     "attachments/Pasted image 20231030084457.png",
     "Music/和弦.md",

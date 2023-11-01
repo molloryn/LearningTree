@@ -181,9 +181,9 @@ ILSpy
 
 ### 设置
 
-Ctrl+ALT+E打开Exception Setting，这里设置Debug时是否捕捉异常并停止提示。
+`Ctrl`+`ALT`+`E`打开`Exception` `Setting`，这里设置`Debug`时是否捕捉异常并停止提示。
 
-比如一些异步的方法、Task中引发的异常，默认是不捕获异常的，需要将Common Language Runtime Exception勾上。
+比如一些异步的方法、`Task`中引发的异常，默认是不捕获异常的，需要将`Common` `Language` `Runtime` `Exception`勾上。
 
 **多进程调试**
 
@@ -196,10 +196,13 @@ Under Common Properties\\Startup Project select Multiple startup projects and se
 解决方案属性-\>多个启动项目
 
 ![电脑萤幕的截图 描述已自动生成](../attachments/e65d34b03eae060ab5c231e2780469d1.png)
+### 断点
+
+行号上`Ctrl`+`Mouse Left Click`可以快速插入临时断点。 
 
 ### 即时调试
 
--   即时调试窗口:命中断点后[Ctrl+D+I]
+-   即时调试窗口:命中断点后`Ctrl`+`D`+`I`
 
     可输入参数,实例化对象,常量,也可执行方法或函数
 
