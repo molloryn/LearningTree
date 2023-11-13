@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "wifi",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/CMD.md"
+                "file": "SoftwareManual/VisualStudio.md"
               }
             }
           },
@@ -194,9 +193,10 @@
   },
   "active": "7f302cd6406add63",
   "lastOpenFiles": [
+    "attachments/Pasted image 20231113101056.png",
+    "SoftwareManual/CMD.md",
     "CTF/ToolsList.md",
     "CTF/README.md",
-    "SoftwareManual/CMD.md",
     "SoftwareManual/VisualStudio.md",
     "CloudNative/Docker.md",
     "ComputerScience/Architecture/ABP.md",
@@ -229,7 +229,6 @@
     "CTF/MISC/音频隐写.md",
     "CTF/MISC/文件头.md",
     "CTF/CRYPTO/CTF.md",
-    "CTF/MISC/图像隐写/BMP.md",
     "ComputerScience/Algorithm",
     "Math",
     "Fontend/FrontendConcept.docx",

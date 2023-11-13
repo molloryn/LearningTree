@@ -181,6 +181,24 @@ ILSpy
 
 如果想阻止别人反编译你的源码,可为你的程序集加上SuppresslIdasmAttribute属性
 
+
+
+
+# 模板
+
+## 项目模板
+
+[dotnet new uninstall - .NET CLI | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new-uninstall)
+
+显示拥有的项目模板：
+`dotnet new uninstall` 
+它也顺便告诉你如何卸载拥有的项目模板。
+还有使用插件形式安装的是在 `Extensions`中进行卸载，需要以管理员权限启动VS
+![](../attachments/Pasted%20image%2020231113101056.png)
+
+
+
+
 # 调试
 
 ### 设置
