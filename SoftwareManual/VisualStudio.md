@@ -206,6 +206,9 @@ ILSpy
 `C:\Users\<Name>\Documents\Visual Studio 2022\Templates\ProjectTemplates`
 具体可以自己生成一个，勾上自动导入，然后通过 `everything`等工具找到实际目录。
 
+模板xml文件的属性：[Visual Studio Template Schema Reference - Visual Studio (Windows) | Microsoft Learn](https://learn.microsoft.com/en-us/visualstudio/extensibility/visual-studio-template-schema-reference?view=vs-2022)
+
+
 # 调试
 
 ### 设置
