@@ -186,6 +186,46 @@ ILSpy
 
 
 
+# 项目配置
+
+## 解决方案统一配置项目
+
+project的xml中可以使用 `Import` 方式导入一个统一的xml文件：
+
+`common.xml`:
+```xml
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<SatelliteResourceLanguages>en;zh-Hans</SatelliteResourceLanguages>
+	</PropertyGroup>
+</Project>
+```
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<Import Project="..\..\..\..\common.xml"></Import>
+    <PropertyGroup>
+        
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>575a2d7c-be72-40ea-bf82-2ece95e5ad68</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <DockerfileContext>..\..\..\..</DockerfileContext>
+        <DockerComposeProjectPath>..\..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>1591</NoWarn>
+    </PropertyGroup>
+```
+
+## ASP.NET Core项目编译下的多语言文件夹
+
+通过 `SatelliteResourceLanguages` 可以指定需要的。不指定会全部都有。。。
+```xml
+<SatelliteResourceLanguages>en;zh-Hans</SatelliteResourceLanguages>
+```
+
 
 # 模板
 
