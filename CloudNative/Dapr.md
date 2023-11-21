@@ -77,6 +77,11 @@ If you leave the Configure for HTTPS checkbox checked, the generated ASP.NET Cor
 ## State stores
 
 Care must be taken to always pass an explicit app-id parameter when consuming the state management building block. The block uses the application id value as a prefix for its state key for each key/value pair. If the application id changes, you can no longer access the previously stored state.
+## PubSub
+
+如果应用程序有配置，则程序本身需要暴露 `/dapr/subscribe` 接口，供边车获取程序所监听的主题。
+
+> Visual Studio容器开发中，容器边车需要重新启动才会重新读取。
 
 
 ## Namespace

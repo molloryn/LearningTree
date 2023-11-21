@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CloudNative/Dapr.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CloudNative/Dapr.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CloudNative/Dapr.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "CloudNative/Dapr.md"
               }
             }
           },
@@ -193,10 +193,10 @@
   },
   "active": "7f302cd6406add63",
   "lastOpenFiles": [
+    "SoftwareManual/VisualStudio.md",
     "ComputerScience/Linux.md",
     "CTF/AWD/Linux易忽略点.md",
     "Koubot/Linux命令.md",
-    "SoftwareManual/VisualStudio.md",
     "CloudNative/Dapr.md",
     "CloudNative/Docker.md",
     "attachments/Pasted image 20231114104833.png",
