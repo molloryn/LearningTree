@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "Fontend/FrontendConcept.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 273.49999618530273
+    "width": 273.49999618530273,
+    "collapsed": true
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "Fontend/FrontendConcept.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "Fontend/FrontendConcept.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md"
+                "file": "Fontend/FrontendConcept.md"
               }
             }
           },
@@ -193,9 +194,9 @@
   },
   "active": "7f302cd6406add63",
   "lastOpenFiles": [
+    "ComputerScience/Architecture/ABP.md",
     "SoftwareManual/VisualStudio.md",
     "Programming/C#.md",
-    "ComputerScience/Architecture/ABP.md",
     "CTF/ToolsList.md",
     "SoftwareManual/CMD.md",
     "ComputerScience/Architecture/架构.md",
