@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "ComputerScience/Architecture/ABP.md"
               }
             }
           },
@@ -195,9 +195,9 @@
   },
   "active": "7f302cd6406add63",
   "lastOpenFiles": [
+    "SoftwareManual/VisualStudio.md",
     "Fontend/FrontendConcept.md",
     "ComputerScience/Architecture/ABP.md",
-    "SoftwareManual/VisualStudio.md",
     "Programming/C#.md",
     "CTF/ToolsList.md",
     "SoftwareManual/CMD.md",

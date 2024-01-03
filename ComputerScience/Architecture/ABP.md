@@ -61,3 +61,11 @@ public IAbpLazyServiceProvider LazyServiceProvider { get; set; } = default!;
 
 
 属性注入必须为 public property with public setter
+
+## 替换默认实现
+
+[Dependency Injection | Documentation Center | ABP.IO](https://docs.abp.io/en/abp/latest/Dependency-Injection#replace-a-service)
+使用 
+```csharp
+[Dependency(ReplaceServices = true)]
+```
