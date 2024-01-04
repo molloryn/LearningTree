@@ -392,6 +392,9 @@ Nuget.Config 在 Users\\\${username}\\AppData\\Roaming\\NuGet下
 
 docker compose文件里面不能有中文
 
+### Can not find the container with the name starting with XXX
+
+
 ## 增加
 
 You can add Docker support to an existing project by selecting Add \> Docker Support in Solution Explorer. The Add \> Docker Support and Add \> Container Orchestrator Support commands are located on the right-click menu (or context menu) of the project node for an ASP.NET Core project in Solution Explorer, as shown in the following screenshot:
