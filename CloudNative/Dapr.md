@@ -176,11 +176,11 @@ Actors uses System.Text.Json (JSON) for state storage (the serializer and option
 
 ## 服务发现&服务间调用
 
-daprd sidecar 有 app-port，是指宿主微服务的API监听地址，由sidecar去调用的
+`daprd sidecar `有`app-port`，是指宿主微服务的`API`监听地址，由`sidecar`去调用的
 
-而dapr-http-port是设置sidecar本身的HTTP的监听地址，是由dapr-placement解析出边车地址然后两个边车间沟通的HTTP监听地址。gRPC的监听地址也可以设置
+而`dapr-http-port`是设置`sidecar`本身的`HTTP`的监听地址，是由`dapr-placement`解析出边车地址然后两个边车间沟通的`HTTP`监听地址。`gRPC`的监听地址也可以设置
 
-sidecar的默认的HTTP监听是3500，gRPC的是50001。一般不需要修改（修改后暂时不知道怎么调通，因为dapr-placement默认是映射到默认端口？）。
+`sidecar`的默认的`HTTP`监听是`3500`，`gRPC`的是`50001`。一般不需要修改（修改后暂时不知道怎么调通，因为`dapr-placement`默认是映射到默认端口？）。
 
 ### 问题
 
