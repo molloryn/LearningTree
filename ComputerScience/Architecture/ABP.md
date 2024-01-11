@@ -19,6 +19,16 @@ ABP 是 ASP.NET Boilerplate的全称，意味着它是一种代码层面的最�
 
 # 错误排查
 
+### 数据库异常
+
+#### AbpDbConcurrencyException
+
+领域事件中UpdateAsync必定产生AbpDbConcurrencyException问题
+`https://sourcegraph.com/github.com/abpframework/abp@4f6426add5b69bfb273f601b1ddd9f1f89099a72/-/blob/framework/src/Volo.Abp.EntityFrameworkCore/Volo/Abp/EntityFrameworkCore/AbpDbContext.cs?L347:17&popover=pinned`
+`https://sourcegraph.com/github.com/abpframework/abp@4f6426add5b69bfb273f601b1ddd9f1f89099a72/-/blob/framework/src/Volo.Abp.EntityFrameworkCore/Volo/Abp/EntityFrameworkCore/AbpDbContext.cs?L520:28&popover=pinned`
+
+[处理并发冲突 - EF Core | Microsoft Learn](https://learn.microsoft.com/zh-cn/ef/core/saving/concurrency?tabs=data-annotations)
+
 #### Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application.'
 Repository中的DbContext不可以`using`，直接交由ABP框架管理生命周期。
 ```cs
@@ -50,6 +60,8 @@ using (var uow = _unitOfWorkManager.Begin()
 ```
 The requested service 'Volo.Abp.DependencyInjection.ObjectAccessor`1[[Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Http.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]' has not been registered
 ```
+
+
 
 
 # 依赖注入
