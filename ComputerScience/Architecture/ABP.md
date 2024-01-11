@@ -23,7 +23,7 @@ ABP 是 ASP.NET Boilerplate的全称，意味着它是一种代码层面的最�
 
 #### AbpDbConcurrencyException
 
-领域事件中UpdateAsync必定产生AbpDbConcurrencyException问题
+领域事件中UpdateAsync产生AbpDbConcurrencyException问题。最后发现其实就是并发异常。眼光不能局限在某个服务，这次是事件多次触发，Redis拿到旧的数据导致的
 `https://sourcegraph.com/github.com/abpframework/abp@4f6426add5b69bfb273f601b1ddd9f1f89099a72/-/blob/framework/src/Volo.Abp.EntityFrameworkCore/Volo/Abp/EntityFrameworkCore/AbpDbContext.cs?L347:17&popover=pinned`
 `https://sourcegraph.com/github.com/abpframework/abp@4f6426add5b69bfb273f601b1ddd9f1f89099a72/-/blob/framework/src/Volo.Abp.EntityFrameworkCore/Volo/Abp/EntityFrameworkCore/AbpDbContext.cs?L520:28&popover=pinned`
 
