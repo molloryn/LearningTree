@@ -176,11 +176,14 @@ https://github.com/gubeihc/blasting 前端密码爆破
 
 ## 开发
 
-| 软件名   | 场景                                              | 备注 |
-|:-------- |:------------------------------------------------- |:---- |
-| ProcDump | 创建进程dump文件，用于查找程序crash/高占用CPU原因 |      | 
-|          |                                                   |      |
-|          |                                                   |      |
+| 软件名 | 场景 | 备注 |
+| :--- | :--- | :--- |
+| ProcDump | 创建进程dump文件，用于查找程序crash/高占用CPU原因 |  |
+| Navicate | 本地数据库管理工具 |  |
+| DbGate | WEB端数据库管理工具 | 开源免费 |
+|  |  |  |
+|  |  |  |
+
 
 
 
@@ -208,6 +211,7 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | Czkawka                    | 文件清理，可以搜索相似、重复文件、文件夹等 | [qarmin/czkawka](https://github.com/qarmin/czkawka)                                                    |
 | drawio                     | 开源画图工具(visio替代)                    |                                                                                                        |
 | XMouseButtonControl        | 鼠标功能DIY                                |                                                                                                        |
+|                            |                                            |                                                                                                        |
 
 
 ## 效率
@@ -229,7 +233,8 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | WinMerge         | 开源的文件比较/合并工具                                    |                                                                             |
 | Everything       | 最强全局文件搜索                                           |                                                                             |
 | ScreenToGif      | Gif录屏工具                                                |                                                                             |
-| Textify          | 无限制复制工具，替代OCR                                    | [m417z/Textify](https://github.com/m417z/Textify)                                                                            |
+| Textify          | 无限制复制工具，替代OCR                                    | [m417z/Textify](https://github.com/m417z/Textify)                           |
+| PixPin           | 截图贴图长截图工具                                                           |                                                                             |
 
 ## Audio
 | 软件名  | 场景                   | 备注 |
