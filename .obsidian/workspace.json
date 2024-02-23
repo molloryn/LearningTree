@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c7e45741f13a4821",
+        "id": "48bca3377c1a4a96",
         "type": "tabs",
         "children": [
           {
-            "id": "ec690f6278aa3724",
+            "id": "14fb0d8a9c968356",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/ToolsList.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "H180",
+                "query": "writage",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/ToolsList.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/ToolsList.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/CMD.md"
+                "file": "CTF/ToolsList.md"
               }
             }
           },
@@ -194,8 +194,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ec690f6278aa3724",
+  "active": "06bae426a52ef2d9",
   "lastOpenFiles": [
+    "CTF/Hacker/软件破解.md",
     "SoftwareManual/CMD.md",
     "ComputerScience/Architecture/ABP.md",
     "CTF/ToolsList.md",
@@ -231,7 +232,6 @@
     "Music/FLStudio.md",
     "CTF/MISC/压缩包.md",
     "CTF/MISC/图像隐写/JPG.md",
-    "CTF/MISC/图像隐写/图像隐写.md",
     "ComputerScience/Algorithm",
     "Math",
     "Fontend/FrontendConcept.docx",
