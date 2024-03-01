@@ -213,6 +213,9 @@ Standalone模式暂时不支持docker compose。（仅支持k8s，截至2022/9/2
 HttpClient.DefaultProxy = new WebProxy();
 ```
 
+#### multipart/form-data lost file data
+通过 `Apisix` 调用 `dapr` 边车后发现 postman上传文件丢失了文件内容，发现如果form中不传key值，会丢失文件内容。如果带key，则能正常接收到，但内部文件内容多加了一些信息，需要处理。
+
 # Debug
 
 ## 普通Debug
