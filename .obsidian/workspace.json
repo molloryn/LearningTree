@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "Programming/ASP.NET Core.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "Programming/ASP.NET Core.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "Programming/ASP.NET Core.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Dapr.md"
+                "file": "Programming/ASP.NET Core.md"
               }
             }
           },
@@ -195,21 +195,23 @@
   },
   "active": "14fb0d8a9c968356",
   "lastOpenFiles": [
+    "Programming/ASP.NET Core接口.md",
+    "Programming/C#.md",
+    "Programming/ASP.NET Core.md",
+    "ComputerScience/Algorithm/代码优化.md",
+    "CloudNative/K8S集群管理.md",
+    "CloudNative/Docker.md",
+    "CloudNative/Dapr.md",
     "SoftwareManual/CMD.md",
     "CTF/ToolsList.md",
     "CTF/Hacker/软件破解.md",
     "ComputerScience/Architecture/ABP.md",
-    "CloudNative/Dapr.md",
     "SoftwareManual/Git.md",
-    "Programming/C#.md",
     "attachments/Pasted image 20240109155224.png",
-    "CloudNative/Docker.md",
     "SoftwareManual/VisualStudio.md",
     "Fontend/FrontendConcept.md",
     "ComputerScience/Architecture/架构.md",
-    "Programming/ASP.NET Core接口.md",
     "CloudNative/Kubernetes(K8S).md",
-    "CloudNative/K8S集群管理.md",
     "CloudNative/CloudNative.md",
     "ComputerScience/Linux.md",
     "CTF/AWD/Linux易忽略点.md",
@@ -229,8 +231,6 @@
     "Music/MusicTheory.md",
     "attachments/Pasted image 20231023211045.png",
     "Music/FLStudio.md",
-    "CTF/MISC/压缩包.md",
-    "CTF/MISC/图像隐写/JPG.md",
     "ComputerScience/Algorithm",
     "Math",
     "Fontend/FrontendConcept.docx",
