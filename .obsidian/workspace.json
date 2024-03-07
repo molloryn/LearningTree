@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/架构.md",
+                "file": "Programming/ASP.NET Core.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/架构.md",
+                "file": "Programming/ASP.NET Core.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/架构.md",
+                "file": "Programming/ASP.NET Core.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/架构.md"
+                "file": "Programming/ASP.NET Core.md"
               }
             }
           },
@@ -195,9 +195,11 @@
   },
   "active": "ebc0e3854c5b837f",
   "lastOpenFiles": [
+    "Programming/C#.md",
+    "SoftwareManual/VisualStudio.md",
+    "ComputerScience/架构.md",
     "Programming/ASP.NET Core.md",
     "Programming/ASP.NET Core接口.md",
-    "Programming/C#.md",
     "ComputerScience/Algorithm/代码优化.md",
     "CloudNative/K8S集群管理.md",
     "CloudNative/Docker.md",
@@ -208,7 +210,6 @@
     "ComputerScience/Architecture/ABP.md",
     "SoftwareManual/Git.md",
     "attachments/Pasted image 20240109155224.png",
-    "SoftwareManual/VisualStudio.md",
     "Fontend/FrontendConcept.md",
     "ComputerScience/Architecture/架构.md",
     "CloudNative/Kubernetes(K8S).md",
@@ -230,7 +231,6 @@
     "attachments/Pasted image 20231023232747.png",
     "Music/MusicTheory.md",
     "attachments/Pasted image 20231023211045.png",
-    "Music/FLStudio.md",
     "ComputerScience/Algorithm",
     "Math",
     "Fontend/FrontendConcept.docx",
