@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/ASP.NET Core.md",
+                "file": "Programming/TroubleShooting.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "DateOnly",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/ASP.NET Core.md",
+                "file": "Programming/TroubleShooting.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/ASP.NET Core.md",
+                "file": "Programming/TroubleShooting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming/ASP.NET Core.md"
+                "file": "Programming/TroubleShooting.md"
               }
             }
           },
@@ -195,10 +196,12 @@
   },
   "active": "ebc0e3854c5b837f",
   "lastOpenFiles": [
-    "Programming/C#.md",
     "SoftwareManual/VisualStudio.md",
-    "ComputerScience/架构.md",
+    "SoftwareManual/VSCode.md",
+    "SoftwareManual/MicosoftOffice.md",
     "Programming/ASP.NET Core.md",
+    "Programming/C#.md",
+    "ComputerScience/架构.md",
     "Programming/ASP.NET Core接口.md",
     "ComputerScience/Algorithm/代码优化.md",
     "CloudNative/K8S集群管理.md",
@@ -224,12 +227,10 @@
     "ComputerScience/计算机网络.md",
     "ComputerScience/Database.md",
     "attachments/Pasted image 20231030084457.png",
-    "Music/和弦.md",
     "attachments/Pasted image 20231023234405.png",
     "attachments/Pasted image 20231023233708.png",
     "attachments/Pasted image 20231023232849.png",
     "attachments/Pasted image 20231023232747.png",
-    "Music/MusicTheory.md",
     "attachments/Pasted image 20231023211045.png",
     "ComputerScience/Algorithm",
     "Math",
