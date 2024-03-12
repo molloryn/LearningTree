@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CloudNative/Dapr.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CloudNative/Dapr.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CloudNative/Dapr.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "CloudNative/Dapr.md"
               }
             }
           },
@@ -195,13 +195,13 @@
   },
   "active": "259f7c99059586b9",
   "lastOpenFiles": [
+    "SoftwareManual/VisualStudio.md",
     "SoftwareManual/CMD.md",
     "attachments/Pasted image 20240309124752.png",
     "attachments/Pasted image 20240309124642.png",
     "CTF/ToolsList.md",
     "CloudNative/Kubernetes(K8S).md",
     "Programming/TroubleShooting.md",
-    "SoftwareManual/VisualStudio.md",
     "SoftwareManual/VSCode.md",
     "SoftwareManual/MicosoftOffice.md",
     "Programming/ASP.NET Core.md",

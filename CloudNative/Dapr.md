@@ -174,6 +174,25 @@ Actors uses System.Text.Json (JSON) for state storage (the serializer and option
 虽然作用于全局，但处于K8S不同命名空间下也不能访问到ActorHost。
 [Unhandled exception. Dapr.DaprApiException: error invoke actor method: failed to invoke target 10.39.1.36:50002 after 3 retries · Issue #5090 · dapr/dapr (github.com)](https://github.com/dapr/dapr/issues/5090)
 
+
+## Binding
+
+### Output Binding
+
+定义外部系统资源，封装系统调用，由Dapr解决调用方式。
+按大类进行抽象如MQ、数据库、SMTP、HTTP，将消息传递通过dapr实现的调用方式，给具体的外部服务（具体SMTP服务）或组件（具体如Kafka、MySQL等）。
+#### Output Binding Component
+定义外部绑定组件资源，以供边车调用。
+定义连接种类、资源名、连接方式、鉴权等基础信息
+#### operation
+类似RESTful对资源定义，对资源的操作似乎只有增删改查几种`operation`？具体看dapr支持的Component的文档，弄清支持的`opertaion`。
+
+### Input Binding
+
+内部服务接收来自外部的事件，可以看作是一个`trigger`
+
+
+
 ## 服务发现&服务间调用
 
 `daprd sidecar `有`app-port`，是指宿主微服务的`API`监听地址，由`sidecar`去调用的
@@ -193,7 +212,7 @@ Actors uses System.Text.Json (JSON) for state storage (the serializer and option
 可以通过改写调用api进行，如：`https://localhost:3500/v1.0/invoke/myappid.<namespace>/method/ping`
 [How to: Service invocation across namespaces | Dapr Docs](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-namespaces/)
 
-### Dashboard
+## Dashboard
 
 Standalone模式暂时不支持docker compose。（仅支持k8s，截至2022/9/29）
 
