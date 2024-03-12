@@ -178,6 +178,7 @@ Actors uses System.Text.Json (JSON) for state storage (the serializer and option
 ## Binding
 
 ### Output Binding
+[How-To: Use output bindings to interface with external resources | Dapr Docs](https://docs.dapr.io/developing-applications/building-blocks/bindings/howto-bindings/)
 
 定义外部系统资源，封装系统调用，由Dapr解决调用方式。
 按大类进行抽象如MQ、数据库、SMTP、HTTP，将消息传递通过dapr实现的调用方式，给具体的外部服务（具体SMTP服务）或组件（具体如Kafka、MySQL等）。
@@ -188,6 +189,8 @@ Actors uses System.Text.Json (JSON) for state storage (the serializer and option
 类似RESTful对资源定义，对资源的操作似乎只有增删改查几种`operation`？具体看dapr支持的Component的文档，弄清支持的`opertaion`。
 
 ### Input Binding
+
+[How-To: Trigger your application with input bindings | Dapr Docs](https://docs.dapr.io/developing-applications/building-blocks/bindings/howto-triggers/)
 
 内部服务接收来自外部的事件，可以看作是一个`trigger`
 
