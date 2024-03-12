@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/CMD.md"
+                "file": "SoftwareManual/VisualStudio.md"
               }
             }
           },
@@ -195,6 +195,7 @@
   },
   "active": "259f7c99059586b9",
   "lastOpenFiles": [
+    "SoftwareManual/CMD.md",
     "attachments/Pasted image 20240309124752.png",
     "attachments/Pasted image 20240309124642.png",
     "CTF/ToolsList.md",
@@ -211,7 +212,6 @@
     "CloudNative/K8S集群管理.md",
     "CloudNative/Docker.md",
     "CloudNative/Dapr.md",
-    "SoftwareManual/CMD.md",
     "CTF/Hacker/软件破解.md",
     "ComputerScience/Architecture/ABP.md",
     "SoftwareManual/Git.md",
@@ -230,7 +230,6 @@
     "attachments/Pasted image 20231023234405.png",
     "attachments/Pasted image 20231023233708.png",
     "attachments/Pasted image 20231023232849.png",
-    "attachments/Pasted image 20231023232747.png",
     "ComputerScience/Algorithm",
     "Math",
     "Fontend/FrontendConcept.docx",
