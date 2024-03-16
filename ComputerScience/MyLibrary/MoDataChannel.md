@@ -9,8 +9,8 @@
 		新增"Endpoint"的中间件类型，相对于消息Transform的中间件。可访问到Input Endpoint和Output Endpoint。
 		Endpoint中间件可以有HTTP接口触发、定时器触发中间件，不过新增这种可能就会使得Pipe通信属性多一个方向（因为可以传递主动拉取的事件消息了）
 - 从指定文件类型读取信息
-		瞬时生命周期Channel，用完即销毁。
-		相对的是常规的LongRunning生命周期，它是单例的。
+		瞬时生命周期Channel，用完即断开连接Dispose，下次需要重新Init。
+		相对的是常规的LongRunning生命周期，它是单例的，默认仅一次Init。
 
 # 规划
 
