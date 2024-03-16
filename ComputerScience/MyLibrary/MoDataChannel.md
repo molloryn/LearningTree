@@ -26,7 +26,7 @@
 - 消息通路以双向管道模式实现。
 - 消息通路消息传递以上下文模式传递，自由新增管道中间件，如可配置数据协议转换中间件，将目标系统的格式转换为指定格式。
 - 消息通路可以统一管理，查看状态等各种信息。
-- Pipe+Middleware Build后成为Pipeline，是未激活状态，init后变为DataChannel。
+- Pipe+Middleware+Endpoint Build后成为Pipeline，是未激活状态，init后变为DataChannel。
 
 #### 双向管道模式
 
@@ -48,7 +48,7 @@ Output方向一般代表从 本系统 到 对端系统 的方向，即消息首�
 
 PipeEndpoint接口：
 - PositiveMethod: `SendData()`、`RetrieveData()`
-- PassiveEvent: `OnDataInComming()`、`OnDataRequest()`
+- PassiveEvent: `OnDataInComing()`、`OnDataRequest()`
 
 DataContext头：
 ```json

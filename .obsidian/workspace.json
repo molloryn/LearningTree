@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "C#",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -195,12 +195,12 @@
   },
   "active": "259f7c99059586b9",
   "lastOpenFiles": [
+    "Programming/C#.md",
+    "ComputerScience/MyLibrary/MoDataChannel.md",
     "ComputerScience/操作系统.md",
     "CTF/ToolsList.md",
-    "ComputerScience/MyLibrary/MoDataChannel.md",
     "ComputerScience/MyLibrary",
     "CloudNative/Docker.md",
-    "Programming/C#.md",
     "SoftwareManual/VisualStudio.md",
     "ComputerScience/Architecture/架构.md",
     "CloudNative/Dapr.md",
