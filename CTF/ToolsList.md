@@ -199,19 +199,19 @@ https://github.com/gubeihc/blasting 前端密码爆破
 
 ## 其他
 
-| 软件名                        | 场景                    | 备注                                                                                                     |
-| :------------------------- | :-------------------- | :----------------------------------------------------------------------------------------------------- |
-| RustDesk                   | 远程桌面                  | 开源                                                                                                     |
-| Parsec                     | 远程桌面                  | 支持移动端，高画质                                                                                              |
-| Proxifier                  | 设置各种规则，使得本地软件走特定代理    |                                                                                                        |
-| ContextMenuManager.NET.4.0 | Windows右键管理工具         |                                                                                                        |
-| Optimizer                  | Windows优化工具           | [hellzerg/optimizer: The finest Windows Optimizer (github.com)](https://github.com/hellzerg/optimizer) |
-| sysinternals               | Windows调试工具等，火绒剑替代    |                                                                                                        |
-| BFG-repo-cleaner           | Git Secret blob 移除工具  | [rtyley/bfg-repo-cleaner](https://github.com/rtyley/bfg-repo-cleaner)                                  |
-| Czkawka                    | 文件清理，可以搜索相似、重复文件、文件夹等 | [qarmin/czkawka](https://github.com/qarmin/czkawka)                                                    |
-| drawio                     | 开源画图工具(visio替代)       |                                                                                                        |
-| XMouseButtonControl        | 鼠标功能DIY               |                                                                                                        |
-|                            |                       |                                                                                                        |
+| 软件名                        | 场景                    | 备注                                                                                                                         |
+| :------------------------- | :-------------------- | :------------------------------------------------------------------------------------------------------------------------- |
+| RustDesk                   | 远程桌面                  | 开源                                                                                                                         |
+| Parsec                     | 远程桌面                  | 支持移动端，高画质                                                                                                                  |
+| Proxifier                  | 设置各种规则，使得本地软件走特定代理    |                                                                                                                            |
+| ContextMenuManager.NET.4.0 | Windows右键管理工具         |                                                                                                                            |
+| Optimizer                  | Windows优化工具           | [hellzerg/optimizer: The finest Windows Optimizer (github.com)](https://github.com/hellzerg/optimizer)                     |
+| sysinternals               | Windows调试工具等，火绒剑替代    |                                                                                                                            |
+| BFG-repo-cleaner           | Git Secret blob 移除工具  | [rtyley/bfg-repo-cleaner](https://github.com/rtyley/bfg-repo-cleaner)                                                      |
+| Czkawka                    | 文件清理，可以搜索相似、重复文件、文件夹等 | [qarmin/czkawka](https://github.com/qarmin/czkawka)                                                                        |
+| drawio                     | 开源画图工具(visio替代)       |                                                                                                                            |
+| XMouseButtonControl        | 鼠标功能DIY               |                                                                                                                            |
+| HAWK5                      | C# WPF开发的爬虫、数据清洗工具    | [ferventdesert/Hawk: visualized crawler & ETL IDE written with C#/WPF (github.com)](https://github.com/ferventdesert/Hawk) |
 
 
 ## 效率
