@@ -1011,29 +1011,24 @@ By default, circular references are detected and exceptions thrown. You can pres
 
 某些线程上引发的异常不会被捕获，需要用以下方式：
 
+
+```cs
 var curDomain = AppDomain.CurrentDomain;
-
-curDomain.UnhandledException += new UnhandledExceptionEventHandler((sender, eventArgs) =\>
-
+curDomain.UnhandledException += new UnhandledExceptionEventHandler((sender, eventArgs) =>
 {
-
-var ex = (Exception) eventArgs.ExceptionObject;
-
-KouLog.QuickAdd(\$"程序异常捕获：{ex.ToJsonString()}");
-
+	var ex = (Exception) eventArgs.ExceptionObject;
+	KouLog.QuickAdd($"程序异常捕获：{ex.ToJsonString()}");
 });
 
-TaskScheduler.UnobservedTaskException += (sender, e) =\>
-
+TaskScheduler.UnobservedTaskException += (sender, e) =>
 {
-
-KouLog.QuickAdd(\$"任务异常捕获：{e.ToJsonString()}");
-
+	KouLog.QuickAdd($"任务异常捕获：{e.ToJsonString()}");
 };
+```
 
 而对于Winform等线程上引发的异常，还需要使用
 
-Application.ThreadException去捕获。
+`Application.ThreadException`去捕获。
 
 ## 网络编程
 
