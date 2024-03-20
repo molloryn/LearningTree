@@ -24,3 +24,26 @@ var result = await Http.PostAsync("api/method", new StringContent(strData));
 
 所以最好使用`Frombody`只用DTO request类来写，其他的限制太复杂。
 
+
+### Minimal API
+需要用`async (HttpResponse response, HttpContext context)`的异步才能被Swagger展示出来，可能是个bug
+
+```cs
+//获取Channel列表
+endpoints.MapGet("/data-channel/channels", async (HttpResponse response, HttpContext context) =>
+{
+    var channels = DataChannelCentral.Channels.Select(p => p.Value).Select(p => new
+    {
+        p.Id,
+        Middlewares = p.GetMiddlewares().Select(m => m.GetType().Name),
+        Endpoints = p.GetEndpoints().Select(m => m.GetType().Name)
+    });
+    await context.Response.WriteAsJsonAsync(channels);
+}).WithName("获取DataChannel状态列表").WithOpenApi(operation =>
+{
+    operation.Summary = "获取DataChannel状态列表";
+    operation.Description = "获取DataChannel状态列表";
+    operation.Tags = tagGroup;
+    return operation;
+});
+```
