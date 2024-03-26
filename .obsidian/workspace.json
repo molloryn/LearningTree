@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e340fd1cd921d788",
+        "id": "67d98b742737ebaf",
         "type": "tabs",
         "children": [
           {
-            "id": "56efeb42eaa249d2",
+            "id": "0d9bf22d85d1c792",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hacker/软件破解.md",
+                "file": "CloudNative/Docker.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/Hacker/软件破解.md",
+                "file": "CloudNative/Docker.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/Hacker/软件破解.md",
+                "file": "CloudNative/Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/Hacker/软件破解.md"
+                "file": "CloudNative/Docker.md"
               }
             }
           },
@@ -193,9 +193,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "56efeb42eaa249d2",
+  "active": "0d9bf22d85d1c792",
   "lastOpenFiles": [
+    "SoftwareManual/CMD.md",
+    "SoftwareManual/AHK.md",
+    "Math/形式幂级数.md",
     "CloudNative/Dapr.md",
+    "CTF/Hacker/软件破解.md",
     "CloudNative/K8S集群管理.md",
     "ComputerScience/操作系统.md",
     "ComputerScience/计算机网络.md",
@@ -217,11 +221,7 @@
     "ComputerScience/Architecture/ABP.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
     "ComputerScience/MyLibrary/MoDataChannel.md",
-    "Programming/C#.md",
-    "CTF/ToolsList.md",
     "ComputerScience/MyLibrary",
-    "SoftwareManual/VisualStudio.md",
-    "SoftwareManual/CMD.md",
     "attachments/Pasted image 20240309124752.png",
     "attachments/Pasted image 20240309124642.png",
     "attachments/Pasted image 20240109155224.png",

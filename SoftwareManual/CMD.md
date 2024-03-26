@@ -340,13 +340,18 @@ Hyper-V 会保留部分tcp端口，开始到结束范围内的端口不可用, �
 
 ③再次运行 `netsh interface ipv4 show excludedportrange protocol=tcp` 命令可以看到6379端口已被排除(带有\*号标记)
 
-还有一种办法是重新设置一下「TCP 动态端口范围」，让Hyper-V只在我们设定的范围内保留端口即可。可以以管理员权限运行下面的命令，将「TCP 动态端口范围」重新设定为49152-65535。如果你觉得这个范围太大，还可以改小一点。
+还有一种办法是重新设置一下「TCP 动态端口范围」，让Hyper-V只在我们设定的范围内保留端口即可。可以以管理员权限运行下面的命令，将「TCP 动态端口范围」重新设定为`49152-65535`。如果你觉得这个范围太大，还可以改小一点。
 
-![](../attachments/006623272f7415e1c9c9d30e9f1800d4.png)
+
+```sh
+netsh int ipv4 set dynamic tcp start=49152 num=16384
+netsh int ipv6 set dynamic tcp start=49152 num=16384
+```
+
 
 然后重启电脑即可。
 
-重启电脑后，再运行命令netsh int ipv4 show dynamicport tcp查看动态端口范围，发现确实已经修改为了49152-65535。
+重启电脑后，再运行命令`netsh int ipv4 show dynamicport tcp`查看动态端口范围，发现确实已经修改为了`49152-65535`。
 
 ## 设置Alias
 
