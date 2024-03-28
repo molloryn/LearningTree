@@ -238,6 +238,19 @@ HttpClient.DefaultProxy = new WebProxy();
 #### multipart/form-data lost file data
 通过 `Apisix` 调用 `dapr` 边车后发现 postman上传文件丢失了文件内容，发现如果form中不传key值，会丢失文件内容。如果带key，则能正常接收到，但内部文件内容多加了一些信息，需要处理。
 
+#### Grpc.Core.RpcException: Status(StatusCode="ResourceExhausted", Detail="grpc: received message larger than max (9615510 vs. 4194304)")
+setting parameters `daprHTTPMaxRequestSize` and `UseGrpcChannelOptions` with higher data size
+
+```cs
+ services.AddDaprClient(builder => builder.UseGrpcChannelOptions(new GrpcChannelOptions()
+ {
+     MaxReceiveMessageSize = 100 * 1024 * 1024,
+     MaxSendMessageSize = 100 * 1024 * 1024,
+     MaxRetryBufferSize = 100 * 1024 * 1024
+     
+ }));
+```
+
 # Debug
 
 ## 普通Debug
