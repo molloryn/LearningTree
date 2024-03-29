@@ -47,3 +47,9 @@ endpoints.MapGet("/data-channel/channels", async (HttpResponse response, HttpCon
     return operation;
 });
 ```
+
+
+# 依赖注入
+
+#### 使用依赖注入的方式构造实例，且支持部分参数由用户传递（顺序不限）
+`object ActivatorUtilities.Createlnstance(IServiceProvider provider, Type instanceType, params object[] parameters)`
