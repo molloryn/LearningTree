@@ -53,3 +53,13 @@ endpoints.MapGet("/data-channel/channels", async (HttpResponse response, HttpCon
 
 #### 使用依赖注入的方式构造实例，且支持部分参数由用户传递（顺序不限）
 `object ActivatorUtilities.Createlnstance(IServiceProvider provider, Type instanceType, params object[] parameters)`
+
+#### 部分注入
+```cs
+ var client = DaprClient.CreateInvokeHttpClient(appId);
+//方式一
+services.TryAddScoped<ICommandFlight>(provider => ActivatorUtilities.CreateInstance<CommandFlightHttpApi>(provider, client));
+//方式二 （HttpClient适用，因为被封装）未测试
+services.TryAddScoped<ICommandFlight, CommandFlightHttpApi>();
+services.AddHttpClient<CommandFlightHttpApi>(_ => client.CreateGrpcService<ICommandFlight>());
+```
