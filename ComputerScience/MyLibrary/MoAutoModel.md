@@ -14,7 +14,7 @@
 
 #### 值转换器
 
-`Name in AB%,%CD%,EF`
-`CreateTime in 2023-1-1 - 2024-1-1`
-`CreateTime = 2023-1-1 || CreateTime = 2024-1-1`
-`Name = ABC`
+`Name in "AB%,%CD%,EF"`
+`CreateTime in "[2023-1-1,2024-1-1]"`
+`CreateTime >= "2023-1-1" && CreateTime <= "2024-1-1"`
+`Name = "ABC"`
