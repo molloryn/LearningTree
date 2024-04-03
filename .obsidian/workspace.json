@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoAutoModel.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoAutoModel.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoAutoModel.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoAutoModel.md"
+                "file": "ComputerScience/Architecture/ABP.md"
               }
             }
           },
@@ -195,6 +195,7 @@
   },
   "active": "0d9bf22d85d1c792",
   "lastOpenFiles": [
+    "ComputerScience/MyLibrary/MoAutoModel.md",
     "ComputerScience/MyLibrary/MoDataChannel.md",
     "ComputerScience/MyLibrary/MoRpcInvocation.md",
     "Programming/ASP.NET Core接口.md",
@@ -220,7 +221,6 @@
     "ComputerScience/SoftwareTest.md",
     "CTF/思路打开.md",
     "CloudNative/Deployments/K8S集群部署要求.md",
-    "CloudNative/Deployments/K8S部署笔记.md",
     "ComputerScience/MyLibrary",
     "attachments/Pasted image 20240309124752.png",
     "attachments/Pasted image 20240309124642.png",

@@ -90,3 +90,8 @@ public IAbpLazyServiceProvider LazyServiceProvider { get; set; } = default!;
 ```csharp
 [Dependency(ReplaceServices = true)]
 ```
+
+
+
+# Distributed Event Bus
+#### AbpDaprEventBus
