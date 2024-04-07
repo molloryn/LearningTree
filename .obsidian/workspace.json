@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "ComputerScience/MyLibrary/MoRpcInvocation.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "ComputerScience/MyLibrary/MoRpcInvocation.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "ComputerScience/MyLibrary/MoRpcInvocation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolsList.md"
+                "file": "ComputerScience/MyLibrary/MoRpcInvocation.md"
               }
             }
           },
@@ -209,6 +209,7 @@
   },
   "active": "7320a555f2f3c24c",
   "lastOpenFiles": [
+    "CTF/ToolsList.md",
     "ComputerScience/SoftwareTest.md",
     "ComputerScience/Architecture/ABP.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
@@ -234,7 +235,6 @@
     "ComputerScience/WEB.md",
     "ComputerScience/Unity.md",
     "CTF/思路打开.md",
-    "CloudNative/Deployments/K8S集群部署要求.md",
     "ComputerScience/MyLibrary",
     "attachments/Pasted image 20240309124752.png",
     "attachments/Pasted image 20240309124642.png",
