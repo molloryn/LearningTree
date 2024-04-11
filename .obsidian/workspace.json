@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoAutoModel.md",
+                "file": "ComputerScience/MyLibrary/MoHotConfiguration.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoAutoModel.md",
+                "file": "ComputerScience/MyLibrary/MoHotConfiguration.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoAutoModel.md",
+                "file": "ComputerScience/MyLibrary/MoHotConfiguration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoAutoModel.md"
+                "file": "ComputerScience/MyLibrary/MoHotConfiguration.md"
               }
             }
           },
@@ -195,8 +195,9 @@
   },
   "active": "ab526b8686076adb",
   "lastOpenFiles": [
-    "Programming/C#.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
+    "ComputerScience/MyLibrary/MoHotConfiguration.md",
+    "Programming/C#.md",
     "ComputerScience/MyLibrary/MoDataChannel.md",
     "ComputerScience/MyLibrary/MoRpcInvocation.md",
     "CTF/ToolsList.md",
@@ -220,7 +221,6 @@
     "CloudNative/CloudNative.md",
     "ComputerScience/WEB.md",
     "ComputerScience/Unity.md",
-    "CTF/思路打开.md",
     "ComputerScience/MyLibrary",
     "attachments/Pasted image 20240309124752.png",
     "attachments/Pasted image 20240309124642.png",
