@@ -344,3 +344,13 @@ The Dapr CLI run command starts the application. It invokes the underlying Dapr 
 [Dapr Community Call - Oct 4th (#91) (youtube.com)](https://www.youtube.com/watch?v=L_S98bRGfCQ&t=668s)
 
 其他：[[Discussion] Who is using Visual Studio (or other IDEs) for Dapr application development? · Issue #6097 · dapr/dapr (github.com)](https://github.com/dapr/dapr/issues/6097)
+
+
+
+
+
+# 部署
+
+## 资源需求
+
+[Production guidelines on Kubernetes | Dapr Docs](https://docs.dapr.io/operations/hosting/kubernetes/kubernetes-production)
