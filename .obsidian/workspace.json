@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "ComputerScience/MyLibrary/MoAutoModel.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "ComputerScience/MyLibrary/MoAutoModel.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "ComputerScience/MyLibrary/MoAutoModel.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Dapr.md"
+                "file": "ComputerScience/MyLibrary/MoAutoModel.md"
               }
             }
           },
@@ -195,6 +195,7 @@
   },
   "active": "ab526b8686076adb",
   "lastOpenFiles": [
+    "CloudNative/Dapr.md",
     "ComputerScience/MyLibrary/MoHotConfiguration.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
     "Programming/C#.md",
@@ -207,7 +208,6 @@
     "ComputerScience/架构.md",
     "Programming/ASP.NET Core.md",
     "ComputerScience/Architecture/架构.md",
-    "CloudNative/Dapr.md",
     "CloudNative/Docker.md",
     "SoftwareManual/CMD.md",
     "SoftwareManual/AHK.md",
