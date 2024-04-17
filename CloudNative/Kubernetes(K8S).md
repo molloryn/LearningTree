@@ -96,6 +96,23 @@ CRI is an interface between container runtimes and container orchestration platf
 
 dapr中的边车，就是很好的例子，边车与应用程序位于同一个Pod内。
 [kubernetes里的各种port解惑 - 周国通 - 博客园 (cnblogs.com)](https://www.cnblogs.com/tylerzhou/p/11023157.html)
+
+
+```yml
+apiVersion: v1
+kind: Service
+metadata:
+name: tomcat-server
+spec:
+type: NodePort
+ports:
+    port: 11111  #service暴露在cluster ip上的端口，通过<cluster ip>:port访问服务,通过此端口集群内的服务可以相互访问
+    targetPort: 8080  #Pod的外部访问端口，port和nodePort的数据通过这个端口进入到Pod内部，Pod里面的containers的端口映射到这个端口，提供服务
+    nodePort: 30001 #Node节点的端口，<nodeIP>:nodePort 是提供给集群外部客户访问service的入口
+selector:
+tier: frontend
+```
+
 ### Service
 
 一个Pod有一个自己的IP Address，一个Pod搭配一个Service，Service 管理Pod的IP，Pod挂掉IP也不会变。Service分Internal service和external service，即可被外部访问以及不可被外部访问的。
