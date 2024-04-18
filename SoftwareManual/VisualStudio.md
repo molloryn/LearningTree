@@ -353,7 +353,9 @@ Under Common Properties\\Startup Project select Multiple startup projects and se
 
 Alt + C Collapse all (在Solution Explore界面)
 
-![Title: fig:](../attachments/bae11f3d5036aabc8e6911587026bfff.png)默认快捷键 `Ctrl+[,S` （个人建议改成Ctrl+W，Ctrl+W，表示Where）
+![Title: fig:](../attachments/bae11f3d5036aabc8e6911587026bfff.png)
+`SoulutionExplorer.SyncWithActiveDocument`
+默认快捷键 `Ctrl+[,S` （个人建议改成Ctrl+W，Ctrl+W，表示Where）
 
 #### Resharper相关
 
