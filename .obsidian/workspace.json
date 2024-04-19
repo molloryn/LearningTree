@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "ComputerScience/Architecture/ABP.md"
               }
             }
           },
@@ -195,9 +195,9 @@
   },
   "active": "abf7ed3a5683e937",
   "lastOpenFiles": [
+    "SoftwareManual/VisualStudio.md",
     "CTF/ToolsList.md",
     "SoftwareManual/Git.md",
-    "SoftwareManual/VisualStudio.md",
     "CloudNative/Kubernetes(K8S).md",
     "ComputerScience/MyLibrary/MoRpcInvocation.md",
     "ComputerScience/MyLibrary/MoHotConfiguration.md",
