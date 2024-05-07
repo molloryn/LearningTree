@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Database.md",
+                "file": "Programming/NET/IdentityServer4.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Database.md",
+                "file": "Programming/NET/IdentityServer4.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Database.md",
+                "file": "Programming/NET/IdentityServer4.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Database.md"
+                "file": "Programming/NET/IdentityServer4.md"
               }
             }
           },
@@ -195,15 +195,18 @@
   },
   "active": "abf7ed3a5683e937",
   "lastOpenFiles": [
-    "SoftwareManual/VisualStudio.md",
+    "Programming/NET/ASP.NET Core.md",
+    "Programming/NET/IdentityServer4.md",
     "Programming/TroubleShooting.md",
+    "Programming/NET",
+    "ComputerScience/Database.md",
+    "SoftwareManual/VisualStudio.md",
     "ComputerScience/MyLibrary/MoDataChannel.md",
     "ComputerScience/MyLibrary/MoRpcInvocation.md",
     "ComputerScience/MyLibrary/MoHotConfiguration.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
     "CTF/ToolsList.md",
-    "Programming/ASP.NET Core.md",
-    "Programming/C#.md",
+    "Programming/NET/C#.md",
     "README.md",
     "CTF/WEB/正则表达式.md",
     "CTF/思路打开.md",
@@ -219,8 +222,6 @@
     "CloudNative/Dapr.md",
     "ComputerScience/Architecture/ABP.md",
     "ComputerScience/SoftwareTest.md",
-    "Programming/ASP.NET Core接口.md",
-    "ComputerScience/架构.md",
     "ComputerScience/MyLibrary",
     "attachments/Pasted image 20240309124752.png",
     "attachments/Pasted image 20240309124642.png",
@@ -240,7 +241,6 @@
     "CTF/PWN",
     "CTF/Reverse",
     "CTF/Hacker",
-    "ComputerScience/AI",
     "未命dd名.canvas"
   ]
 }

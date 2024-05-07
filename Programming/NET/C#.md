@@ -52,7 +52,7 @@
 
 静态字段、构造方法是线程安全的。Static constructors are guaranteed to be run only once per application domain, before any instances of a class are created or any static members are accessed.
 
-![Graphical user interface, text Description automatically generated](../attachments/d2626a3be07b363c06fa7bbe9647977e.png)
+![Graphical user interface, text Description automatically generated](../../attachments/d2626a3be07b363c06fa7bbe9647977e.png)
 
 这样子的属性实例化是对象创建完毕后才赋值的，所以是最后才生效的。
 
@@ -189,7 +189,7 @@ At the end of the scope of the variable r
 
 还可以使用global using
 
-![电脑萤幕的截图 描述已自动生成](../attachments/9d8382a445624ca721b203c879e414a1.png)
+![电脑萤幕的截图 描述已自动生成](../../attachments/9d8382a445624ca721b203c879e414a1.png)
 
 ##### explicit与implict
 
@@ -384,11 +384,11 @@ interfaces default to **internal** access. Interface members are **public** by d
 
 ## Record
 
-![图片包含 文本 描述已自动生成](../attachments/243dc8e644c37be47e69d8ef89826f4f.png)
+![图片包含 文本 描述已自动生成](../../attachments/243dc8e644c37be47e69d8ef89826f4f.png)
 
 两种写法
 
-![文本 描述已自动生成](../attachments/db2f1e011c4b527961666045a76b5f4a.png)
+![文本 描述已自动生成](../../attachments/db2f1e011c4b527961666045a76b5f4a.png)
 
 默认都是readonly的，即immutable。也可以自己改成mutable的。
 
@@ -472,7 +472,7 @@ Span\<T\>直接获取ref 引用，可截取一段，变为数组操作，直接�
 
 从C/C++的角度来说，其实是封装了void\*类型的指针操作，它抽象了所有连续内存空间的类型系统，包括：数组、非托管指针、堆栈指针、fixed或pinned过的托管数据，以及值内部区域的引用。
 
-![在这里插入图片描述](../attachments/d26733c2032289d6b203af6d8aede024.png)
+![在这里插入图片描述](../../attachments/d26733c2032289d6b203af6d8aede024.png)
 
 不能存储在heap上，因为要规避被多个线程访问，只能在stack上，意思是不能存在类或结构体等字段（甚至是lambdas等表达式都不行）上保留，而只能在函数内部，作为一个tmp变量，确保只会有一个线程访问
 
@@ -1338,7 +1338,7 @@ TypeAdapterConfig\<TSource, TDestination\>
 
 ## ADO.NET数据库对象
 
-![](../attachments/a9844e331bcc8a84a1ee717e2cd1bd69.png)
+![](../../attachments/a9844e331bcc8a84a1ee717e2cd1bd69.png)
 
 Transaction事务简单来说就是多个命令，要么都执行要么都不执行
 
@@ -1356,7 +1356,7 @@ ExecuteReader() 返回一个DataReader对象。如果SQL不是查询Select，则
 
 ExecuteXmlReader()返回一个XmlReader对象
 
-![](../attachments/4d4123214e8c414592f16b09f7c0880a.png)
+![](../../attachments/4d4123214e8c414592f16b09f7c0880a.png)
 
 #### Connection对象
 
@@ -1380,7 +1380,7 @@ SqlDataReader.Read()方法可以读取下一行数据，然后按照列索引可
 
 过程：
 
-![](../attachments/da11987a876dcc5543c01a804d72b536.png)
+![](../../attachments/da11987a876dcc5543c01a804d72b536.png)
 
 # WinForm
 
@@ -1566,7 +1566,7 @@ Application.Current.MainWindow.FindName("xxx")
 
 **●不规则窗体**
 
-![](../attachments/a8b839523d633dfadd72ca983567ab6f.png)
+![](../../attachments/a8b839523d633dfadd72ca983567ab6f.png)
 
 解释下这个xaml需要注意的属性设置：
 
@@ -1600,9 +1600,9 @@ this.DragMove();
 
 Grid的划分
 
-![](../attachments/29fcada77befd23e493ee3d734901dbf.png)
+![](../../attachments/29fcada77befd23e493ee3d734901dbf.png)
 
-![](../attachments/2997ee0728b9095984487410540ed21b.png)
+![](../../attachments/2997ee0728b9095984487410540ed21b.png)
 
 **圆角阴影Border**
 
@@ -1648,9 +1648,9 @@ Border的Background属性设置ImageBrush 这样会按照Border的边框填充�
 
 静态资源(StaticResource)指的是在程序载入内存时对资源的一次性使用，之后就不再访问这个资源了；动态资源(DynamicResource)使用指的是在程序运行过程中然会去访问资源。
 
-![](../attachments/ce6a6e95ef665f5c3c739501b7dae3f2.png)
+![](../../attachments/ce6a6e95ef665f5c3c739501b7dae3f2.png)
 
-![](../attachments/c27af3fbccc17cbf186bf661350fa386.png)
+![](../../attachments/c27af3fbccc17cbf186bf661350fa386.png)
 
 **●使用pack协议查找资源**
 
@@ -1741,11 +1741,11 @@ Binding需要一个数据源，是拿自己的或者上层的DataContext
 
 可以在最外层即Window层设置DataContext，则在window内所有的控件都能看到Source然后拥有binding数据源，数据源一般是ViewModel
 
-![](../attachments/7df88e6c5c774439f9e34f13feb4d4e2.png)
+![](../../attachments/7df88e6c5c774439f9e34f13feb4d4e2.png)
 
 Binding有个StringFormat属性可以格式化字符串
 
-![](../attachments/85fe44fb8042dd627a46d4167602234b.png)
+![](../../attachments/85fe44fb8042dd627a46d4167602234b.png)
 
 \<DataGrid ItemsSource="{Binding CodeList}"\> 在MVVM框架中DataGrid需要写明ItemsSource属性，这样里面的DataGridTextColumn中的Binding属性就是一个个CodeList中包含的对象
 
@@ -1761,7 +1761,7 @@ private ObservableCollection\<DMCode\> codeList; 比如这里是DMCode类，其�
 
 MVC全名是Model View Controller，是模型(model)－视图(view)－控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。MVC被独特的发展起来用于映射传统的输入、处理和输出功能在一个逻辑的图形化用户界面的结构中。
 
-![](../attachments/8423ffee2b901dfd8f7cd096d3af6dc8.png)
+![](../../attachments/8423ffee2b901dfd8f7cd096d3af6dc8.png)
 
 个人理解：
 
@@ -1775,7 +1775,7 @@ Controller即供访问的api或访问入口文件，比如网站即访问control
 
 MVVM是Model-View-ViewModel的简写。它本质上就是MVC 的改进版。MVVM 就是将其中的View 的状态和行为抽象化，让我们将视图 UI 和业务逻辑分开。当然这些事 ViewModel 已经帮我们做了，它可以取出 Model 的数据同时帮忙处理 View 中由于需要展示内容而涉及的业务逻辑。
 
-![](../attachments/b3200515aa4c8ceefffac91a2c091e92.png)
+![](../../attachments/b3200515aa4c8ceefffac91a2c091e92.png)
 
 Model 现实对象的抽象的结果
 
@@ -1807,9 +1807,9 @@ DelegateCommand 继承ICommand
 
 **ViewModel数据属性长这样：**
 
-![](../attachments/a8c6e853ac2e8d5356c20722619f46b8.png)
+![](../../attachments/a8c6e853ac2e8d5356c20722619f46b8.png)
 
-![](../attachments/bdc9bb971e87f964e2e11c58717dd320.png)
+![](../../attachments/bdc9bb971e87f964e2e11c58717dd320.png)
 
 注：两个类实现的基类不一样，因此通知属性改变方法名字有些不一样
 
@@ -1817,7 +1817,7 @@ DelegateCommand 继承ICommand
 
 **ViewModel命令属性长这样：**
 
-![](../attachments/a5b94dc005e3362867d5189ffcf7b872.png)
+![](../../attachments/a5b94dc005e3362867d5189ffcf7b872.png)
 
 传递的是命令所以比如Button是Command属性Binding的命令属性
 
@@ -1833,7 +1833,7 @@ Services文件夹 接口、服务功能类定义
 
 ViewModels文件夹 对应View里面的名字 比如MainWindow有MainWindowViewModel 但也有把某个模块抽象为ViewModel比如数据表格的每一个数据，是否可选中等(ViewModel里面可以包含ViewModel) 如果ViewModel里面包含的ViewModel里xaml中有要用到上一层ViewModel的DataContext需要重新指定相对Source
 
-![](../attachments/04a276d1c4693804116b008ebd98adfb.png)
+![](../../attachments/04a276d1c4693804116b008ebd98adfb.png)
 
 FindAncestor找外层的DataContext，AncestorType这里指定外层的DataGrid
 

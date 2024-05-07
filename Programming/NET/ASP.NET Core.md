@@ -22,7 +22,7 @@ ViewData、ViewBag、TempData、Model传值，后台传数据到前台，前台�
 
 `aspnet`中是在`HttpContext`中，但已经不是标配，不能直接使用，需要进行配置：添加中间件以及服务实例
 
-![](../attachments/bdae182ae9aaadcca0078c5c3b06d53d.png)
+![](../../attachments/bdae182ae9aaadcca0078c5c3b06d53d.png)
 
 asp.net.core核心理念之一：pay-for-what-you-use 按需加载，要啥配置啥，不是原来asp.net的全家桶了。所以简约、高效。
 
@@ -30,7 +30,7 @@ asp.net.core核心理念之一：pay-for-what-you-use 按需加载，要啥配�
 
 使用Identity Server4
 
-![](../attachments/3959373c4405b4c5c8b5c8868c0f2ff8.png)
+![](../../attachments/3959373c4405b4c5c8b5c8868c0f2ff8.png)
 
 用户先通过登陆获取token，然后每次请求都带有token，请求到达Gateway之后会直接通过一种加密验证机制验证token是否有效，所以Gateway能够实现鉴权授权的效果。
 
@@ -40,15 +40,15 @@ HTTP协议是请求响应模型，浏览器访问端口传递数据，请求要�
 
 ASP.NETCore里的这个东西叫做Kestrel，是精简高效的HttpServer，以包形式提供，自身无法单独运行。内部封装了对libuv的调用，作为I/O的底层，屏蔽各系统底层实现的差异，无需依赖IIS等，基于.NET Core CLR，是一个独立的程序了，因此做到了跨平台。
 
-![](../attachments/3e8e8733a93c779fc76ae9ae67957e5e.png)
+![](../../attachments/3e8e8733a93c779fc76ae9ae67957e5e.png)
 
 #### 创建服务器的入口
 
-![](../attachments/a2e479eab331baa8198eac676c06dcc8.png)
+![](../../attachments/a2e479eab331baa8198eac676c06dcc8.png)
 
 要对Kestrel进行配置，需要在appsettings.json中添加Kestrel节点，因为源代码中有这一操作
 
-![](../attachments/4ae1eddf2b05c8f8304e1d76dbf9699d.png)
+![](../../attachments/4ae1eddf2b05c8f8304e1d76dbf9699d.png)
 
 #### Startup类
 
@@ -58,23 +58,23 @@ Configure方法是配置Http请求的pipeline（管道），即Http请求的处�
 
 若只留一个：
 
-![](../attachments/203f926689fdf61ffc567ca87fcfb895.png)
+![](../../attachments/203f926689fdf61ffc567ca87fcfb895.png)
 
 那么也会成功响应，且任何请求都返回Hello World！侧面证明这是从请求层面完整的响应处理。
 
 所以MVC框架需要自行设计。即设计管道
 
-![](../attachments/7428b44f963b9287676299420b772122.png)
+![](../../attachments/7428b44f963b9287676299420b772122.png)
 
 #### 管道模型（中间件、洋葱）
 
-![](../attachments/12b37270a4895a56a909c087ff6e1d59.png)
+![](../../attachments/12b37270a4895a56a909c087ff6e1d59.png)
 
 拼接管道原理（如何洋葱般的拼接一系列的delegate）
 
-![](../attachments/3c92b63ad6240174976af6fc0392e391.png)
+![](../../attachments/3c92b63ad6240174976af6fc0392e391.png)
 
-![](../attachments/fedf7e3d0bbff1ea70bb09384d43c370.png)
+![](../../attachments/fedf7e3d0bbff1ea70bb09384d43c370.png)
 
 ## 开发
 
@@ -90,11 +90,11 @@ Configure方法是配置Http请求的pipeline（管道），即Http请求的处�
 
 若是要调整静态资源文件路径，在Startup.cs文件中配置UseStaticFiles
 
-![](../attachments/673e5b07657f0163f11944a3e5f76007.png)
+![](../../attachments/673e5b07657f0163f11944a3e5f76007.png)
 
 使用IIS托管的原理：
 
-![](../attachments/a60c1db6a78a1d0ef3add50f71294bae.png)
+![](../../attachments/a60c1db6a78a1d0ef3add50f71294bae.png)
 
 ### 使用Configuration
 
@@ -102,9 +102,9 @@ Configure方法是配置Http请求的pipeline（管道），即Http请求的处�
 
 builder.Configuration实际上是按下图优先度读取配置（越前面的优先度越高）：
 
-![A screenshot of a computer program Description automatically generated with medium confidence](../attachments/dd66a8e1cc5290aee6acf3387a1e0db9.png)
+![A screenshot of a computer program Description automatically generated with medium confidence](../../attachments/dd66a8e1cc5290aee6acf3387a1e0db9.png)
 
-![A screenshot of a computer program Description automatically generated with medium confidence](../attachments/af719732f655b9529c2a3cd0ff5b4452.png)
+![A screenshot of a computer program Description automatically generated with medium confidence](../../attachments/af719732f655b9529c2a3cd0ff5b4452.png)
 
 具体怎么选择看环境：
 
@@ -184,7 +184,7 @@ ASP.NETCore中的内置IoC容器是Microsoft.Externsions.DependencyInjection中�
 
 - **AddScoped**：作用域单例，实际上是container对象.CreateScope()创建出来的一个“子容器”，所以作用域不同。同一个容器就同一个实例。不过在asp.net Core中，变成了一个请求一个实例，不同请求不同实例，因为一次请求底层构造了一个子容器实例，一次请求的意思就是一次http请求，第二次发同一个请求也算不同请求了。一次请求相同的情况是注册的服务用到多次的时候，注入进去的服务是同一个实例。
 
-![](../attachments/fc35966aaa4228489b7f58a18df9583d.png)
+![](../../attachments/fc35966aaa4228489b7f58a18df9583d.png)
 
 #### 手动获取依赖
 
@@ -192,7 +192,7 @@ ASP.NETCore中的内置IoC容器是Microsoft.Externsions.DependencyInjection中�
 
 [c# - Resolving instances with ASP.NET Core DI from within ConfigureServices - Stack Overflow](https://stackoverflow.com/questions/32459670/resolving-instances-with-asp-net-core-di-from-within-configureservices)
 
-![](../attachments/52aaeffa8b35a671feeb2d02d37675c3.png)
+![](../../attachments/52aaeffa8b35a671feeb2d02d37675c3.png)
 
 #### 使用第三方IOC容器（例 Autofac）
 
@@ -245,7 +245,7 @@ using(var scope = container.BeginLifetimeScope())
 
 使用ASP.NET Core中的Filter来实现AOP 思想（是使用的特性实现），比如有IActionFilter（在action执行前、执行后；controller调用前调用后，全局…前后?添加方法）、IResultFilter（结果前结果后）、ExceptionFilterAttribute（捕捉action、controller、全局发生的异常），特性Attribute有三种注册方式，action注册，控制器注册，全局注册。执行顺序是类似于中间件的管道模型，就像是“面向环形编程”：灵活扩展，随取随用
 
-![](../attachments/c9639c64a512e42b4c48c1b082e6961b.png)
+![](../../attachments/c9639c64a512e42b4c48c1b082e6961b.png)
 
 前两种是在方法或类上添加特性，第三种是在Startup里的Configure里使用Filters.Add添加filter特性类进行全局注册。
 
@@ -263,15 +263,15 @@ Filter类的写法和控制器的依赖注入一样
 
 2、3、4的依赖注入都是基于FilterFactory，所以若是自行实现的其他Filter的Attribute需要实现IFilterMetadata接口，不然无法依赖注入
 
-![](../attachments/8b8fb09b586ae7f9fac248e21e89e762.png)
+![](../../attachments/8b8fb09b586ae7f9fac248e21e89e762.png)
 
-![](../attachments/bda55ea17258fce1dbe049a9af81fc9b.png)
+![](../../attachments/bda55ea17258fce1dbe049a9af81fc9b.png)
 
 使用第三方的IoC的AOP实现，这是对一个依赖注入的类进行拓展，当其他类依赖注入这个类并调用的时候，会进行相应的AOP，因此这个实现了深入一个方法内部、业务逻辑层进行AOP，这种深入的一般都需要用第三方IoC容器实现：
 
-![](../attachments/8a7bad07b38c3e3833489c25c2d9cfa4.png)
+![](../../attachments/8a7bad07b38c3e3833489c25c2d9cfa4.png)
 
-![](../attachments/a53559fbf1d5133bcec3147d5a122937.png)
+![](../../attachments/a53559fbf1d5133bcec3147d5a122937.png)
 
 ## 构建RESTful API
 
@@ -313,15 +313,15 @@ api消费者可以在Header请求头中写Media Type 比如application/json或ap
 
 配置Controller是在ConfigureServices中AddControllers里面的
 
-![](../attachments/0252006edb66793b48cd7d28986f37f6.png)
+![](../../attachments/0252006edb66793b48cd7d28986f37f6.png)
 
 3.0后的写法是
 
-![](../attachments/49e84ec96386e1f127eab9c383da38ee.png)
+![](../../attachments/49e84ec96386e1f127eab9c383da38ee.png)
 
 使用POST新建资源
 
-![](../attachments/704c88ffd020df2925a8de244c3443ab.png)
+![](../../attachments/704c88ffd020df2925a8de244c3443ab.png)
 
 ### API属性/字段映射
 
@@ -344,11 +344,11 @@ api消费者可以在Header请求头中写Media Type 比如application/json或ap
 
 配置：
 
-![](../attachments/ea175c1b79b4b90075b4e35162d8b12e.png)
+![](../../attachments/ea175c1b79b4b90075b4e35162d8b12e.png)
 
 使用（这里是用了依赖注入IMapper）：
 
-![](../attachments/18e0d70af4f7b88d3eba625d3b28ed5c.png)
+![](../../attachments/18e0d70af4f7b88d3eba625d3b28ed5c.png)
 
 **功能**
 
@@ -512,13 +512,13 @@ By convention, all public properties with a getter and a setter will be included
 
 可在派生上下文中覆写 OnModelCreating 方法，并使用 ModelBuilder API 来配置模型。 此配置方法最为有效，并可在不修改实体类的情况下指定配置。 Fluent API 配置具有最高优先级，并将替代约定和数据注释。
 
-![](../attachments/10ba1df7b1aa6044b4f0cd0c53941792.png)
+![](../../attachments/10ba1df7b1aa6044b4f0cd0c53941792.png)
 
 #### 数据注释（特性）
 
 也可将特性（称为数据注释）应用于类和属性。 数据注释会替代约定，但会被 Fluent API 配置替代。
 
-![](../attachments/1626f51f453de92cbe2e3099808270c1.png)
+![](../../attachments/1626f51f453de92cbe2e3099808270c1.png)
 
 以上两图两者等价，择一配置。
 
@@ -556,9 +556,9 @@ Post.Blog is the inverse navigation property （反向导航属性）of Blog.Pos
 
 显式指明导航属性，有冲突的情况：
 
-![](../attachments/e771f44954f4ec97925196d0480dd9f7.png)
+![](../../attachments/e771f44954f4ec97925196d0480dd9f7.png)
 
-![](../attachments/2fa253323ef8af111b635da5434a0508.png)
+![](../../attachments/2fa253323ef8af111b635da5434a0508.png)
 
 ### EFCore跟踪修改
 
