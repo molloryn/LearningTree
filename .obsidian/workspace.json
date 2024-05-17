@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/NET/IdentityServer4.md",
+                "file": "Programming/NET/Authentication.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/NET/IdentityServer4.md",
+                "file": "Programming/NET/Authentication.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/NET/IdentityServer4.md",
+                "file": "Programming/NET/Authentication.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming/NET/IdentityServer4.md"
+                "file": "Programming/NET/Authentication.md"
               }
             }
           },
@@ -196,7 +196,7 @@
   "active": "abf7ed3a5683e937",
   "lastOpenFiles": [
     "Programming/NET/ASP.NET Core.md",
-    "Programming/NET/IdentityServer4.md",
+    "Programming/NET/Authentication.md",
     "Programming/TroubleShooting.md",
     "Programming/NET",
     "ComputerScience/Database.md",
