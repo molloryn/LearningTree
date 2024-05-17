@@ -38,4 +38,5 @@ such as [AddJwtBearer](https://learn.microsoft.com/en-us/dotnet/api/microsoft.e
 # Authorization(授权)
 
 
-
+## Cliams
+"Claims" in the context of ASP.NET Core authentication typically refers to the assertions about a user that a system receives and uses to make decisions about access or behavior. These claims can include information like the user's name, email, roles, or any other relevant data that can be used for authorization purposes within the application. In ASP.NET Core, these claims are used during the authentication process to determine the user's identity and authorization levels.
