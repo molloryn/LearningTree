@@ -130,6 +130,8 @@ Configure<AbpSystemTextJsonSerializerModifiersOptions>(options =>
 });
 
 ```
+#### 丢失精度问题
 
+雪花类型long id均使用string代替，否则会遇到json序列化丢失精度问题`https://jsoneditoronline.org/indepth/parse/why-does-json-parse-corrupt-large-numbers/`
 
 # Time （UTC与本地时间）
