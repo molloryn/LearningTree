@@ -106,7 +106,9 @@ public IAbpLazyServiceProvider LazyServiceProvider { get; set; } = default!;
 `DaprDistributedEventBus.cs`中继承`EventBus`实现。
 `IDaprSerializer`用于序列化，`ABP`默认实现为`Utf8JsonDaprSerializer`，实际使用`IJsonSerializer`实现。而该接口`ABP`默认实现为`AbpSystemTextJsonSerializer`，使用`AbpSystemTextJsonSerializerOptions`进行配置。
 
+推送时有个巨坑，在`IsAbpDaprEventData`中会直接检测5个Json Node是否包含，但其中有可能null，因此如果使用了 IgnoreWhenDefault，这里检测不通过就不会进入Dapr的事件Handler
 
+> `app.UseCloudEvents();` 用于解析data_base64等application/cloudevents+json格式的请求。必须位于abp的UseConfiguredEndpoints之前。
 
 ## 仓储层推送
 
