@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Dapr.md"
+                "file": "ComputerScience/Architecture/ABP.md"
               }
             }
           },
@@ -195,6 +195,7 @@
   },
   "active": "abf7ed3a5683e937",
   "lastOpenFiles": [
+    "CloudNative/Dapr.md",
     "CloudNative/Docker.md",
     "ComputerScience/Architecture/ABP.md",
     "ComputerScience/架构.md",
@@ -221,7 +222,6 @@
     "Programming/Python.md",
     "CloudNative/Kubernetes(K8S).md",
     "CloudNative/K8S集群管理.md",
-    "ComputerScience/AI/ArtificialIntelligence.md",
     "ComputerScience/MyLibrary",
     "attachments/Pasted image 20240309124752.png",
     "attachments/Pasted image 20240309124642.png",
