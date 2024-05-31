@@ -396,8 +396,14 @@ docker compose文件里面不能有中文
 
 docker compose中镜像构建的 context 文件找不到，可能是路径写错或者没创建相应的Dockerfile。
 
+#### The path must be absolute.
+[Regression: "The path must be absolute." on Linux · Issue #38175 · dotnet/aspnetcore (github.com)](https://github.com/dotnet/aspnetcore/issues/38175)
+将Development的容器环境变量换成Production即可。似乎是Bug。
+
 ### Can not find the container with the name starting with XXX
 检查是否是以 `Release` 模式运行，而又禁用了 `Release` 的容器运行
+
+
 
 ## 增加
 
