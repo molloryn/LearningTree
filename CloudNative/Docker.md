@@ -400,6 +400,9 @@ docker compose中镜像构建的 context 文件找不到，可能是路径写错
 [Regression: "The path must be absolute." on Linux · Issue #38175 · dotnet/aspnetcore (github.com)](https://github.com/dotnet/aspnetcore/issues/38175)
 将Development的容器环境变量换成Production即可。似乎是Bug。
 
+#### Failed to create CoreCLR
+.NET 8 在另外的机器上跑同个镜像失败。原因是docker engine版本过低，20需升级到24以上。
+
 ### Can not find the container with the name starting with XXX
 检查是否是以 `Release` 模式运行，而又禁用了 `Release` 的容器运行
 
