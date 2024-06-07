@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ddfd2b938828f865",
+        "id": "66939c05037b9a71",
         "type": "tabs",
         "children": [
           {
-            "id": "abf7ed3a5683e937",
+            "id": "e31b85cc9a853575",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CloudNative/Dapr.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Dapr.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Dapr.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "CloudNative/Dapr.md"
-              }
+              "state": {}
             }
           },
           {
@@ -193,15 +184,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "abf7ed3a5683e937",
+  "active": "e31b85cc9a853575",
   "lastOpenFiles": [
+    "ComputerScience/Architecture/ABP.md",
+    "CloudNative/Dapr.md",
     "CloudNative/Kubernetes(K8S).md",
     "attachments/4ce39983e3b8871aea802b5ef10167a.jpg",
     "CloudNative/K8S集群管理.md",
     "CloudNative/Docker.md",
     "Programming/NET/Authentication.md",
-    "ComputerScience/Architecture/ABP.md",
-    "CloudNative/Dapr.md",
     "ComputerScience/架构.md",
     "CTF/Hacker/软件破解.md",
     "Programming/NET/ASP.NET Core.md",

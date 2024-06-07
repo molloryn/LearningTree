@@ -24,6 +24,14 @@ ABP 是 ASP.NET Boilerplate的全称，意味着它是一种代码层面的最�
 #### A second operation was started on this context instance
 同一个依赖注入的类的多个仓储共用一个DbContext（待确认），因此无法同步执行。注意异步方法的调用，是否都进行了await。注意入口方法是否是void忘记等待。
 
+#### DbUpdateConcurrencyException
+
+`The adatabase operation was expected to affect 1 row(s), but actually affected 0 row(s).`
+
+是因为Update操作时，此数据不存在。此数据可能已经被删除或已经被Update而无法匹配上。
+也有可能是需要Add的操作，错误的使用了Update方法。
+
+
 #### AbpDbConcurrencyException
 
 ConcurrencyStamp原理是生成SQL语句时带上`ConcurrencyStamp=@old`，然后更新时更新为新的，如果失败证明数据库那边已经被其他修改了（证明版本不一致）。
