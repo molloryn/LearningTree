@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "CloudNative/Dapr.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "CloudNative/Dapr.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "CloudNative/Dapr.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md"
+                "file": "CloudNative/Dapr.md"
               }
             }
           },
@@ -195,6 +195,9 @@
   },
   "active": "e31b85cc9a853575",
   "lastOpenFiles": [
+    "CloudNative/CloudNative.md",
+    "ComputerScience/AI/ArtificialIntelligence.md",
+    "CloudNative/Components/Apache APISIX.md",
     "CloudNative/Dapr.md",
     "ComputerScience/Architecture/ABP.md",
     "CloudNative/Kubernetes(K8S).md",
@@ -220,8 +223,6 @@
     "CTF/思路打开.md",
     "SoftwareManual/Git.md",
     "Fontend/Blazor.md",
-    "Music/和弦.md",
-    "Fontend/FrontendConcept.md",
     "ComputerScience/MyLibrary",
     "attachments/Pasted image 20240309124752.png",
     "attachments/Pasted image 20240309124642.png",
