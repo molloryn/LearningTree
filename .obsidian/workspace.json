@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Dapr.md"
+                "file": "CloudNative/Kubernetes(K8S).md"
               }
             }
           },
@@ -195,12 +195,16 @@
   },
   "active": "e31b85cc9a853575",
   "lastOpenFiles": [
+    "CloudNative/K8S集群管理.md",
+    "CloudNative/Kubernetes(K8S).md",
+    "CloudNative/Docker.md",
     "CloudNative/CloudNative.md",
+    "CloudNative/Dapr.md",
     "CloudNative/Deployments/K8S集群部署要求.md",
+    "CloudNative/Deployments/K8S部署笔记.md",
     "attachments/Pasted image 20240616173908.png",
     "SoftwareManual/CMD.md",
     "attachments/Pasted image 20240616173732.png",
-    "CloudNative/Deployments/K8S部署笔记.md",
     "Programming/C.md",
     "Programming/TroubleShooting.md",
     "SoftwareManual/VisualStudio.md",
@@ -212,8 +216,6 @@
     "SoftwareManual/WSL.md",
     "SoftwareManual/VSCode.md",
     "SoftwareManual/MicosoftOffice.md",
-    "CloudNative/Docker.md",
-    "CloudNative/Dapr.md",
     "Programming/Python.md",
     "Programming/C++.md",
     "Programming/NET/ASP.NET Core接口.md",
@@ -221,7 +223,6 @@
     "Music/FLStudio.md",
     "Music/和弦.md",
     "Math/形式幂级数.md",
-    "Fontend/HTML&CSS.md",
     "attachments/4ce39983e3b8871aea802b5ef10167a.jpg",
     "Programming/NET",
     "ComputerScience/MyLibrary",
