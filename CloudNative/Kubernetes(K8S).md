@@ -152,7 +152,6 @@ Node中有多个Pod，多个Service，可以用一个Ingress用于外部路由Se
 - 如果使用 ConfigMap 的 subPath 挂载为 Container 的 Volume，`Kubernetes不会做自动热更新`
 - ConfigMap 哪怕不使用 `subPath` 的挂载方式 `C#` 文件修改监听功能也没有触发，`Golang` 的正常，怀疑可能和自己的实现有关，因为还有其他事情没有继续跟进，下周准备继续跟进一下。
 
-> 挂载目录也需要使用`subPath`，比如`/app/vikunja/file`的`subPath`也需要写`file`才能够挂载上去
 
 # Harbor镜像仓库
 
