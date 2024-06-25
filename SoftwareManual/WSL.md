@@ -29,6 +29,8 @@
 
 <https://zinglix.xyz/2020/04/18/wsl2-proxy/>
 
+新版本WSL遇到问题的：
+[Accessing network applications with WSL | Microsoft Learn](https://learn.microsoft.com/en-us/windows/wsl/networking#auto-proxy)
 #### 脚本
 
 
