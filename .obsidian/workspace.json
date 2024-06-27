@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoDataChannel.md",
+                "file": "Programming/NET/Authentication.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoDataChannel.md",
+                "file": "Programming/NET/Authentication.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoDataChannel.md",
+                "file": "Programming/NET/Authentication.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoDataChannel.md"
+                "file": "Programming/NET/Authentication.md"
               }
             }
           },
@@ -195,6 +195,7 @@
   },
   "active": "e31b85cc9a853575",
   "lastOpenFiles": [
+    "ComputerScience/MyLibrary/MoDataChannel.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
     "ComputerScience/MyLibrary/MoHotConfiguration.md",
     "ComputerScience/MyLibrary/MoRpcInvocation.md",
@@ -223,7 +224,6 @@
     "Programming/JavaScript.md",
     "SoftwareManual/MicosoftOffice.md",
     "Programming/Python.md",
-    "Programming/C++.md",
     "attachments/4ce39983e3b8871aea802b5ef10167a.jpg",
     "Programming/NET",
     "ComputerScience/MyLibrary",
