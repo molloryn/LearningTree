@@ -67,6 +67,62 @@ public abstract class AuthenticationManager
 
 其实现有CookieAuthentication等，详见：[ASP.NET Core 之 Identity 入门（二） - Savorboard - 博客园 (cnblogs.com)](https://www.cnblogs.com/savorboard/p/aspnetcore-identity2.html)
 
+### AuthenticationHttpContextExtensions
+
+AuthenticationHttpContextExtensions 类是对 HttpContext 认证相关的扩展，它提供了如下扩展方法：
+
+- **SignInAsync** 用户登录成功后颁发一个证书（加密的用户凭证），用来标识用户的身份。
+    
+- **SignOutAsync** 退出登录，如清除Coookie等。
+    
+- **AuthenticateAsync** 验证在 `SignInAsync` 中颁发的证书，并返回一个 `AuthenticateResult` 对象，表示用户的身份。
+    
+- **ChallengeAsync** 返回一个需要认证的标识来提示用户登录，通常会返回一个 `401` 状态码。
+    
+- **ForbidAsync** 禁上访问，表示用户权限不足，通常会返回一个 `403` 状态码。
+    
+- **GetTokenAsync** 用来获取 `AuthenticationProperties` 中保存的额外信息。
+
+
+```cs
+public static class AuthenticationHttpContextExtensions
+{
+    public static Task<AuthenticateResult> AuthenticateAsync(this HttpContext context, string scheme) =>
+        context.RequestServices.GetRequiredService<IAuthenticationService>().AuthenticateAsync(context, scheme);
+
+    public static Task ChallengeAsync(this HttpContext context, string scheme, AuthenticationProperties properties) { }
+    public static Task ForbidAsync(this HttpContext context, string scheme, AuthenticationProperties properties) { }
+    public static Task SignInAsync(this HttpContext context, string scheme, ClaimsPrincipal principal, AuthenticationProperties properties) {}
+    public static Task SignOutAsync(this HttpContext context, string scheme, AuthenticationProperties properties) { }
+    public static Task<string> GetTokenAsync(this HttpContext context, string scheme, string tokenName) { }
+}
+
+```
+
+
+### AddAuthenticationCore
+
+**AddAuthenticationCore** 中注册了认证系统的三大核心对象：`IAuthenticationSchemeProvider`，`IAuthenticationHandlerProvider` 和 `IAuthenticationService`，以及一个对Claim进行转换的 IClaimsTransformation(不常用)
+
+```cs
+public static class AuthenticationCoreServiceCollectionExtensions
+{
+    public static IServiceCollection AddAuthenticationCore(this IServiceCollection services)
+    {
+        services.TryAddScoped<IAuthenticationService, AuthenticationService>();
+        services.TryAddSingleton<IClaimsTransformation, NoopClaimsTransformation>(); // Can be replaced with scoped ones that use DbContext
+        services.TryAddScoped<IAuthenticationHandlerProvider, AuthenticationHandlerProvider>();
+        services.TryAddSingleton<IAuthenticationSchemeProvider, AuthenticationSchemeProvider>();
+        return services;
+    }
+}
+
+```
+
+
+- `IAuthenticationSchemeProvider` 用来提供对Scheme的注册和查询。Scheme 用来标识使用的是哪种认证方式（如cookie, bearer, oauth, openid 等等）
+- 
+
 # Authorization(授权)
 
 ## 术语
