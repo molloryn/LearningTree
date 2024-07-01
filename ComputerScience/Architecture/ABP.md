@@ -13,6 +13,16 @@ ABP 是 ASP.NET Boilerplate的全称，意味着它是一种代码层面的最�
 ![](../../attachments/Pasted%20image%2020240620151358.png)
 
 
+
+# 模块化
+
+### 启动
+
+#### OnApplicationInitializationAsync
+
+> **OnApplicationInitializationAsync 和 OnApplicationInitialization 在官方的 module 中一般只用Async，而不会执行到同步的方法**
+
+
 # 数据库
 
 ### Unit Of Work

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming/NET/Authentication.md"
+                "file": "ComputerScience/Architecture/ABP.md"
               }
             }
           },
@@ -195,6 +195,7 @@
   },
   "active": "e31b85cc9a853575",
   "lastOpenFiles": [
+    "Programming/NET/Authentication.md",
     "attachments/Pasted image 20240627160448.png",
     "ComputerScience/MyLibrary/MoDataChannel.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
@@ -206,7 +207,6 @@
     "SoftwareManual/WSL.md",
     "SoftwareManual/CMD.md",
     "attachments/Pasted image 20240620151358.png",
-    "Programming/NET/Authentication.md",
     "ComputerScience/Architecture/架构.md",
     "SoftwareManual/VSCode.md",
     "CloudNative/Kubernetes(K8S).md",
@@ -232,7 +232,6 @@
     "attachments/Pasted image 20240109155224.png",
     "attachments/Pasted image 20231114104833.png",
     "attachments/Pasted image 20231114103910.png",
-    "attachments/Pasted image 20231113101056.png",
     "ComputerScience/Algorithm",
     "Math",
     "Fontend/FrontendConcept.docx",
