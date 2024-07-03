@@ -17,6 +17,49 @@
 
 用户账号在 AspNetUsers 表
 
+# 术语
+
+## OAuth2.0
+
+[What is OAuth 2.0 and what does it do for you? - Auth0](https://auth0.com/intro-to-iam/what-is-oauth-2)
+[理解OAuth 2.0 - 阮一峰的网络日志 (ruanyifeng.com)](https://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
+OAuth 2.0 is an authorization protocol and NOT an authentication protocol. As such, it is designed primarily as a means of granting access to a set of resources, for example, remote APIs or user data.
+
+OAuth 2.0 uses Access Tokens. An **Access Token** is a piece of data that represents the authorization to access resources on behalf of the end-user. OAuth 2.0 doesn’t define a specific format for Access Tokens. However, in some contexts, the JSON Web Token (JWT) format is often used. This enables token issuers to include data in the token itself. Also, for security reasons, Access Tokens may have an expiration date.
+
+**简单说，OAuth 就是一种授权机制。数据的所有者告诉系统，同意授权第三方应用(也可以理解是前端)进入系统（后端），获取这些数据。系统从而产生一个短期的进入令牌（token），用来代替密码，供第三方应用使用。**
+
+它规定四种方式获取令牌：
+- 授权码（authorization-code）
+- 隐藏式（implicit）
+- 密码式（password）
+- 客户端凭证（client credentials）
+
+Token的生成方式或类型：Bearer Token
+## Bearer Token
+
+一个加密字符串，客户端拿到Token后，存储起来。在下次请求接口的时候，在请求头中包含`Authorization: Bearer <token>`。服务端收到请求后解析Token，验证Token合法性。
+
+#### JWT
+对`Bearer Token`的实现。
+[JSON Web Token 入门教程 - 阮一峰的网络日志 (ruanyifeng.com)](https://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html)
+
+JWT 的原理是，服务器认证以后，生成一个 JSON 对象，发回给用户，就像下面这样。
+```js
+{
+  "姓名": "张三",
+  "角色": "管理员",
+  "到期时间": "2018年7月1日0点0分"
+}
+```
+以后，用户与服务端通信的时候，都要发回这个 JSON 对象。服务器完全只靠这个对象认定用户身份。为了防止用户篡改数据，服务器在生成这个对象的时候，会加上签名（详见后文）。
+
+服务器就不保存任何 session 数据了，也就是说，服务器变成无状态了，从而比较容易实现扩展。
+
+## OpenID
+[OpenID Connect 是什麼？ | HENNGE Taiwan 部落格](https://hennge.com/tw/blog/what-is-openid-connect.html)
+基于`OAuth2.0`的单点登录技术。
+
 
 # Authentication(身份认证)
 

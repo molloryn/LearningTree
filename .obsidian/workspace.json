@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "66939c05037b9a71",
+        "id": "97577deaecad6ec2",
         "type": "tabs",
         "children": [
           {
-            "id": "e31b85cc9a853575",
+            "id": "f5e682c25e14e59f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/NET/ASP.NET Core.md",
+                "file": "Programming/NET/Authentication.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/NET/ASP.NET Core.md",
+                "file": "Programming/NET/Authentication.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/NET/ASP.NET Core.md",
+                "file": "Programming/NET/Authentication.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming/NET/ASP.NET Core.md"
+                "file": "Programming/NET/Authentication.md"
               }
             }
           },
@@ -193,17 +193,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e31b85cc9a853575",
+  "active": "f5e682c25e14e59f",
   "lastOpenFiles": [
+    "ComputerScience/MyLibrary/MoDataChannel.md",
+    "Programming/NET/ASP.NET Core.md",
     "Programming/NET/Authentication.md",
     "CloudNative/Docker.md",
     "ComputerScience/Architecture/ABP.md",
     "attachments/Pasted image 20240627160448.png",
-    "ComputerScience/MyLibrary/MoDataChannel.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
     "ComputerScience/MyLibrary/MoHotConfiguration.md",
     "ComputerScience/MyLibrary/MoRpcInvocation.md",
-    "Programming/NET/ASP.NET Core.md",
     "Programming/TroubleShooting.md",
     "SoftwareManual/WSL.md",
     "SoftwareManual/CMD.md",
