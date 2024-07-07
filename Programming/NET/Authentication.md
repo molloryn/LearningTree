@@ -70,7 +70,23 @@ JWT 的原理是，服务器认证以后，生成一个 JSON 对象，发回给�
 基于`OAuth2.0`的单点登录技术。
 以下两个术语有了新的名称：
 - **Third-party application OR Client**：第三方应用程序，前端或客户端。现在称为 **Relying Party**
-- **Authorization server**：认证服务器，即服务提供商专门用来处理认证的服务器。现在称为 **OpenID Provider** 除了可以放置 AccessToken 之外，也可以存放ID Token
+- **Authorization server**：认证服务器，即服务提供商专门用来处理认证的服务器。现在称为 **OpenID Provider** 除了可以放置 AccessToken 之外，也可以存放`ID Token`
+
+### ID Token
+使用 JWS （JSON Web Signature, [RFC 7515](https://tools.ietf.org/html/rfc7515)）的规范定义。
+
+> BASE64URL(UTF8(JWS Protected Header)) || '.' ||  
+> BASE64URL(JWS Payload) || '.' ||  
+> BASE64URL(JWS Signature)
+
+#### Header 
+![](../../attachments/Pasted%20image%2020240707180409.png)
+
+#### Data
+![](../../attachments/Pasted%20image%2020240707180418.png)
+
+#### Signature 
+二进制数据，用来验证Header与Payload内容的完整性。
 
 # Authentication(身份认证)
 

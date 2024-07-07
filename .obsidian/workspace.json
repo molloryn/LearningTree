@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "97577deaecad6ec2",
+        "id": "5846cfb7678e5c43",
         "type": "tabs",
         "children": [
           {
-            "id": "f5e682c25e14e59f",
+            "id": "cb7083eaadca7a46",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoDataChannel.md",
+                "file": "Programming/NET/Authentication.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoDataChannel.md",
+                "file": "Programming/NET/Authentication.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoDataChannel.md",
+                "file": "Programming/NET/Authentication.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoDataChannel.md"
+                "file": "Programming/NET/Authentication.md"
               }
             }
           },
@@ -193,10 +193,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f5e682c25e14e59f",
+  "active": "cb7083eaadca7a46",
   "lastOpenFiles": [
-    "ComputerScience/MyLibrary/MoAutoModel.md",
+    "attachments/Pasted image 20240707180418.png",
+    "attachments/Pasted image 20240707180409.png",
     "ComputerScience/MyLibrary/MoDataChannel.md",
+    "ComputerScience/MyLibrary/MoAutoModel.md",
     "SoftwareManual/CMD.md",
     "Programming/NET/Authentication.md",
     "Programming/NET/ASP.NET Core.md",
@@ -231,7 +233,6 @@
     "attachments/Pasted image 20240309124642.png",
     "attachments/Pasted image 20240109155224.png",
     "attachments/Pasted image 20231114104833.png",
-    "attachments/Pasted image 20231114103910.png",
     "ComputerScience/Algorithm",
     "Math",
     "Fontend/FrontendConcept.docx",
