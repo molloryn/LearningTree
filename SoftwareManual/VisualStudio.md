@@ -383,7 +383,7 @@ Window类所以先按W
 
 Git Changes窗口建议改为Ctrl+W, G (Git)
 
-Package Manage Console建议改为Ctrl+W, C (Console)
+Package Manage Console建议改为Ctrl+W, C (Console) `View.PackageManagerConsole`
 
 Bookmark窗口 Ctrl+W, B (Bookmark)
 

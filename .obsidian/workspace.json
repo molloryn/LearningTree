@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "5846cfb7678e5c43",
+        "id": "0724080b219a7043",
         "type": "tabs",
         "children": [
           {
-            "id": "cb7083eaadca7a46",
+            "id": "a0a15aaa4d54f39d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programming/NET/ASP.NET Core.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -49,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "HasForeignKey",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +61,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/NET/ASP.NET Core.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/NET/ASP.NET Core.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Programming/NET/ASP.NET Core.md"
-              }
+              "state": {}
             }
           },
           {
@@ -194,8 +184,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "cb7083eaadca7a46",
+  "active": "a0a15aaa4d54f39d",
   "lastOpenFiles": [
+    "SoftwareManual/VisualStudio.md",
+    "Programming/NET/ASP.NET Core.md",
     "CloudNative/Dapr.md",
     "CloudNative/Kubernetes(K8S).md",
     "CloudNative/K8S集群管理.md",
@@ -205,7 +197,6 @@
     "ComputerScience/MyLibrary/MoDataChannel.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
     "SoftwareManual/CMD.md",
-    "Programming/NET/ASP.NET Core.md",
     "CloudNative/Docker.md",
     "ComputerScience/Architecture/ABP.md",
     "attachments/Pasted image 20240627160448.png",
@@ -222,7 +213,6 @@
     "attachments/Pasted image 20240616173908.png",
     "attachments/Pasted image 20240616173732.png",
     "Programming/C.md",
-    "SoftwareManual/VisualStudio.md",
     "Programming/PHP.md",
     "Programming/NET/C#.md",
     "Programming/JavaScript.md",
