@@ -179,7 +179,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 239.5
+    "width": 218.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,8 +195,9 @@
   },
   "active": "a0a15aaa4d54f39d",
   "lastOpenFiles": [
-    "ComputerScience/MyLibrary/MoAutoModel.md",
+    "Programming/NET/Mapster.md",
     "Programming/NET/Authentication.md",
+    "ComputerScience/MyLibrary/MoAutoModel.md",
     "SoftwareManual/VisualStudio.md",
     "Programming/NET/ASP.NET Core.md",
     "CloudNative/Dapr.md",
