@@ -97,8 +97,26 @@ The requested service 'Volo.Abp.DependencyInjection.ObjectAccessor`1[[Microsoft.
 ```
 
 
+### Instances cannot be resolved and nested lifetimes cannot be created from this LifetimeScope as it has already been disposed.
+[C# Async Antipatterns (markheath.net)](https://markheath.net/post/async-antipatterns)
+
+```csharp
+public void Main()
+{
+	IRepoXXX a;
+	Method(a);//未等待导致多线程异常。
+}
+
+public async void Method(IRepoXXX a)
+{
+	await a.GetQueryable();
+}
+```
 
 
+### 发现没有保存
+
+可能要到UnitOfWork结束后才会一起保存，或使用autoSave=true
 
 # 依赖注入
 

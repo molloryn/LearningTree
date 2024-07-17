@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming/NET/Authentication.md"
+                "file": "ComputerScience/Architecture/ABP.md"
               }
             }
           },
@@ -195,8 +195,8 @@
   },
   "active": "a0a15aaa4d54f39d",
   "lastOpenFiles": [
-    "Programming/NET/Mapster.md",
     "Programming/NET/Authentication.md",
+    "Programming/NET/Mapster.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
     "SoftwareManual/VisualStudio.md",
     "Programming/NET/ASP.NET Core.md",
