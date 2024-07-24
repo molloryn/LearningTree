@@ -524,6 +524,9 @@ select count(*) c, DATEPART(HH, SOBT) as d from FlightPlan where … group by SO
 比如用 `Navicate` 连接 `127.0.0.1:33333` 端口的`docker`环境SQL Server，默认是会报错的。
 而要使用 `127.0.0.1,33333`，逗号连接！
 
+#### 无法信任的根证书SSL问题
+
+在连接字符串中加入`TrustServerCertificate=true`
 
 #### 自增ID列无法插入
 
