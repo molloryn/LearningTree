@@ -73,7 +73,7 @@ var context = await _repository.GetDbContextAsync();
 
 ```
 
-**而且Repository依赖UnitOfWork，否则无法获取DbContext**
+**而且Repository依赖UnitOfWork，否则无法获取DbContext，特别是ABP封装的方法会触发，如Any、FirstOrDefault等，而GetList等却不会触发**
 **对于不是ApplicationService等默认开启了UnitOfWork的，需要手动增加UnitOfWork标签，或手动使用unitOfWork进行Begin**。比如在EventHandler中。注意要使用virtual才会生效。
 ```cs
 [UnitOfWork]
