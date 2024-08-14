@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "Programming/TroubleShooting.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ff3837382f54265e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Programming/TroubleShooting.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -49,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "efcore",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,7 +80,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -86,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "Programming/TroubleShooting.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "Programming/TroubleShooting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md"
+                "file": "Programming/TroubleShooting.md"
               }
             }
           },
@@ -193,10 +208,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ca849d58770c6c63",
+  "active": "ff3837382f54265e",
   "lastOpenFiles": [
-    "CloudNative/K8S集群管理.md",
     "CloudNative/Kubernetes(K8S).md",
+    "CloudNative/K8S集群管理.md",
     "ComputerScience/Linux.md",
     "ComputerScience/Architecture/ABP.md",
     "ComputerScience/Architecture/架构.md",

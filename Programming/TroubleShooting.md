@@ -136,6 +136,14 @@ Set Project Build Order in Visual Studio
 
 可能Id是0，然后调用的是Attach、Update方法，导致无法匹配上。
 
+### The instance of entity type cannot be tracked because another instance with the same key value
+
+[The instance of entity type cannot be tracked because another instance with the same key value for { 'ID'} is already being tracked. · Issue #28822 · dotnet/efcore (github.com)](https://github.com/dotnet/efcore/issues/28822)
+
+DbContext在整个生命周期Scope内进行追踪。
+在使用ABP 仓储时，也是整个事务为一个范围，所以在两个方法里面查出同一个实体进行更新后再去数据库查相同的实体再更新就会出现此异常。
+
+
 # C\#
 
 ## 开发
