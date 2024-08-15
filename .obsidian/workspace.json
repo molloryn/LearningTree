@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "af131ff511c8290f",
+        "id": "21245345efb9540b",
         "type": "tabs",
         "children": [
           {
-            "id": "ca849d58770c6c63",
+            "id": "878c1dc4115ca164",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/TroubleShooting.md",
+                "file": "CTF/WEB/Python.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/TroubleShooting.md",
+                "file": "CTF/WEB/Python.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/TroubleShooting.md",
+                "file": "CTF/WEB/Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming/TroubleShooting.md"
+                "file": "CTF/WEB/Python.md"
               }
             }
           },
@@ -193,11 +193,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ca849d58770c6c63",
+  "active": "878c1dc4115ca164",
   "lastOpenFiles": [
+    "CTF/WEB/Python.md",
+    "Programming/TroubleShooting.md",
     "CTF/Hacker/代理解密.md",
     "CTF/Hacker/软件破解.md",
-    "Programming/TroubleShooting.md",
     "CloudNative/Kubernetes(K8S).md",
     "CloudNative/K8S集群管理.md",
     "ComputerScience/Linux.md",
@@ -224,7 +225,6 @@
     "attachments/Pasted image 20240620151358.png",
     "SoftwareManual/VSCode.md",
     "CloudNative/CloudNative.md",
-    "CloudNative/Deployments/K8S集群部署要求.md",
     "attachments/Pasted image 20240616173908.png",
     "attachments/Pasted image 20240616173732.png",
     "attachments/4ce39983e3b8871aea802b5ef10167a.jpg",
