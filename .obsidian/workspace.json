@@ -195,8 +195,9 @@
   },
   "active": "878c1dc4115ca164",
   "lastOpenFiles": [
-    "CTF/WEB/SSRF.md",
+    "CTF/WEB/JavaScript.md",
     "CTF/WEB/Python.md",
+    "CTF/WEB/SSRF.md",
     "CTF/WEB/模板注入.md",
     "Programming/TroubleShooting.md",
     "CTF/Hacker/代理解密.md",
@@ -223,7 +224,6 @@
     "attachments/Pasted image 20240627160448.png",
     "ComputerScience/MyLibrary/MoHotConfiguration.md",
     "ComputerScience/MyLibrary/MoRpcInvocation.md",
-    "SoftwareManual/WSL.md",
     "attachments/Pasted image 20240620151358.png",
     "attachments/Pasted image 20240616173908.png",
     "attachments/Pasted image 20240616173732.png",
