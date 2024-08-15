@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/WEB/Python.md",
+                "file": "CTF/WEB/模板注入.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/WEB/Python.md",
+                "file": "CTF/WEB/模板注入.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/WEB/Python.md",
+                "file": "CTF/WEB/模板注入.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/WEB/Python.md"
+                "file": "CTF/WEB/模板注入.md"
               }
             }
           },
@@ -195,7 +195,7 @@
   },
   "active": "878c1dc4115ca164",
   "lastOpenFiles": [
-    "CTF/WEB/Python.md",
+    "CTF/WEB/模板注入.md",
     "Programming/TroubleShooting.md",
     "CTF/Hacker/代理解密.md",
     "CTF/Hacker/软件破解.md",
