@@ -4,3 +4,4 @@
 
 python Flask-jinja2 关键字绕过：[以 Bypass 为中心谭谈 Flask-jinja2 SSTI 的利用 - 先知社区 (aliyun.com)](https://xz.aliyun.com/t/9584?time__1311=n4%2BxnD0DuA5CwhDBqootGQ3G%3DDCDcG6ZEnxmwpD)
 
+[Marven11/Fenjing: 专为CTF设计的Jinja2 SSTI全自动绕WAF脚本 | A Jinja2 SSTI cracker for bypassing WAF, designed for CTF (github.com)](https://github.com/Marven11/Fenjing)
