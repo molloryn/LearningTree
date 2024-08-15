@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/WEB/模板注入.md",
+                "file": "CTF/WEB/Python.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/WEB/模板注入.md",
+                "file": "CTF/WEB/Python.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/WEB/模板注入.md",
+                "file": "CTF/WEB/Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/WEB/模板注入.md"
+                "file": "CTF/WEB/Python.md"
               }
             }
           },
@@ -195,6 +195,8 @@
   },
   "active": "878c1dc4115ca164",
   "lastOpenFiles": [
+    "CTF/WEB/SSRF.md",
+    "CTF/WEB/Python.md",
     "CTF/WEB/模板注入.md",
     "Programming/TroubleShooting.md",
     "CTF/Hacker/代理解密.md",
@@ -223,8 +225,6 @@
     "ComputerScience/MyLibrary/MoRpcInvocation.md",
     "SoftwareManual/WSL.md",
     "attachments/Pasted image 20240620151358.png",
-    "SoftwareManual/VSCode.md",
-    "CloudNative/CloudNative.md",
     "attachments/Pasted image 20240616173908.png",
     "attachments/Pasted image 20240616173732.png",
     "attachments/4ce39983e3b8871aea802b5ef10167a.jpg",
