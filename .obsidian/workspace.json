@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/AWD/Linux易忽略点.md",
+                "file": "CTF/MISC/图像隐写/PNG.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/AWD/Linux易忽略点.md",
+                "file": "CTF/MISC/图像隐写/PNG.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/AWD/Linux易忽略点.md",
+                "file": "CTF/MISC/图像隐写/PNG.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/AWD/Linux易忽略点.md"
+                "file": "CTF/MISC/图像隐写/PNG.md"
               }
             }
           },
@@ -195,6 +195,10 @@
   },
   "active": "f34fb8866e1173b7",
   "lastOpenFiles": [
+    "CTF/MISC/图像隐写/BMP.md",
+    "CTF/MISC/图像隐写/JPG.md",
+    "CTF/MISC/图像隐写/图像隐写.md",
+    "CTF/AWD/Linux易忽略点.md",
     "CTF/AWD/工具.md",
     "CTF/CRYPTO/公钥密码密钥格式.md",
     "CTF/Hacker/代理解密.md",
@@ -211,7 +215,6 @@
     "CTF/WEB/绕过(Bypass).md",
     "CTF/思路打开.md",
     "CTF/Hacker/软件破解.md",
-    "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/文件头.md",
     "CTF/MISC/数值类.md",
     "CTF/MISC/镜像分析.md",
@@ -219,9 +222,6 @@
     "CTF/MISC/电子取证.md",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/WEB/Python.md",
-    "CTF/WEB/JavaScript.md",
-    "CTF/WEB/SSRF.md",
-    "CTF/WEB/模板注入.md",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
     "attachments/Pasted image 20240627160448.png",
