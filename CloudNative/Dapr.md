@@ -268,6 +268,9 @@ setting parameters `daprHTTPMaxRequestSize` and `UseGrpcChannelOptions` with
 #### invoke failed Transport: authentication handshake failed: x509: certificate has expired
 更新了`dapr-system` `control panel`但未重启边车。
 
+#### K8S daprd 边车未启动
+检查 `yaml` 文件 `annotation` 无异常，如果仍未出现，似乎是因为设置了工作负载的内存、CPU限制，可能是BUG？
+
 
 # Debug
 

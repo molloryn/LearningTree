@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolManual/010Editor.md",
+                "file": "CloudNative/Dapr.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolManual/010Editor.md",
+                "file": "CloudNative/Dapr.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolManual/010Editor.md",
+                "file": "CloudNative/Dapr.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolManual/010Editor.md"
+                "file": "CloudNative/Dapr.md"
               }
             }
           },
@@ -195,6 +195,8 @@
   },
   "active": "dd778d4ac861fa04",
   "lastOpenFiles": [
+    "CloudNative/Docker.md",
+    "CTF/ToolManual/010Editor.md",
     "CTF/MISC/文件头.md",
     "CTF/MISC/压缩包.md",
     "CTF/MISC/图像隐写/JPG.md",
@@ -219,8 +221,6 @@
     "CTF/MISC/二维码.md",
     "CTF/MISC/电子取证.md",
     "CTF/WEB/WEB.md",
-    "CTF/WEB/PHP.md",
-    "CTF/WEB/JavaScript.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
