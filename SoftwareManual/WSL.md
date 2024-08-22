@@ -153,6 +153,12 @@ path+=(
 
 ## 安装
 
+
+```shell
+wsl --update
+wsl --install -d kali-linux
+```
+
 <https://blog.csdn.net/niuiic/article/details/121908096>
 
 <https://blog.csdn.net/tabactivity/article/details/125875242> 桌面版
