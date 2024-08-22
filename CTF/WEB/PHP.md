@@ -2,7 +2,7 @@
 
 #### @
 错误抑制，可以抑制函数错误输出。
-
+[Web小白的CTF自学笔记（5）——PHP基础 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/688362521)
 
 # 弱类型
 
