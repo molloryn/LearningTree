@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/WEB/PHP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "wifi",
+                "query": "include",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/WEB/PHP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/WEB/PHP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/CMD.md"
+                "file": "CTF/WEB/PHP.md"
               }
             }
           },
@@ -197,6 +196,7 @@
   "active": "67f4e67ab31d8587",
   "lastOpenFiles": [
     "CTF/WEB/文件包含.md",
+    "SoftwareManual/CMD.md",
     "CTF/WEB/绕过(Bypass).md",
     "CTF/WEB/正则表达式.md",
     "CTF/WEB/信息收集.md",
@@ -221,7 +221,6 @@
     "CTF/MISC/图像隐写/图像隐写.md",
     "CloudNative/Dapr.md",
     "CloudNative/Docker.md",
-    "CTF/ToolManual/010Editor.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
