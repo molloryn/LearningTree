@@ -44,3 +44,14 @@ page=php://filter/convert.base64-encode/resource=index.php
 源码泄露？
 
 ```
+
+
+[关于 CTF 中 php 考点与绕过那些事的总结_ctf php-CSDN博客](https://blog.csdn.net/Myon5/article/details/136455078)
+# 绕过
+
+## 函数绕过
+
+### array_search
+array_search(value,array,strict) 函数用于在数组中搜索指定的值，如果找到则返回其键（默认键是数组下标，但是如果是字典则返回它的key），否则返回 false。
+如果第三个参数不传，默认为false，其实就是使用`==`的方式去遍历数组，这时候就可以使用弱类型的绕过了。
+
