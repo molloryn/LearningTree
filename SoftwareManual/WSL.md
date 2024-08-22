@@ -157,9 +157,11 @@ path+=(
 ```shell
 wsl --update
 wsl --install -d kali-linux
-```
 
-<https://blog.csdn.net/niuiic/article/details/121908096>
+# 安装好后会新建用户，但不能是root
+sudo su # 然后切换到root用户，用本用户密码
+passwd root # 修改root用户密码
+```
 
 <https://blog.csdn.net/tabactivity/article/details/125875242> 桌面版
 
@@ -329,7 +331,14 @@ docker run --name linux-command --rm -d -p 9665:3000 wcjiang/linux-command:lates
 ```
 
 
-## \~\/.zshrc
+## 配置bash为zsh
+
+
+```bash
+chsh -s /bin/zsh
+```
+
+#### \~\/.zshrc
 
 ```sh
 # ~/.zshrc file for zsh interactive shells.
