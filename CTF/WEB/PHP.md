@@ -41,19 +41,33 @@ The term "allow_url_include" refers to a PHP setting that controls whether or no
 
 
 ## php://filter
-`php://` 用来访问输入和输出流（I/O streams），输入/输出流也就是「数据流」，数据流可以是某个文件（xx.php）或某个url（http://www.baidu.com）
+`php://` 用来定义输入和输出流（I/O streams），输入/输出流也就是「数据流」，数据流可以是某个文件（xx.php）或某个url（http://www.baidu.com）
 可以在访问数据流之前进行「过滤」，并指定过滤方式。
 
+过滤器语法：`php://filter/[read=或write=]filter-name[|other-filter-name]/resource=xxxx`, 其中`read=`可选。多个过滤器用`|`分隔，按从左到右的方式过滤。
+
+> read定义的是输入流，write定义的是输出流，具体看某个函数所需参数是输入流还是输出流
+
+以下是各种过滤器
+- string.toupper
+- string.tolower
+- string.rot13
+- convert.base64-encode
+- convert.iconv.utf-8*.utf-16*
 ```php
-
-# include源码泄露
-include("php://filter/convert.base64-encode/resource=index.php");
-
+######### read过滤器应用于接收输入流参数的函数
 
 # 等同于readfile('http://www.baidu.com');
 readfile('php://filter/resource=http://www.baidu.com');
 
+# 转大写输出
+readfile('php://filter/read=string.toupper/resource=index.php');
 
+# include源码泄露
+include("php://filter/convert.base64-encode/resource=index.php");
+
+######### write过滤器应用于接收输入流参数的函数
+file_put_contents('php://filter/write=string.tolower/resource=result.txt','hello text');
 ```
 
 
