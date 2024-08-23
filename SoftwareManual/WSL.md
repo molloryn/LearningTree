@@ -297,11 +297,20 @@ passwd root # 输入两次强制设置弱密码
 
 ## 安装常用包
 
+### kali
 ```sh
 apt install wget # 可从Web下载文件
 apt install net-tools
 apt install dirsearch # web目录扫描
 apt install hydra # web密码爆破
+apt install libgmp-dev libmpc-dev libmpfr-dev # gmpy2 dependencies
+```
+
+
+### python
+
+```sh
+pip install PyCryptodome gmpy2 pwntools
 ```
 
 
