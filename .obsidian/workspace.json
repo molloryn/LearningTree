@@ -165,17 +165,9 @@
                 "searchQuery": ""
               }
             }
-          },
-          {
-            "id": "69a00cd8a3fdb10a",
-            "type": "leaf",
-            "state": {
-              "type": "quiet-outline",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",

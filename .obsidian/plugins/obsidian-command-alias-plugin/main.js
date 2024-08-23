@@ -74,7 +74,7 @@ var CommandAliasPluginSettingTab = class extends import_obsidian.PluginSettingTa
       const alias = this.plugin.settings.aliases[aliasId];
       const aliasName = alias.name;
       const command = app.commands.commands[alias.commandId];
-      const commandName = command.name || "command missing";
+      const commandName = command && command.name || "command missing";
       aliasesForRemove.push({
         aliasId,
         aliasName,
