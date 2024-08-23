@@ -44,11 +44,16 @@ The term "allow_url_include" refers to a PHP setting that controls whether or no
 `php://` 用来访问输入和输出流（I/O streams），输入/输出流也就是「数据流」，数据流可以是某个文件（xx.php）或某个url（http://www.baidu.com）
 可以在访问数据流之前进行「过滤」，并指定过滤方式。
 
+```php
 
-可用于 `include`等
-```sh
-?page=php://filter/convert.base64-encode/resource=index.php
-# 源码泄露
+# include源码泄露
+include("php://filter/convert.base64-encode/resource=index.php");
+
+
+# 等同于readfile('http://www.baidu.com');
+readfile('php://filter/resource=http://www.baidu.com');
+
+
 ```
 
 
