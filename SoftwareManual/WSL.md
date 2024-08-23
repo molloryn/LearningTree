@@ -683,6 +683,11 @@ vsrmall(){
 	find . -iname "obj" -print0 | xargs -0 rm -rf
 }
 
+# include sage10,Pwntools,PyCryptodome,z3 Prover with jupyter
+cryptohack(){
+	# We map to 127.0.0.1 on the host rather than the default 0.0.0.0 as Jupyter token authentication was disabled for the sake of convenience.
+	docker run --rm -p 127.0.0.1:8888:8888 -it hyperreality/cryptohack:latest
+}
 ```
 
 

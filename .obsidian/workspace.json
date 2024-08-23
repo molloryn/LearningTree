@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "MyLi",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -198,12 +197,15 @@
   "active": "a0096c37646f8351",
   "lastOpenFiles": [
     "CTF/CRYPTO/CTF.md",
+    "SoftwareManual/WSL.md",
+    "CTF/WEB/JavaScript.md",
+    "CTF/WEB/Python.md",
+    "Programming/Python.md",
     "CTF/CRYPTO/密码种类与特征.md",
     "CTF/WEB/绕过(Bypass).md",
     "CTF/CRYPTO/算法性质.md",
     "CTF/CRYPTO/伪随机数.md",
     "CTF/CRYPTO/Encoding.md",
-    "SoftwareManual/WSL.md",
     "CTF/ToolsList.md",
     "CTF/CRYPTO/密码攻击方式.md",
     "CTF/CRYPTO/RSA.md",
@@ -220,9 +222,6 @@
     "CTF/CRYPTO/公钥密码密钥格式.md",
     "CTF/CRYPTO/PBE.md",
     "CloudNative/Docker.md",
-    "CTF/WEB/PHP.md",
-    "CTF/AWD/工具.md",
-    "ComputerScience/网络安全（新）.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",

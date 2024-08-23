@@ -19,8 +19,9 @@
 
 # 常用内置函数
 
-- `type` 获取类型
-
+- `type()` 获取类型
+- `chr()` function can be used to convert an ASCII ordinal number to a character (the `ord()` function does the opposite).
+- `bytes.fromhex(str)` convert hex to bytes. `b'xx'.hex()`on byte strings to get the hex representation.
 
 # 字符串
 
@@ -73,3 +74,4 @@ print(greeting)
 ```
 
 在上述示例中，`f`前缀表示格式化字符串，大括号`{}`内的表达式会被计算并插入到字符串中。
+
