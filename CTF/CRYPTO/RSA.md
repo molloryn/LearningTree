@@ -1,4 +1,8 @@
-# 原理
+# 工具
+
+sagemath
+
+# 理论
 
 $$
 m^e \mod n \equiv c
@@ -11,3 +15,4 @@ $$
 $$
 a^{\phi(p)} \mod p \equiv 1
 $$
+
