@@ -21,11 +21,16 @@
             }
           },
           {
-            "id": "d923aff5048ae19c",
+            "id": "27190d6e36a80741",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "CTF/ToolManual/Burpsuite.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
