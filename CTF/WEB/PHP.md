@@ -40,6 +40,8 @@ var_dump("0e123124"=="0e44912"); //true 科学计数法时(0e开头) 视为相�
 
 #### allow_url_include
 The term "allow_url_include" refers to a PHP setting that controls whether or not remote file inclusion is allowed. When set to "On", it allows PHP scripts to include files from remote locations using a URL. This can be useful for accessing resources or libraries hosted on other servers, but it can also pose a security risk if not used carefully.
+#### allow_url_fopen
+determines whether PHP is allowed to open remote files using functions like `file_get_contents()` or `fopen()` with a URL path.
 
 #### magic_quotes_gpc
 "magic_quotes_gpc" is a security feature in PHP that automatically adds escape characters to certain characters in user input data, such as quotes and backslashes, to prevent SQL injection attacks. However, this feature is now deprecated and should not be relied upon as the sole means of preventing such attacks. Therefore, it is recommended to turn it off and use other security measures, such as prepared statements and input validation.
@@ -54,7 +56,6 @@ The term "allow_url_include" refers to a PHP setting that controls whether or no
 
 [文件包含&PHP伪协议利用_file_get_contents()支持的协议_红云谈安全的博客-CSDN博客](https://blog.csdn.net/qq_51524329/article/details/121439731)
 
-[phpfilter的妙用_拓海AE的博客-CSDN博客](https://blog.csdn.net/weixin_44576725/article/details/124177555)
 ## php://input
 提供了一个方式来 读取HTTP请求体的原始内容。
 ```php
@@ -78,13 +79,14 @@ var_dump($_POST);
 > read定义的是输入流，write定义的是输出流，具体看某个函数所需参数是输入流还是输出流
 
 以下是各种过滤器
-- string.toupper
-- string.tolower
-- string.rot13
-- convert.base64-encode
+- `string.toupper`
+- `string.tolower`
+- `string.rot13`
+- `convert.base64-encode`
 - `convert.iconv.<in-charset>.<out-charset>` 将数据流的内容按照「指定字符编码」来转。
+- `string.strip_tags` 将形如`<>`的xml标签去除。注意这是读取文件后，执行前就去除。
 
-> string.tolower等过滤器是执行渲染后再tolower或toupper。
+> string.tolower等过滤器是执行渲染后再tolower或toupper，不带过滤器也是先执行。
 > convert.base64-encode是将源文件内容整体编码
 
 ```php
@@ -130,6 +132,39 @@ file_get_contents('php://input');
 file_put_contents('php://filter/write=string.tolower/resource=result.txt','hello text');
 
 ```
+
+## 其他协议
+
+
+```
+
+file:// — 访问本地文件系统
+
+http:// — 访问 HTTP(s) 网址
+
+ftp:// — 访问 FTP(s) URLs
+
+php:// — 访问各个输入/输出流（I/O streams）
+PHP 提供了一些杂项输入/输出（IO）流，允许访问 PHP 的输入输出流、标准输入输出和错误描述符， 内存中、磁盘备份的临时文件流以及可以操作其他读取写入文件资源的过滤器。
+
+zlib:// — 压缩流
+
+data:// — 数据（RFC 2397）
+
+glob:// — 查找匹配的文件路径模式
+
+phar:// — PHP 归档
+
+ssh2:// — Secure Shell 2
+
+rar:// — RAR
+
+ogg:// — 音频流
+
+expect:// — 处理交互式的流
+
+```
+
 
 
 [关于 CTF 中 php 考点与绕过那些事的总结_ctf php-CSDN博客](https://blog.csdn.net/Myon5/article/details/136455078)
