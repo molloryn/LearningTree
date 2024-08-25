@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/图像隐写/PNG.md",
+                "file": "CTF/思路打开.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/图像隐写/PNG.md",
+                "file": "CTF/思路打开.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/图像隐写/PNG.md",
+                "file": "CTF/思路打开.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/图像隐写/PNG.md"
+                "file": "CTF/思路打开.md"
               }
             }
           },
@@ -188,14 +188,18 @@
   },
   "active": "a0096c37646f8351",
   "lastOpenFiles": [
+    "CTF/MISC/图像隐写/PNG.md",
+    "CTF/思路打开.md",
+    "attachments/Pasted image 20240825234859.png",
+    "CTF/MISC/编码类.md",
+    "CTF/WEB/PHP.md",
+    "CTF/MISC/数值类.md",
     "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/图像隐写/BMP.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/电子取证.md",
-    "CTF/MISC/编码类.md",
     "CTF/WEB/文件包含.md",
     "SoftwareManual/WSL.md",
-    "CTF/WEB/PHP.md",
     "CTF/WEB/代码与命令执行.md",
     "CloudNative/Docker.md",
     "CTF/ToolManual/Burpsuite.md",
@@ -210,10 +214,6 @@
     "CTF/CRYPTO/伪随机数.md",
     "CTF/CRYPTO/Encoding.md",
     "CTF/ToolsList.md",
-    "CTF/CRYPTO/密码攻击方式.md",
-    "CTF/CRYPTO/RSA.md",
-    "CTF/CRYPTO/Practice_Cryptograph.md",
-    "CTF/CRYPTO/RSA理论知识.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
@@ -225,7 +225,6 @@
     "Programming/NET",
     "ComputerScience/MyLibrary",
     "attachments/Pasted image 20240309124752.png",
-    "attachments/Pasted image 20240309124642.png",
     "ComputerScience/Algorithm",
     "Math",
     "Fontend/FrontendConcept.docx",

@@ -96,6 +96,14 @@ for i in range(5000):
             break
 ```
 
+##### 宽隐写
+
+修改宽导致图片整体像素偏移。如果CRC也被篡改了只能脚本爆破不断输出图片，再翻阅出一个正常的图片。
+
+![](../../../attachments/Pasted%20image%2020240825234859.png)
+
+
+
 
 ### 调色板数据块PLTE（palette chunk）
 
