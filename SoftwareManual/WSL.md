@@ -688,6 +688,10 @@ cryptohack(){
 	# We map to 127.0.0.1 on the host rather than the default 0.0.0.0 as Jupyter token authentication was disabled for the sake of convenience.
 	docker run --rm -p 127.0.0.1:8888:8888 -it hyperreality/cryptohack:latest
 }
+
+xp(){
+	docker run -tid --name xiaopi -p 22:22 -p 8083:8083 -p 8073:8073 -p 808 -p 8080:8080 -p 9999:9999 -p 3306:3306 -p 20:20 -p 21:21 --privileged=true xiaopi-ctf
+}
 ```
 
 
