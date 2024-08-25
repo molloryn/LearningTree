@@ -70,7 +70,7 @@ determines whether PHP is allowed to open remote files using functions like `fil
 
 ## php://input
 
-> 条件：`allow_url_include = On`
+> 条件：`allow_url_include = On` 时，可以在诸如`include()`函数中执行命令
 
 提供了一个方式来 读取HTTP请求体的原始内容。
 
@@ -171,6 +171,13 @@ file_put_contents('php://filter/write=string.tolower/resource=result.txt','hello
  这是一个输入流执行的协议，它可以向服务器输入数据，而服务器也会执行。常用代码如下：
  `http://127.0.0.1/include.php?file=data://text/plain,<?php%20phpinfo();?>`
 `text/plain;base64`: 若纯文本没用可用base64编码
+
+
+```php
+# 测试发现只要条件满足，这就会执行代码
+include($_GET['a']);
+```
+
 
 
 #### zip://

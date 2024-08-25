@@ -688,9 +688,8 @@ cryptohack(){
 	# We map to 127.0.0.1 on the host rather than the default 0.0.0.0 as Jupyter token authentication was disabled for the sake of convenience.
 	docker run --rm -p 127.0.0.1:8888:8888 -it hyperreality/cryptohack:latest
 }
-
 xp(){
-	docker run -tid --name xp-ctf -p 22:22 -p 8083:8083 -p 8080:8080 -p 8074:8074 -p 8070:8070 -p 8056:8056 -p 8053:8053 -p 9999:9999 -p 3306:3306 --privileged=true -v "$PWD":/xp/www/0.0.0.0_8080 -v "$PWD":/xp/www/0.0.0.0_8083 -v "$PWD":/xp/www/0.0.0.0_8074 -v "$PWD":/xp/www/0.0.0.0_8070 -v "$PWD":/xp/www/0.0.0.0_8056 -v "$PWD":/xp/www/0.0.0.0_8053 koubot/xp-ctf:latest 
+	docker run -tid --name xp-ctf -p 22:22 -p 8083:8083 -p 8080:8080 -p 8074:8074 -p 8070:8070 -p 8056:8056 -p 8053:8053 -p 9999:9999 -p 3306:3306 --privileged=true -v "$PWD":/xp/www/0.0.0.0_8080 -v "$PWD":/xp/www/0.0.0.0_8083 -v "$PWD":/xp/www/0.0.0.0_8074 -v "$PWD":/xp/www/0.0.0.0_8070 -v "$PWD":/xp/www/0.0.0.0_8056 -v "$PWD":/xp/www/0.0.0.0_8053 koubot/xp-ctf:latest /bin/bash -c 'service xpd start && service sshd start && tail -f /dev/null'
 	echo http://localhost:8083
 	echo http://localhost:8080
 	echo http://localhost:8074
