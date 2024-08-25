@@ -690,7 +690,14 @@ cryptohack(){
 }
 
 xp(){
-	docker run -tid --name xiaopi -p 22:22 -p 8083:8083 -p 8073:8073 -p 808 -p 8080:8080 -p 9999:9999 -p 3306:3306 -p 20:20 -p 21:21 --privileged=true xiaopi-ctf
+	docker run -tid --name xp-ctf -p 22:22 -p 8083:8083 -p 8080:8080 -p 8074:8074 -p 8070:8070 -p 8056:8056 -p 8053:8053 -p 9999:9999 -p 3306:3306 --privileged=true -v "$PWD":/xp/www/0.0.0.0_8080 -v "$PWD":/xp/www/0.0.0.0_8083 -v "$PWD":/xp/www/0.0.0.0_8074 -v "$PWD":/xp/www/0.0.0.0_8070 -v "$PWD":/xp/www/0.0.0.0_8056 -v "$PWD":/xp/www/0.0.0.0_8053 koubot/xp-ctf:latest 
+	echo http://localhost:8083
+	echo http://localhost:8080
+	echo http://localhost:8074
+	echo http://localhost:8070
+	echo http://localhost:8056
+	echo http://localhost:8053
+	echo http://localhost:9999/panel
 }
 ```
 
