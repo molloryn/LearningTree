@@ -13,41 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/WEB/文件包含.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "27190d6e36a80741",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CTF/WEB/PHP.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dfe08c1823e458e4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SoftwareManual/WSL.md",
+                "file": "CTF/MISC/图像隐写/PNG.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/WSL.md",
+                "file": "CTF/MISC/图像隐写/PNG.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/WSL.md",
+                "file": "CTF/MISC/图像隐写/PNG.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/WSL.md"
+                "file": "CTF/MISC/图像隐写/PNG.md"
               }
             }
           },
@@ -213,12 +186,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "dfe08c1823e458e4",
+  "active": "a0096c37646f8351",
   "lastOpenFiles": [
-    "CTF/WEB/PHP.md",
+    "CTF/MISC/图像隐写/JPG.md",
+    "CTF/MISC/图像隐写/BMP.md",
+    "CTF/MISC/图像隐写/图像隐写.md",
+    "CTF/MISC/电子取证.md",
+    "CTF/MISC/编码类.md",
     "CTF/WEB/文件包含.md",
-    "CTF/WEB/代码与命令执行.md",
     "SoftwareManual/WSL.md",
+    "CTF/WEB/PHP.md",
+    "CTF/WEB/代码与命令执行.md",
     "CloudNative/Docker.md",
     "CTF/ToolManual/Burpsuite.md",
     "CTF/WEB/SSRF.md",
@@ -236,11 +214,6 @@
     "CTF/CRYPTO/RSA.md",
     "CTF/CRYPTO/Practice_Cryptograph.md",
     "CTF/CRYPTO/RSA理论知识.md",
-    "CTF/Reverse/Andorid逆向.md",
-    "CTF/Reverse/PE逆向.md",
-    "CTF/Reverse/Reverse.md",
-    "CTF/MISC/镜像分析.md",
-    "CTF/MISC/二维码.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
