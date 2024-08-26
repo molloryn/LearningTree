@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/图像隐写/BMP.md",
+                "file": "CTF/思路打开.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/图像隐写/BMP.md",
+                "file": "CTF/思路打开.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/图像隐写/BMP.md",
+                "file": "CTF/思路打开.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/图像隐写/BMP.md"
+                "file": "CTF/思路打开.md"
               }
             }
           },
@@ -195,6 +195,8 @@
   },
   "active": "dd778d4ac861fa04",
   "lastOpenFiles": [
+    "CTF/MISC/图像隐写/BMP.md",
+    "CTF/MISC/图像隐写/JPG.md",
     "CTF/CRYPTO/密码种类与特征.md",
     "CTF/CRYPTO/密码攻击方式.md",
     "CTF/CRYPTO/PBE.md",
@@ -216,11 +218,9 @@
     "CloudNative/Dapr.md",
     "CloudNative/Docker.md",
     "CTF/ToolManual/010Editor.md",
-    "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/思路打开.md",
-    "CTF/MISC/图像隐写/BMP.md",
     "CTF/ToolManual/CyberChef.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
