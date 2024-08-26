@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/WSL.md",
+                "file": "CTF/MISC/电子取证.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "MyLinux",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/WSL.md",
+                "file": "CTF/MISC/电子取证.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/WSL.md",
+                "file": "CTF/MISC/电子取证.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/WSL.md"
+                "file": "CTF/MISC/电子取证.md"
               }
             }
           },
@@ -196,11 +195,11 @@
   },
   "active": "dd778d4ac861fa04",
   "lastOpenFiles": [
+    "SoftwareManual/WSL.md",
     "Programming/NET/C#.md",
     "attachments/Pasted image 20240825234859.png",
     "CTF/CRYPTO/RSA理论知识.md",
     "CTF/CRYPTO/RSA.md",
-    "SoftwareManual/WSL.md",
     "CloudNative/Dapr.md",
     "CloudNative/Docker.md",
     "CTF/ToolManual/010Editor.md",
