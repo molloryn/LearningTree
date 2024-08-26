@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/电子取证.md",
+                "file": "CTF/MISC/图像隐写/BMP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "伪加密",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/电子取证.md",
+                "file": "CTF/MISC/图像隐写/BMP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/电子取证.md",
+                "file": "CTF/MISC/图像隐写/BMP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/电子取证.md"
+                "file": "CTF/MISC/图像隐写/BMP.md"
               }
             }
           },
@@ -195,8 +195,19 @@
   },
   "active": "dd778d4ac861fa04",
   "lastOpenFiles": [
-    "CTF/ToolsList.md",
+    "CTF/CRYPTO/密码种类与特征.md",
+    "CTF/CRYPTO/密码攻击方式.md",
+    "CTF/CRYPTO/PBE.md",
+    "CTF/CRYPTO/Encoding.md",
+    "CTF/CRYPTO/CTF.md",
+    "CTF/MISC/数值类.md",
+    "CTF/MISC/文件头.md",
+    "CTF/MISC/编码类.md",
+    "CTF/MISC/镜像分析.md",
+    "CTF/MISC/二维码.md",
+    "CTF/MISC/压缩包.md",
     "CTF/MISC/电子取证.md",
+    "CTF/ToolsList.md",
     "SoftwareManual/WSL.md",
     "Programming/NET/C#.md",
     "attachments/Pasted image 20240825234859.png",
@@ -205,23 +216,12 @@
     "CloudNative/Dapr.md",
     "CloudNative/Docker.md",
     "CTF/ToolManual/010Editor.md",
-    "CTF/MISC/文件头.md",
-    "CTF/MISC/压缩包.md",
     "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/思路打开.md",
     "CTF/MISC/图像隐写/BMP.md",
-    "CTF/MISC/编码类.md",
     "CTF/ToolManual/CyberChef.md",
-    "CTF/README.md",
-    "CTF/AWD/工具.md",
-    "README.md",
-    "CTF/CRYPTO/Encoding.md",
-    "CTF/CRYPTO/CTF.md",
-    "CTF/CRYPTO/Practice_Cryptograph.md",
-    "CTF/MISC/音频隐写.md",
-    "CTF/MISC/数值类.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
