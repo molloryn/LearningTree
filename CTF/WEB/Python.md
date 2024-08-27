@@ -8,6 +8,12 @@
 
 `print("\x80")` 
 
+```python
+str = b'\xe6\x82\xa8\xe7\x9a\x84\xe4\xbf\xa1\xe6\x81\xa
+# Decode the hex data assuming
+str.decode('utf-8')
+```
+
 
 # 反序列化
 
