@@ -343,6 +343,10 @@ Under Common Properties\\Startup Project select Multiple startup projects and se
 
 关闭勾选Just My Code。加载所有dll之后，打断点会提示代码对不上。这时设置断点可以调试对不上的代码。
 
+##### 拥有pdb文件时
+可使用原生VisualStudio加载符号，但需要手动创建一个目录，使用everything复制所有pdb文件（一般就在nuget目录下）到该文件夹，在Options->Debugging->Symbols->Symbol file locations 中添加该目录
+
+
 # 快捷操作
 
 所有快捷键均可在工具-\>选项-\>键盘中自定义
