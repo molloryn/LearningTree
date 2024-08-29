@@ -339,6 +339,8 @@ Under Common Properties\\Startup Project select Multiple startup projects and se
 [Presentation options for compiled code | ReSharper Documentation (jetbrains.com)](https://www.jetbrains.com/help/resharper/Code_Presentation_Options.html)
 [Debug modules that have no debug information (PDB) | ReSharper Documentation (jetbrains.com)](https://www.jetbrains.com/help/resharper/Debugging_Without_Source_Code.html)
 
+- In the debug mode, open the Visual Studio's Modules window (Debug | Windows | Modules), select one of several modules, right-click the selection, and choose Load Symbols with ReSharper Decompiler.
+
 关闭勾选Just My Code。加载所有dll之后，打断点会提示代码对不上。这时设置断点可以调试对不上的代码。
 
 # 快捷操作
