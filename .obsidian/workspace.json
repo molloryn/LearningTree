@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/思路打开.md",
+                "file": "Programming/JavaScript.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 270.49999618530273
+    "width": 236.5
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/思路打开.md",
+                "file": "Programming/JavaScript.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/思路打开.md",
+                "file": "Programming/JavaScript.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/思路打开.md"
+                "file": "Programming/JavaScript.md"
               }
             }
           },
@@ -188,8 +188,12 @@
   },
   "active": "a0096c37646f8351",
   "lastOpenFiles": [
-    "CTF/MISC/图像隐写/PNG.md",
+    "Fontend/HTML&CSS.md",
+    "Fontend/Blazor.md",
+    "Fontend/FrontendConcept.md",
+    "CloudNative/K8S集群管理.md",
     "CTF/思路打开.md",
+    "CTF/MISC/图像隐写/PNG.md",
     "attachments/Pasted image 20240825234859.png",
     "CTF/MISC/编码类.md",
     "CTF/WEB/PHP.md",
@@ -211,9 +215,6 @@
     "CTF/CRYPTO/密码种类与特征.md",
     "CTF/WEB/绕过(Bypass).md",
     "CTF/CRYPTO/算法性质.md",
-    "CTF/CRYPTO/伪随机数.md",
-    "CTF/CRYPTO/Encoding.md",
-    "CTF/ToolsList.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
