@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/WEB/Python.md",
+                "file": "CTF/CRYPTO/算法性质.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/WEB/Python.md",
+                "file": "CTF/CRYPTO/算法性质.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/WEB/Python.md",
+                "file": "CTF/CRYPTO/算法性质.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/WEB/Python.md"
+                "file": "CTF/CRYPTO/算法性质.md"
               }
             }
           },
@@ -188,6 +188,8 @@
   },
   "active": "a0096c37646f8351",
   "lastOpenFiles": [
+    "CTF/ToolsList.md",
+    "CTF/WEB/Python.md",
     "CTF/WEB/PHP.md",
     "Programming/Python.md",
     "CloudNative/Dapr.md",
@@ -213,8 +215,6 @@
     "CloudNative/Docker.md",
     "CTF/ToolManual/Burpsuite.md",
     "CTF/WEB/SSRF.md",
-    "CTF/CRYPTO/CTF.md",
-    "CTF/WEB/JavaScript.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
