@@ -31,6 +31,12 @@
 #### import base64
 - `base64.b64encode()` 
 
+#### from pwn 
+
+##### from pwn import xor
+
+
+
 #### from Crypto.Util.number import *
 > pip install PyCryptodome
 
