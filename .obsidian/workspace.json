@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/CRYPTO/算法性质.md",
+                "file": "CloudNative/Components/Redis.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/CRYPTO/算法性质.md",
+                "file": "CloudNative/Components/Redis.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/CRYPTO/算法性质.md",
+                "file": "CloudNative/Components/Redis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/CRYPTO/算法性质.md"
+                "file": "CloudNative/Components/Redis.md"
               }
             }
           },
@@ -188,8 +188,9 @@
   },
   "active": "a0096c37646f8351",
   "lastOpenFiles": [
-    "CTF/CRYPTO/密码攻击方式.md",
     "CTF/CRYPTO/算法性质.md",
+    "CloudNative/Components/Redis.md",
+    "CTF/CRYPTO/密码攻击方式.md",
     "CTF/CRYPTO/密码种类与特征.md",
     "CTF/ToolManual/CyberChef.md",
     "CTF/ToolsList.md",
@@ -215,7 +216,6 @@
     "CTF/MISC/编码类.md",
     "CTF/MISC/数值类.md",
     "CTF/MISC/图像隐写/JPG.md",
-    "CTF/MISC/图像隐写/BMP.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
