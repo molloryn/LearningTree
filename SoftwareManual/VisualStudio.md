@@ -231,6 +231,19 @@ project的xml中可以使用 `Import` 方式导入一个统一的xml文件：
 <SatelliteResourceLanguages>en;zh-Hans</SatelliteResourceLanguages>
 ```
 
+## CopyToOutputDirectory但复制到特定目录下
+
+使用`<Link>`可以实现复制到特定输出目录
+```xml
+<ItemGroup>
+	<Content Include="config.json">
+		<Link>Config\config.json</Link>
+		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</Content>
+</ItemGroup>
+
+```
+
 
 # 模板
 

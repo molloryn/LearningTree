@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Components/Redis.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Components/Redis.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Components/Redis.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Components/Redis.md"
+                "file": "SoftwareManual/VisualStudio.md"
               }
             }
           },
@@ -188,8 +188,8 @@
   },
   "active": "a0096c37646f8351",
   "lastOpenFiles": [
-    "CTF/CRYPTO/算法性质.md",
     "CloudNative/Components/Redis.md",
+    "CTF/CRYPTO/算法性质.md",
     "CTF/CRYPTO/密码攻击方式.md",
     "CTF/CRYPTO/密码种类与特征.md",
     "CTF/ToolManual/CyberChef.md",
