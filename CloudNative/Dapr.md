@@ -271,7 +271,16 @@ setting parameters `daprHTTPMaxRequestSize` and `UseGrpcChannelOptions` with
 更新了`dapr-system` `control panel`但未重启边车。
 
 #### K8S daprd 边车消失 无显示
-检查 `yaml` 文件 `annotation` 无异常，如果仍未出现，似乎是因为设置了工作负载的内存、CPU限制，可能是BUG？
+检查 `yaml` 文件 `annotation` 无异常，重启后时不时可以重新出现。
+实际上是边车注入失败，具体可以看`dapr-sidecar-injector`的日志，目前遇到的问题有：
+`Sidecar injector failed to inject for app 'xxxx'. Error: error from sentry SignCertificate: rpc error: code = Canceled desc = context canceled`
+
+具体原因未知。
+[Dapr 1.12.4 fail randomly to assign a sidecar - error from sentry SignCertificate · Issue #7444 · dapr/dapr (github.com)](https://github.com/dapr/dapr/issues/7444)
+有一个解决办法：使用dapr提供的一个feature: injector watch dog
+[Dapr Operator control plane service overview | Dapr Docs](https://docs.dapr.io/concepts/dapr-services/operator/#injector-watchdog)
+
+
 
 
 

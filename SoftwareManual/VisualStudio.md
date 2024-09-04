@@ -231,6 +231,19 @@ project的xml中可以使用 `Import` 方式导入一个统一的xml文件：
 <SatelliteResourceLanguages>en;zh-Hans</SatelliteResourceLanguages>
 ```
 
+## CopyToOutputDirectory但复制到特定目录下
+
+使用`<Link>`可以实现复制到特定输出目录
+```xml
+<ItemGroup>
+	<Content Include="config.json">
+		<Link>Config\config.json</Link>
+		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</Content>
+</ItemGroup>
+
+```
+
 
 # 模板
 
@@ -339,7 +352,13 @@ Under Common Properties\\Startup Project select Multiple startup projects and se
 [Presentation options for compiled code | ReSharper Documentation (jetbrains.com)](https://www.jetbrains.com/help/resharper/Code_Presentation_Options.html)
 [Debug modules that have no debug information (PDB) | ReSharper Documentation (jetbrains.com)](https://www.jetbrains.com/help/resharper/Debugging_Without_Source_Code.html)
 
+- In the debug mode, open the Visual Studio's Modules window (Debug | Windows | Modules), select one of several modules, right-click the selection, and choose Load Symbols with ReSharper Decompiler.
+
 关闭勾选Just My Code。加载所有dll之后，打断点会提示代码对不上。这时设置断点可以调试对不上的代码。
+
+##### 拥有pdb文件时
+可使用原生VisualStudio加载符号，但需要手动创建一个目录，使用everything复制所有pdb文件（一般就在nuget目录下）到该文件夹，在Options->Debugging->Symbols->Symbol file locations 中添加该目录
+
 
 # 快捷操作
 
