@@ -87,12 +87,13 @@ https://github.com/gubeihc/blasting 前端密码爆破
 
 ## 其他
 
-| 软件名     | 场景               | 备注                                                                               |
-| :------ | :--------------- | :------------------------------------------------------------------------------- |
-| bruno   | API接口测试          | [lightweight alternative to postman/insomnia](https://github.com/usebruno/bruno) |
-| IPCheck | IP相关工具，检查VPN是否覆盖 | [MyIP](https://github.com/jason5ng32/MyIP)                                       |
-|         |                  |                                                                                  |
-|         |                  |                                                                                  |
+| 软件名         | 场景               | 备注                                                                               |
+| :---------- | :--------------- | :------------------------------------------------------------------------------- |
+| bruno       | API接口测试          | [lightweight alternative to postman/insomnia](https://github.com/usebruno/bruno) |
+| IPCheck     | IP相关工具，检查VPN是否覆盖 | [MyIP](https://github.com/jason5ng32/MyIP)                                       |
+| MHDDoS      | DDos工具 56种方法     | [MatrixTM/MHDDoS](https://github.com/MatrixTM/MHDDoS)                            |
+| postcat     | 国产API接口测试工具      | [Postcatlab/postcat](https://github.com/Postcatlab/postcat)                      |
+| hackingtool | 黑客工具箱            | [Z4nzu/hackingtool](https://github.com/Z4nzu/hackingtool)                        |
 
 
 
