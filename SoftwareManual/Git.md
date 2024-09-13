@@ -10,6 +10,8 @@ A remote ref is a reference (pointer) to a branch, tag, or other object in a rem
 
 拿到git地址和权限后，选择本地电脑中一个文件夹，使用 `git init` 在当前目录新建一个`.git`目录，然后进行`git pull` 拉取代码。
 
+> Git对于文件夹和文件名是忽略大小写的，注意
+
 ### 分支
 
 ```bash
