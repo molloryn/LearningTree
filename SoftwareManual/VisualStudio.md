@@ -360,6 +360,11 @@ Under Common Properties\\Startup Project select Multiple startup projects and se
 可使用原生VisualStudio加载符号，但需要手动创建一个目录，使用everything复制所有pdb文件（一般就在nuget目录下）到该文件夹，在Options->Debugging->Symbols->Symbol file locations 中添加该目录
 
 
+### 调试打印类信息
+
+默认情况下，如果有重写`ToString()`，则使用该方法在Debugger中显示。
+还可以通过
+
 # 快捷操作
 
 所有快捷键均可在工具-\>选项-\>键盘中自定义
