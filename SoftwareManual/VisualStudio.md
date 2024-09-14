@@ -363,8 +363,8 @@ Under Common Properties\\Startup Project select Multiple startup projects and se
 ### 调试打印类信息
 
 默认情况下，如果有重写`ToString()`，则使用该方法在Debugger中显示。
-还可以通过
-
+还可以通过 `[DebuggerDisplay]` 进行配置
+[Display custom info using DebuggerDisplay - Visual Studio (Windows) | Microsoft Learn](https://learn.microsoft.com/en-us/visualstudio/debugger/using-the-debuggerdisplay-attribute?view=vs-2022)
 # 快捷操作
 
 所有快捷键均可在工具-\>选项-\>键盘中自定义
