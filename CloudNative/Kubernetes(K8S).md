@@ -188,3 +188,10 @@ docker push <仓库名>/<项目名>/<镜像名>:[版本号] # push只能通过ta
 
 排查nginx日志，发现buff写入失败，提示空间不足。
 发现`df -h` 容器Pod磁盘占满。Worker节点空间不足。
+
+
+#### 获取用户真实IP
+首先需要配置Web服务器，需要设置header`X-Real-IP`，nginx设置方法：
+[HTTP 请求头中的 Remote_Addr，X-Forwarded-For，X-Real-IP - 23云恋49枫 - 博客园 (cnblogs.com)](https://www.cnblogs.com/luxiaojun/p/10451860.html)
+
+在K8S中部署的nginx，可能获取不到真实的地址，需要看当前nginx工作负责的k8s服务的配置。比如如果为NodePort模式，需要设置external-traffic-policy为Local，但是如果设置Local，就不能通过任意的worker节点访问会自动负载均衡了，必须相同节点。（也可以通过外部负载均衡实现）[externaltrafficpolicy的有关问题说明 - 紫色飞猪 - 博客园 (cnblogs.com)](https://www.cnblogs.com/zisefeizhu/p/13262239.html)
