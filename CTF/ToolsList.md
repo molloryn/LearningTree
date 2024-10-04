@@ -1,3 +1,26 @@
+
+# 学习资源
+
+
+| 软件名     | 场景     | 备注                                                                                  |
+| :------ | :----- | :---------------------------------------------------------------------------------- |
+| 安卓逆向这档事 | 安卓逆向学习 | [GitHub - ZJ595/AndroidReverse: 《安卓逆向这档事》](https://github.com/ZJ595/AndroidReverse) |
+
+
+
+
+# 环境
+
+| 软件名       | 场景                                                                             | 备注                                                                  |
+| :-------- | :----------------------------------------------------------------------------- | :------------------------------------------------------------------ |
+| CTF-OS    | CTF环境                                                                          | [ProbiusOfficial/CTF-OS](https://github.com/ProbiusOfficial/CTF-OS) |
+| TryHackMe | 在线靶场环境学习                                                                       | [TryHackMe \| Cyber Security Training](https://tryhackme.com/)      |
+| SOMD5     | MD5解密                                                                          | [MD5免费在线解密破解_MD5在线加密-SOMD5](https://www.somd5.com/)                 |
+| Hashes    | Decrypt MD5, SHA1, MySQL, NTLM, SHA256, MD5 Email, SHA256 Email, SHA512 hashes | [Decrypt Hash](https://hashes.com/en/decrypt/hash)                  |
+|           |                                                                                |                                                                     |
+
+
+
 # MISC
 
 ## 压缩包
@@ -162,6 +185,9 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | explainshell  | 自动解释所有linux命令            | [idank/explainshell](https://github.com/idank/explainshell)                                  |
 | linux-command | 搜索linux命令                | [jaywcjlove/linux-command](https://github.com/jaywcjlove/linux-command)                      |
 | LunarVim      | 基于Neovim的IDE             | [LunarVim/LunarVim](https://github.com/LunarVim/LunarVim)                                    |
+| nnn           | 文件管理器                    | [jarun/nnn](https://github.com/jarun/nnn)                                                    |
+| Openwrt       | 路由器操作系统                  | [openwrt/openwrt](https://github.com/openwrt/openwrt)                                        |
+|               |                          |                                                                                              |
 
 # 笔记
 
