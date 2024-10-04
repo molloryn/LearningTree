@@ -161,6 +161,7 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | You-Get       | 用于从 Web 下载媒体内容（视频、音频、图像） | [soimort/you-get](https://github.com/soimort/you-get)                                        |
 | explainshell  | 自动解释所有linux命令            | [idank/explainshell](https://github.com/idank/explainshell)                                  |
 | linux-command | 搜索linux命令                | [jaywcjlove/linux-command](https://github.com/jaywcjlove/linux-command)                      |
+| LunarVim      | 基于Neovim的IDE             | [LunarVim/LunarVim](https://github.com/LunarVim/LunarVim)                                    |
 
 # 笔记
 
@@ -281,11 +282,12 @@ https://github.com/gubeihc/blasting 前端密码爆破
 
 ## 中间件管理
 
-| 软件名                        | 场景                  | 备注                                                                                                       |
-|:----------------------------- |:--------------------- |:---------------------------------------------------------------------------------------------------------- |
+| 软件名                           | 场景            | 备注                                                                                                         |
+| :---------------------------- | :------------ | :--------------------------------------------------------------------------------------------------------- |
 | RedisInsight                  | Redis官方出品管理工具 | [RedisInsight/RedisInsight: Redis GUI by Redis (github.com)](https://github.com/RedisInsight/RedisInsight) |
-| Another Redis Desktop Manager | Redis管理工具         | [qishibo/AnotherRedisDesktopManager](https://github.com/qishibo/AnotherRedisDesktopManager)                |
-|                               |                       |                                                                                                            |
+| Another Redis Desktop Manager | Redis管理工具     | [qishibo/AnotherRedisDesktopManager](https://github.com/qishibo/AnotherRedisDesktopManager)                |
+| TinyRDM                       | 开源Redis管理客户端  | [Tiny Redis Desktop Manager](https://github.com/tiny-craft/tiny-rdm)                                       |
+|                               |               |                                                                                                            |
 
 ## UI
 | 软件名       | 场景                                                                     | 备注 |
