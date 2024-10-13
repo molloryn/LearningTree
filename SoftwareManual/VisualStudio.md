@@ -365,6 +365,11 @@ Under Common Properties\\Startup Project select Multiple startup projects and se
 默认情况下，如果有重写`ToString()`，则使用该方法在Debugger中显示。
 还可以通过 `[DebuggerDisplay]` 进行配置
 [Display custom info using DebuggerDisplay - Visual Studio (Windows) | Microsoft Learn](https://learn.microsoft.com/en-us/visualstudio/debugger/using-the-debuggerdisplay-attribute?view=vs-2022)
+
+### 应用程序处于中断模式（The application is in break mode）
+下了断点在自己代码里但发现中断模式，在通过dapr插件启动微服务调试时遇到，这种情况可能是那个无法命中断点的程序的dll较旧，需要重新build一下。
+
+
 # 快捷操作
 
 所有快捷键均可在工具-\>选项-\>键盘中自定义

@@ -68,6 +68,25 @@ echo '`echo 123`'
 ```
 可以发现，`'`可以将内部直接转义为纯字符串。
 
+
+#### {}
+可以在terminal中多行执行命令，而无需编写shell脚本
+
+```sh
+{
+  command1
+  command2
+  command3
+}
+
+# 也可使用
+command1 && \
+command2 && \
+command3
+
+```
+
+
 ## 文件描述符 (File Descriptor)
 
 [Linux反弹shell（一）文件描述符与重定向 | K0rz3n's Blog](https://www.k0rz3n.com/2018/08/05/Linux%E5%8F%8D%E5%BC%B9shell%EF%BC%88%E4%B8%80%EF%BC%89%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6%E4%B8%8E%E9%87%8D%E5%AE%9A%E5%90%91/)
