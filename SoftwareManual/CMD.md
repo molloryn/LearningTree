@@ -314,6 +314,16 @@ DOS窗口必须重启后环境变量才有效。
 
 任务管理器中，详细信息栏，选择列，选择开启“特权”一栏。
 
+#### Windows服务启动类型无法修改，为灰色
+
+可以尝试使用命令修改：`sc config "Muse Hub Background Service(服务属性中的服务名称)" start=demand`
+如果报错拒绝访问，则还可以通过注册表修改：
+参考路径：`计算机\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\<服务名称>`
+里面注册表项`Start`即为启动类型：`1 - 自动延时启动 2 - 自动 3 - 手动 4 - 禁用`。修改后重启电脑即可。
+
+拒绝访问是因为权限类型。即使是管理员权限，也无法修改。其实还有一个电脑的最高特殊权限，所以还可以通过这个软件：`M2-Team NSudo Launcher`[GitHub - M2TeamArchived/NSudo: [Deprecated, work in progress alternative: https://github.com/M2Team/NanaRun] Series of System Administration Tools](https://github.com/M2TeamArchived/NSudo) 来启动 `services.msc`来修改。
+
+
 ### 端口占用问题
 
 Hyper-V 会保留部分tcp端口，开始到结束范围内的端口不可用, 使用如下命令查看保留的端口：
