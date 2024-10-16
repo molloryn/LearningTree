@@ -298,7 +298,7 @@ TIP
 
 ```yaml
 parsers:
-  - urls: http://xxx.yaml
+  - reg: ^http
     yaml:
       preprend-rules:
         - DOMAIN-SUFFIX,location.microsoft.com,🔰 选择节点
