@@ -43,17 +43,17 @@
 
 #### Kafka
 
-问题一
+#### 问题一
 
 1195725856 is GET[space] encoded as a big-endian, four-byte integer (see here for more information on how that works). This indicates that HTTP traffic is being sent to Kafka port 9092, but Kafka doesn't accept HTTP traffic, it only accepts its own protocol (which takes the first four bytes as the receive size, hence the error).
 
-问题二 dapr显示无法连接到kafka（is your cluster reachable?）
+#### 问题二 dapr显示无法连接到kafka（is your cluster reachable?）
 
 需要配置好地址。
 
 项目Rebuild后可能是dapr开的比较快，而kafka还没起来，导致以为连不上。第二次再启动就行了。
 
-问题三Message was too large, server rejected it to avoid allocation error when using Headers
+#### 问题三Message was too large, server rejected it to avoid allocation error when using Headers
 
 ```yaml
 - name: maxMessageBytes
@@ -63,6 +63,9 @@
 配置弄大点？
 
 注意dapr这些component的yaml配置文件需要Rebuild才会生效
+
+#### 问题四 无法从外部连接kafka，dapr访问地址将自动变为内部集群ip
+kafka需配置外部访问监听地址：[Kafka Listeners - Explained](https://rmoff.net/2018/08/02/kafka-listeners-explained/)
 
 ### Accessibility
 
