@@ -22,6 +22,21 @@ Kubernetes每个实例是以Cluster为单位的。每个Work Node（VM或物理�
 
 注意service端口是否开对
 
+### DNS
+
+> 1. k8s 中有 namespace 的概念，由于不同的 namespace 中可以有同样名称的 service or pod，因此 DNS 解析的部份就需要考虑 namespace
+> 2. k8s cluster domain name，若是未设定，预设就会是 `cluster.local`
+
+#### Service DNS
+基本格式：
+`<service-name>.<namespace-name>.svc.<cluster domain name>`
+
+#### Pod DNS
+基本格式：
+`<pod-ip-address>.<namespace-name>.pod.<cluster domain name>`
+
+
+
 ## 命令
 
 ### Kubectl
