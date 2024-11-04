@@ -289,7 +289,8 @@ setting parameters `daprHTTPMaxRequestSize` and `UseGrpcChannelOptions` with
 有一个解决办法：使用dapr提供的一个feature: injector watch dog
 [Dapr Operator control plane service overview | Dapr Docs](https://docs.dapr.io/concepts/dapr-services/operator/#injector-watchdog)
 
-
+#### initial http2 frame frame server is not a settings frame: \*http2.GoAwayFrame
+使用容器起来进行远程调用时，dapr直接返回该错误。原因是因为容器`override`配置中dapr配置了`app-protocol=grpc`，而实际上程序未启用grpc方式返回数据。
 
 
 
