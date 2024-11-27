@@ -67,4 +67,24 @@ services.AddHttpClient<CommandFlightHttpApi>(_ => client.CreateGrpcService<IComm
 
 # 问题
 
-## 
+## ERR Empty Response
+在`docker`环境下运行程序，开启HTTP服务监听`80`端口，访问后直接拒绝。
+排查发现，是如下代码：
+
+```cs
+public ConcurrentQueue<object> _queue = new();
+Task.Factory.StartNew(()=>{
+	while(true)
+	{
+		if(_queue.TryDeque())
+		{
+			//..其他业务
+		}
+	}
+})
+```
+
+即使在不同线程，在`Linux`环境似乎会将主线程阻塞？导致HTTP等线程均不可用。
+测试发现，仅需等待部分时间，甚至可`Thread.Sleep(0)`，问题消失。
+
+或建议采用异步Task，应也可解决相关问题。
