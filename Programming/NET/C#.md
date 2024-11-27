@@ -299,6 +299,8 @@ Type类型实例需要使用指定Type的IsAssignableFrom等方法来判断deriv
 
 ## 坑
 
+
+
 ### Assembly
 
 `Assembly.GetCallingAssembly()`如果在lambada表达式中一定要注意了，它就不是外层的assembly了，而是这个函数来源的assembly。
