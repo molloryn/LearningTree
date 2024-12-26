@@ -401,9 +401,12 @@ docker compose中镜像构建的 context 文件找不到，可能是路径写错
 将Development的容器环境变量换成Production即可。似乎是Bug。
 
 #### Failed to create CoreCLR
-.NET 8 在另外的机器上跑同个镜像失败。原因是docker engine版本过低，20需升级到24以上。
+.NET 8 在另外的机器上跑同个镜像失败。原因是docker engine版本过低，20需升级到23以上。
 
-### Can not find the container with the name starting with XXX
+#### Docker compose起来后边车无法连接RabbitMQ
+rabbitMQ还没起来，边车就去访问了，需要用depends on解决先后顺序。
+
+#### Can not find the container with the name starting with XXX
 检查是否是以 `Release` 模式运行，而又禁用了 `Release` 的容器运行
 
 

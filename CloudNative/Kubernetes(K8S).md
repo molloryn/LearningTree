@@ -22,6 +22,21 @@ Kubernetes每个实例是以Cluster为单位的。每个Work Node（VM或物理�
 
 注意service端口是否开对
 
+### DNS
+
+> 1. k8s 中有 namespace 的概念，由于不同的 namespace 中可以有同样名称的 service or pod，因此 DNS 解析的部份就需要考虑 namespace
+> 2. k8s cluster domain name，若是未设定，预设就会是 `cluster.local`
+
+#### Service DNS
+基本格式：
+`<service-name>.<namespace-name>.svc.<cluster domain name>`
+
+#### Pod DNS
+基本格式：
+`<pod-ip-address>.<namespace-name>.pod.<cluster domain name>`
+
+
+
 ## 命令
 
 ### Kubectl
@@ -128,6 +143,17 @@ Node中有多个Pod，多个Service，可以用一个Ingress用于外部路由Se
 ### Configuration
 
 对于Pod的外部配置，可以使用ConfigMap或Secrets。
+
+### 容器权限
+特权模式还有一个用户和用户组的配置。效果不一。
+
+曾遇到`opentelemetry collector`无法收集pod的log问题，虽然启用了特权模式但仍无效，但以特定uid及gid启动则可以：
+```yaml
+ securityContext:
+    runAsUser: 0
+    runAsGroup: 0
+```
+[find files with '/var/log/pods/*/*/*.log' pattern: open .: permission denied · Issue #33083 · open-telemetry/opentelemetry-collector-contrib (github.com)](https://github.com/open-telemetry/opentelemetry-collector-contrib/issues/33083)
 
 ### 挂载模式
 

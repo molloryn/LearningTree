@@ -299,6 +299,8 @@ Type类型实例需要使用指定Type的IsAssignableFrom等方法来判断deriv
 
 ## 坑
 
+
+
 ### Assembly
 
 `Assembly.GetCallingAssembly()`如果在lambada表达式中一定要注意了，它就不是外层的assembly了，而是这个函数来源的assembly。
@@ -357,6 +359,11 @@ Could not load file or assembly 'FuzzySharp, Version=1.0.4.0, Culture=neutral, P
 |                                                         |                                                |                                                                                                                                                       |
 |                                                         |                                                |                                                                                                                                                       |
 |                                                         |                                                |                                                                                                                                                       |
+### 问题
+
+#### RestoreTask failed but no log
+本地编译成功但是在容器环境进行`dotnet restore`还原时还原失败，这时是因为改了依赖，发现有一个包引用过`Dapr.Client v1.14`觉得没必要多次引用，然后把引用去掉了，但会导致这个谜之问题。还原后问题消失。
+
 
 ## Accessibility
 

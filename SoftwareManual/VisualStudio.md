@@ -295,9 +295,9 @@ Under Common Properties\\Startup Project select Multiple startup projects and se
 
 行号上`Ctrl`+`Mouse Left Click`可以快速插入临时断点。 
 
-### 即时调试
+### 即时调试（Debug.Immediate）
 
--   即时调试窗口:命中断点后`Ctrl`+`D`+`I`
+-   即时调试窗口:命中断点后`Ctrl`+`ALT`+`I`
 
     可输入参数,实例化对象,常量,也可执行方法或函数
 

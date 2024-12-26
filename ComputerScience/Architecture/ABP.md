@@ -41,7 +41,7 @@ ABP 是 ASP.NET Boilerplate的全称，意味着它是一种代码层面的最�
 
 #### DbUpdateConcurrencyException
 
-`The adatabase operation was expected to affect 1 row(s), but actually affected 0 row(s).`
+`The database operation was expected to affect 1 row(s), but actually affected 0 row(s).`
 
 是因为Update操作时，此数据不存在。此数据可能已经被删除或已经被Update而无法匹配上。
 也有可能是需要Add的操作，错误的使用了Update方法。

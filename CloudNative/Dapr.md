@@ -43,17 +43,17 @@
 
 #### Kafka
 
-问题一
+#### 问题一
 
 1195725856 is GET[space] encoded as a big-endian, four-byte integer (see here for more information on how that works). This indicates that HTTP traffic is being sent to Kafka port 9092, but Kafka doesn't accept HTTP traffic, it only accepts its own protocol (which takes the first four bytes as the receive size, hence the error).
 
-问题二 dapr显示无法连接到kafka（is your cluster reachable?）
+#### 问题二 dapr显示无法连接到kafka（is your cluster reachable?）
 
 需要配置好地址。
 
 项目Rebuild后可能是dapr开的比较快，而kafka还没起来，导致以为连不上。第二次再启动就行了。
 
-问题三Message was too large, server rejected it to avoid allocation error when using Headers
+#### 问题三Message was too large, server rejected it to avoid allocation error when using Headers
 
 ```yaml
 - name: maxMessageBytes
@@ -63,6 +63,9 @@
 配置弄大点？
 
 注意dapr这些component的yaml配置文件需要Rebuild才会生效
+
+#### 问题四 无法从外部连接kafka，dapr访问地址将自动变为内部集群ip
+kafka需配置外部访问监听地址：[Kafka Listeners - Explained](https://rmoff.net/2018/08/02/kafka-listeners-explained/)
 
 ### Accessibility
 
@@ -174,6 +177,12 @@ Actors uses System.Text.Json (JSON) for state storage (the serializer and option
 虽然作用于全局，但处于K8S不同命名空间下也不能访问到ActorHost。
 [Unhandled exception. Dapr.DaprApiException: error invoke actor method: failed to invoke target 10.39.1.36:50002 after 3 retries · Issue #5090 · dapr/dapr (github.com)](https://github.com/dapr/dapr/issues/5090)
 
+#### Namespaced Actor
+> 现在1.14支持跨命名空间的Actor了
+
+Each namespaced actor deployment **must** use its own separate state store.
+
+
 
 ## Binding
 
@@ -194,7 +203,9 @@ Actors uses System.Text.Json (JSON) for state storage (the serializer and option
 
 内部服务接收来自外部的事件，可以看作是一个`trigger`
 
-
+#### input binding会批量通知所有dapr边车
+dapr有一个设计，`component`可以有`scopes`，限定binding component到特定微服务。
+[How-To: Scope components to one or more applications | Dapr Docs](https://docs.dapr.io/operations/components/component-scopes/)
 
 ## 服务发现&服务间调用
 
@@ -231,7 +242,7 @@ Self-host 模式，不依赖docker环境，需要使用`dapr init --slim`。离�
 
 ## TroubleShotting
 
-> Visual Studio 由于预热机制，**边车仅启动一次，除非自行重启，边车是不会重读配置的**。比如监听领域事件。
+> Visual Studio 由于预热机制，Docker模式下**边车仅启动一次，除非自行重启，边车是不会重读配置的**。比如监听领域事件。
 
 #### Requesting HTTP version 2.0 with version policy RequestVersionOrHigher while unable to establish HTTP/2 connection
 可能是使用了 `http_proxy`和 `https_proxy` 的原因
@@ -280,7 +291,11 @@ setting parameters `daprHTTPMaxRequestSize` and `UseGrpcChannelOptions` with
 有一个解决办法：使用dapr提供的一个feature: injector watch dog
 [Dapr Operator control plane service overview | Dapr Docs](https://docs.dapr.io/concepts/dapr-services/operator/#injector-watchdog)
 
+#### initial http2 frame frame server is not a settings frame: \*http2.GoAwayFrame
+使用容器起来进行远程调用时，dapr直接返回该错误。原因是因为容器`override`配置中dapr配置了`app-protocol=grpc`，而实际上程序未启用grpc方式返回数据。
 
+#### 调试时事件发布有时候丢失
+看是否一个消费者组有多个消费者，默认行为同实例的会竞争事件。
 
 
 

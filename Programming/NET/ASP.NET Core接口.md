@@ -63,3 +63,37 @@ services.TryAddScoped<ICommandFlight>(provider => ActivatorUtilities.CreateInsta
 services.TryAddScoped<ICommandFlight, CommandFlightHttpApi>();
 services.AddHttpClient<CommandFlightHttpApi>(_ => client.CreateGrpcService<ICommandFlight>());
 ```
+
+
+# 问题
+
+## ERR Empty Response
+在`docker`环境下运行程序，开启HTTP服务监听`80`端口，访问后直接拒绝。
+排查发现，是如下代码：
+
+```cs
+public ConcurrentQueue<object> _queue = new();
+Task.Factory.StartNew(()=>{
+	while(true)
+	{
+		if(_queue.TryDeque())
+		{
+			//..其他业务
+		}
+	}
+})
+```
+
+即使在不同线程，在`Linux`环境似乎会将主线程阻塞？导致HTTP等线程均不可用。
+测试发现，仅需等待部分时间，甚至可`Thread.Sleep(0)`，问题消失。
+
+或建议采用异步Task，应也可解决相关问题。
+
+
+
+## Configuration 对于ICollection的行为是添加
+添加的行为对于`Option`类带默认值的，以及有多个来源的都是一样。
+源码在`Microsoft.Extensions.Confgiuration.ConfigurationBinder #line 530` 中
+
+## Serilog死锁 写大日志会出现该问题
+[Console logging sometimes causes application to hang · Issue #84 · serilog/serilog-sinks-console](https://github.com/serilog/serilog-sinks-console/issues/84)
