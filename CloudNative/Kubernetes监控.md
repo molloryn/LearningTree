@@ -55,3 +55,45 @@
 
 ## 舆情监控
 - 微信、微博等新闻媒体
+
+
+# 监控工具
+
+### Elastic Stack（ELK Stack）
+
+- **组成**：Elastic Stack主要包括以下组件：
+    
+    - **Elasticsearch**：一个分布式搜索和分析引擎。
+    - **Logstash**：数据处理管道，支持收集、解析、变换数据。
+    - **Kibana**：数据可视化工具，用户可以通过它创建图表和仪表板。
+    - **Beats**：轻量级数据发送器，用于将数据从不同来源发送到Logstash或Elasticsearch。
+- **用途**：
+    
+    - 集中式日志管理
+    - 搜索和分析应用日志
+    - 创建可视化仪表板和报告
+
+### Prometheus
+
+- **组成**：Prometheus主要包括以下组件：
+    
+    - **Prometheus Server**：核心组件，负责数据采集和存储。
+    - **Alertmanager**：用于处理告警。
+    - **Pushgateway**：支持短期任务推送指标。
+    - **Exporter**：将监控数据从各种系统和服务导出给Prometheus。
+    - **PromQL**：查询语言，用于查询监控数据。
+- **用途**：
+    
+    - 指标监控和告警
+    - 系统性能分析
+    - 服务健康监测
+
+### 关系与结合使用
+
+- **互补性**：Elastic Stack主要用于日志数据的收集、存储和可视化，而Prometheus则专注于时间序列数据的指标监控和告警。
+     
+- **结合使用**：
+    
+    - **日志与指标关联**：可以通过将Prometheus的指标数据与Elastic Stack的日志数据关联，提供全面的系统监控视图。例如，当某个指标出现异常时，可以快速查看相关日志进行故障排查。
+    - **数据可视化**：虽然Prometheus有自己的可视化工具（如Grafana），但也可以将Prometheus的指标数据导入Elastic Stack，利用Kibana进行更高级的可视化和分析。
+    - **中央化存储**：将Prometheus的指标数据通过工具（如Elasticsearch Exporter）导入到Elasticsearch中，实现统一的数据存储和管理。
