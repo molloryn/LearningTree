@@ -121,3 +121,8 @@
 ### 灰度发布
 类似金丝雀发布，但用户参与感更强，让用户参与测试及互动。
 
+
+# 网络
+
+
+[【DNS系列-K8S排错】CoreDNS 新增 host 解析不生效_coredns hosts 不生效-CSDN博客](https://blog.csdn.net/qq_24433609/article/details/126548450)
