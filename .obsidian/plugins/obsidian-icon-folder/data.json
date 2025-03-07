@@ -53,7 +53,8 @@
     "iconColorInFrontmatterFieldName": "iconColor",
     "iconsInLinksEnabled": true,
     "lucideIconPackType": "native",
-    "debugMode": false
+    "debugMode": false,
+    "useInternalPlugins": false
   },
   "attachments": "FarImages"
 }
