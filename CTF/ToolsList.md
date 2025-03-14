@@ -278,6 +278,8 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | WizTree             | 开源免费TreeSizePro替代品                 |                                                                       |
 | ab-download-manager | 仿IDM的开源下载器                         | [amir1376](https://github.com/amir1376/ab-download-manager)           |
 | FileCentipede       | 全能下载器，嗅探下载等                        | [filecxx/FileCentipede](https://github.com/filecxx/FileCentipede)     |
+| winhex              | 010editor替代                        |                                                                       |
+| ImHex               | 010editor超级替代                      | [WerWolv/ImHex](https://github.com/WerWolv/ImHex)                     |
 |                     |                                    |                                                                       |
 
 ## Audio
