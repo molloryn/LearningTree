@@ -277,6 +277,8 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | PixPin              | 截图贴图长截图工具                          |                                                                       |
 | WizTree             | 开源免费TreeSizePro替代品                 |                                                                       |
 | ab-download-manager | 仿IDM的开源下载器                         | [amir1376](https://github.com/amir1376/ab-download-manager)           |
+| FileCentipede       | 全能下载器，嗅探下载等                        | [filecxx/FileCentipede](https://github.com/filecxx/FileCentipede)     |
+|                     |                                    |                                                                       |
 
 ## Audio
 | 软件名                       | 场景                  | 备注  |

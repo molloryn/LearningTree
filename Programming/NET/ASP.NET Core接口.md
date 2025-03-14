@@ -91,9 +91,6 @@ Task.Factory.StartNew(()=>{
 
 
 
-## Configuration 对于ICollection的行为是添加
-添加的行为对于`Option`类带默认值的，以及有多个来源的都是一样。
-源码在`Microsoft.Extensions.Confgiuration.ConfigurationBinder #line 530` 中
 
 ## Serilog死锁 写大日志会出现该问题
 [Console logging sometimes causes application to hang · Issue #84 · serilog/serilog-sinks-console](https://github.com/serilog/serilog-sinks-console/issues/84)
