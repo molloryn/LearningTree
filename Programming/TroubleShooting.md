@@ -143,6 +143,7 @@ Set Project Build Order in Visual Studio
 DbContext在整个生命周期Scope内进行追踪。
 在使用ABP 仓储时，也是整个事务为一个范围，所以在两个方法里面查出同一个实体进行更新后再去数据库查相同的实体再更新就会出现此异常。
 
+另外还有一种可能是Mapster的Map问题，如果Map中包含ID映射的，会将ChangeTrack中变为`Not found`，特别是映射嵌套类的时候。所以需要IgnoreID列。具体原因待查。
 
 # C\#
 
