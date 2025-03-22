@@ -245,6 +245,39 @@ project的xml中可以使用 `Import` 方式导入一个统一的xml文件：
 ```
 
 
+
+# 发布
+
+容器发布
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <WebPublishMethod>Container</WebPublishMethod>
+    <ContainerPublishMethod>NetSdk</ContainerPublishMethod>
+    <ContainerRepository>username/test</ContainerRepository>
+    <RegistryUrl>index.docker.io</RegistryUrl>
+    <UserName>9kit</UserName>
+    <PublishImageTag>latest</PublishImageTag>
+    <PublishProvider>ContainerRegistry</PublishProvider>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+    <ProjectGuid>9f221ded-210c-4907-be8a-7d0d489f9f70</ProjectGuid>
+    <_IsDockerfilePresent>true</_IsDockerfilePresent>
+    <_TargetId>NetSdkDockerContainerRegistry</_TargetId>
+  </PropertyGroup>
+</Project>
+
+```
+
+如果发布失败或没反应，直接拷出output中的命令自己执行看看报错
+
+
 # 模板
 
 ## 项目模板
