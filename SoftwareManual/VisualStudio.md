@@ -551,6 +551,9 @@ Shortcut Scheme中可以开启Shortcut Browser，按三下Ctrl快速弹出当前
 
 ### 快捷
 
+#### 批量解决CS0246 引用未引入的错误
+![](../attachments/Pasted%20image%2020250325173137.png)
+
 #### Alt+\` Navigate To
 
 ##### To-do explorer
