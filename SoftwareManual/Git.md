@@ -220,6 +220,8 @@ Now you should have a pending pull request in your fork (MyFork), which you can 
 *.png           binary
 ```
 
+# BFG-repo-cleaner
+[BFG Repo-Cleaner by rtyley](https://rtyley.github.io/bfg-repo-cleaner/)
 
 
 # 开源协议
