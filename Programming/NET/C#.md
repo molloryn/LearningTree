@@ -76,28 +76,31 @@
 
 #### 常用判断关系的方法
 
-1.  **bool** IsInstanceOfType(object);
-2.  //判断对象是否是指定类型
-3.  //类型可以是父类，接口
-4.  //用法：父类.IsInstanceOfType(子类对象)
-5.  
-6.  **bool** IsAssignableFrom(Type)
-7.  //判断两个类型的关系
-8.  //类型可以是父类，接口
-9.  //用法：父类.IsAssignableFrom(子类) 对应的有IsAssignableTo
-10. 
-11. **bool** IsSubClassOf(Type)
-12. //判断两个类型的关系
-13. //类型不可以是接口
-14. //用法：子类.IsSubClassOf(父类)
-15. Type GetGenericTypeDefinition()
-16. //获取泛型类型typeof(GenericType\<\>)
+```cs
+// 判断对象是否是指定类型
+// 类型可以是父类，接口
+// 用法：父类.IsInstanceOfType(子类对象)
+bool IsInstanceOfType(object);
 
-但注意，虽然IComparable a = b; //b是int?，不会报错，但使用typeof(int?).IsAssignableTo(typeof(IComparable)会是false，这可能是设计上的一个bug。但就其原理是因为<https://stackoverflow.com/questions/39955837/why-isassignablefrom-return-false-when-comparing-a-nullable-against-an-interface>
+// 判断两个类型的关系
+// 类型可以是父类，接口
+// 用法：父类.IsAssignableFrom(子类) 对应的有IsAssignableTo
+bool IsAssignableFrom(Type);
+
+// 判断两个类型的关系
+// 类型不可以是接口
+// 用法：子类.IsSubClassOf(父类)
+bool IsSubClassOf(Type);
+
+// 获取泛型类型typeof(GenericType<>)
+Type GetGenericTypeDefinition();
+```
+
+> 注意：虽然 `IComparable a = b;` // b是`int?`，不会报错，但使用 `typeof(int?).IsAssignableTo(typeof(IComparable))` 会返回 `false`，这可能是设计上的一个bug。其原理可以参考 [Stack Overflow](https://stackoverflow.com/questions/39955837/why-isassignablefrom-return-false-when-comparing-a-nullable-against-an-interface)。
 
 最好使用a is IComparable来判断是否实现了接口（但type却没办法了）
 
-## 插件编程
+# 插件编程
 
 ### 合并dll
 
@@ -151,13 +154,13 @@ new的优先级是按照父类A = new 子类B（），那么方法是调用的�
 
 ##### static关键字
 
-static的属性初始化需要注意顺序，在一个静态属性引用另一个静态属性的时候，如果这个静态属性正在被初始化的时候引用另一个需要被初始化但未被初始化的属性时，会得到null（这是C\#的bug？不，见下面textual order的描述）
+`static` 的属性初始化需要注意顺序，在一个静态属性引用另一个静态属性的时候，如果这个静态属性正在被初始化的时候引用另一个需要被初始化但未被初始化的属性时，会得到 `null`（这是 C# 的 bug？不，见下面 textual order 的描述）
 
-另外建议使用static constructors，即使不是静态类，也可以使用静态构造函数，用于初始化静态变量。
+> A static constructor is used to initialize any static data, or to perform a particular action that needs to be performed once only. It is called automatically before the first instance is created or any static members are referenced.
 
-A static constructor is used to initialize any static data, or to perform a particular action that needs to be performed once only. It is called automatically before the first instance is created or any static members are referenced.
+> If static field variable initializers are present in the class of the static constructor, they will be executed in the textual order in which they appear in the class declaration immediately prior(紧接着) to the execution of the static constructor.（所以会按顺序先执行参数的初始化（若有））
 
-If static field variable initializers are present in the class of the static constructor, they will be executed in the textual order in which they appear in the class declaration immediately prior(紧接着) to the execution of the static constructor.（所以会按顺序先执行参数的初始化（若有））
+另外建议使用 `static constructors`，即使不是静态类，也可以使用静态构造函数，用于初始化静态变量。
 
 注意，静态构造函数不能有参数，且会在一个实例构造函数之前调用。静态构造函数只会调用一次。
 
