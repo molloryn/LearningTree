@@ -94,3 +94,12 @@ Task.Factory.StartNew(()=>{
 
 ## Serilog死锁 写大日志会出现该问题
 [Console logging sometimes causes application to hang · Issue #84 · serilog/serilog-sinks-console](https://github.com/serilog/serilog-sinks-console/issues/84)
+
+
+
+
+
+
+
+# 待学
+[深入解析ASP.NET Core MVC应用的模块化设计[上篇]-腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/2394132)
