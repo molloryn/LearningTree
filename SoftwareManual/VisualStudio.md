@@ -412,6 +412,10 @@ Under Common Properties\\Startup Project select Multiple startup projects and se
 ### 应用程序处于中断模式（The application is in break mode）
 下了断点在自己代码里但发现中断模式，在通过dapr插件启动微服务调试时遇到，这种情况可能是那个无法命中断点的程序的dll较旧，需要重新build一下。
 
+### 调试Generator或EFCore等非常规程序入口点
+call `Debugger.Launch()` in your code. The just-in-time debugger should prompt you to attach a debugger when it hits that line.
+`Debugger.Break()`也可以尝试
+
 
 # 快捷操作
 
