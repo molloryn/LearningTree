@@ -28,7 +28,7 @@
 #### like
 1. 字段类型为字符串时
 - `test`代表`%test%`，查询包含`test`的
-- `test%`保持原样（当含有`%`原样输出）
+- `test%`代表以`test`开头的，即与数据库模糊相同（当含有`%`原样输出）
 
 #### explike
 与：`&`
@@ -49,10 +49,8 @@
 #### in
 1. 字段类型为字符串时
 - `佛山,深圳` 字符串等于佛山或等于深圳
-~~2. 字段类型为时间时~~
-- `EOBT in "[Now, Now+30min]"`
-
-
+2. 字段类型为时间时（暂未实现）
+- `EOBT in "[now, now+30min]"`
 
 
 ### 字段比较值
@@ -64,14 +62,13 @@
 #### DateTime，DateOnly类型
 支持格式为`yyyy-MM-dd`, `yyyyMMdd`, `MMdd`, `yyyy-MM-dd HHmmss`, `yyMMdd`
 以及时间表达式：`Now`, `Now+30min`
+
 ##### 时间表达式
 当前时间：`now`
 增加某时间长度后的时间：`now + 60min`
 减去某时间长度后的时间：`now - 3.6h`, `yyyy-MM-dd + 60min`
 支持连续加减
-
 - 仅支持`+`或`-`
-
 
 #### TimeSpan类型
 支持格式为`HH:mm:ss`, `HHmm`
@@ -107,9 +104,10 @@
 ```cs
 CustomFor(nameof(Entity.FieldName), (input, querable))
 ```
-#### 前端请求类
 
-可以以传统方式编写请求类
+### 前端请求类（暂未实现）
+
+可以以传统方式编写请求类，前端不必拼接语句
 ```cs
 
 
@@ -139,7 +137,7 @@ CustomFor(nameof(Entity.FieldName), (input, querable))
 ## 引擎的模块划分及逻辑关系
 
 引擎使用面向接口、依赖注入的方式实现，具体实现可供开发者进行替换或改造，主要分为应用接口与内部实现接口。应用接口面向开发者，即提供开箱即用的接口。内部实现主要代表引擎内部所有构建块，面向需求更复杂的开发者，可供灵活扩展引擎，实现不同的需求。引擎命名为`AutoModel`，模块整体架构如图所示：
-
+![](../../attachments/Pasted%20image%2020250408100554.png)
 
 
 应用接口上，主要提供两种应用接口。一是适用于数据库的引擎功能接口，可以适用于`LINQ to SQL`的表达式生成，将生成的过滤表达式运用于`ORM`框架，实现针对数据库的动态过滤。二是适用于内存的引擎功能接口，可以适用于实体`Lambda`表达式生成，生成`Predicate<TEntity>`的方法委托，即传入为实体类型，返回值为布尔类型的函数指针。该方法委托可用于内存中`IEnumerable<TEntity>`的类型筛选，即任何实体支持迭代的类型的筛选。
@@ -149,10 +147,7 @@ CustomFor(nameof(Entity.FieldName), (input, querable))
 ## 引擎交互流程
 
 引擎交互流程通过一个例子进行解释：
-
-![](media/3cc067fba287288a6379cf931dbb5d3b.png)
-
-
+![](../../attachments/Pasted%20image%2020250408100610.png)
 其中表达式：
 
 `Callsign like "CCA%" && CreateTime >= "2024-12-25" && (EOBT > "now – 60min") || ATOT < "now + 3d")`
