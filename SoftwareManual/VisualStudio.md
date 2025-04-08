@@ -1,5 +1,4 @@
 
-功能增强参考：[2.14 Visual Studio 高效率 | Furion (baiqian.ltd)](http://furion.baiqian.ltd/docs/vsfast/)
 ### 文件编码与代码规范
 
 文件编码可以在这里检查：
@@ -413,6 +412,10 @@ Under Common Properties\\Startup Project select Multiple startup projects and se
 ### 应用程序处于中断模式（The application is in break mode）
 下了断点在自己代码里但发现中断模式，在通过dapr插件启动微服务调试时遇到，这种情况可能是那个无法命中断点的程序的dll较旧，需要重新build一下。
 
+### 调试Generator或EFCore等非常规程序入口点
+call `Debugger.Launch()` in your code. The just-in-time debugger should prompt you to attach a debugger when it hits that line.
+`Debugger.Break()`也可以尝试
+
 
 # 快捷操作
 
@@ -529,103 +532,36 @@ Ctrl+Shift+V 打开粘贴板历史内容,点击粘贴
 
 ![图形用户界面, 文本, 应用程序 描述已自动生成](../attachments/5052e72105bf683d6650d3de22438dd5.png)
 
-# ReSharper
+## 增强配置
 
-### 问题
+### 开启内联参数提示
 
-#### prop template
-`prop`有非常奇怪的问题，转而使用VisualStudio的比较好。
+![](https://furion.net/img/vs1.png) ![](https://furion.net/img/vs2.png)
 
-> 其实原因发现居然是VS自己的IntelliCode，关闭C# suggestioins.
-> 又发现一个解决方案，可以开启IntelliCode，但是选择 `Apply whole line completions on right arrow`
+### 开启全局智能提示
 
-
-ReSharper > Tools > Template Explorer
-![](../attachments/Pasted%20image%2020230829170428.png)
-
-### 配置
-
-Shortcut Scheme中可以开启Shortcut Browser，按三下Ctrl快速弹出当前支持的快捷键。
-
-如果发现对不上快捷键，需要去Keyboard配置中重新覆盖一下配置。
+![](https://furion.net/img/vs3.png) ![](https://furion.net/img/vs4.png)
 
 
-### File Layout
-其中有功能可以排序属性
 
-应用File Layout需要使用
-![](../attachments/Pasted%20image%2020231114103910.png)
-这个右键文件使用 `Cleanup Code…` 功能，注意不是VS的CleanupCode
+## 实时显示诊断错误
 
-按字母顺序排序属性：
-![](../attachments/Pasted%20image%2020231114104833.png)
+在过去，我们需要写完代码编译才能知道具体的错误，最新版的 `Visual Studio` 支持 **内联诊断错误**，开启如下：
 
-### 快捷
+![](https://furion.net/img/vs7.png) ![](https://furion.net/img/vs8.png)
 
-#### 批量解决CS0246 引用未引入的错误
-![](../attachments/Pasted%20image%2020250325173137.png)
+## 中文智能提示
 
-#### Alt+\` Navigate To
+打开网站 [https://dotnet.microsoft.com/zh-cn/download/intellisense](https://dotnet.microsoft.com/zh-cn/download/intellisense) 下载对应的语言版本。
 
-##### To-do explorer
-需要在写了 `TODO` `BUG`等描述的地方进入
-[Navigate To: To-do Explorer | ReSharper Documentation (jetbrains.com)](https://www.jetbrains.com/help/resharper/Navigation_and_Search__Navigate_from_Here__Todo_Explorer.html)
+配置教程
 
-#### Alt+Insert Generate Code
-[Generate type members | ReSharper Documentation (jetbrains.com)](https://www.jetbrains.com/help/resharper/2023.2/Generating_Type_Members.html)
+如果配置了不能显示中文，可以查看此篇教程 [https://blog.csdn.net/sD7O95O/article/details/103776077](https://blog.csdn.net/sD7O95O/article/details/103776077)
 
-#### Ctrl+Shift+Alt+方向键 快速移动参数/行顺序
+关于 `NET6+` 的中文智能提示
 
-MoveUp和MoveDown可能要重新设置一下
+因为官方不再提供本地化包了，详情可查看相关 Issue [https://github.com/dotnet/docs/issues/27283](https://github.com/dotnet/docs/issues/27283)
 
-#### Alt+Enter 集大成
+**推荐使用 `islocalizer` 工具库：[https://github.com/stratosblue/IntelliSenseLocalizer](https://github.com/stratosblue/IntelliSenseLocalizer) ✨✨**
 
-**Alt+Enter** 快速看看当前代码支持的功能，不仅是重构，还可以是直接转向接口实现等
-
-如果直接输入word，还可以查找所有Action
-
-![Navigating to action](../attachments/fc4c8e56e190ad09b005012c03b28fd0.png)
-
-比如输入
-
-Nearby，启动转到文件附近文件功能
-
-Regular，启动validate regular expression 功能
-
-### Navigation
-
-![图形用户界面, 应用程序 描述已自动生成](../attachments/ec5910620828f74c2ecaa8836b9df46c.png)
-
-一定要设置的是TextEditor
-
-ReSharper_GotoPrevMember
-
-#### Quick Documentation （Ctrl+Shift+F1）
-
-可以快速转到MSDN
-
-![Quick Documentation pop-up](../attachments/2ff040f06d057f130c1faf0cb63e3640.png)
-
-## Code Snippets
-
-ReSharper \| Tools \| Templates Explorer.
-
-[jetbrains.com/resharper/features/code_templates.html](https://www.jetbrains.com/resharper/features/code_templates.html)
-
-## Convenient Functions
-
-### Complete Statement 快速加括号
-
-This feature inserts necessary syntax elements (braces, semicolons etc.) and sets you in position to start the next statement, saving you from excessive juggling with the caret. As you work, keep in mind the default shortcut for this feature: **Ctrl+Shift+Enter**.
-
-Complete Statement (also known as Smart Enter) comes to rescue in numerous scenarios, including auto-closing parentheses, adding semicolons, completing if, while and for statements, and so on.
-
-### Namespace
-
-By default, ReSharper assumes that the namespace each class appears in matches its location in the project. The 'root' namespace for the project is defined in the project properties:
-
-![Text Description automatically generated](../attachments/1c6a5a06abe576207723de4a8b38645c.png)
-
-项目内部的才会自动按照文件夹分namespace
-
-![](../attachments/84cd8787ed543b696bff31bd1430a952.png)
+![](https://furion.net/img/vs5.png) ![](https://furion.net/img/vs6.png)
