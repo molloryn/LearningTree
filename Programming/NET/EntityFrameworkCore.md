@@ -46,3 +46,208 @@ list.Foreach(p=>p.Name = "XX");
 var context = repo.GetDbContextAsync();
 context.SaveChanges(); //可以成功保存。
 ```
+
+
+
+
+# 基础知识
+
+ORM（Object Relational Mapping）框架
+
+注意MySQL数据库不能用MyISAM，需要用InnoDB，不然不支持外键和事务等，发挥不了EF的效果
+
+## 依赖注入
+
+#### DbContext依赖注入
+
+[https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-6.0/whatsnew\#dbcontext-factory-improvements](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-6.0/whatsnew#dbcontext-factory-improvements)
+
+IDbContextFactory\<SomeDbContext\> contextFactory
+
+这种注入的适合Actor等，需要用 using var context1 = \_contextFactory.CreateDbContext();
+
+注册需要这样：
+
+builder.Services
+
+.AddDbContextFactory\<FlightContext\>(options =\> options.UseMySql(connectionString, version))
+
+.BuildServiceProvider();
+
+简单的可以直接用
+
+builder.Services.AddDbContext\<FlightContext\>(
+
+options =\> options.UseMySql(connectionString, version));
+
+这种在constructor内就直接用FlightContext即可（适用于Controller）
+
+## 配置
+
+### 加载关联数据
+
+#### Lazy loading延迟加载
+
+### 字段配置
+
+By convention, all public properties with a getter and a setter will be included in the model.
+
+默认只会映射含有get、set字段的public属性。
+
+### 模型配置
+
+配置有两种配置方式，一种是使用fluentAPI配置，另一种是对模型使用Attribute。
+
+#### fluentAPI
+
+可在派生上下文中覆写 OnModelCreating 方法，并使用 ModelBuilder API 来配置模型。 此配置方法最为有效，并可在不修改实体类的情况下指定配置。 Fluent API 配置具有最高优先级，并将替代约定和数据注释。
+
+![](../../attachments/10ba1df7b1aa6044b4f0cd0c53941792.png)
+
+#### 数据注释（特性）
+
+也可将特性（称为数据注释）应用于类和属性。 数据注释会替代约定，但会被 Fluent API 配置替代。
+
+![](../../attachments/1626f51f453de92cbe2e3099808270c1.png)
+
+以上两图两者等价，择一配置。
+
+| Fluent API                                                                                              | 数据注释                                                  | 说明                                                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IsRequired()                                                                                            | [Required]                                            |                                                                                                                                                                                                                                                                                       |
+| .HasKey(c =\> c.xxxxx)                                                                                  | [Key]                                                 | 此键映射到关系数据库中主键的概念                                                                                                                                                                                                                                                                      |
+| .HasKey(c =\> new { c.xxx1, c.xxx2 }                                                                    | 无                                                     | 组合键，只能用fluent api配置。                                                                                                                                                                                                                                                                  |
+| .HasPrincipalKey(b =\> b.xxx)                                                                           |                                                       | Principal key：The properties that uniquely identify the principal entity. This may be the primary key or an alternate key.                                                                                                                                                            |
+| .HasAlternateKey(c =\> c.xxx);                                                                          |                                                       | 除了主键外，备用键还可用作每个实体实例的替代唯一标识符;它可用作关系的目标。 使用关系数据库时，这将映射到备用键列上的唯一索引/约束和引用列的一个或多个外键约束的概念。支持组合键。                                                                                                                                                                                            |
+| HasXXXKey(xxxxx).HasName("xxxx")                                                                        |                                                       | 配置xxxx约束的名称。                                                                                                                                                                                                                                                                          |
+| .IsConcurrencyToken()                                                                                   | [ConcurrencyCheck]                                    | 并发标记                                                                                                                                                                                                                                                                                  |
+| .HasOne(p =\> p.Blog).WithMany(b =\> b.Posts);                                                          | [InverseProperty(“映射到引用的实体类型的反向导航属性的nameof”)]         | 显式声明反向导航属性（因为有多个同一个类型的导航属性的时候，映射到哪个反向导航属性是二义性的，需要进行显式配置） HasOne、HasMany是指明配置自己实体类上的引用的导航属性（即对方），WithOne、WithMany是指明引用的实体类型的反向导航属性（即自身） 逻辑即：我（Post）有一个对应的Blog（可导航过去），这个Blog有很多Post（通过这个Blog找到Post，即自己，叫反向导航，是相对于这个模型而非某个字段而言的）                                                         |
+| .HasMany(b =\> b.Posts).WithOne();                                                                      |                                                       | 只有导航属性，没有反向导航属性；即导航属性那个类没有自身的引用                                                                                                                                                                                                                                                       |
+| .HasForeignKey(p=\>p.BlogForeignKey); .HasForeignKey(s =\> new { s.CarState, s.CarLicensePlate });（组合键） | [ForeignKey("BlogForeignKey")]（仅支持简单键）                | 指明当前多对多/一对多/多对一/一对一的关系的导航属性的外键是根据(依赖)哪个(或多个)属性 注意在one-to-one的关系中需要显式配置外键 如果前面使用了只有导航属性没有反向导航属性的，那么HasForeignKey无法自动推断，需要使用HasForeignKey\<T\>的泛型形式                                                                                                                                     |
+| HasPrincipalKey(p =\> p.Id);                                                                            |                                                       | 指明当前多对多/一对多/多对一/一对一的关系的主键，与外键相应，即这边的外键映射到那边的主键，本来外键默认对应是那边的Primary Key，但是可以换成这设定的Principal Key。 PS：当该关系所映射的主键与本身表主键设置不一致时才需要指明。                                                                                                                                                       |
+| .OnDelete(DeleteBehavior.Cascade);                                                                      |                                                       | 配置级联删除                                                                                                                                                                                                                                                                                |
+| .Ignore(b=\>b.LoadedFromDatabase)                                                                       | [NotMapped]                                           | 排除一个属性                                                                                                                                                                                                                                                                                |
+| .Property(b=\>b.BlogId).HasColumnName("blog_id");                                                       | [Column("blog_id")]                                   | 默认情况下是映射与字段名一致的属性，不一致要指明列名                                                                                                                                                                                                                                                            |
+| .HasColumnType("decimal(5, 2)")                                                                         | [Column(TypeName = "decimal(5, 2)")]                  | 按照数据库的类型方式标注类型                                                                                                                                                                                                                                                                        |
+| .ToTable("blogs")                                                                                       | [Table("blogs")]                                      | 指定映射的数据库表名                                                                                                                                                                                                                                                                            |
+| .ToTable("blogs", schema: "blogging")                                                                   | [Table("blogs", Schema = "blogging")]                 | 指定映射的数据库表的视图名                                                                                                                                                                                                                                                                         |
+| .HasDefaultValue(x)                                                                                     |                                                       | 指定某个属性有默认值                                                                                                                                                                                                                                                                            |
+| .HasDefaultValueSql("getdate()")                                                                        |                                                       | 指定某个属性有默认值（用的sql里面的默认值）                                                                                                                                                                                                                                                               |
+| .ValueGeneratedOnAddOrUpdate()                                                                          | [DatabaseGenerated(DatabaseGeneratedOption.Computed)] | This just lets EF know that values are generated for added or updated entities, it does not guarantee that EF will setup the actual mechanism to generate values.                                                                                                                     |
+| .HasComputedColumnSql("[LastName] + ', ' + [FirstName]")                                                |                                                       | Computed columns In some cases, the column's value is computed every time it is fetched (sometimes called virtual columns), and in others it is computed on every update of the row and stored (sometimes called stored or persisted columns). This varies across database providers. |
+
+术语：
+
+Post.Blog is a reference navigation property（引用导航属性，是一个）
+
+Blog.Posts is a collection navigation property（集合导航属性，是多个）
+
+Post.Blog is the inverse navigation property （反向导航属性）of Blog.Posts (and vice versa 反之亦然) 是两者之间的关系，能相互导航过去
+
+显式指明导航属性，有冲突的情况：
+
+![](../../attachments/e771f44954f4ec97925196d0480dd9f7.png)
+
+![](../../attachments/2fa253323ef8af111b635da5434a0508.png)
+
+### EFCore跟踪修改
+
+//如果直接使用user则会报错，似乎是因为user也是从KouContext中取出来的，ef认为被修改了，没有取消跟踪。
+
+如果一个Model中的外键对象是用的之前从context中取出的模型而被修改，则会报错，可能是因为不能同时修改外键对象又增加Model。只能从context中取出最新的外键对象然后加到Model中，才可绑定。
+
+## 日志排查
+
+optionsBuilder.LogTo(Console.WriteLine);
+
+options.EnableSensitiveDataLogging();
+
+## 注意事项
+
+### 在Context内就SaveChanges
+
+比如blog和posts的关系，首先需要blog.Incloude(p=\>p.posts)
+
+在两个context下进行修改时，会出现问题。
+
+比如在第一个context中
+
+将Blog.Posts = new List\<Post\>();了
+
+然后将这个Blog对象传到另一个Context中，
+
+context.Blog.Update(blog);
+
+这里将不会自动trace Blog原有的post，都会当作新的Post加入到表中。
+
+### Equal重写
+
+重写后的Equal在EFCore的linq to sql中似乎没有用（是使用的设定的候选键对比而不是override之后的），必须转换为Client Evaluation才有效。
+
+EFCore的Single、Update、Delete等等都是通过设定的候选键，而非重写后的Equal。
+
+### Parameterized constructor
+
+Navigator property不会被认为是entity的property，可以使用private constructor，做个无参constructor.
+
+另外如果其他的property无法映射，需要build设置 property 指明它是entity的property.
+
+### Backing Field
+
+Starting with EF Core 3.0, if the backing field for a property is known, then EF Core will always read and write that property using the backing field. This could cause an application break if the application is relying on additional behavior coded into the getter or setter methods.
+
+即，如果有Name这个property且有_name，会自动的找到它的_name这个Backing Field（需要满足条件才可以自动找到，<https://docs.microsoft.com/en-us/ef/core/modeling/backing-field>），然后读写它而不是通过property的get或者set property。所以如果需要property的读写逻辑，则需要
+
+modelBuilder.UsePropertyAccessMode(PropertyAccessMode.PreferFieldDuringConstruction);
+
+By default, EF will always read and write to the backing field - assuming one has been properly configured - and will never use the property. However, EF also supports other access patterns. For example, the following sample instructs EF to write to the backing field only while materializing, and to use the property in all other cases:
+
+即，只在初始化阶段使用field。
+
+## 反向工程
+
+自动根据已设计好的数据库信息生成model类以及dbContext
+
+Scaffold-DbContext -Connection "Server=127.0.0.1;User Id=root;Password=root;Database=kou;" -Provider MySql.Data.EntityFrameworkCore -OutputDir Models/EFTemp -DataAnnotations -Project Koubot.SDK -force -Verbose -Tables system_global_setting,system_alias_list,system_plugin_enable_setting
+
+如果build failed是因为整个解决方案无法build，说明有错误，要解决这些错误然后重新生成解决方案才可以进行反向工程
+
+DataAnnotations 这个是生成自动生成model字段的attribute的
+
+force是覆盖已经存在的文件的
+
+outputDir是生成的文件路径
+
+Provider mysql那个是provider
+
+Verbose 显示详细
+
+Tables 是指定表名（一般更新的时候用）
+
+连接字段是connection
+
+详细见：<https://docs.microsoft.com/zh-cn/ef/core/miscellaneous/cli/powershell>
+
+框架默认具有公共getter和setter的属性会被包括在模型中，可以用NotMapped排除
+
+public class Blog  
+{  
+ public int BlogId { get; set; }  
+ public string Url { get; set; }  
+​  
+ [NotMapped]  
+ public DateTime LoadedFromDatabase { get; set; }  
+}
+
+## Migration
+
+| Terminal                                                                                                                           | 操作                                                                                                                     | 解释                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| dotnet ef migrations add \<Alter Operation Name\>                                                                                  | Add-Migration \<Alter Operation Name\>                                                                                   | 每次操作变动需要Add Migration，相当于git中的commit。 -Project Project.Name 来指定Target project，当然可以直接在Default Project中选择。Target project实际上是Migration所在Assembly，默认是在Context所在Assembly下，可以通过DbContextOptionsBuilder中设置MigrationsAssembly，分离Migration到其他项目（Migration所在项目必须是Class Library） 似乎第一次Migration无法识别，需要先在Context项目上生成一次，然后直接复制Migration文件到Migration项目。然后也可以随意更改生成的namespace，下次migrate会自动识别。 默认需要一个启动项目，先获取到Context对象，然后进行模型对比映射，得出变更，进而生成Migration文件。 启动项目是Console或asp.net core等项目，可以通过自定义一个启动入口类，管理启动项目获取到的Context对象是如何构造的：IDesignTimeDbContextFactory\<FlightContext\>  至于terminal中，需要先移动到启动的项目文件夹下，然后使用--project来指定migration项目 |
+| dotnet ef database update                                                                                                          | Update-Database                                                                                                          | 操作变动后需要同步到数据库，相当于git中的push                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|                                                                                                                                    | Update-Database [ToSpecificState]                                                                                        | 可以将数据库回滚到特定的Migration状态                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| dotnet ef migrations remove                                                                                                        | Remove-Migration                                                                                                         | 移除最新一次的Add Migration操作                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| dotnet ef migrations script                                                                                                        | Script-Migration                                                                                                         | 需要到生产环境时，使用该命令进行同步修改                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| dotnet ef migrations script AddNewTables AddAuditTable                                                                             | Script-Migration [AddNewTables] [AddAuditTable]                                                                          | 生成从指定migration状态到指定migration状态的修改SQL语句                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| dotnet ef migrations list                                                                                                          | Get-Migration                                                                                                            | list all existing migrations                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| dotnet ef dbcontext scaffold "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Chinook" Microsoft.EntityFrameworkCore.SqlServer | Scaffold-DbContext 'Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Chinook' Microsoft.EntityFrameworkCore.SqlServer | Reverse Engineering 反向工程 DB First  -Tables Artist, Album可以指定仅反向给定表名  -Force 需要重新进行反向工程  -Context 指定Context                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
