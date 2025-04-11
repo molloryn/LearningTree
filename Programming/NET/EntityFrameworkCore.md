@@ -47,6 +47,71 @@ var context = repo.GetDbContextAsync();
 context.SaveChanges(); //可以成功保存。
 ```
 
+## 外键问题
+
+### 自动生成了Shadow state property
+
+在配置一对多关系的时候，误写成了如下配置：
+```cs
+  builder.HasOne<Role>().WithMany().HasForeignKey(p => p.GroupId);
+```
+导致会自动生成`RoleId`列。
+应写为：
+```cs
+  builder.HasOne(p=>p.Role).WithMany().HasForeignKey(p => p.GroupId);
+```
+
+## 继承关系
+在EF Core中，当实体类之间存在继承关系并使用TPH（Table-Per-Hierarchy）映射策略时，会自动生成Discriminator列。该列用于区分同一表中不同类型的实体，该列的值表示每一行对应的具体实体类型（如基类名或子类名）。
+继承关系有多种映射策略，如`Table-Per-Hierarchy`，`Table-Per-Type`等。
+
+如果发现自动生成了Discriminator列，一般是因为将基类和子类添加到了当前DbContext，如`DbSet<BaseEntity>`，或通过`IEntityTypeConfiguration`自动注册进来的实体。
+
+
+
+## 更新
+
+### ChangeTracker
+
+ChangeTracker是在调用ChangeTracker.Entries()（内部调用了ChangeTracker.DetectChanges）时才会刷新状态是Modified，如果发现值没有变化，将还是UnChanged，所以在数据同步场景中进行Delete操作，并不会触发更新。
+
+在实现CDC时发现删除操作未能成功执行，ChangeTracker发现最后因为软删除置为Unchanged后SaveChanges时会调用一次ChangeTracker.Entries()计算值是否变化， 计算结果为Unchanged。
+
+```cs
+   public override async Task DeleteManyAsync(IEnumerable<TEntity> entities, bool autoSave = false, CancellationToken cancellationToken = default)
+   {
+       var entityArray = entities.ToArray();
+       if (entityArray.IsNullOrEmptySet())
+       {
+           return;
+       }
+       
+       var dbContext = await GetDbContextAsync();
+
+       dbContext.RemoveRange(entityArray.Select(x => x));
+
+       if (autoSave)
+       {
+           await dbContext.SaveChangesAsync(cancellationToken);
+       }
+   }
+ protected virtual void ApplyConceptsForDeletedEntity(EntityEntry entry)
+ {
+     if (entry.Entity is not IHasSoftDelete entity)
+     {
+         return;
+     }
+
+     //entry.Reload();
+     entry.State = EntityState.Unchanged;
+     entity.IsDeleted = true;
+
+     //ObjectHelper.TrySetProperty(entry.Entity.As<IHasSoftDelete>(), x => x.IsDeleted, () => true);
+     SetDeletionAuditProperties(entry);
+ }
+
+
+```
 
 
 

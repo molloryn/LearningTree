@@ -26,6 +26,7 @@
 #### 类型不一致
 
 比如`labelId:100000` 就无法序列化到 `string labelId`上
+
 ### JsonConstructor 特性
 
 Constructor上的参数必须与属性或字段一样，否则会报错：`Each parameter in the deserialization constructor on type xxx must bind to an object property`
