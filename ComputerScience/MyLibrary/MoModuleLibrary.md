@@ -12,6 +12,6 @@
 ```cs
 AddService()
 {
-    Module.Register<T>(Action(option=>option));
+    Module.Register<TModule>(Action(option=>option));
 }
 ```
