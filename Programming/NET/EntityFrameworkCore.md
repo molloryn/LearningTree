@@ -141,7 +141,9 @@ context.SaveChanges(); //可以成功保存。
 
 ### ChangeTracker
 
-ChangeTracker是在调用ChangeTracker.Entries()（内部调用了ChangeTracker.DetectChanges）时才会刷新状态是Modified，如果发现值没有变化，将还是UnChanged，所以在数据同步场景中进行Delete操作，并不会触发更新。
+ChangeTracker判断更新的原理是在调用ChangeTracker.Entries()（内部调用了ChangeTracker.DetectChanges）时会与Originally值进行对比，如果值不一致才会刷新状态是Modified，否则将还是UnChanged。
+只有开启了跟踪才会变为`Unchanged`状态，也就是正在跟踪，此时的状态进行修改属性会记录下`Original`值。否则是为`Detached`状态，不会进行变化。但有其他方式将`Detached`状态转为其他跟踪状态（待补充），如Remove、Update等操作。
+
 
 在实现CDC时发现删除操作未能成功执行，ChangeTracker发现最后因为软删除置为Unchanged后SaveChanges时会调用一次ChangeTracker.Entries()计算值是否变化， 计算结果为Unchanged。
 
@@ -170,7 +172,6 @@ ChangeTracker是在调用ChangeTracker.Entries()（内部调用了ChangeTracker.
          return;
      }
 
-     //entry.Reload();
      entry.State = EntityState.Unchanged;
      entity.IsDeleted = true;
 
@@ -180,6 +181,10 @@ ChangeTracker是在调用ChangeTracker.Entries()（内部调用了ChangeTracker.
 
 
 ```
+
+实际上还可以使用`entry.Reload();`来计算当前状态，原理是先从数据库重新刷新当前实体值，变为`Unchanged`跟踪状态，然后进一步修改`IsDeleted`触发计算为`Unchanged`。但这里采用直接置`entry.State = EntityState.Unchanged`，可以增强性能，但对于CDC场景会失效，因为本身`Originally`就是`IsDeleted`，最终计算还是`Unchanged`，导致无法触发更新。这种软删除的场景可以转为使用Update。
+
+还有`Attach()`方法可以标记实体为`Unchanged`状态，即认为当前实体已经在数据库存在（`Originally`标记当前值），然后后续修改都可以被跟踪为`Modified`，就仅更新已更新的字段。
 
 
 
