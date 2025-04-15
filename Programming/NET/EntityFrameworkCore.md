@@ -141,7 +141,9 @@ context.SaveChanges(); //可以成功保存。
 
 ### ChangeTracker
 
-ChangeTracker是在调用ChangeTracker.Entries()（内部调用了ChangeTracker.DetectChanges）时才会刷新状态是Modified，如果发现值（与Originally值进行对比，仅开启跟踪才会有值）没有变化，将还是UnChanged，所以在数据同步场景中进行Delete操作，并不会触发更新。
+ChangeTracker判断更新的原理是在调用ChangeTracker.Entries()（内部调用了ChangeTracker.DetectChanges）时会与Originally值进行对比，如果值不一致才会刷新状态是Modified，否则将还是UnChanged。
+只有开启了跟踪才会变为`Unchanged`状态，也就是正在跟踪，此时的状态进行修改属性会记录下`Original`值。否则是为`Detached`状态，不会进行变化。但有其他方式将`Detached`状态转为其他跟踪状态（待补充），如Remove、Update等操作。
+
 
 在实现CDC时发现删除操作未能成功执行，ChangeTracker发现最后因为软删除置为Unchanged后SaveChanges时会调用一次ChangeTracker.Entries()计算值是否变化， 计算结果为Unchanged。
 
@@ -179,6 +181,9 @@ ChangeTracker是在调用ChangeTracker.Entries()（内部调用了ChangeTracker.
 
 
 ```
+
+
+还有`Attach()`方法可以标记实体为`Unchanged`状态，即认为当前实体已经在数据库存在（`Originally`标记当前值），然后后续修改都可以被跟踪为`Modified`，就仅更新已更新的字段。
 
 
 
