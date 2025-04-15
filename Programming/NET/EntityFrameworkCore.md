@@ -43,14 +43,28 @@ ConcurrencyStamp原理是生成SQL语句时带上`ConcurrencyStamp=@old`，然�
 
 #### SQLlite相关问题
 
+遇到一个更新用户数据失败问题，随便修改某个字段都会报错。而从EFCore的SQL语句也没法看出问题：
+![](../../attachments/d5c19e6587b245290ad303ae6af8e09.png)
+
+SQLite对于GUID字段的存储是TEXT，是大小写敏感的，但是C# GUID对象是大小写不敏感的，日志默认ToString是小写的。又因为EFCore对于的GUID类型生成的SQL是使用大写生成的，所以匹配不上导致更新失败。
+
+> 不要被程序生成的参数列表误导了，这里的参数日志是格式化的程序guid，不是真正的sql参数
+
+相关issues:
+[SQLite: Lower-case Guid strings don't work in queries · Issue #19651 · dotnet/efcore](https://github.com/dotnet/efcore/issues/19651)
+[Issue with uppercase/lowercase GUID · Issue #25043 · dotnet/efcore](https://github.com/dotnet/efcore/issues/25043)
+
+SQLite解决方案：
+
+```cs
+builder.Property(p=>p.Id).HasConversion(new GuidToStringConverter());
+
+```
 
 
 
 ### A second operation was started on this context instance
-同一个依赖注入的类的多个仓储共用一个DbContext（待确认），因此无法同步执行。注意异步方法的调用，是否都进行了await。注意入口方法是否是void忘记等待。
-
-
-
+同一个依赖注入的类的多个仓储共用一个DbContext（待确认），因此无法同步执行。**注意异步方法的调用，是否都进行了await**。注意入口方法是否是void忘记等待。
 
 
 #### Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application.'
