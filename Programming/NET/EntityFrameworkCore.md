@@ -1,5 +1,6 @@
 
-# Update
+# 问题
+## Update
 
 Update 方法会将传入的实体的状态设置为 Modified，但它只会处理根实体。EF Core 不会自动递归地将所有关联的子实体状态也设置为 Modified。
 
@@ -7,7 +8,60 @@ Update 方法会将传入的实体的状态设置为 Modified，但它只会处�
 Update 方法会更改所有实体数据为当前状态，所以一般用于`Disconnected Entity`的设置。
 `https://www.learnentityframeworkcore.com/dbcontext/modifying-data`
 
-# 问题
+
+### DbUpdateConcurrencyException
+
+`The database operation was expected to affect 1 row(s), but actually affected 0 row(s).`
+
+问题可通过EFCore生成的SQL语句进行排查，**可能实际上使用的SQL语句不一定就是真正执行的SQL**（详见Sqlite的问题）。
+1. 一般是因为Update操作时，此数据不存在。此数据可能已经被删除或已经被Update而无法匹配上。
+也有可能是需要Add的操作，错误的使用了Update方法。
+2. 还有就是SQL语句生成了并发检查相关的问题
+
+其实最根本的原因就是生成的Update SQL语句Where条件不匹配，找不到要更新的数据，然后判断EffectRow不一致。
+
+### AbpDbConcurrencyException
+
+ConcurrencyStamp原理是生成SQL语句时带上`ConcurrencyStamp=@old`，然后更新时更新为新的，如果失败证明数据库那边已经被其他修改了（证明版本不一致）。
+
+其他可能：
+1. 因为令牌在AbpContext SaveChanges时进行修改，若这次进行保存数据库失败，下次再进行修改，则也会抛出该异常。
+2. 一次请求，A微服务需要修改，A调用B，B恰好也去修改状态，这时候A再进行修改则会取出旧令牌匹配。（逻辑上是串行，其实没有问题）
+##### 修改令牌
+`GetAsync()`查出的实体实例被修改后，然后又重新多次查询相关实例并客户端侧修改，即使没有使用 `Update` 等方法也会导致并发异常。（这里是同事写了个递归函数）
+初步判断应该是令牌修改是ABP客户端侧判断，而非交给数据库判断，然后多次查询修改时发现令牌不匹配，直接在客户端侧触发并发修改异常。
+
+只读查询功能似乎要额外设置。具体看 `GetAsync()`设置。
+
+##### 多线程触发
+领域事件中UpdateAsync产生AbpDbConcurrencyException问题。最后发现其实就是多线程并发异常。眼光不能局限在某个服务，这次是事件多次触发，Redis拿到旧的数据导致的
+`https://sourcegraph.com/github.com/abpframework/abp@4f6426add5b69bfb273f601b1ddd9f1f89099a72/-/blob/framework/src/Volo.Abp.EntityFrameworkCore/Volo/Abp/EntityFrameworkCore/AbpDbContext.cs?L347:17&popover=pinned`
+`https://sourcegraph.com/github.com/abpframework/abp@4f6426add5b69bfb273f601b1ddd9f1f89099a72/-/blob/framework/src/Volo.Abp.EntityFrameworkCore/Volo/Abp/EntityFrameworkCore/AbpDbContext.cs?L520:28&popover=pinned`
+
+[处理并发冲突 - EF Core | Microsoft Learn](https://learn.microsoft.com/zh-cn/ef/core/saving/concurrency?tabs=data-annotations)
+
+
+#### SQLlite相关问题
+
+
+
+
+### A second operation was started on this context instance
+同一个依赖注入的类的多个仓储共用一个DbContext（待确认），因此无法同步执行。注意异步方法的调用，是否都进行了await。注意入口方法是否是void忘记等待。
+
+
+
+
+
+#### Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application.'
+Repository中的DbContext不可以`using`，直接交由ABP框架管理生命周期。
+```cs
+await using var context = await _repository.GetDbContextAsync(); //导致错误
+//直接使用
+var context = await _repository.GetDbContextAsync();
+
+```
+
 
 ## ABP仓储层
 
