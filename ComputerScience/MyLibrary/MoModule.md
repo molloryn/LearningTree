@@ -6,7 +6,8 @@
 
 1. 统一的、直觉性的基础设施库的注册、配置方式，上手简易。
 2. 自动进行中间件注册，只需要进行依赖注入配置即可。
-3. 提供高性能的服务注册方式，对于反射的自动注册操作，在所有的MoModule注册过程中，仅遍历一次。
+3. 无需担忧服务、中间件重复注册，任何模块均自动仅注册一次。
+4. 提供高性能的服务注册方式，对于反射的自动注册操作，在所有的MoModule注册过程中，仅遍历一次。
 
 
 ## 组成部分
@@ -43,30 +44,35 @@ public class ModuleGuideAuthorization
 ### 模块配置
 
 为了提高开发者设置的优先级，在开发者AddMoModule的过程中，配置Option的Action设置如果不是模块第一次注册，仍会覆盖上一次的配置设置。这是因为模块的级联注册可能在开发者使用模块之前，已经进行了模块的配置。
+如若有其他配置需求，供开发者提供如下扩展方法：
+```cs
+services.ConfigMoModulePost<TModuleOption>(Action<TModuleOption> config);
+services.ConfigMoModulePre<TModuleOption>(Action<TModuleOption> config);
+```
 
 
 ### 模块级联注册
 
-
-
-因此模块内部进行级联注册时可采用如下方式：
+模块内部进行级联注册时可采用如下方式：
 ```cs
-TryAddMoModule<TModuleOption>(EMoModule module, Action<Option> preConfig = null, Action<Option> postConfig = null)
+TryAddMoModule<TModuleOption>(Action<TModuleOption> preConfig = null, Action<TModuleOption> postConfig = null);
 ```
 
 
 
 
-# 设计
+# 原理
 
-实现MoDomainTypeFinder用于获取当前应用程序相关程序集及搜索，可设置业务程序集。
+## MoDomainTypeFinder 
+
+用于获取当前应用程序相关程序集及搜索，可设置业务程序集。
 用于Core扫描相关程序集所有类型进行自动注册、项目单元发现等，提高整个框架的性能。
 
-整个Services注册仅扫描一次业务程序集
-
+## ModuleBuilderExtensions
+依赖注入背后的设置方式
 ```cs
-AddService()
+services.AddMoModuleAuthorization()
 {
-    Module.Register<TModule>(Action(option=>option));
+    Module.Register<TModule>();
 }
 ```
