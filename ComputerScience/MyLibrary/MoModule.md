@@ -42,7 +42,7 @@ public class ModuleGuideAuthorization
 
 
 ### 模块配置
-
+	
 为了提高开发者设置的优先级，在开发者AddMoModule的过程中，配置Option的Action设置如果不是模块第一次注册，仍会覆盖上一次的配置设置。这是因为模块的级联注册可能在开发者使用模块之前，已经进行了模块的配置。
 如若有其他配置需求，供开发者提供如下扩展方法：
 ```cs
@@ -55,7 +55,11 @@ services.ConfigMoModulePre<TModuleOption>(Action<TModuleOption> config);
 
 模块内部进行级联注册时可采用如下方式：
 ```cs
-DependsOnMoModule<TModuleOption>(Action<TModuleOption> preConfig = null, Action<TModuleOption> postConfig = null);
+    public void DependsOnModule(params EMoModules[] modules);
+    
+    public void DependsOnModule<TOtherModuleOption>(Action<TOtherModuleOption>? preConfig = null,
+        Action<TOtherModuleOption>? postConfig = null) 
+        where TOtherModuleOption : IMoModuleOption;
 ```
 
 
