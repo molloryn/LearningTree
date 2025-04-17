@@ -129,6 +129,18 @@ context.SaveChanges(); //可以成功保存。
   builder.HasOne(p=>p.Role).WithMany().HasForeignKey(p => p.GroupId);
 ```
 
+### 更新导航属性
+
+[Changing Foreign Keys and Navigations - EF Core | Microsoft Learn](https://learn.microsoft.com/en-us/ef/core/change-tracking/relationship-changes)
+
+因为EFCore提供两种方式更新，一种是用导航属性，如`Reference navigation`及`Collection navigation`，即一个是对一的，一个是对多的实体。另外一种方式是操作外键，这种需要显式定义外键并配置才能操作。
+
+只用一种方式更新关系：
+
+> Do not write code to manipulate all navigations and FK values each time a relationship changes. Such code is more complicated and must ensure consistent changes to foreign keys and navigations in every case. If possible, just manipulate a single navigation, or maybe both navigations. If needed, just manipulate FK values. Avoid manipulating both navigations and FK values.
+
+
+
 ## 继承关系
 在EF Core中，当实体类之间存在继承关系并使用TPH（Table-Per-Hierarchy）映射策略时，会自动生成Discriminator列。该列用于区分同一表中不同类型的实体，该列的值表示每一行对应的具体实体类型（如基类名或子类名）。
 继承关系有多种映射策略，如`Table-Per-Hierarchy`，`Table-Per-Type`等。
