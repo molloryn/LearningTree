@@ -215,7 +215,6 @@ cmd运行`shell:startup`打开自定义自启动列表放入该bat文件
 
 #### win11启动组策略gpedit.msc
 
-
 ```powershell
 @echo off
 
