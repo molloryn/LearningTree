@@ -17,7 +17,7 @@
 MoModule作为库的核心注册机制
 每个Library有自己的MoModule，该Module中，并
 1. `ModuleOption{ModuleName}`: 模块Option的设置
-2. `ModuleGuide{ModuleName}`: 模块进一步配置的向导类
+2. `ModuleGuide{ModuleName}`: 模块配置的向导类
 3. `Module{ModuleName}`: 含有依赖注入的方式以及配置ASP.NET Core中间件等具体实现
 4. `ModuleBuilderExtensions{ModuleName}`: 面向用户的扩展方法
 
@@ -32,15 +32,16 @@ services.AddMoModuleAuthorization(Action<ModuleOptionAuthorization> option = nul
 ```cs
 public class ModuleGuideAuthorization
 {
-    public void AddPermissionBit<TEnum>(string claimTypeDefinition) where TEnum : struct, Enum
-    {
-        MoModule.ConfigureExtraServices<ModuleAuthorization>(services =>
-        {
-            var checker = new PermissionBitChecker<TEnum>(claimTypeDefinition);
-            PermissionBitCheckerManager.AddChecker(checker);
-            services.AddSingleton<IPermissionBitChecker<TEnum>, PermissionBitChecker<TEnum>>(_ => checker);
-        });
-    }
+     public ModuleGuideAuthorization AddPermissionBit<TEnum>(string claimTypeDefinition) where TEnum : struct, Enum
+ {
+     ConfigureExtraServices(nameof(AddPermissionBit), context =>
+     {
+         var checker = new PermissionBitChecker<TEnum>(claimTypeDefinition);
+         PermissionBitCheckerManager.AddChecker(checker);
+         context.Services.AddSingleton<IPermissionBitChecker<TEnum>, PermissionBitChecker<TEnum>>(_ => checker);
+     });
+     return this;
+ }
 }
 ```
 
@@ -57,13 +58,15 @@ services.ConfigMoModulePre<TModuleOption>(Action<TModuleOption> config);
 
 ### 模块级联注册
 
-模块内部进行级联注册时可采用如下方式：
+模块内部进行级联注册时可采用如下方法获取`Guide`类进行进一步配置。
 ```cs
-    public void DependsOnModule(params EMoModules[] modules);
-    
-    public void DependsOnModule<TOtherModuleOption>(Action<TOtherModuleOption>? preConfig = null,
-        Action<TOtherModuleOption>? postConfig = null) 
-        where TOtherModuleOption : IMoModuleOption;
+protected TOtherModuleGuide DependsOnModule<TOtherModuleGuide>()  where TOtherModuleGuide : MoModuleGuide, new()
+{
+    return new TOtherModuleGuide()
+    {
+        GuideFrom = CurModuleEnum()
+    };
+}
 ```
 
 
@@ -79,8 +82,9 @@ services.ConfigMoModulePre<TModuleOption>(Action<TModuleOption> config);
 ## ModuleBuilderExtensions
 依赖注入背后的设置方式
 ```cs
-services.AddMoModuleAuthorization()
+public static ModuleGuideAuthorization AddMoModuleAuthorization<TEnum>(this IServiceCollection services, string claimTypeDefinition) where TEnum : struct, Enum
 {
-    Module.Register<TModule>();
+    return new ModuleGuideAuthorization()
+        .AddDefaultPermissionBit<TEnum>(claimTypeDefinition);
 }
 ```
