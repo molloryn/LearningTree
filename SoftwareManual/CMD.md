@@ -177,6 +177,18 @@ Dism /Online /Cleanup-Image /CheckHealth
 Dism /Online /Cleanup-Image /RestoreHealth
 ```
 
+## 解除文件关联
+
+```sh
+assoc.mp4 # 获取mp4关联的文件类型
+# .mp4=WMP11.AssocFile.MP4
+ftype | findstr "MP4" # 查找文件类型关联的打开程序
+# PotPlayerMini64.MP4="D:\Program Files\DAUM\PotPlayer\PotPlayerMini64.exe" "%1"
+# 通过下面两条置空
+assoc.mp4=
+ftype PotPlayerMini64.MP4=
+```
+
 
 ### 入域
 
