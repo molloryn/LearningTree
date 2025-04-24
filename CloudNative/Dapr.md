@@ -244,6 +244,11 @@ Self-host 模式，不依赖docker环境，需要使用`dapr init --slim`。离�
 
 > Visual Studio 由于预热机制，Docker模式下**边车仅启动一次，除非自行重启，边车是不会重读配置的**。比如监听领域事件。
 
+
+#### Fatal error from runtime: failed to retrieve the initial identity certificate: error from sentry SignCertificate: rpc error: code = PermissionDenied desc = failed to get configuration
+查看`dapr-sentry`的日志发现有个配置读取不到，因为命名空间不对。
+
+
 #### Requesting HTTP version 2.0 with version policy RequestVersionOrHigher while unable to establish HTTP/2 connection
 可能是使用了 `http_proxy`和 `https_proxy` 的原因
 .NET populates the HttpClient DefaultProxy from these environment variables. My company proxy appears to be interfering with HTTP/2 (unsupported?), preventing gRPC from working correctly. The workaround for local development is to manually set the default proxy for the HttpClient before making the gRPC call:
