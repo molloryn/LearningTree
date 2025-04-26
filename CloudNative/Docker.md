@@ -375,6 +375,7 @@ sudo journalctl -u docker.service
 Apr 26 14:29:15 lavm-xi6x7kk6zz systemd[1]: docker.service: Consumed 27min 196ms CPU time. -- Boot 5cd1554dd89e43c582bcbfe75e1facfa -- Apr 26 14:30:14 lavm-xi6x7kk6zz systemd[1]: Starting Docker Application Container Engine... Apr 26 14:30:14 lavm-xi6x7kk6zz dockerd[820]: unable to configure the Docker daemon with file /etc>
 ```
 
+shao
 
 
 #### The "Configuration" parameter is not supported by the "WaitForWarmupCompletion" task loaded from assembly: Microsoft.VisualStudio.Containers.Tools.Tasks,
