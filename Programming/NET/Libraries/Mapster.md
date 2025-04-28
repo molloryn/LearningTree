@@ -1,5 +1,14 @@
 # Mapster
 
+TypeAdapterConfig\<TSource, TDestination\>
+
+.NewConfig()
+
+.Map(dest =\> dest.Id, src =\> src.Id)
+
+.Map(dest =\> dest.Name, src =\> src.Name)
+
+.IgnoreNonMapped(true)//这里的意思是除了显式配置的Map，其他都忽略
 
 # TroubleShotting
 

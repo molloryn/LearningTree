@@ -11,5 +11,6 @@
   ],
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "readableLineLength": false
+  "readableLineLength": false,
+  "showInlineTitle": false
 }

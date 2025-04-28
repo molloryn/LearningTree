@@ -8,8 +8,11 @@
 
 ## TroubleShooting
 
-### 未成功序列化
-`SystemText`.`Json`默认行为是只反序列化到`public`属性，对于非`public`的属性的需要加`JsonInclude`标签才会设置。
+### 未成功反序列化
+`SystemText`.`Json`默认行为是只反序列化到`public`属性（或`init`？），对于非`public`的属性的需要加`JsonInclude`标签才会设置。
+[c# - Use System.Text.Json to deserialize properties with private setters - Stack Overflow](https://stackoverflow.com/questions/62270834/use-system-text-json-to-deserialize-properties-with-private-setters/67206063#67206063)
+默认是大小写敏感的，需要设置option insensitive
+.NET 7后新增JsonRequired
 
 
 ### 序列化值为{}
@@ -28,6 +31,9 @@
 ```
 
 ### 序列化失败
+
+默认情况下不会序列化`Field`，只会序列化`Properties`。而`Tuple`是两个public field，所以也不会序列化`Tuple`
+
 #### 类型不一致
 
 比如`labelId:100000` 就无法序列化到 `string labelId`上

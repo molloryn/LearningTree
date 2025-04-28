@@ -228,7 +228,7 @@
   "cMenuBottomValue": 4.25,
   "cMenuNumRows": 12,
   "cMenuWidth": 502,
-  "cMenuFontColor": "#c00000",
+  "cMenuFontColor": "#0c0c0c",
   "cMenuBackgroundColor": "#b1ffff",
   "autohide": false,
   "custom_bg1": "#FFB78B8C",
