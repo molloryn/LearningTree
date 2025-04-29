@@ -9,25 +9,24 @@
 ## TroubleShooting
 
 ### 未成功反序列化
-`SystemText`.`Json`默认行为是只反序列化到`public`属性（或`init`？），对于非`public`的属性的需要加`JsonInclude`标签才会设置。
+`System.Text.Json`默认行为是只反序列化到`public`属性（或`init`？），对于非`public`的属性的需要加`JsonInclude`标签才会设置。
 [c# - Use System.Text.Json to deserialize properties with private setters - Stack Overflow](https://stackoverflow.com/questions/62270834/use-system-text-json-to-deserialize-properties-with-private-setters/67206063#67206063)
 默认是大小写敏感的，需要设置option insensitive
-.NET 7后新增JsonRequired
+.NET 7后新增`JsonRequired`
 
 
 ### 序列化值为{}
 默认情况下是序列化当前类型字段，如果用`this`关键字要小心。
 
-```cs
-
-    /// <summary>
-    /// 将当前状态提取为可追踪链信息
-    /// </summary>
-    /// <returns></returns>
-    public string GetCurTracingData()
-    {
-        return JsonSerializer.Serialize(this, TracingDataJsonOptions); //应改为(object)this
-    }
+```csharp
+/// <summary>
+/// 将当前状态提取为可追踪链信息
+/// </summary>
+/// <returns></returns>
+public string GetCurTracingData()
+{
+    return JsonSerializer.Serialize(this, TracingDataJsonOptions); //应改为(object)this
+}
 ```
 
 ### 序列化失败
@@ -43,8 +42,7 @@
 Constructor上的参数必须与属性或字段一样，否则会报错：`Each parameter in the deserialization constructor on type xxx must bind to an object property`
 似乎多了或少了都不行？
 
-```cs
-
+```csharp
 public class Person
 {
     public string  Name { get; init; }
@@ -57,15 +55,14 @@ public class Person
     }
 }
 
-   var json2 = """
-               {
-               "tracingData": "123",
-               "changingList": [
-                "ddd"
-               ],
-               "name" : "",
-               "age": ""
-               }
-               """;
-
+var json2 = """
+           {
+           "tracingData": "123",
+           "changingList": [
+            "ddd"
+           ],
+           "name" : "",
+           "age": ""
+           }
+           """;
 ```
