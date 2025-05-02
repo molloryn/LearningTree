@@ -256,31 +256,32 @@ https://github.com/gubeihc/blasting 前端密码爆破
 
 ## 效率
 
-| 软件名                 | 场景                                 | 备注                                                                    |
-| :------------------ | :--------------------------------- | :-------------------------------------------------------------------- |
-| Snipaste            | 截图贴图工具                             |                                                                       |
-| GoldenDict          | 支持MDict的字典工具                       |                                                                       |
-| FluentSearch        | 快捷搜索栏，大量功能                         |                                                                       |
-| Quicker             | 鼠标中键插件扩展、类Workflow编程、含有快捷搜索栏       | 收费版可翻页                                                                |
-| utools              | 类似Quicker，但支持markdown笔记搜索          | [插件离线安装](https://blog.csdn.net/m0_32156988/article/details/126415067) |
-| DevToys             | 如格式化JSON，JSON转YAML，比较文本，测试RegExp   | [veler/DevToys](https://github.com/veler/DevToys)                     |
-| PowerToys           | 微软开源功能增强工具，包括批量重命名、图像压缩、进程解锁等      | [microsoft/PowerToys](https://github.com/microsoft/PowerToys)         |
-| Captura             | 开源录屏工具                             |                                                                       |
-| TreeSizePro         | 用饼图方式直观的查看硬盘占用情况                   |                                                                       |
-| AnyTxt.Searcher     | 能够索引doc,txt,pdf等文件内容，全盘搜索文件内容      |                                                                       |
-| Bandicam            | 录屏工具（收费）                           |                                                                       |
-| UACWhitelistTool    | UAC添加白名单，将以管理员运行的弹窗屏蔽，例如everything | [XIU2/UACWhitelistTool](https://github.com/XIU2/UACWhitelistTool)     |
-| WinMerge            | 开源的文件比较/合并工具                       |                                                                       |
-| Everything          | 最强全局文件搜索                           |                                                                       |
-| ScreenToGif         | Gif录屏工具                            |                                                                       |
-| Textify             | 无限制复制工具，替代OCR                      | [m417z/Textify](https://github.com/m417z/Textify)                     |
-| PixPin              | 截图贴图长截图工具                          |                                                                       |
-| WizTree             | TreeSizePro免费替代品                   |                                                                       |
-| ab-download-manager | 仿IDM的开源下载器                         | [amir1376](https://github.com/amir1376/ab-download-manager)           |
-| FileCentipede       | 全能下载器，嗅探下载等                        | [filecxx/FileCentipede](https://github.com/filecxx/FileCentipede)     |
-| winhex              | 010editor替代                        |                                                                       |
-| ImHex               | 010editor超级替代                      | [WerWolv/ImHex](https://github.com/WerWolv/ImHex)                     |
-|                     |                                    |                                                                       |
+| 软件名                 | 场景                                         | 备注                                                                    |
+| :------------------ | :----------------------------------------- | :-------------------------------------------------------------------- |
+| Snipaste            | 截图贴图工具                                     |                                                                       |
+| GoldenDict          | 支持MDict的字典工具                               |                                                                       |
+| FluentSearch        | 快捷搜索栏，大量功能                                 |                                                                       |
+| Quicker             | 鼠标中键插件扩展、类Workflow编程、含有快捷搜索栏               | 收费版可翻页                                                                |
+| utools              | 类似Quicker，但支持markdown笔记搜索                  | [插件离线安装](https://blog.csdn.net/m0_32156988/article/details/126415067) |
+| DevToys             | 如格式化JSON，JSON转YAML，比较文本，测试RegExp           | [veler/DevToys](https://github.com/veler/DevToys)                     |
+| PowerToys           | 微软开源功能增强工具，包括批量重命名、图像压缩、进程解锁等              | [microsoft/PowerToys](https://github.com/microsoft/PowerToys)         |
+| Captura             | 开源录屏工具                                     |                                                                       |
+| TreeSizePro         | 用饼图方式直观的查看硬盘占用情况                           |                                                                       |
+| AnyTxt.Searcher     | 能够索引doc,txt,pdf等文件内容，全盘搜索文件内容              |                                                                       |
+| Bandicam            | 录屏工具（收费）                                   |                                                                       |
+| UACWhitelistTool    | UAC添加白名单，将以管理员运行的弹窗屏蔽，例如everything         | [XIU2/UACWhitelistTool](https://github.com/XIU2/UACWhitelistTool)     |
+| WinMerge            | 开源的文件比较/合并工具                               |                                                                       |
+| Everything          | 最强全局文件搜索                                   |                                                                       |
+| ScreenToGif         | Gif录屏工具                                    |                                                                       |
+| Textify             | 无限制复制工具，替代OCR                              | [m417z/Textify](https://github.com/m417z/Textify)                     |
+| PixPin              | 截图贴图长截图工具                                  |                                                                       |
+| WizTree             | TreeSizePro免费替代品                           |                                                                       |
+| ab-download-manager | 仿IDM的开源下载器                                 | [amir1376](https://github.com/amir1376/ab-download-manager)           |
+| FileCentipede       | 全能下载器，嗅探下载等                                | [filecxx/FileCentipede](https://github.com/filecxx/FileCentipede)     |
+| winhex              | 010editor替代                                |                                                                       |
+| ImHex               | 010editor超级替代                              | [WerWolv/ImHex](https://github.com/WerWolv/ImHex)                     |
+| OBS                 | Open Broadcaster Software bandicam录屏软件开源替代 | [Open Broadcaster Software \| OBS](https://obsproject.com/)           |
+|                     |                                            |                                                                       |
 
 ## Audio
 | 软件名                       | 场景                  | 备注  |
