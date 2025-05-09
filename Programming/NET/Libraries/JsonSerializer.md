@@ -14,6 +14,10 @@
 默认是大小写敏感的，需要设置option insensitive
 .NET 7后新增`JsonRequired`
 
+#### 元组无法序列化
+
+直至`.NET 8.0`，仍对元组序列化支持不够，目前仅有设置`IncludeFields=true`才会序列化成功，且序列化为`Items = xx`的形式，若有命名，反序列化时也为`(null, null)`
+
 
 ### 序列化值为{}
 默认情况下是序列化当前类型字段，如果用`this`关键字要小心。
