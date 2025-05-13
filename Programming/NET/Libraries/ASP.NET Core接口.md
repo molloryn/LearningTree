@@ -112,3 +112,32 @@ Task.Factory.StartNew(()=>{
 
 ## 待学
 [深入解析ASP.NET Core MVC应用的模块化设计[上篇]-腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/2394132)
+
+
+
+## 中间件
+
+中间件的顺序非常重要，比如 `UseRouting` 必须在 `UseEndpoints` 之前，否则会报错。
+
+`UseRouting` 必须接一个 `UseEndpoints`，用于配置 `UseRouting` 中路由信息。而且一旦第一次用了 `UseEndpoints`，后续再次使用 `UseEndpoints` 的操作都会附加到第一次 `UseEndpoints` 上，意味着两个 `UseEndpoints` 之间的中间件 `Middleware` 都会失效。
+
+因此应该先添加中间件，最后添加 `UserEndpoints`。
+
+示例顺序：
+```cs
+ app.UseMoExceptionHandler();
+ app.UseRouting();
+ app.UseSharedCors(config);
+ app.UseSharedDapr(config);
+ app.UseSharedLogging(config);
+ app.UseSharedJwt(config);
+ app.UseInvocationProxy(config);
+ app.UseSharedGrpcServices(config);
+ app.UseSharedHttpServices(config);
+ app.UseSharedDatabase(config);
+ app.UseEndpointsHttpServices(config, "基础功能");
+ app.UseEndpointsSharedJwt(config, "基础功能");
+ app.UseEndpointsSharedDatabase(config, "基础功能");
+ app.UseEndpointsSharedConfig(config, "基础功能");
+
+```
