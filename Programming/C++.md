@@ -1,13 +1,3 @@
-目录
-
-[类Class](#类class)
-
-[string类型](#string类型)
-
-[向量vector](#向量vector)
-
-[其他](#其他)
-
 #### C++引入名字空间（namespace）
 
 定义一个名字空间
