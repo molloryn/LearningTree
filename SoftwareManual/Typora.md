@@ -1,7 +1,9 @@
-# 自动生成标题编号
+# Typora
 
-打开Typora，然后依次点击：文件→偏好设置→外观→打开主题文件夹
-在该文件夹中创建`base.user.css`文件，内容如下，保存后重启Typora即可看到效果
+## 自动生成标题编号
+
+打开`Typora`，然后依次点击：文件→偏好设置→外观→打开主题文件夹
+在该文件夹中创建`base.user.css`文件，内容如下，保存后重启`Typora`即可看到效果
 
 ```css
 /** initialize css counter */

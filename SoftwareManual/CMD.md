@@ -1,8 +1,10 @@
-# PowerShell
+# CMD
 
-#### 安装SSH Server以支持SSH连接
+## PowerShell
 
-```sh
+### 安装SSH Server以支持SSH连接
+
+```powershell
 # 使用PowerShell以管理员权限执行，查看安装状态
 Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
 # 安装Server
@@ -24,16 +26,15 @@ Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 # 添加防火墙规则
 New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH SSH Server' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22 -Program "C:\Windows\System32\OpenSSH\sshd.exe"
 
-
 # ssh客户端生成ssh公钥与私钥，以使用无密码连接，将生成的公钥放到ssh服务端
 ssh-keygen -q -b 2048 -P "" -f <hostname>_rsa -t rsa
 # 具体操作： https://stackoverflow.com/a/69970152
 ```
 
 仍然无效的可以使用如下方法安装
-[Manually install OpenSSH in Windows Server (saotn.org)](https://www.saotn.org/manually-install-openssh-in-windows-server/)
+[Manually install OpenSSH in Windows Server](https://www.saotn.org/manually-install-openssh-in-windows-server/)
 
-#### 获取CPU温度
+### 获取CPU温度
 
 ```powershell
 $data = Get-WMIObject -Query "SELECT * FROM Win32_PerfFormattedData_Counters_ThermalZoneInformation" -Namespace "root/CIMV2"
@@ -41,42 +42,41 @@ $data = Get-WMIObject -Query "SELECT * FROM Win32_PerfFormattedData_Counters_The
 @($data)[0].HighPrecisionTemperature
 ```
 
-#### 临时无限制模式
+### 临时无限制模式
 
 `pwsh -ExecutePolicy Unrestricted`
 
 在当前会话有效
 
-#### 获取电池寿命报告
+### 获取电池寿命报告
 
 `powercfg batteryreport output "D:\\battery_report.html"`
 
-#### 计算文件sha256
+### 计算文件sha256
 
 `Get-FileHash filePath`
 
 `CertUtil -hashfile {PATH AND FILE NAME} {SHA256|MD5}`
 
-#### 同时使用WIFI与有线网络
+### 同时使用WIFI与有线网络
 
 首先使用`route print`查看路由表。
 路由表有顺序优先级，越上面的优先级越高。
 `0.0.0.0`指代所有目标？
 ![](../attachments/Pasted%20image%2020240616173732.png)
 其中`192`部分为`WIFI`网关，`188`为有线网关（内网）。此时所有流量先走有线网，导致上不了外网。
-而这种原因可能是配置了DHCP导致的，因此如果进行手动配置，填写好掩码、网关，则可以将优先级下降。
+而这种原因可能是配置了`DHCP`导致的，因此如果进行手动配置，填写好掩码、网关，则可以将优先级下降。
 另外还有一种方式可以增加：
 `route add 188.22.76.0 mask 255.255.255.0 188.22.77.1 -p`
 其中`-p`是永久生效，默认是拔网线重启后就失效。
 
-
-#### 端口转发
+### 端口转发
 
 `netsh interface portproxy add v4tov4 listenaddress=10.0.10.21 listenport=8081 connectaddress=192.168.33.111 connectport=8081`
 
 `netsh interface portproxy` 表示端口映射列表
 
-`add v4tov4` 表示添加的是IPV4到IPV4的端口
+`add v4tov4` 表示添加的是`IPV4`到`IPV4`的端口
 
 `listenaddress` 表示侦听的ip地址，填的是映射方
 
@@ -92,8 +92,7 @@ $data = Get-WMIObject -Query "SELECT * FROM Win32_PerfFormattedData_Counters_The
 
 注意，浏览器出现`ERR_UNSAFE_PORT`错误不是因为服务器那边，而是浏览器本身定义了内置端口，这些端口是无法被使用的：
 
-```
-
+```text
 1, // tcpmux
 7, // echo
 9, // discard
@@ -160,8 +159,10 @@ $data = Get-WMIObject -Query "SELECT * FROM Win32_PerfFormattedData_Counters_The
 6669, // Alternate IRC
 ```
 
-# Windows
+## Windows
+
 ### 反复异常蓝屏
+
 可能是更新驱动导致系统文件损坏，可通过命令尝试修复
 
 ```powershell
@@ -172,14 +173,14 @@ sfc /scannow
 或使用
 
 ```powershell
-Dism /Online /Cleanup-Image /ScanHealth
+Dism /Online /Cleanup-Image /ScanHealth
 Dism /Online /Cleanup-Image /CheckHealth
 Dism /Online /Cleanup-Image /RestoreHealth
 ```
 
-## 解除文件关联
+### 解除文件关联
 
-```sh
+```cmd
 assoc.mp4 # 获取mp4关联的文件类型
 # .mp4=WMP11.AssocFile.MP4
 ftype | findstr "MP4" # 查找文件类型关联的打开程序
@@ -189,7 +190,6 @@ assoc.mp4=
 ftype PotPlayerMini64.MP4=
 ```
 
-
 ### 入域
 
 计算机名联系部门相关人员，应是一人一计算机名。
@@ -197,7 +197,7 @@ ftype PotPlayerMini64.MP4=
 
 ![](../attachments/Pasted%20image%2020230726170452.png)
 
-#### 游戏强制全屏的窗口化
+### 游戏强制全屏的窗口化
 
 `Alt+Enter`
 
@@ -212,7 +212,6 @@ Alt + Space（打开窗口菜单）然后 M（移动）
 Windows 键 + 左 / 右方向键
 如果你的双屏是水平排列的，使用Windows + 左方向键可以将窗口移动到左边的屏幕（如果窗口在右边屏幕），Windows + 右方向键可以将窗口移动到右边的屏幕（如果窗口在左边屏幕）。不过这种方法在另一个屏幕无法正常显示的情况下可能无法准确操作，因为系统可能会根据屏幕状态做出不同反应。但在一些情况下，它可以帮助你快速切换窗口所在的屏幕位置，你可以多尝试几次看看是否能将窗口移动到可见的屏幕区域。
 
-
 ### 应用自启动最小化
 
 `start /min D:\Euynac\Dictionary\GoldenDict\GoldenDict.exe`
@@ -223,24 +222,23 @@ cmd运行`shell:startup`打开自定义自启动列表放入该bat文件
 
 `start "" /B /D "D:\Desktop\bongo_cat_mver_0.1.6_64" "Bongo Cat Mver.exe"`
 
-`start`的参数可以看帮助文件学习, 主要的坑就是第一个参数. 空引号是用来指定新窗口的标题。在 `start` 命令里，第一个引号内的内容会被当作新窗口的标题。若省略这部分，后续带引号的程序路径会被错误识别为窗口标题。所以使用空引号能避免这种情况，让命令正确识别后续的程序路径。
+`start`的参数可以看帮助文件学习, 主要的坑就是第一个参数. 空引号是用来指定新窗口的标题。在 `start` 命令里，第一个引号内的内容会被当作新窗口的标题。若省略这部分，后续带引号的程序路径会被错误识别为窗口标题。所以使用空引号能避免这种情况，让命令正确识别后续的程序路径。
 
 #### win11启动组策略gpedit.msc
 
 ```powershell
 @echo off
 
- pushd "%~dp0"
+pushd "%~dp0"
 
- dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum >List.txt
+dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum >List.txt
 
- dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum >>List.txt
+dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum >>List.txt
 
- for /f %%i in ('findstr /i . List.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i"
+for /f %%i in ('findstr /i . List.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i"
 
- pause
+pause
 ```
-
 
 #### 解决UTF8编码问题
 
@@ -254,8 +252,6 @@ set PYTHONUTF8=1  # windows
 ```
 
 千万注意`bat`文件中使用`set xxxx=xxxx`时，结尾不要含有空格，否则也会当作传入的值。
-
-
 
 #### 关闭/启用默认使用管理员权限打开程序
 
@@ -271,19 +267,15 @@ set PYTHONUTF8=1  # windows
 
 切换到旧版右键菜单：
 
-
 ``` sh
 reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
 ```
 
-
 恢复回Win11右键菜单：
-
 
 ```sh
 reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f
 ```
-
 
 重启Windows资源管理器生效：
 
@@ -291,9 +283,9 @@ reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" 
 
 #### 自启动程序
 
-文件位置打开后，按 Windows 徽标键 + R，键入`shell:startup`，然后选择“确定”。这将打开“启动”文件夹。
+文件位置打开后，按 Windows 徽标键 + R，键入`shell:startup`，然后选择"确定"。这将打开"启动"文件夹。
 
-将该应用的快捷方式从文件位置复制并粘贴到“启动”文件夹中。
+将该应用的快捷方式从文件位置复制并粘贴到"启动"文件夹中。
 
 #### WIFI密码
 
@@ -306,11 +298,9 @@ reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" 
 Certutil.exe作为证书服务的一部分安装。您可以使用Certutil.exe转储和显示证书颁发机构（CA）配置信息，配置证书服务，备份和还原CA组件，以及验证证书，密钥对和证书链。
 
 ```sh
-
 1.  certutil -hashfile filename MD5
 2.  certutil -hashfile filename SHA1
 3.  certutil -hashfile filename SHA256
-
 ```
 
 #### 快速切换到指定文件夹
@@ -319,9 +309,8 @@ Certutil.exe作为证书服务的一部分安装。您可以使用Certutil.exe�
 
 #### 强行删除权限不足的文件（需要管理员权限）
 
-
 ```bash
-set path=”XX”
+set path="XX"
 
 takeown /F %path% /r /d y
 
@@ -330,14 +319,13 @@ cacls %path% /t /e /g Administrators:F
 rd /s /q $path$
 ```
 
-
 #### 打开cmd当前目录
 
 ```sh
-1.  explorer .
-2.  explorer %cd%
-3.  start .
-4.  start %cd%
+1.  explorer .
+2.  explorer %cd%
+3.  start .
+4.  start %cd%
 ```
 
 #### Windows键失效
@@ -346,7 +334,7 @@ rd /s /q $path$
 
 #### 不重启使环境变量修改生效
 
-以修改环境变量“PATH”为例，修改完成后，进入DOS命令提示符，输入：`set PATH=C:` ，关闭DOS窗口。再次打开DOS窗口，输入：`echo %PATH%` ，可以发现PATH 值已经生效。
+以修改环境变量"PATH"为例，修改完成后，进入DOS命令提示符，输入：`set PATH=C:` ，关闭DOS窗口。再次打开DOS窗口，输入：`echo %PATH%` ，可以发现PATH 值已经生效。
 
 DOS窗口必须重启后环境变量才有效。
 
@@ -356,7 +344,7 @@ DOS窗口必须重启后环境变量才有效。
 
 #### 判断程序是否以管理员运行
 
-任务管理器中，详细信息栏，选择列，选择开启“特权”一栏。
+任务管理器中，详细信息栏，选择列，选择开启"特权"一栏。
 
 #### Windows服务启动类型无法修改，为灰色
 
@@ -367,7 +355,6 @@ DOS窗口必须重启后环境变量才有效。
 参考路径：`计算机\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\<服务名称>`
 里面注册表项`Start`即为启动类型：`1 - 自动延时启动 2 - 自动 3 - 手动 4 - 禁用`。修改后重启电脑即可。
 还有个方案是可以将注册表中的`Security`（有这个说明控制了权限）随便改个名字，让它无效，这样就可以手动控制启动类型了。
-
 
 ### 端口占用问题
 
@@ -393,16 +380,14 @@ Hyper-V 会保留部分tcp端口，开始到结束范围内的端口不可用, �
 
 **上面的命令可以通过修改numberofports参数保留startport开始的多个端口**
 
-③再次运行 `netsh interface ipv4 show excludedportrange protocol=tcp` 命令可以看到6379端口已被排除(带有\*号标记)
+③再次运行 `netsh interface ipv4 show excludedportrange protocol=tcp` 命令可以看到6379端口已被排除(带有*号标记)
 
 还有一种办法是重新设置一下「TCP 动态端口范围」，让Hyper-V只在我们设定的范围内保留端口即可。可以以管理员权限运行下面的命令，将「TCP 动态端口范围」重新设定为`49152-65535`。如果你觉得这个范围太大，还可以改小一点。
-
 
 ```sh
 netsh int ipv4 set dynamic tcp start=49152 num=16384
 netsh int ipv6 set dynamic tcp start=49152 num=16384
 ```
-
 
 然后重启电脑即可。
 
@@ -442,13 +427,11 @@ netsh int ipv6 set dynamic tcp start=49152 num=16384
 
 | 命令                                | 参数                                                                                                                                                                                                                                        | 简介                                                                                                                                                                                                                               |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| netstat                             | -a 显示一个所有的有效连接信息列表，包括已建立的连接（ESTABLISHED），也包括监听连接请求（LISTENING）的那些连接。 -b 显示在创建每个连接或侦听端口时涉及的可执行程序。 -n 以数字形式显示地址和端口号。 -o 显示拥有的与每个连接关联的进程 ID。  | net status 显示网络连接、路由表和网络接口信息，可以让用户得知有哪些网络连接正在运作。 不带参数则是显示活动的TCP连接 netstat -aon\|findstr "80"（以80端口为例） 其他用例： 查看某个端口具体被那个应用占用 tasklist \| findstr “PID” |
+| netstat                             | -a 显示一个所有的有效连接信息列表，包括已建立的连接（ESTABLISHED），也包括监听连接请求（LISTENING）的那些连接。 -b 显示在创建每个连接或侦听端口时涉及的可执行程序。 -n 以数字形式显示地址和端口号。 -o 显示拥有的与每个连接关联的进程 ID。  | net status 显示网络连接、路由表和网络接口信息，可以让用户得知有哪些网络连接正在运作。 不带参数则是显示活动的TCP连接 netstat -aon\|findstr "80"（以80端口为例） 其他用例： 查看某个端口具体被那个应用占用 tasklist \| findstr "PID" |
 | set http_proxy set https_proxy      | =socks5://127.0.0.1:1080 或http也可以                                                                                                                                                                                                       | CMD设置临时代理（永久需要在环境变量中设置）可以用curl测试，不能使用ping。                                                                                                                                                          |
 | netsh interface ipv4 show neighbors |                                                                                                                                                                                                                                             | 查看局域网邻居ip                                                                                                                                                                                                                   |
 | tracert                             |                                                                                                                                                                                                                                             | 路由跟踪，指示到目标地址经过的路由IP                                                                                                                                                                                               |
 |                                     |                                                                                                                                                                                                                                             |                                                                                                                                                                                                                                    |
-
-
 
 # 注册表
 
@@ -531,12 +514,9 @@ ExcludeIds
 rem 注释
 ```
 
-
-
 ## 输入与输出
 
 #### \>与\>\>
-
 
 ```sh
 ping sz.tencent.com > a.txt
@@ -577,7 +557,6 @@ DOS不支持长文件名，所以就出现了`Tempor~1`
 
 ## IF 条件判断
 
-
 ```bash
 IF [NOT] ERRORLEVEL number do command
 IF [NOT] string1==string2 do command
@@ -592,7 +571,6 @@ cmd中输入`help if`可以看到详细解释
 
 ELSE 子句必须出现在同一行上的 IF 之后。例如:
 
-
 ```bash
 IF EXIST filename. (
 del filename.
@@ -603,7 +581,6 @@ echo filename. missing.
 ```
 
 #### 比较数值
-
 
 ```bash
 set /a num1=20
@@ -658,7 +635,7 @@ GEQ - 大于或等于
 
 因为`delims`分割后提取的总是第一组字符串内容，如果要提取其他组的字符串，需要使用`tokens`。
 
-`tokens=` 后面一般跟的是数字，如 `tokens=2`，也可以跟多个，但是每个数字之间用逗号分隔，如 `tokens=3,5,8`，它们的含义分别是：提取第2节字符串、提取第3、第5和第8节字符串。注意，这里所说的“节”，是由 `delims=` 这一开关划分的，它的内容并不是一成不变的。
+`tokens=` 后面一般跟的是数字，如 `tokens=2`，也可以跟多个，但是每个数字之间用逗号分隔，如 `tokens=3,5,8`，它们的含义分别是：提取第2节字符串、提取第3、第5和第8节字符串。注意，这里所说的"节"，是由 `delims=` 这一开关划分的，它的内容并不是一成不变的。
 
 `tokens=1-5`，提取1-5节的内容，需要用5个变量接收
 
@@ -700,8 +677,7 @@ GEQ - 大于或等于
 
 一般来说`for /f` 的用法就是1、2、3种，1就是使用文件作为输入的时候，2就是命令运行结果作为输入的，3是字符串作为输入。
 
-但如果第一种中，文件名是有空格或&等特殊符号的时候，使用第一种写法就会出错。这时候就使用`usebackq`来拓展第一种文件输入方式变为””的，5、6相应拓展2、3
-
+但如果第一种中，文件名是有空格或&等特殊符号的时候，使用第一种写法就会出错。这时候就使用`usebackq`来拓展第一种文件输入方式变为""的，5、6相应拓展2、3
 
 ```sh
 1、for /f %%i in (文件名) do (……)
@@ -712,16 +688,14 @@ GEQ - 大于或等于
 6、for /f "usebackq" %%i in ('字符串') do (……)
 ```
 
-
 ### 变量延迟
-
 
 ```sh
 @echo off
 set num=0
 for /f %%i in ('dir /a-d /b *.exe') do (
-    set /a num+=1
-    echo num 当前的值是 %num%
+    set /a num+=1
+    echo num 当前的值是 %num%
 )
 ```
 
@@ -729,30 +703,27 @@ for /f %%i in ('dir /a-d /b *.exe') do (
 
 批处理的预处理机制也是一条一条处理的，分析完第一条`set num = 0`后，然后分析整体的`for`循环语句，检测语法错误等，其中`%num%`在num已经有赋值，所以可以被替换。而`num+=1`虽然确实有用，但num值已经被替换掉了，所以结果一直都是0。
 
-这种替换在一条内部就确定变量的值了，所以如果让这种特性“延迟”，那么num变量就能变化了（即暂不替换变量），因此有了延迟变量。有两种用法：
+这种替换在一条内部就确定变量的值了，所以如果让这种特性"延迟"，那么num变量就能变化了（即暂不替换变量），因此有了延迟变量。有两种用法：
 
 ① 使用 `setlocal enabledelayedexpansion` 语句：在获取变化的变量值语句之前使用`setlocal enabledelayedexpansion`，并把原本使用百分号对闭合的变量引用改为使用感叹号对来闭合；
-
 
 ```
 set num=0
 setlocal enabledelayedexpansion
 for /f %%i in ('dir /a-d /b *.exe') do (
-    set /a num+=1
-    echo num 当前的值是 !num!
+    set /a num+=1
+    echo num 当前的值是 !num!
 )
 ```
-
 
 ② 使用 `call` 语句：在原来命令的前部加上 `call` 命令，并把变量引用的单层百分号对改为双层。
 
 ```
 for /f %%i in ('dir /a-d /b *.exe') do (
-    set /a num+=1
-    call echo num 当前的值是 %%num%%
+    set /a num+=1
+    call echo num 当前的值是 %%num%%
 )
 ```
-
 
 ### for /r （遍历文件夹）
 
@@ -760,18 +731,16 @@ for /f %%i in ('dir /a-d /b *.exe') do (
 
 `for /r [目录] %%i in (元素集合) do 命令语句集合`
 
-1. 列举“目录”及该目录路径下所有子目录，并把列举出来的目录路径和元素集合中的每一个元素拼接成形如“目录路径\\元素”格式的新字符串，然后，对每一条这样的新字符串执行“命令语句集合”中的每一条命令；
-	特别的是：当“元素集合”带以点号分隔的通配符?或\*的时候，把“元素集合”视为文件（不视为文件夹），整条语句的作用是匹配“目录”所指文件夹及其所有子文件夹下匹配的文件；若不以点号分隔，则把“元素集合”视为文件夹（不视为文件）；
-2. 当省略掉“目录”时，则针对当前目录；
+1. 列举"目录"及该目录路径下所有子目录，并把列举出来的目录路径和元素集合中的每一个元素拼接成形如"目录路径\\元素"格式的新字符串，然后，对每一条这样的新字符串执行"命令语句集合"中的每一条命令；
+    特别的是：当"元素集合"带以点号分隔的通配符?或*的时候，把"元素集合"视为文件（不视为文件夹），整条语句的作用是匹配"目录"所指文件夹及其所有子文件夹下匹配的文件；若不以点号分隔，则把"元素集合"视为文件夹（不视为文件）；
+2. 当省略掉"目录"时，则针对当前目录；
 3. 当元素集合中仅仅是一个点号的时候，将只列举目录路径；
-
 
 ```sh
 @echo off
 for /r d:\test %%i in (.) do echo %%i
 pause
 ```
-
 
 执行的结果如下所示：
 
@@ -792,12 +761,11 @@ d:\test\3\.
 
 第2点差别很容易被大家忽视，导致用 `for /r` 列举路径的时候会造成遗漏；而第3点则会让大家有更直观的感受，很容易感觉到两者之间的差别。
 
-要是“元素集合”不是点号呢？
-
+要是"元素集合"不是点号呢？
 
 ```
 @echo off
-for /r d:\\test %%i in (a b c) do echo %%i
+for /r d:\test %%i in (a b c) do echo %%i
 pause
 ```
 
@@ -815,7 +783,7 @@ D:\test\3\b
 D:\test\3\c
 ```
 
-原来，它的含义是：列举 d:\\test 及其所有的子目录，对所有的目录路径都分别添加a、b、c之后再显示出来。
+原来，它的含义是：列举 d:\test 及其所有的子目录，对所有的目录路径都分别添加a、b、c之后再显示出来。
 
 ```
 @echo off

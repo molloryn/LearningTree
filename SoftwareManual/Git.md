@@ -2,15 +2,15 @@
 
 ## 概念
 
-##### ref
+### ref
 
-A remote ref is a reference (pointer) to a branch, tag, or other object in a remote repository. For example, if you clone a repository from git.ourcompany.com, you will have a remote ref named origin/master that points to the master branch on the remote server. You can use remote refs to fetch, push, or pull data from the remote repository. You can also use them to track the state of the remote repository and compare it with your local repository.
+A remote ref is a reference (pointer) to a branch, tag, or other object in a remote repository. For example, if you clone a repository from `git.ourcompany.com`, you will have a remote ref named `origin/master` that points to the master branch on the remote server. You can use remote refs to fetch, push, or pull data from the remote repository. You can also use them to track the state of the remote repository and compare it with your local repository.
 
 ## 开始新项目
 
-拿到git地址和权限后，选择本地电脑中一个文件夹，使用 `git init` 在当前目录新建一个`.git`目录，然后进行`git pull` 拉取代码。
+拿到`git`地址和权限后，选择本地电脑中一个文件夹，使用 `git init` 在当前目录新建一个`.git`目录，然后进行`git pull` 拉取代码。
 
-> Git对于文件夹和文件名是忽略大小写的，注意
+> `Git`对于文件夹和文件名是忽略大小写的，注意
 
 ### 分支
 
@@ -63,7 +63,7 @@ git config --global http.proxy socks5://127.0.0.1:1080 # 设置代理为sock5（
 git config --global --unset http.proxy # 移除代理
 ```
 
-### 迁移Git仓库到另一个Git仓库
+### 迁移`Git`仓库到另一个`Git`仓库
 
 ```shell
 # 使用--mirror克隆仓库
@@ -74,7 +74,7 @@ git remote set-url origin <URL to my NEW repo location>
 git push --mirror origin
 ```
 
-### Git提交时用错了用户名
+### `Git`提交时用错了用户名
 
 [GIT提交时用错了用户名-hanwei_1049-ChinaUnix博客](http://blog.chinaunix.net/uid-13746440-id-5586437.html)
 
@@ -117,23 +117,23 @@ fi
 ' --tag-name-filter cat -- --branches --tags
 ```
 
-[git - How do I change the author and committer name/email for multiple commits? - Stack Overflow](https://stackoverflow.com/questions/750172/how-do-i-change-the-author-and-committer-name-email-for-multiple-commits)
+[How do I change the author and committer name/email for multiple commits? - Stack Overflow](https://stackoverflow.com/questions/750172/how-do-i-change-the-author-and-committer-name-email-for-multiple-commits)
 
-###### 不修改历史来将错误的用户/邮箱关联上
+##### 不修改历史来将错误的用户/邮箱关联上
 
-使用`mailmap`特性，在git仓库根目录下创建`.mailmap`文件，然后可以使用`git shortlog`功能看看是否关联正确。
+使用`mailmap`特性，在`git`仓库根目录下创建`.mailmap`文件，然后可以使用`git shortlog`功能看看是否关联正确。
 
-[gitmailmap(5) (htmlpreview.github.io)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/newren/git-filter-repo/docs/html/gitmailmap.html)
+[gitmailmap(5)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/newren/git-filter-repo/docs/html/gitmailmap.html)
 
 ```mailmap
 Proper Name <proper@email.xx> Commit Name <commit@email.xx>
 ```
 
-但似乎对Gitlab不管用。
+但似乎对`Gitlab`不管用。
 
-###### git-filter-repo工具
+##### `git-filter-repo`工具
 
-不过可以通过[github.com/newren/git-filter-repo/](https://github.com/newren/git-filter-repo/)该工具，通过编写的`mailmap`文件，自动应用`filter-branch`命令。
+不过可以通过[git-filter-repo](https://github.com/newren/git-filter-repo/)该工具，通过编写的`mailmap`文件，自动应用`filter-branch`命令。
 
 这个命令还需要在`fresh clone`的仓库下运行，意思是需要重新从远程克隆仓库到本地并保持`fresh`，以保证执行的简单性。
 
@@ -141,9 +141,9 @@ Proper Name <proper@email.xx> Commit Name <commit@email.xx>
 git filter-repo --mailmap git-mailmap
 ```
 
-[git - How do I change the author and committer name/email for multiple commits? - Stack Overflow](https://stackoverflow.com/questions/750172/how-do-i-change-the-author-and-committer-name-email-for-multiple-commits/9491696#9491696)
+[How do I change the author and committer name/email for multiple commits? - Stack Overflow](https://stackoverflow.com/questions/750172/how-do-i-change-the-author-and-committer-name-email-for-multiple-commits/9491696#9491696)
 
-###### 提交filter-branch的更改
+##### 提交`filter-branch`的更改
 
 ```shell
 git push origin --force-with-lease
@@ -151,16 +151,16 @@ git push origin --force-with-lease
 
 > `force` overwrites a remote branch with your local branch.
 >
-> `--force-with-lease` It allows you to overwrite a remote branch only if your local copy is up to date with the remote branch, or in other words, if you have the “lease” on the remote branch. This way, you can avoid losing someone else’s work that you have not fetched yet. If the remote branch has changed since you last fetched it, the push will be rejected and you will have to fetch and merge or rebase before pushing again.
+> `--force-with-lease` It allows you to overwrite a remote branch only if your local copy is up to date with the remote branch, or in other words, if you have the "lease" on the remote branch. This way, you can avoid losing someone else's work that you have not fetched yet. If the remote branch has changed since you last fetched it, the push will be rejected and you will have to fetch and merge or rebase before pushing again.
 
 但实测发现还是需要用`--force`，不知道为什么用上面的命令会失败。
-而且还遇到了没有origin的定义的问题，手动添加`git add remote origin <url>`
-另外推送的时候还需要指定`set-upstream`的问题，导致只能一分支一分支的进行push
+而且还遇到了没有`origin`的定义的问题，手动添加`git add remote origin <url>`
+另外推送的时候还需要指定`set-upstream`的问题，导致只能一分支一分支的进行`push`
 最后发现其实可以用`git push --force --all`来批量推送
 
-### .gitingore不生效
+### `.gitingore`不生效
 
-因为如果已经先前加入了git管理的文件，则再添加`.gitingore`则无效，仍然会被追踪changes。
+因为如果已经先前加入了`git`管理的文件，则再添加`.gitingore`则无效，仍然会被追踪`changes`。
 
 可以使用
 
@@ -168,29 +168,31 @@ git push origin --force-with-lease
 
 如果缓存太多要删除的，可以使用
 
-`git rm -r --cached .` 全部删除再 `git add .`加回tracing，这时候则会遵守.gitingore的规则去添加tracing。
+`git rm -r --cached .` 全部删除再 `git add .`加回`tracing`，这时候则会遵守`.gitingore`的规则去添加`tracing`。
 
 最后`git commit -m ".gitignore is now working"`
 
-### Fork后使用原项目未merge的pull request 应用到自己Fork的分支
+### `Fork`后使用原项目未`merge`的`pull request` 应用到自己`Fork`的分支
 
-[stackoverflow.com/questions/6022302/how-to-apply-unmerged-upstream-pull-requests-from-other-forks-into-my-fork](https://stackoverflow.com/questions/6022302/how-to-apply-unmerged-upstream-pull-requests-from-other-forks-into-my-fork)
+[How to apply unmerged upstream pull requests from other forks into my fork - Stack Overflow](https://stackoverflow.com/questions/6022302/how-to-apply-unmerged-upstream-pull-requests-from-other-forks-into-my-fork)
 
-You can also do this via the github webpage.
+You can also do this via the `github` webpage.
 
-I assume, you should have already a fork (MyFork) of the common repo (BaseRepo) which has the pending pull request from a fork (OtherFork) you are interested in.
+I assume, you should have already a fork (`MyFork`) of the common repo (`BaseRepo`) which has the pending pull request from a fork (`OtherFork`) you are interested in.
 
-1.  Navigate to the fork (OtherFork) which has initiated the pull request which you like to get into your fork (MyFork)
-2.  Go to the pull requests page of OtherFork
-3.  Click new pull request
-4.  The pending pull request(s) should be offered. Remember to select proper OtherFork branch too. Select on the left side as the base fork your fork (MyFork) (**IMPORTANT**).
-5.  Now the option of View pull request should change to Create pull request. Click this.
+1. Navigate to the fork (`OtherFork`) which has initiated the pull request which you like to get into your fork (`MyFork`)
+2. Go to the pull requests page of `OtherFork`
+3. Click new pull request
+4. The pending pull request(s) should be offered. Remember to select proper `OtherFork` branch too. Select on the left side as the base fork your fork (`MyFork`) (**IMPORTANT**).
+5. Now the option of View pull request should change to Create pull request. Click this.
 
-Now you should have a pending pull request in your fork (MyFork), which you can simply accept.
+Now you should have a pending pull request in your fork (`MyFork`), which you can simply accept.
 
 ## 自动换行转换
+
 [Disable git EOL Conversions - Stack Overflow](https://stackoverflow.com/questions/21822650/disable-git-eol-conversions)
-```
+
+```gitattributes
 # Handle line endings automatically for files detected as text 
 # and leave all files detected as binary untouched.
 * text=auto
@@ -220,10 +222,10 @@ Now you should have a pending pull request in your fork (MyFork), which you can 
 *.png           binary
 ```
 
-# BFG-repo-cleaner
+## BFG-repo-cleaner
+
 [BFG Repo-Cleaner by rtyley](https://rtyley.github.io/bfg-repo-cleaner/)
 
-
-# 开源协议
+## 开源协议
 
 ![图片包含 日程表 描述已自动生成](../attachments/17120b1324d66fe52e161baeafee27c9.png)![图示 中度可信度描述已自动生成](../attachments/4b33b7e7acddea591e74cbea61b93da4.png)

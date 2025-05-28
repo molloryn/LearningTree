@@ -1,9 +1,11 @@
+# PowerShell
 
-# 从单行base64执行
+## 从单行base64执行
 
 `powershell -EncodedCommand`
 
 注意不是文本转base64，似乎是从字节流转的：
+
 ```powershell
 $script = Get-Content "bongo-cat_runner.ps1" -Raw
 $bytes = [System.Text.Encoding]::Unicode.GetBytes($script)
@@ -11,10 +13,9 @@ $encoded = [Convert]::ToBase64String($bytes)
 $encoded | Set-Content "encoded.txt"
 ```
 
+### 通过`VBS`运行脚本
 
-## 通过vbs运行脚本
-
-```powershell
+```vbs
 Set shell = CreateObject("Shell.Application")
 Set fso = CreateObject("Scripting.FileSystemObject")
 
@@ -31,5 +32,4 @@ psFile.Close
 
 ' Run PowerShell script with administrator privileges.
 shell.ShellExecute "powershell.exe", "-NoProfile -ExecutionPolicy Bypass -File """ & ps1Path & """", "", "runas", 1
-
 ```

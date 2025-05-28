@@ -1,4 +1,6 @@
-### 导出当前所有安装的插件的vsix文件以供离线安装
+# VSCode
+
+## 导出当前所有安装的插件的`vsix`文件以供离线安装
 
 [How can I install Visual Studio Code extensions offline? - Stack Overflow](https://stackoverflow.com/questions/37071388/how-can-i-install-visual-studio-code-extensions-offline)
 
@@ -68,28 +70,28 @@ Invoke-Expression "code --list-extensions" -OutVariable extensions | Out-Null
 $extensions | Get-VSMarketPlaceExtension
 ```
 
+## 将当前文件用新窗口打开(移到另一屏幕)
 
-
-### 将当前文件用新窗口打开(移到另一屏幕)
-
-命令名（用Ctrl+Shift+P输入）：`Open Active File in New Window`
+命令名（用`Ctrl+Shift+P`输入）：`Open Active File in New Window`
 
 快捷键：`Ctrl+K, O`
 
-### 将转码后的文本保存下来
+## 将转码后的文本保存下来
 
-点击下面那个切换编码格式的（比如GB-2312） → 会弹出框，选择Save with encoding, 选择UTF-8.
+点击下面那个切换编码格式的（比如`GB-2312`） → 会弹出框，选择`Save with encoding`, 选择`UTF-8`.
 
-### 自动补全function括号(parentheses)
+## 自动补全function括号(parentheses)
 
-`Ctrl + Shift + P` =\> Settings.json 或 Ctrl+, 打开Preference Setting.
+`Ctrl + Shift + P` => `Settings.json` 或 `Ctrl+,` 打开`Preference Setting`.
 
 ```json
 "typescript.suggest.completeFunctionCalls": true,
 "javascript.suggest.completeFunctionCalls": true,
-"C_Cpp.autocompleteAddParentheses": true "python.analysis.completeFunctionParens": true,
+"C_Cpp.autocompleteAddParentheses": true,
+"python.analysis.completeFunctionParens": true
 ```
-### 对某个插件停止自动更新
+
+## 对某个插件停止自动更新
 
 Auto updates are disabled if you install a specific version (not latest) which is now supported.
 
@@ -98,15 +100,16 @@ Auto updates are disabled if you install a specific version (not latest) which i
 ### 常用快捷键
 
 `Ctrl+Shift+F` 全局查找
-`Ctrl+P` 按文件名查找文件 （其实`Ctrl+T`也可以，和 Visual Studio Resharper 快捷键一致，不过多了个`#`号
+`Ctrl+P` 按文件名查找文件 （其实`Ctrl+T`也可以，和 `Visual Studio` `Resharper` 快捷键一致，不过多了个`#`号
+
 ### HTML
 
-#### Emmet abbreviation
+#### `Emmet` abbreviation
 
-button =\> `<button><button\>`
+`button` => `<button></button>`
 
-button\#test =\> `<button id="test"><button\>`
+`button#test` => `<button id="test"></button>`
 
-button.test =\> `<button class="test"><button\>`
+`button.test` => `<button class="test"></button>`
 
 
