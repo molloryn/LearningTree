@@ -109,3 +109,20 @@
 将当前Markdown文件进行拆分，按照大章节目录拆为多个小文件，根据当前文件层级来拆分，如按照H1拆分，如拆分文件仍过大，则按照H2拆分，以此类推。拆分后的文件名与当前章节有关。
 要以当前文件名建立新文件夹，并把拆分后的文件放入到新文件夹下。
 ```
+
+
+```
+将当前Markdown文件进行拆分，按照大章节目录拆为多个小文件，根据当前文件层级来拆分，如按照H1拆分，如拆分文件仍过大，则按照H2拆分，以此类推。拆分后的文件名与当前章节有关。  
+要以当前文件名建立新文件夹，并把拆分后的文件放入到新文件夹下。  
+对每个拆分后的文件进行修改：  
+1. 将文件标题作为Heading1，如果文件内部存在这个标题，则跳过。  
+2. 除了文件标题H1之外，其余地方不允许再出现H1。请调整每个标题级别符合要求。  
+3. 对其中涉及的专有英文名词，使用反引号"`"包裹。  
+4. 对于其中没有使用代码块"```"语法包裹的，请使用合适的代码块语言包裹  
+5. 尽量不要对内容进行改动，仅修复格式、语法错误或事实错误。  
+6. 若有事实错误修正的，最后总结改动项。  
+7. 标号也统一使用markdown列表序号，如①等需要进行修改。  
+8. 如果存在代码段，或命令，请换用反引号包裹，如: .HasKey(c =\> c.Id) => `.HasKey(c => c.Id) `  
+9. 如果存在外部地址形如`<https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/recommended-tags>`格式的，替换为可阅读的格式：`[Recommended XML documentation tags - C# reference | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/recommended-tags)`
+
+```
