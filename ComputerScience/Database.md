@@ -1,20 +1,22 @@
-# 基础知识
+# 数据库
 
-## 并发锁
+## 基础知识
 
-#### 共享（Share）锁和排他（Exclusive，X）锁
+### 并发锁
 
-共享锁即读锁，共享 (S) 用于不更改或不更新数据的操作（只读操作），如 SELECT 语句。排他锁（X锁）：用于数据修改操作，例如 INSERT、UPDATE 或 DELETE。确保不会同时同一资源进行多重更新。
+#### 共享（`Share`）锁和排他（`Exclusive`，`X`）锁
 
-当事务A对数据D加S锁后，事务B可以对其加S锁，但无法加X锁。
+共享锁即读锁，共享 (`S`) 用于不更改或不更新数据的操作（只读操作），如 `SELECT` 语句。排他锁（`X`锁）：用于数据修改操作，例如 `INSERT`、`UPDATE` 或 `DELETE`。确保不会同时同一资源进行多重更新。
 
-而事务A对数据D加X锁后，事务B无法对数据D加S锁或X锁
+当事务A对数据D加`S`锁后，事务B可以对其加`S`锁，但无法加`X`锁。
+
+而事务A对数据D加`X`锁后，事务B无法对数据D加`S`锁或`X`锁
 
 #### 乐观锁
 
 乐观锁是一种以乐观的态度看并发的情况，对读不会加锁，只会在更新的时候进行加锁。因此可能会导致脏读的情况。
 
-乐观锁可以使用version来实现，就是事务在执行过程中执行到了更新阶段，这时候就会判断事务刚读取到的信息version是否是当前更新的数据库version，确保读取到的依旧是最新的数据，同一个version就可以执行下去，如果是不同的version，则会回滚后，再尝试一遍执行事务。
+乐观锁可以使用`version`来实现，就是事务在执行过程中执行到了更新阶段，这时候就会判断事务刚读取到的信息`version`是否是当前更新的数据库`version`，确保读取到的依旧是最新的数据，同一个`version`就可以执行下去，如果是不同的`version`，则会回滚后，再尝试一遍执行事务。
 
 所以乐观锁适用于读多写少的情况
 
@@ -24,121 +26,120 @@
 
 如果是多写的情况，使用乐观锁就总会导致冲突发生，回滚重试反而降低了性能，这时候就适用于悲观锁
 
-## 事务（Transaction）
+### 事务（`Transaction`）
 
-事务具有4个特征，分别是原子性、一致性、隔离性和持久性，简称事务的ACID特性；
+事务具有4个特征，分别是原子性、一致性、隔离性和持久性，简称事务的`ACID`特性；
 
-#### 原子性（atomicity)
+#### 原子性（`atomicity`）
 
 一个事务要么全部提交成功，要么全部失败回滚，不能只执行其中的一部分操作，这就是事务的原子性
 
-回滚事务的原理就是，每个sql语句有对应的逆sql，MySQL中的innoDB引擎拥有undolog，有insert，就记录对应的delete语句
+回滚事务的原理就是，每个`sql`语句有对应的逆`sql`，`MySQL`中的`innoDB`引擎拥有`undolog`，有`insert`，就记录对应的`delete`语句
 
-事务提交有对应的redolog，用于数据恢复，保证持久性。
+事务提交有对应的`redolog`，用于数据恢复，保证持久性。
 
-#### 一致性（consistency)
+#### 一致性（`consistency`）
 
 事务的执行不能破坏数据库数据的完整性和一致性，一个事务在执行之前和执行之后，数据库都必须处于一致性状态。
 
 如果数据库系统在运行过程中发生故障，有些事务尚未完成就被迫中断，这些未完成的事务对数据库所作的修改有一部分已写入物理数据库，这是数据库就处于一种不正确的状态，也就是不一致的状态
 
-#### 隔离性（isolation）
+#### 隔离性（`isolation`）
 
 事务的隔离性是指在并发环境中，并发的事务时相互隔离的，一个事务的执行不能不被其他事务干扰。不同的事务并发操作相同的数据时，每个事务都有各自完成的数据空间，即一个事务内部的操作及使用的数据对其他并发事务是隔离的，并发执行的各个事务之间不能相互干扰。
 
-在标准SQL规范中，定义了4个事务隔离级别，不同的隔离级别对事务的处理不同，分别是：读未提交，读已提交，可重复读和串行化
+在标准`SQL`规范中，定义了4个事务隔离级别，不同的隔离级别对事务的处理不同，分别是：读未提交，读已提交，可重复读和串行化
 
 ##### 事务隔离级别
-###### 1. 读未提交（Read Uncommited）
+
+###### 1. 读未提交（`Read Uncommited`）
 
 该隔离级别相当于没有加锁，允许脏读，其隔离级别最低。比如事务A和事务B同时进行，事务A在整个执行阶段，会将某数据的值从1开始一直加到10，然后进行事务提交，此时，事务B能够读取到这个数据项在事务A操作过程中的所有中间值（如1变成2，2变成3等）。
 
-**脏读(Dirty Read)**：在A事务中，可以读到实际上可能不存在的数据（因为在B事务执行的中间值并不是最终的数据）
+**脏读(`Dirty Read`)**：在A事务中，可以读到实际上可能不存在的数据（因为在B事务执行的中间值并不是最终的数据）
 
-###### 2. 读已提交（Read Commited）
+###### 2. 读已提交（`Read Commited`）
 
 只能读取到已经提交了的事务的值，避免了脏读。但仍有幻读和不可重复读的问题存在。
 
-**幻读(Phantom reads)**：在A事务中，第一次读取的消息条数可能和第二次读取的消息条数不一样。涉及到消息条目的操作（insert, delete）需要注意该问题。
+**幻读(`Phantom reads`)**：在A事务中，第一次读取的消息条数可能和第二次读取的消息条数不一样。涉及到消息条目的操作（`insert`, `delete`）需要注意该问题。
 
-**不可重复读(Non-repeatable reads)**：在A事务中，第一次读取一条记录某个字段上的值，可能和第二次读取该条记录上的值不一致。涉及到单条数据的需要注意该问题。
+**不可重复读(`Non-repeatable reads`)**：在A事务中，第一次读取一条记录某个字段上的值，可能和第二次读取该条记录上的值不一致。涉及到单条数据的需要注意该问题。
 
-###### 3. 可重复读（Repeatable Read)
+###### 3. 可重复读（`Repeatable Read`）
 
 对正在修改的记录加了读锁，避免了不可重复读的问题。但仍有幻读的问题。
 
-###### 4. 串行化（Serializable）
+###### 4. 串行化（`Serializable`）
 
 是最严格的事务隔离级别，它要求所有事务被串行执行，即事务只能一个接一个的进行处理，不能并发执行。
-避免了三种Read phenomena
+避免了三种`Read phenomena`
 
-#### 持久性（durability）
+#### 持久性（`durability`）
 
 一旦事务提交，那么它对数据库中的对应数据的状态的变更就会永久保存到数据库中。即使发生系统崩溃或机器宕机等故障，只要数据库能够重新启动，那么一定能够将其恢复到事务成功结束的状态
 
+## 数据库基础
 
-# 数据库基础
+### 查询顺序
 
-## 查询顺序
+The following steps show the logical processing order, or binding order, for a `SELECT` statement. This order determines when the objects defined in one step are made available to the clauses in subsequent steps. For example, if the query processor can bind to (access) the tables or views defined in the `FROM` clause, these objects and their columns are made available to all subsequent steps. **Conversely, because the `SELECT` clause is step 8, any column aliases or derived columns defined in that clause cannot be referenced by preceding clauses.(所以`select`的别名只能在`select`执行顺序后续的语句中使用)** However, they can be referenced by subsequent clauses such as the `ORDER BY` clause. The actual physical execution of the statement is determined by the query processor and the order may vary from this list.
 
-The following steps show the logical processing order, or binding order, for a SELECT statement. This order determines when the objects defined in one step are made available to the clauses in subsequent steps. For example, if the query processor can bind to (access) the tables or views defined in the FROM clause, these objects and their columns are made available to all subsequent steps. **Conversely, because the SELECT clause is step 8, any column aliases or derived columns defined in that clause cannot be referenced by preceding clauses.(所以select的别名只能在select执行顺序后续的语句中使用)** However, they can be referenced by subsequent clauses such as the ORDER BY clause. The actual physical execution of the statement is determined by the query processor and the order may vary from this list.
+#### `FROM`
 
-### FROM
+对`FROM`子句中的前两个表执行笛卡尔积（`Cartesian product`)(交叉联接），生成虚拟表`VT1`
 
-对FROM子句中的前两个表执行笛卡尔积（Cartesian product)(交叉联接），生成虚拟表VT1
+#### `ON`
 
-### ON
+对`VT1`应用`ON`筛选器。只有那些使条件为真的行才被插入`VT2`。
 
-对VT1应用ON筛选器。只有那些使条件为真的行才被插入VT2。
+#### `OUTER`(`JOIN`)
 
-### OUTER(JOIN)
+如果指定了`OUTER JOIN`（相对于`CROSS JOIN` 或(`INNER JOIN`),保留表（`preserved table`：左外部联接把左表标记为保留表，右外部联接把右表标记为保留表，完全外部联接把两个表都标记为保留表）中未找到匹配的行将作为外部行添加到 `VT2`,生成`VT3`.如果`FROM`子句包含两个以上的表，则对上一个联接生成的结果表和下一个表重复执行步骤1到步骤3，直到处理完所有的表为止。
 
-如果指定了OUTER JOIN（相对于CROSS JOIN 或(INNER JOIN),保留表（preserved table：左外部联接把左表标记为保留表，右外部联接把右表标记为保留表，完全外部联接把两个表都标记为保留表）中未找到匹配的行将作为外部行添加到 VT2,生成VT3.如果FROM子句包含两个以上的表，则对上一个联接生成的结果表和下一个表重复执行步骤1到步骤3，直到处理完所有的表为止。
+#### `WHERE`
 
-### WHERE
+对`VT3`应用`WHERE`筛选器。只有条件为`true`的行才被插入`VT4`.
 
-对VT3应用WHERE筛选器。只有条件为true的行才被插入VT4.
+#### `GROUP BY`
 
-### GROUP BY
+按`GROUP BY`子句中的列列表对`VT4`中的行分组，生成`VT5`.
 
-按GROUP BY子句中的列列表对VT4中的行分组，生成VT5.
+#### `WITH CUBE` or `WITH ROLLUP`
 
-### WITH CUBE or WITH ROLLUP
+把超组(`Suppergroups`)插入`VT5`,生成`VT6`.
 
-把超组(Suppergroups)插入VT5,生成VT6.
+#### `HAVING`
 
-### HAVING
+对`VT6`应用`HAVING`筛选器。只有条件为`true`的组才会被插入`VT7`.
 
-对VT6应用HAVING筛选器。只有条件为true的组才会被插入VT7.
+#### `SELECT`
 
-### SELECT
+处理`SELECT`列表，产生`VT8`.
 
-处理SELECT列表，产生VT8.
+#### `DISTINCT`
 
-### DISTINCT
+将重复的行从`VT8`中移除，产生`VT9`.
 
-将重复的行从VT8中移除，产生VT9.
+#### `ORDER BY`
 
-### ORDER BY
+将`VT9`中的行按`ORDER BY` 子句中的列列表排序，生成游标（`VC10`).
 
-将VT9中的行按ORDER BY 子句中的列列表排序，生成游标（VC10).
-
-### TOP/LIMIT
+#### `TOP`/`LIMIT`
 
 从第几位开始取，限制行数
 
-## 引擎
+### 引擎
 
-常见的mysql表引擎有InnoDB和MyISAM，主要的区别是InnoDB适合频繁写数据库操作，MyISAM适合读取数据库的情况多一点
+常见的`mysql`表引擎有`InnoDB`和`MyISAM`，主要的区别是`InnoDB`适合频繁写数据库操作，`MyISAM`适合读取数据库的情况多一点
 
-注意MySQL数据库不能用MyISAM，需要用InnoDB，不然不支持外键和事务等
+注意`MySQL`数据库不能用`MyISAM`，需要用`InnoDB`，不然不支持外键和事务等
 
-## 锁
+### 锁
 
-对数据对象加上share共享锁（S锁），其他事务可以读取但无法修改它。如果加上exclusive排他锁（X锁），则其他事务无法访问到它。
+对数据对象加上`share`共享锁（`S`锁），其他事务可以读取但无法修改它。如果加上`exclusive`排他锁（`X`锁），则其他事务无法访问到它。
 
-
-## 存储过程
+### 存储过程
 
 ```sql
 IF NOT EXISTS(SELECT 1 WHERE @LocalAddr IN ('')) BEGIN
@@ -156,7 +157,7 @@ ELSE BEGIN
 END
 ```
 
-### 变量
+#### 变量
 
 `@`是局部变量声明，如果没有`@`的字段代表是列名；
 
@@ -179,21 +180,19 @@ select * from stuInfo where stuName = @name
 
 还有`@@error` 等是全局变量，系统自定义的，我们只读，不能改！！
 
+### `SQL`语句
 
-## SQL语句
+#### 建表
 
-### 建表
+以`MySQL`为例
 
-以MySQL为例
-
-要考虑id自增（AUTO_INCREMENT）、PRIMARY KEY、COMMENT（注释）
+要考虑`id`自增（`AUTO_INCREMENT`）、`PRIMARY KEY`、`COMMENT`（注释）
 
 ![](../attachments/bba22799c1c0040134dfe9025ebec076.png)
 
-常见的mysql表引擎有INNODB和MyISAM，主要的区别是INNODB适合频繁写数据库操作，MyISAM适合读取数据库的情况多一点
+常见的`mysql`表引擎有`INNODB`和`MyISAM`，主要的区别是`INNODB`适合频繁写数据库操作，`MyISAM`适合读取数据库的情况多一点
 
-使用以下mysql sql语句，可以给表设定数据库引擎：
-
+使用以下`mysql sql`语句，可以给表设定数据库引擎：
 
 ```sql
 ALTER TABLE `wp_posts` ENGINE = MyISAM;
@@ -740,7 +739,7 @@ CREATE TEMPORARY TABLE if not EXISTS aliasTmpTable (
 | CONCAT()                                 | 字符串拼接     | 最常用的字符串拼接方法，但遇到拼接中的字符串出现null的情况会返回null 插入换行符得用CHAR(10)                                                                                                                                                                                                                                        |
 | CONCAT_WS()（concat with separator）     | 字符串拼接     | 比CONCAT多了个分隔符功能，且如果某个字符串为null，会忽略null，并返回其他字符串的值 语法：CONCAT_WS(separator,str1,str2,…) 第一个参数是其它参数的分隔符。分隔符的位置放在要连接的两个字符串之间。分隔符可以是一个字符串，也可以是其它参数                                                                                           |
 | cast("23333.3333" as decimal)            | 字符串类型转换 |                                                                                                                                                                                                                                                                                                                                    |
-| CONVERT("23333.3333", decimal(3,1))      | 字符串类型转换 | 不支持’’的，会报错Incorrect DECIMAL value: ‘0’ for column ‘’ at row -1 decimal(3,1)，总3位，保留1位 如果只用decimal，则是四舍五入变成整数                                                                                                                                                                                          |
+| CONVERT("23333.3333", decimal(3,1))      | 字符串类型转换 | 不支持’’的，会报错Incorrect DECIMAL value: '0' for column '’ at row -1 decimal(3,1)，总3位，保留1位 如果只用decimal，则是四舍五入变成整数                                                                                                                                                                                          |
 | substring_index                          |                | Return the substring before the first occurrence of the delimiter "-": SELECT SUBSTRING_INDEX('foo-bar-bar', '-', 1) as result; Outputs result = "foo" You can replace 1 with the numbers of occurrences you want before getting the substring SELECT SUBSTRING_INDEX('foo-bar-bar', '-', 2) as result; Outputs result = "foo-bar" |
 | FROM_UNIXTIME(date,'%Y-%m-%d %H:%i:%S')  | 时间戳转换     |                                                                                                                                                                                                                                                                                                                                    |
 | SUBSTRING(myfield, 1, LENGTH(myfield)-4) |                | 利用length函数，动态的检测需要保留的位数，因此曲线救国的实现了remove。 注意CHARACTER_LENGTH()与LENGTH()的区别！                                                                                                                                                                                                                    |
@@ -830,7 +829,7 @@ MySQL 8.0之后，默认collation不再像之前版本一样是是utf8mb4_genera
 
 中间的0900，它对应的是Unicode 9.0的规范。要知道，Unicode规范是在不断更新的，每次更新既包括扩充，也包括修正。比如6.0版新加入了222个中日韩统一表义字符（CJK Unified Ideographs），7.0版加入了俄国货币卢布的符号等等。
 
-ai表示accent insensitivity，也就是“不区分音调”
+ai表示accent insensitivity，也就是"不区分音调"
 
 #### 修改数据库的字符集及字符编码
 
@@ -883,21 +882,21 @@ END
 
 这个问题本来不麻烦，为什么会难住人呢？原因不复杂，你去看关于MySQL和Unicode的中文资料，绝大部分都是告诉你，utf8或者utf8mb4就可以解决问题了。因此，不少程序员完全意识不到还有collation这种东西。
 
-所以，这些程序员理解的“字符集”就只有一堆孤零零的字符，根本没想到还需要定义字符之间的等价和排序关系。而这恰恰是最可惜的，因为他们完全错过了“举一反三”的启发，许多类似问题也就缺乏解决思路。要知道，哪怕你做的不是国际化的业务，也可以从collation中受益的。
+所以，这些程序员理解的"字符集"就只有一堆孤零零的字符，根本没想到还需要定义字符之间的等价和排序关系。而这恰恰是最可惜的，因为他们完全错过了"举一反三"的启发，许多类似问题也就缺乏解决思路。要知道，哪怕你做的不是国际化的业务，也可以从collation中受益的。
 
-我们都知道，电商系统的订单处理是一个流程，其中涉及许多状态，比如“已下单，未支付”、“已支付”、“已确认”、“已拣货”、“已发货”等等。
+我们都知道，电商系统的订单处理是一个流程，其中涉及许多状态，比如"已下单，未支付"、"已支付"、"已确认"、"已拣货"、"已发货"等等。
 
-有程序员看到这个需求，想当然就按照先后顺序，用1、2、3、4、5来表示对应状态，确实简单不会出错，也方便先后对比，比如要查找所有“已确认”之前的订单，就查查“已确认”的状态码是4，那么找状态码\<4的订单就可以。
+有程序员看到这个需求，想当然就按照先后顺序，用1、2、3、4、5来表示对应状态，确实简单不会出错，也方便先后对比，比如要查找所有"已确认"之前的订单，就查查"已确认"的状态码是4，那么找状态码\<4的订单就可以。
 
-然后，有一天，忽然要在两个状态之间加入某个中间状态，比如“已确认”之后需要新的风险评估，通过了才可以去拣货，怎么办？总不可能在3和4之间加一个3.5吧？因为这个数据字段本来就是整数型啊。
+然后，有一天，忽然要在两个状态之间加入某个中间状态，比如"已确认"之后需要新的风险评估，通过了才可以去拣货，怎么办？总不可能在3和4之间加一个3.5吧？因为这个数据字段本来就是整数型啊。
 
-所以“有经验”一点的程序员会改改，一开始就不按照1、2、3、4、5这样来分配状态码，而是按100、200、300、400、500，留足空隙，这样就避免了3.5的尴尬，直接给“风控系统已通过”分配350就可以了。
+所以"有经验"一点的程序员会改改，一开始就不按照1、2、3、4、5这样来分配状态码，而是按100、200、300、400、500，留足空隙，这样就避免了3.5的尴尬，直接给"风控系统已通过"分配350就可以了。
 
-但这仍然不够。如果业务忽然要求既有顺序要变，比如之前“已确认”在前，“风控系统已通过”在后，现在要求“风控系统已通过”在前，“已确认”在后，该怎么办？350总不可能大于400呀。
+但这仍然不够。如果业务忽然要求既有顺序要变，比如之前"已确认"在前，"风控系统已通过"在后，现在要求"风控系统已通过"在前，"已确认"在后，该怎么办？350总不可能大于400呀。
 
 如果你了解了collation就会发现，这是同样的问题。数据的标识和数据的有序性应当隔离开来。标识是一套规范，有序性是另一套规范，两者可以随意组合。你看，Unicode字符的排序可以按照字符的编码值来，也可以按照其它规范来——加载不同collation就是了嘛。
 
-所以，“已下单，未支付”的代码就可以是OUPD，“已支付“的代码就可以是PDED，“已确认”的代码就可以是CFMD…… 它们只用来做唯一标识，没有任何其它意义。然后在外面定义一套顺序规则，比如OUPD \< PDED \< CFMD，然后提供一个查询接口，做任何比较的时候都查询这个接口就好——实际上许多语言可以自定义compare函数来做排序，道理就在这里。万一将来要改业务流程，比如加入新状态，或者更改状态的先后顺序，也只需要做一点点更改，规则查询接口保持不变，其它地方更是保持原封不动。
+所以，"已下单，未支付"的代码就可以是OUPD，"已支付"的代码就可以是PDED，"已确认"的代码就可以是CFMD…… 它们只用来做唯一标识，没有任何其它意义。然后在外面定义一套顺序规则，比如OUPD \< PDED \< CFMD，然后提供一个查询接口，做任何比较的时候都查询这个接口就好——实际上许多语言可以自定义compare函数来做排序，道理就在这里。万一将来要改业务流程，比如加入新状态，或者更改状态的先后顺序，也只需要做一点点更改，规则查询接口保持不变，其它地方更是保持原封不动。
 
 ## 问题
 
