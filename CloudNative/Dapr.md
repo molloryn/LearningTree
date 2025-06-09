@@ -207,6 +207,11 @@ Each namespaced actor deployment **must** use its own separate state store.
 dapr有一个设计，`component`可以有`scopes`，限定binding component到特定微服务。
 [How-To: Scope components to one or more applications | Dapr Docs](https://docs.dapr.io/operations/components/component-scopes/)
 
+
+#### Binding配置正确但未生效
+日志显示成功初始化 `binding` 但未能接收事件。发现是因为 `pubsub` 的 component 配置有异常导致 pubsub模块初始化不成功，其中pubsub的队列地址与 binding 的消息队列地址一致。
+
+
 ## 服务发现&服务间调用
 
 `daprd sidecar `有`app-port`，是指宿主微服务的`API`监听地址，由`sidecar`去调用的
