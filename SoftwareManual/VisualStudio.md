@@ -506,7 +506,7 @@ call `Debugger.Launch()` in your code. The just-in-time debugger should prompt y
 
 ### 快速定位活动文件
 
-[![](../attachments/36206c5edebb7bcbce3d264bab464531.png)] 默认快捷键 `Ctrl+[,S`（个人建议改成 `Ctrl+W，Ctrl+W`，表示 `Where`）
+[![](../attachments/36206c5edebb7bcbce3d264bab464531.png)] 默认快捷键 `Ctrl+[,S`（个人建议改成 `Ctrl+W，Ctrl+W`，表示 `Where`）如果发现会自动跟踪当前文件，去设置里面关闭 `Track Active Item in Solution Explorer`
 
 ![电脑的屏幕截图 描述已自动生成](../attachments/3f16e5f798883588e52433d2202c0017.gif)
 
