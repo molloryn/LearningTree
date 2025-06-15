@@ -209,7 +209,7 @@ dapr有一个设计，`component`可以有`scopes`，限定binding component到�
 
 
 #### Binding配置正确但未生效
-日志显示成功初始化 `binding` 但未能接收事件。发现是因为 `pubsub` 的 component 配置有异常导致 pubsub模块初始化不成功，其中pubsub的队列地址与 binding 的消息队列地址一致。
+日志显示成功初始化 `binding` 但未能接收事件。发现是因为 `pubsub` 的 component 配置有异常导致 pubsub模块初始化不成功，其中pubsub的队列地址与 binding 的消息队列地址一致。发现将pubsub component配置正确后 binding问题解决。
 
 
 ## 服务发现&服务间调用
