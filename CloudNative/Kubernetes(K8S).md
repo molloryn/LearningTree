@@ -221,3 +221,8 @@ docker push <仓库名>/<项目名>/<镜像名>:[版本号] # push只能通过ta
 [HTTP 请求头中的 Remote_Addr，X-Forwarded-For，X-Real-IP - 23云恋49枫 - 博客园 (cnblogs.com)](https://www.cnblogs.com/luxiaojun/p/10451860.html)
 
 在K8S中部署的nginx，可能获取不到真实的地址，需要看当前nginx工作负责的k8s服务的配置。比如如果为NodePort模式，需要设置external-traffic-policy为Local，但是如果设置Local，就不能通过任意的worker节点访问会自动负载均衡了，必须相同节点。（也可以通过外部负载均衡实现）[externaltrafficpolicy的有关问题说明 - 紫色飞猪 - 博客园 (cnblogs.com)](https://www.cnblogs.com/zisefeizhu/p/13262239.html)
+
+
+
+#### 对命名空间进行资源限制后无法启动新Pod
+测试发现如果对命名空间限制资源后，内部的所有Pod也必须指明资源限制，且所有Pod加起来的资源不能超过对命名空间的资源限制。如果其中有一个Pod是无限制的资源，则该命名空间下无法再启动新的Pod
