@@ -1,5 +1,16 @@
 # System.Text.Json
 
+By default, all public properties are serialized. You can specify properties to ignore.
+
+The default encoder escapes non-ASCII characters, HTML-sensitive characters within the ASCII-range, and characters that must be escaped according to the RFC 8259 JSON spec.
+
+By default, JSON is minified. You can pretty-print the JSON.
+
+By default, casing of JSON names matches the .NET names. You can customize JSON name casing.
+
+By default, circular references are detected and exceptions thrown. You can preserve references and handle circular references.
+
+**By default, fields are ignored. You can include fields.**
 
 ## JsonConverter
 
