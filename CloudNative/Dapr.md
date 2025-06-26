@@ -307,6 +307,8 @@ setting parameters `daprHTTPMaxRequestSize` and `UseGrpcChannelOptions` with
 #### 调试时事件发布有时候丢失
 看是否一个消费者组有多个消费者，默认行为同实例的会竞争事件。
 
+#### docker中边车突然关闭退出且无相关日志
+是否是docker-compose中设置了内存限制，到达了限制后被自动结束程序
 
 
 # Debug
