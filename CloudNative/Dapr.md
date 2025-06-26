@@ -403,6 +403,11 @@ The Dapr CLI run command starts the application. It invokes the underlying Dapr 
 
 # 部署
 
+
+## Self-Host 下载
+
+[dapr/installer-bundle: Dapr bundled installer containing CLI and runtime packaged together. This eliminated the need to download Docker images when initializing Dapr locally.](https://github.com/dapr/installer-bundle)
+
 ## 资源需求
 
 [Production guidelines on Kubernetes | Dapr Docs](https://docs.dapr.io/operations/hosting/kubernetes/kubernetes-production)
