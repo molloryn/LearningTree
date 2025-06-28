@@ -82,6 +82,10 @@ If you leave the Configure for HTTPS checkbox checked, the generated ASP.NET Cor
 ## State stores
 
 Care must be taken to always pass an explicit app-id parameter when consuming the state management building block. The block uses the application id value as a prefix for its state key for each key/value pair. If the application id changes, you can no longer access the previously stored state.
+
+
+
+
 ## PubSub
 
 如果应用程序有配置，则程序本身需要暴露 `/dapr/subscribe` 接口，供边车获取程序所监听的主题。
@@ -234,7 +238,9 @@ dapr有一个设计，`component`可以有`scopes`，限定binding component到�
 
 ### error invoke  50002 Unavailable
 调用接口时突然中断提示不可用，边车自动重启。
-排查后似乎是设置了内存限制带了的问题
+排查后似乎是设置了内存限制带了的问题。
+最后根据daprd边车重启堆栈发现问题指向`StateStore`。重新部署redis后正常？
+
 
 
 ## Dashboard
