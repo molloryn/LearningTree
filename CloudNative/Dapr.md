@@ -231,6 +231,12 @@ dapr有一个设计，`component`可以有`scopes`，限定binding component到�
 可以通过改写调用api进行，如：`https://localhost:3500/v1.0/invoke/myappid.<namespace>/method/ping`
 [How to: Service invocation across namespaces | Dapr Docs](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-namespaces/)
 
+
+### error invoke  50002 Unavailable
+调用接口时突然中断提示不可用，边车自动重启。
+排查后似乎是设置了内存限制带了的问题
+
+
 ## Dashboard
 
 Standalone模式暂时不支持docker compose。（仅支持k8s，截至2022/9/29）
