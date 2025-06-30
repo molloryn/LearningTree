@@ -57,7 +57,6 @@ spec:
 
 查看容器DNS：
 1. 容器内部 `hostname`
-2. 
 
 
 

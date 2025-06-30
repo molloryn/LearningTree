@@ -238,7 +238,8 @@ dapr有一个设计，`component`可以有`scopes`，限定binding component到�
 
 ##### 如果发现dapr解析后请求的地址与容器组地址对应不上
 
-有可能是修改了`K8S DNS`的缓存刷新时间或策略，导致重启微服务后未能立刻刷新缓存导致边车错误路由到旧的容器组地址。排查K8S DNS问题：[Kubernetes(K8S)](Kubernetes(K8S).md#DNS)
+1. 有可能是修改了`K8S DNS`的缓存刷新时间或策略，导致重启微服务后未能立刻刷新缓存导致边车错误路由到旧的容器组地址。排查K8S DNS问题：[Kubernetes(K8S)](Kubernetes(K8S).md#DNS)
+2. 如果测试发现仅有一个节点的容器如`worker1`，其上的服务的边车均有解析问题，解析DNS不对，其他节点正常，使用busybox测试coreDNS解析正常，则该问题暂无解决方案(dapr 1.14.4)
 
 ### error invoke  50002 Unavailable  (dapr 1.14.4)
 调用接口时突然中断提示不可用，边车自动重启。
