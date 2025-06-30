@@ -236,11 +236,14 @@ dapr有一个设计，`component`可以有`scopes`，限定binding component到�
 [How to: Service invocation across namespaces | Dapr Docs](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-namespaces/)
 
 
+##### 如果发现dapr解析后请求的地址与容器组地址对应不上
+
+有可能是修改了`K8S DNS`的缓存刷新时间或策略，导致重启微服务后未能立刻刷新缓存导致边车错误路由到旧的容器组地址。
+
 ### error invoke  50002 Unavailable
 调用接口时突然中断提示不可用，边车自动重启。
-排查后似乎是设置了内存限制带了的问题。
+排查后期间怀疑是设置了内存限制带来的问题。
 最后根据daprd边车重启堆栈发现问题指向`StateStore`。重新部署redis后正常？
-
 
 
 ## Dashboard
