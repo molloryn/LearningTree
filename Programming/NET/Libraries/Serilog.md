@@ -1,4 +1,32 @@
+# Serilog
 
+
+## 基本概念
+
+上半部分是 Microsoft Logging系统，通过配置 `builder.Host.UseSerilog(Log.Logger);` 可以设置为 `Serilog Logging Provider`。设置后，原来的日志配置将失效，转而使用 `Serilog` 的日志配置。其中支持的日志等级与内置等级稍微不同。
+```json
+ "Logging": {
+   "LogLevel": {
+     "Default": "Information",
+     "Microsoft.AspNetCore": "Information",
+     "Microsoft": "Debug",
+     "Microsoft.Hosting.Lifetime": "Information"
+   }
+ },
+ "Serilog": {
+   "MinimumLevel": {
+     "Default": "Information",
+     "Override": {
+       "System": "Information",
+       "Microsoft.AspNetCore": "Information",
+       "Microsoft.EntityFrameworkCore": "Information",
+       "Microsoft.Hosting.Lifetime": "Information",
+       "Microsoft.EntityFrameworkCore.Database.Transaction": "Debug"
+     }
+   }
+ }
+
+```
 
 
 
@@ -28,3 +56,19 @@
 #endif
     }
 ```
+
+
+
+
+## 其他问题
+
+### 禁用日志
+
+Serilog 不支持 Microsoft 的 Logging 中的 None 的日志等级，暂时没法禁用日志，只能调整日志等级。 [Support for LogEventLevel.HigherThanFatal · Issue #1049 · serilog/serilog](https://github.com/serilog/serilog/issues/1049)
+
+默认情况下，`UseExceptionHandler`中间件包含了一个默认的异常处理中间件，会打印异常信息到控制台。如若要禁用此功能，需要在日志配置中设置
+
+```json
+"Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware": "None"
+```
+
