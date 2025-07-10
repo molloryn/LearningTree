@@ -292,3 +292,29 @@ class Program
 > HttpContext after await in FooAsync: B
 > HttpContext after await FooAsync in Main: 
 > ```
+
+
+
+## 阻止上下文流动
+
+在一般情况下，当前上下文无论是自己创建Task、Thread，都会使得AsyncLocal捕获到开启这些线程的上下文，如果特殊情况想要在并发操作时规避掉获取上下文（如ABP UOW），可以有如下方案：
+
+### ExecutionContext.SuppressFlow
+
+- 在创建新线程前调用，阻止当前线程的上下文（包括 `AsyncLocal`）流向新线程。
+- 操作后通过 `new Thread()` 创建的新线程会获得干净的上下文。
+
+
+```cs
+ static void StartNewThread()
+    {
+        ExecutionContext.SuppressFlow(); // 🔥 阻止上下文流动
+        var thread = new Thread(() =>
+        {
+            Console.WriteLine($"[Thread] ID: {Thread.CurrentThread.ManagedThreadId}, Value: {asyncLocal.Value ?? "null"}");
+        });
+        
+        thread.Start();
+        ExecutionContext.RestoreFlow(); // 恢复上下文流动
+    }
+```
