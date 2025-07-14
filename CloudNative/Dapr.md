@@ -92,6 +92,12 @@ Care must be taken to always pass an explicit app-id parameter when consuming th
 
 > Visual Studio DockerCompose容器开发中，容器边车需要重新启动才会重新读取，并监听新的主题。
 
+### 同消费者组非竞争模式
+[Allow PubSub to opt-out from competing consumer pattern to send events to every instance · Issue #3176 · dapr/dapr](https://github.com/dapr/dapr/issues/3176)
+[PubSub: notify all instances of an application (rather than "competing consumers") · Issue #3332 · dapr/dapr](https://github.com/dapr/dapr/issues/3332)
+当前解决方案是，定义一个不同行为的`component`，其中提供`consumerID`为`{uuid}`，这样经过该`component`的所有创建及消费主题将会变成指定模式。
+
+
 
 ## Namespace
 dapr有自己一套命名空间机制。
