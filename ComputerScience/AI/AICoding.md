@@ -17,3 +17,5 @@
 - If you find that information is missing or you need help, please stop immediately and output your needs, instead of constantly trying messy methods to reduce code quality.
 - Write reusable, low-coupling and high-cohesion implementations with multiple abstractions. Split files to avoid overly large single files. Instead of just fixing errors, use simplified thinking and refactor whenever possible.
 - Always generate well-structured documentation comments for every necessary element when coding C#.
+
+
