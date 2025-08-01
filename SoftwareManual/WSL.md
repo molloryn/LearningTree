@@ -705,3 +705,36 @@ xp(){
 > 注意，自己在使用反引号、`$()`等操作时，在sh脚本中的执行效果和预期的的问题，它先执行那一部分作为结果替换到脚本中，因此自己在配置 `.zshrc`等文件时，注意执行顺序。`$PWD`等环境变量也一样，脚本第一次运行时候已经决定了结果。除非使用转义符。
 
 Best of all, use a function instead of an alias. A function lets you write the command exactly as you would normally without _any_ extra quotes or escaping.
+
+
+
+## Docker 代理问题
+
+docker 两种代理，一个是 docker desktop 及 cli 使用的，配置在 docker desktop `Network` 中设置，或通过 `Docker daemon` 配置文件设置。
+
+```json
+{
+  "proxies": {
+    "http-proxy": "http://proxy.example.com:3128",
+    "https-proxy": "https://proxy.example.com:3129",
+    "no-proxy": "*.test.example.com,.example.org,127.0.0.0/8"
+  }
+}
+```
+
+
+
+一个是 docker client 使用的，` Builds and containers use the configuration specified in this file.` 需要在 `~/.docker/config.json` 中配置。
+[Proxy configuration | Docker Docs](https://docs.docker.com/engine/cli/proxy/#configure-the-docker-client)
+
+```json
+"proxies": {
+		"default": {
+			"httpProxy": "http://127.0.0.1:41315",
+			"httpsProxy": "http://127.0.0.1:41315",
+			"noProxy": "localhost,127.0.0.1"
+		}
+	},
+```
+
+注意，在 `windows` 下的配置要生效，不仅要重启`docker desktop`还需要 `wsl --shutdown`。
