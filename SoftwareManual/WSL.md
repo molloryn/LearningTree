@@ -724,14 +724,16 @@ docker 两种代理，一个是 docker desktop 及 cli 使用的，配置在 doc
 
 
 
-一个是 docker client 使用的，` Builds and containers use the configuration specified in this file.` 需要在 `~/.docker/config.json` 中配置。
+一个是 docker client 使用的（如构建镜像），` Builds and containers use the configuration specified in this file.` 需要在 `~/.docker/config.json` 中配置。
 [Proxy configuration | Docker Docs](https://docs.docker.com/engine/cli/proxy/#configure-the-docker-client)
+
+注意在 `Windows` 下，执行 `docker cli` 相关命令是在 `WSL`下的，所以需要修改成如下配置：
 
 ```json
 "proxies": {
 		"default": {
-			"httpProxy": "http://127.0.0.1:41315",
-			"httpsProxy": "http://127.0.0.1:41315",
+			"httpProxy": "http://host.docker.internal:41315",
+			"httpsProxy": "http://host.docker.internal:41315",
 			"noProxy": "localhost,127.0.0.1"
 		}
 	},
