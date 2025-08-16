@@ -37,9 +37,7 @@
 
 ## Component Configuration
 
-### Pubsub
 
-边车启动初始化时，首先会去调用应用的 `/dapr/subscribe` 方法获取应用是否有监听分布式事件，如有则注册到边车之中。
 
 #### Kafka
 

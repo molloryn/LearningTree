@@ -220,7 +220,7 @@ docker push <仓库名>/<项目名>/<镜像名>:[版本号] # push只能通过ta
 ```
 
 
-[K8S集群管理](K8S集群管理.md)
+[集群管理](Kubernetes(K8S)/集群管理.md)
 
 
 # TroubleShooting
