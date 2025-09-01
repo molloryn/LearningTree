@@ -25383,10 +25383,13 @@ var ColorHandler = class {
       const curCellColor = this.colorBar.getCurCellColor();
       if (selection.length === 0 && colorMode === 1 /* ColoredText */)
         return;
-      editor.replaceSelection(`<span style="color:${curCellColor}">${selection}</span>`);
+      let newText = selection;
+      newText = newText.replace(/[\*\_]{3}(.+?)[\*\_]{3}/g, "<b><i>$1</i></b>").replace(/[\*\_]{2}(.+?)[\*\_]{2}/g, "<b>$1</b>").replace(/[\*\_](.+?)[\*\_]/g, "<i>$1</i>");
+      newText = newText.replace(/\n/g, "<br>");
+      editor.replaceSelection(`<span style="color:${curCellColor}">${newText}</span>`);
       const cursorEnd = editor.getCursor("to");
       try {
-        const cursorEndChar = selection.length === 0 ? cursorEnd.ch - 7 : cursorEnd.ch + 1;
+        const cursorEndChar = newText.length === 0 ? cursorEnd.ch - 7 : cursorEnd.ch + 1;
         editor.setCursor(cursorEnd.line, cursorEndChar);
       } catch (e) {
         const lineText = editor.getLine(cursorEnd.line);
@@ -25543,3 +25546,5 @@ react-dom/cjs/react-dom.development.js:
    * @license Modernizr 3.0.0pre (Custom Build) | MIT
    *)
 */
+
+/* nosourcemap */
