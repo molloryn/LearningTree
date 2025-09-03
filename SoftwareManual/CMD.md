@@ -58,7 +58,7 @@ $data = Get-WMIObject -Query "SELECT * FROM Win32_PerfFormattedData_Counters_The
 
 `CertUtil -hashfile {PATH AND FILE NAME} {SHA256|MD5}`
 
-### 同时使用WIFI与有线网络
+ ### 同时使用WIFI与有线网络
 
 首先使用`route print`查看路由表。
 路由表有顺序优先级，越上面的优先级越高。
