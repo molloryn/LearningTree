@@ -63,6 +63,37 @@ git config --global http.proxy socks5://127.0.0.1:1080 # 设置代理为sock5（
 git config --global --unset http.proxy # 移除代理
 ```
 
+
+### Git Skip-Worktree Commands  
+  
+#### Ignore local changes to tracked files without adding to .gitignore  
+  
+##### Add file to skip-worktree  
+```bash  
+git update-index --skip-worktree <filename>  
+```  
+  
+##### Remove file from skip-worktree  
+```bash  
+git update-index --no-skip-worktree <filename>  
+```  
+  
+##### List all files in skip-worktree status  
+```bash  
+git ls-files -v | grep ^S  
+```  
+  
+#### Use Cases  
+- Configuration files with local environment settings  
+- Files that need to stay tracked but have local modifications  
+- Temporary local changes that shouldn't be committed  
+  
+#### Notes  
+- Files with `S` prefix are in skip-worktree status  
+- Different from `.gitignore` - file remains tracked in repository  
+- Other developers can still modify their local versions **independently**
+
+
 ### 迁移`Git`仓库到另一个`Git`仓库
 
 ```shell
