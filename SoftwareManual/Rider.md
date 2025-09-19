@@ -19,8 +19,10 @@
 #### 统一色调
 
 - Color Scheme -> General -> Text -> Default text  代码背景色
-- Console colors -> Console -> Background  Console 背景色
-- General -> Background in read-only files 只读文件（如代码生成器代码）背景色
+- Color Scheme -> Console colors -> Console -> Background  Console 背景色
+- Color Scheme -> General -> Background in read-only files 只读文件（如代码生成器代码）背景色
+- Version Control -> File Status Colors   Commit窗口中的文件颜色
+
 
 
 ## 调试 SourceGenerator
