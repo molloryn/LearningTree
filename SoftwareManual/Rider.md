@@ -1,6 +1,8 @@
 # Rider
 
 
+自动换行： Soft Wrap
+
 ## Keymap
 
 - Select File in Project View (In Other - Bookmarks)
