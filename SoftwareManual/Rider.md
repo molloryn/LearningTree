@@ -19,4 +19,18 @@
 #### 统一色调
 
 - Color Scheme -> General -> Text -> Default text  代码背景色
-- Console colors -> Console -> Background  Console背景色
+- Console colors -> Console -> Background  Console 背景色
+- General -> Background in read-only files 只读文件（如代码生成器代码）背景色
+
+
+## 调试 SourceGenerator
+
+应用程序入口点加入类似如下的配置：`launchSetting.json` 即可在 `SourceGenerator` 的代码中增加断点
+
+```json
+"Generators": {  
+  "commandName": "DebugRoslynComponent",  
+  "targetProject": "./StatisticsService.API.csproj"  
+}
+
+```
