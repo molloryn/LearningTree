@@ -27,7 +27,7 @@
 
 ## 调试 SourceGenerator
 
-应用程序入口点加入类似如下的配置：`launchSetting.json` 即可在 `SourceGenerator` 的代码中增加断点
+应用程序入口点加入类似如下的配置：`launchSetting.json` 即可在 `SourceGenerator` 的代码中增加断点，注意要切换为该配置进行Debug。
 
 ```json
 "Generators": {  
@@ -36,3 +36,5 @@
 }
 
 ```
+
+有个缺陷是如果SourceGenerator会导致编译不通过，那还是只能回退到使用 `Visual Studio` 用 `Debug.Launch` 的方式调试。[Can not debug code generator when target project does not build : RIDER-118936](https://youtrack.jetbrains.com/issue/RIDER-118936/Can-not-debug-code-generator-when-target-project-does-not-build)
