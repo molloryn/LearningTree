@@ -396,9 +396,9 @@ netsh int ipv6 set dynamic tcp start=49152 num=16384
 
 ### 网络问题
 
-Turn off Windows Network
-Connectivity Status Indicator active
-tests
+#### WIFI会自动断开
+
+To disable the Windows Network Connectivity Status Indicator (NCSI) active test, use the Group Policy Editor (`gpedit.msc`) to enable the "Turn off Windows Network Connectivity Status Indicator active tests" setting. Navigate to `Computer Configuration` > `Administrative Templates` > `System` > `Internet Communication Management` > `Internet Communication settings` and change the policy to Enabled. After making the change, restart your computer or run `gpupdate /force` to apply it.
 
 ## 设置Alias
 
