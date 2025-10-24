@@ -11,19 +11,20 @@
 
 <https://docs.microsoft.com/zh-cn/windows/wsl/basic-commands>
 
-|                                                                                                           |                                                                                                                                                                                                                                                                       |
-|-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| wsl --list --online                                                                                       | 列出可用的linux发行版                                                                                                                                                                                                                                                 |
-| wsl --install -d kali-linux                                                                               | 下载kali-linux并安装启动                                                                                                                                                                                                                                              |
-| wsl --shutdown                                                                                            | 终止所有子系统                                                                                                                                                                                                                                                        |
-| wsl --terminate docker-desktop-data                                                                       | 终止指定的子系统, 如 docker-desktop-data                                                                                                                                                                                                                              |
-| wsl --export docker-desktop-data F:/WSL/docker-desktop-data/docker-desktop.tar                            | 将子系统导出为tar包                                                                                                                                                                                                                                                   |
-| wsl --unregister docker-desktop-data                                                                      | 使用wsl命令注销并删除子系统                                                                                                                                                                                                                                           |
-| wsl --import docker-desktop-data F:/WSL/docker-desktop-data F:/WSL/docker-desktop-data/docker-desktop.tar | 重新导入子系统到指定目录，然后tar包可以删除了                                                                                                                                                                                                                         |
-| wsl -l -v                                                                                                 | 列出当前安装的wsl列表，以及版本信息                                                                                                                                                                                                                                   |
-| cat /etc/resolv.conf \| grep nameserver                                                                   | WSL 每次启动的时候都会有不同的 IP 地址，所以并不能直接用静态的方式来设置代理。WSL2 会把 IP 写在 /etc/resolv.conf 中                                                                                                                                                   |
+|                                                                                                           |                                                                                                                                                                            |
+| --------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| wsl --list --online                                                                                       | 列出可用的linux发行版                                                                                                                                                              |
+| wsl --install -d kali-linux                                                                               | 下载kali-linux并安装启动                                                                                                                                                          |
+| wsl --shutdown                                                                                            | 终止所有子系统                                                                                                                                                                    |
+| wsl --terminate docker-desktop-data                                                                       | 终止指定的子系统, 如 docker-desktop-data                                                                                                                                            |
+| wsl --export docker-desktop-data F:/WSL/docker-desktop-data/docker-desktop.tar                            | 将子系统导出为tar包                                                                                                                                                                |
+| wsl --unregister docker-desktop-data                                                                      | 使用wsl命令注销并删除子系统                                                                                                                                                            |
+| wsl --import docker-desktop-data F:/WSL/docker-desktop-data F:/WSL/docker-desktop-data/docker-desktop.tar | 重新导入子系统到指定目录，然后tar包可以删除了                                                                                                                                                   |
+| wsl -l -v                                                                                                 | 列出当前安装的wsl列表，以及版本信息                                                                                                                                                        |
+| cat /etc/resolv.conf \| grep nameserver                                                                   | WSL 每次启动的时候都会有不同的 IP 地址，所以并不能直接用静态的方式来设置代理。WSL2 会把 IP 写在 /etc/resolv.conf 中                                                                                                |
 | wsl -d(--distribution) \<Distribution Name\> --user \<User Name\>                                         | 若要通过特定用户运行特定 Linux 发行版，请将 \<Distribution Name\> 替换为你首选的 Linux 发行版的名称（例如 Debian），将 \<User Name\> 替换为现有用户的名称（例如 root）。 如果 WSL 发行版中不存在该用户，你将会收到一个错误。 若要输出当前用户名，请使用 whoami 命令。 |
-| wsl --set-default \<Distribution Name\>                                                                   | 设定默认打开的Linux发行版                                                                                                                                                                                                                                             |
+| wsl --set-default \<Distribution Name\>                                                                   | 设定默认打开的Linux发行版                                                                                                                                                            |
+| wsl --import kali-linux C:\WSL\kali-linux-new "C:\WSL\kali-linux\ext4.vhdx" --vhd --version 2             | 从vhd导入旧的子系统（建议用tar包导入）                                                                                                                                                     |
 
 ## WSL连接宿主机代理
 
@@ -32,12 +33,14 @@
 
 #### 新版配置
 新版本WSL遇到问题的：wsl: 检测到 localhost 代理配置，但未镜像到 WSL。NAT 模式下的 WSL 不支持 localhost 代理
+`wsl: A localhost proxy configuration was detected but not mirrored into WSL. WSL in NAT mode does not support localhost proxies.`
+
 [Accessing network applications with WSL | Microsoft Learn](https://learn.microsoft.com/en-us/windows/wsl/networking#auto-proxy)
 
 https://github.com/microsoft/WSL/issues/10753#issuecomment-2041372912
 
 
-在Windows用户根目录新建`.wslconfig`文件
+在Windows用户根目录`%USERPROFILE%`新建`.wslconfig`文件
 ```config
 [wsl2]
 networkingMode=mirrored
@@ -49,7 +52,7 @@ autoProxy=true
 [experimental]
 # requires dnsTunneling but are also OPTIONAL
 bestEffortDnsParsing=true
-useWindowsDnsCache=true
+# useWindowsDnsCache=true
 autoMemoryReclaim=gradual  # gradual  | dropcache | disabled
 
 ```
