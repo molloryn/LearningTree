@@ -394,6 +394,12 @@ netsh int ipv6 set dynamic tcp start=49152 num=16384
 
 重启电脑后，再运行命令`netsh int ipv4 show dynamicport tcp`查看动态端口范围，发现确实已经修改为了`49152-65535`。
 
+### 网络问题
+
+Turn off Windows Network
+Connectivity Status Indicator active
+tests
+
 ## 设置Alias
 
 [Doskey | Microsoft Learn](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-xp/bb490894(v=technet.10)?redirectedfrom=MSDN)
