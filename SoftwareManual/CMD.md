@@ -400,6 +400,18 @@ netsh int ipv6 set dynamic tcp start=49152 num=16384
 
 To disable the Windows Network Connectivity Status Indicator (NCSI) active test, use the Group Policy Editor (`gpedit.msc`) to enable the "Turn off Windows Network Connectivity Status Indicator active tests" setting. Navigate to `Computer Configuration` > `Administrative Templates` > `System` > `Internet Communication Management` > `Internet Communication settings` and change the policy to Enabled. After making the change, restart your computer or run `gpupdate /force` to apply it.
 
+#### 使用代理
+
+- **Windows Settings Proxy**: The proxy you configure in _Settings → Network & Internet → Proxy_ applies to apps using the WinINET API (like Edge, Internet Explorer, or apps that rely on system networking).
+- **CMD & Console Tools**: Many command-line tools (like `curl`, `git`, `npm`) rely on **WinHTTP** or their own proxy settings, not WinINET. That’s why CMD doesn’t automatically use the proxy you set in Windows Settings.
+- Some tools respect environment variables: (like `curl`)
+```sh
+set http_proxy=http://proxyserver:port
+set https_proxy=http://proxyserver:port
+```
+
+
+
 ## 设置Alias
 
 [Doskey | Microsoft Learn](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-xp/bb490894(v=technet.10)?redirectedfrom=MSDN)
