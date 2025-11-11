@@ -131,7 +131,23 @@ alias proxy="source /xxx/proxy.sh" # 可以为这个脚本设置别名 proxy，�
 一般是升级安装损坏的问题，需要手动通过安装包安装：[Releases · microsoft/WSL](https://github.com/microsoft/WSL/releases/)
 安装过程中出现：`Could not write value  to key \SOFTWARE\Classes\Directory\shell\WSL.   Verify that you have sufficient access to that key, or contact your support personnel.` 诸如此类的问题，需要注册表编辑器修改相应文件夹System以及Adminstrator的权限为完全控制。
 
+### WSL内部错误导致无网络异常
 
+```
+wsl: 出现了内部错误。
+Error code: CreateInstance/CreateVm/ConfigureNetworking/0x8007054f
+wsl: Failed to configure network (networkingMode Mirrored), falling back to networkingMode None.
+wsl: A localhost proxy configuration was detected but not mirrored into WSL. WSL in NAT mode does not support localhost proxies.
+```
+
+将`.wslconfig`配置修改为：
+```ini
+[wsl2]
+networkingMode=mirrored
+autoProxy=true
+```
+
+并将系统代理关闭
 
 ### zsh语法高亮非常慢
 
