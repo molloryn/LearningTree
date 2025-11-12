@@ -10,12 +10,18 @@
 
 ## 消息消费模式
 
-通过
+目前消息消费模式是按照消费者组，对应 `RabbitMQ` 中的 `Queue` 的概念，一个主题是一个 `Exchanges`，比如主题 `ProtocolPlatform.PublishedLanguages.DomainFlight.Events.EventAlterFlight`，对于不同服务的消费者组是类似如下的 `Queue`：
+```
+dev-service-adaptor-msg-preprocessor-for-atc-ProtocolPlatform.PublishedLanguages.DomainFlight.Events.EventAlterFlight
+dev-service-alarm-api-ProtocolPlatform.PublishedLanguages.DomainFlight.Events.EventAlterFlight
+dev-service-atc-flight-adaptor-ProtocolPlatform.PublishedLanguages.DomainFlight.Events.EventAlterFlight
+```
+相同消费组中消息进行竞争。
 
-> Binding 
+> 注意 Dapr Bindings默认则只是Queue，不同服务也是同一个Queue （没有 Exchanges) 
 
 
-## 同消费者组非竞争模式
+### 同消费者组非竞争模式
 
 [Allow PubSub to opt-out from competing consumer pattern to send events to every instance · Issue #3176 · dapr/dapr](https://github.com/dapr/dapr/issues/3176)
 [PubSub: notify all instances of an application (rather than \"competing consumers\") · Issue #3332 · dapr/dapr](https://github.com/dapr/dapr/issues/3332)
