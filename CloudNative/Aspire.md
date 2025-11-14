@@ -4,7 +4,7 @@
 
 ### 启动出现Requesting HTTP version 2.0 
 
-一般是由于电脑使用了环境变量 `HTTP_PROXY` 以及 `HTTPS_PROXY` 导致的，`.NET HTTP Client`会使用此环境变量作为代理。
+一般是由于电脑使用了环境变量 `HTTP_PROXY` 以及 `HTTPS_PROXY` 导致的，`.NET HTTP Client`会使用此环境变量作为代理。Alternatively, set NO_PROXY="localhost,127.0.0.1" in environment. Restart the app.
 
 > 清除环境变量后需要重启IDE生效
 
