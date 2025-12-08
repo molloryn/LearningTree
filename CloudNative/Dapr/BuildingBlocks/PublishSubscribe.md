@@ -66,3 +66,10 @@ dev-service-atc-flight-adaptor-ProtocolPlatform.PublishedLanguages.DomainFlight.
 #### 问题四 无法从外部连接kafka，dapr访问地址将自动变为内部集群ip
 
 `Kafka`需配置外部访问监听地址：[Kafka Listeners - Explained](https://rmoff.net/2018/08/02/kafka-listeners-explained/)
+
+
+
+#### 问题五 (rabbitmq) operation basic.consume caused a connection exception not_allowed: "attempt to reuse consumer tag 
+
+这里dapr将ConsumerID和ConsumerTag合并了，RabbitMQ不允许有相同的ConsumerID被重新注册多次，ConsumerID在RabbitMQ是指的一个连接对象，不是消费者组。 RabbitMQ的消费者组概念是相同的TopicQueue。 
+我遇到这个问题是因为使用了 `streaming subcription api`，然后边车对于相同的主题（不同Handler）注册了多次，没有处理这个情况。 
