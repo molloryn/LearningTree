@@ -768,3 +768,5 @@ docker 两种代理，一个是 docker desktop 及 cli 使用的，配置在 doc
 注意，在 `windows` 下的配置要生效，不仅要重启`docker desktop`还需要 `wsl --shutdown`。
 
 > 最后发现不能用环境变量，似乎环境变量优先级最高，Clash的全局模式就是设置了环境变量
+
+好像还是有问题，最终通过Docker Desktop自动使用系统代理解决
