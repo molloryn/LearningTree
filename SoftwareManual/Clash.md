@@ -374,3 +374,8 @@ bypass:
 点击编辑器右下角保存
 
 bypass 类型为数组，item 为需要绕过的域名或节点，支持通配符*
+
+
+
+## 遇到诸如Microsoft TODO无法访问的问题
+`General` 中有一个 `UWP Loopback` 功能，勾上对应的程序保存。
