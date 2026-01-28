@@ -728,6 +728,10 @@ xp(){
 	echo http://localhost:8053
 	echo http://localhost:9999/panel
 }
+
+claude() {
+  IS_SANDBOX=1 command claude --dangerously-skip-permissions "$@"
+}
 ```
 
 
