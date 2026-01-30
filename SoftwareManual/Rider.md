@@ -41,7 +41,7 @@
 
 
 ### SourceGenerator控制生成目录
-默认设置代码生成路径会在 `C:\Users\{Username}\AppData\Local\Temp\SourceGeneratedDocuments\1415ABEDF6AED9378BC5BC80\MoLibrary.Generators.AutoController\MoLibrary.Generators.AutoController.HttpApiControllerSourceGenerator` 诸如此类的路径
+默认设置代码生成路径会在 `C:\Users\{Username}\AppData\Local\Temp\SourceGeneratedDocuments\1415ABEDF6AED9378BC5BC80\Monica.Generators.AutoController\Monica.Generators.AutoController.HttpApiControllerSourceGenerator` 诸如此类的路径
 
 通过设置 `.csproj` 文件：
 ```xml

@@ -113,7 +113,7 @@ builder.Host.UseDefaultServiceProvider(options =>
 #if DEBUG  
 	options.ValidateOnBuild = true;  
 	options.ValidateScopes = true;  //会严格检测生命周期，必须满足要求，有些是运行时才会发现，比如通过工厂方法注册  
-	//导致注入这种错误：Cannot resolve scoped service 'Microsoft.Extensions.Options.IOptionsSnapshot`1[MoLibrary.StateStore.StackExchange.Modules.ModuleRedisStateStoreOption]' from root provider.  
+	//导致注入这种错误：Cannot resolve scoped service 'Microsoft.Extensions.Options.IOptionsSnapshot`1[Monica.StateStore.StackExchange.Modules.ModuleRedisStateStoreOption]' from root provider.  
 #endif  
 });
 ```
