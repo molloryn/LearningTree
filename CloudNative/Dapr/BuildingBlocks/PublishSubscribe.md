@@ -73,3 +73,19 @@ dev-service-atc-flight-adaptor-ProtocolPlatform.PublishedLanguages.DomainFlight.
 
 这里dapr将ConsumerID和ConsumerTag合并了，RabbitMQ不允许有相同的ConsumerID被重新注册多次，ConsumerID在RabbitMQ是指的一个连接对象，不是消费者组。 RabbitMQ的消费者组概念是相同的TopicQueue。 
 我遇到这个问题是因为使用了 `streaming subcription api`，然后边车对于相同的主题（不同Handler）注册了多次，没有处理这个情况。 
+
+#### 一直启动时失败
+
+1. **正常启动阶段**：日志前半部分是 Kafka 启动时的常规操作 —— 加载各个分区的日志（LogLoader），包括业务主题（如 UserService 相关）和 Kafka 内部主题`__consumer_offsets`（消费者偏移量存储），此时 Kafka 还在加载 93 个分区的日志（进度到 59/93），尚未完成启动。
+2. **关键触发点**：`Terminating process due to signal SIGTERM` 表明 Kafka 进程收到了 SIGTERM 终止信号（通常由 kill 命令、容器停止、系统超时机制触发）。
+你的配置中`initialDelaySeconds: 10`（仅等待 10 秒就开始检测），但从日志能看到 Kafka 加载 93 个分区的日志需要数十秒甚至数分钟，**即使 client 端口（默认 9092）提前监听，Kafka 内部仍未完成启动**，此时若触发健康检查失败或外部终止逻辑，就会导致启动中断。
+```yaml
+livenessProbe:
+  tcpSocket:
+    port: client  # 对应Kafka的客户端端口（默认9092）
+  initialDelaySeconds: 300  # 延长至5分钟（核心修改），给足日志加载时间
+  timeoutSeconds: 5         # 检测超时时间保持5秒即可
+  periodSeconds: 10         # 每10秒检测一次
+  successThreshold: 1       # 1次成功即判定存活
+  failureThreshold: 6       # 失败6次（总计60秒）才重启，避免偶发网络波动误判
+```
