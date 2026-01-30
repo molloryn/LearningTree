@@ -1,5 +1,107 @@
 # 依赖注入
 
+## 关系矩阵
+在 ASP.NET Core 的依赖注入（Dependency Injection, DI）系统中，理解生命周期的**兼容性规则**至关重要。如果配置不当，会引发“捕获依赖（Capturing Dependencies）”问题，导致内存泄漏或逻辑错误。
+
+以下是针对 **Singleton（单例）**、**Scoped（范围内）** 和 **Transient（瞬时）** 生命周期的深度梳理。
+
+---
+
+## 1. 三种生命周期的基础定义
+
+|**生命周期**|**英文名**|**行为模式**|
+|---|---|---|
+|**单例**|**Singleton**|根容器创建后**只创建一个实例**，直到应用程序关闭。|
+|**范围内**|**Scoped**|在**每个请求（Scope）**内创建一个实例。同一次请求内共享。|
+|**瞬时**|**Transient**|**每次注入/获取**时都会创建一个全新的实例。|
+
+---
+
+## 2. 注入规则与兼容性（核心重点）
+
+核心原则是：**长生命周期的服务不能直接注入短生命周期的服务。**
+
+### 注入兼容性矩阵
+
+|**宿主（注入到谁）**|**可注入 Singleton?**|**可注入 Scoped?**|**可注入 Transient?**|
+|---|---|---|---|
+|**Singleton**|✅ 允许|❌ **禁止**|✅ 允许（但有风险）|
+|**Scoped**|✅ 允许|✅ 允许|✅ 允许|
+|**Transient**|✅ 允许|✅ 允许|✅ 允许|
+
+---
+
+## 3. 为什么 Singleton 不能注入 Scoped？
+
+这是面试和开发中最常遇到的陷阱。
+
+- **现象：** 如果你在一个 Singleton 服务中注入了一个 Scoped 服务，Scoped 服务就会被 Singleton “捕获”。
+    
+- **后果：** 这个 Scoped 服务本该在请求结束时销毁，但因为被 Singleton 引用，它会一直存活到程序关闭。这会导致数据库连接无法释放、用户上下文信息错乱等严重问题。
+    
+- **框架保护：** 在 `Development` 环境下，ASP.NET Core 默认会开启 `ValidateScopes` 检查。如果检测到 Singleton 引用 Scoped，程序启动时会直接抛出 `InvalidOperationException`。
+    
+
+---
+
+## 4. 各种组合的副作用梳理
+
+### 1. Singleton 注入 Transient
+
+- **结果：** 这个 Transient 实例会变成“事实上的单例”。
+    
+- **注意：** 因为 Singleton 只初始化一次，它构造函数里的 Transient 实例也就固定下来了。虽然不报错，但失去了 Transient “每次新建”的特性。
+    
+
+### 2. Scoped 注入 Transient
+
+- **结果：** Transient 实例在当前请求范围内是固定的。
+    
+- **注意：** 只有在当前 Scoped 服务被创建时，Transient 才会生成一次。
+    
+
+### 3. 如何在 Singleton 中使用 Scoped 服务？
+
+如果你必须在单例（如 `IHostedService` 后台任务）中使用 Scoped 服务（如 `DbContext`），不能通过构造函数注入，而必须手动创建 Scope：
+
+
+
+```cs
+public class MySingletonService(IServiceProvider serviceProvider) 
+{
+    public void DoWork()
+    {
+        using (var scope = serviceProvider.CreateScope())
+        {
+            var scopedService = scope.ServiceProvider.GetRequiredService<IMyScopedService>();
+            // 业务逻辑...
+        } // scope 释放，scopedService 也随之销毁
+    }
+}
+```
+
+---
+
+## 5. 常见组件的默认生命周期
+
+在开发中，请务必留意框架自带组件的生命周期：
+
+- **DbContext (EF Core):** 默认为 **Scoped**。
+    
+- **IConfiguration:** **Singleton**。
+    
+- **ILogger\<T\>:** **Singleton**。
+    
+- **HttpClientFactory:** 内部管理，通常作为 **Transient** 或 **Singleton** 注入使用。
+    
+
+---
+
+## 总结图示
+
+- **向下兼容：** 短周期可以依赖长周期。
+    
+- **向上孤立：** 长周期不可依赖短周期（除非手动开启局部作用域）。
 
 
 ## 设置
