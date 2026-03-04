@@ -138,7 +138,7 @@ I suggest you add a `.gitattributes` file to the source folder with `autocrlf=fa
 
 [Progressive Web App | Blazor Workshop](https://github.com/dotnet-presentations/blazor-workshop/blob/main/docs/09-progressive-web-app.md#sending-push-notifications)
 
-![image](../attachments/4161b6d4c97627521988ea13dc1cd89e.png)
+![image](../../attachments/4161b6d4c97627521988ea13dc1cd89e.png)
 
 只是这种效果，不是双向通信
 
@@ -146,7 +146,7 @@ I suggest you add a `.gitattributes` file to the source folder with `autocrlf=fa
 
 ### 后台自动更新
 
-![](../attachments/f43befa278c41ace9a79e48d6b45ec3e.png)
+![](../../attachments/f43befa278c41ace9a79e48d6b45ec3e.png)
 
 ## 语法
 
@@ -165,7 +165,7 @@ Welcome to your new app.
 
 `SurveyPrompt`这个tag实际上是一个`razor`文件，任何以`razor`结尾的文件都可以看作是一个可以被其他Component引用的Component。
 
-![文本 描述已自动生成](../attachments/dcd3087537565bf44068abadacc11fd6.png)
+![文本 描述已自动生成](../../attachments/dcd3087537565bf44068abadacc11fd6.png)
 
 使用`Parameter`这个`Attribute`修饰的属性，可以在引用该Component的外部文件中赋值。
 
@@ -188,15 +188,15 @@ Welcome to your new app.
 
 #### 自定义Event
 
-![图形用户界面, 文本, 应用程序, 电子邮件 描述已自动生成](../attachments/3d7f24af0278b20f75810f838a434ad0.png)
+![图形用户界面, 文本, 应用程序, 电子邮件 描述已自动生成](../../attachments/3d7f24af0278b20f75810f838a434ad0.png)
 
-![文本 描述已自动生成](../attachments/bbc932f46e487060032f4a455de2e4b0.png)
+![文本 描述已自动生成](../../attachments/bbc932f46e487060032f4a455de2e4b0.png)
 
 `EventCallback`就像一个`Pointer`或者委托，可以由外部赋值，然后内部进行传入。
 
 在另外的`Component`就可以这样使用：
 
-![文本 描述已自动生成](../attachments/4f67a5dd850483884f5e22b1839ffce6.png)
+![文本 描述已自动生成](../../attachments/4f67a5dd850483884f5e22b1839ffce6.png)
 
 ### Page
 
@@ -236,9 +236,9 @@ Welcome to your new app.
 
 #### Bind
 
-![图形用户界面, 应用程序 描述已自动生成](../attachments/746a462603818ee93de26b0a3c3d47e7.png)
+![图形用户界面, 应用程序 描述已自动生成](../../attachments/746a462603818ee93de26b0a3c3d47e7.png)
 
-![文本 中度可信度描述已自动生成](../attachments/7f801d0f4e404244b424985b4260e156.png)
+![文本 中度可信度描述已自动生成](../../attachments/7f801d0f4e404244b424985b4260e156.png)
 
 双向绑定数据
 
@@ -250,7 +250,7 @@ Welcome to your new app.
 
 `Dependency Injection`, 使用的是`Asp .Net Core`自带的`DI`, 在`Startup`中注入相应的服务。
 
-![Word 低可信度描述已自动生成](../attachments/b8c0e827c34aadf58167ba20c94fb372.png)
+![Word 低可信度描述已自动生成](../../attachments/b8c0e827c34aadf58167ba20c94fb372.png)
 
 `HttpClient`是注入了`service.AddHttpClient();`然后就可以使用api式的访问方法，调用Server端的api了。
 
